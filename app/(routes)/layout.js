@@ -38,6 +38,17 @@ export const metadata = {
 export default function Layout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning={true} className={syne.className}>
+      <Head>
+        <meta property="og:title" content="globalNex - Global Trade Data Intelligence" />
+        <meta property="og:site_name" content="globalNex" />
+        <meta property="og:description" content="GlobalNex is a cutting-edge data analytics platform that revolutionizes the way organizations access, analyze, and leverage global trade data." />
+        <meta property="og:url" content="glblnex.com" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="/og_photo.png" />
+        <meta property="twitter:title" content="globalNex - Global Trade Data Intelligence" />
+        <meta property="twitter:image" content="/og_photo.png" x/>
+        <meta property="twitter:description" content="GlobalNex is a cutting-edge data analytics platform that revolutionizes the way organizations access, analyze, and leverage global trade data." />
+      </Head>
       <body suppressHydrationWarning={true}>
         <MainNavbar />
         <Suspense fallback={<Loading />}>
