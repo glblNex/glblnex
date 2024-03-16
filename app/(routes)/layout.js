@@ -30,7 +30,7 @@ export const metadata = {
   canonical: 'https://glblnex.com/',
   manifest: 'icons/site.webmanifest',
   preconnect: 'https://fonts.googleapis.com',
-  preconnect: { url: 'https://fonts.gstatic.com', crossorigin },
+  preconnect: { url: 'https://fonts.gstatic.com', crossorigin: 'anonymous' },
   stylesheet: 'https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap',
 }
 
