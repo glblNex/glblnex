@@ -43,6 +43,7 @@ export default function Layout({ children }) {
       <body suppressHydrationWarning={true}>
         <MainNavbar />
         <Suspense fallback={<Loading />}>
+          <SpeedInsights />
           <div className='container mx-auto min-w-full z-1'>
             <main>{children}</main>
           </div>
