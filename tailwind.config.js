@@ -6,13 +6,21 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
+    colors: {
+      'highlight': '#005B97',
+      'highlight2': '#00385D',
+      'bg': '#111111',
+      'bg2': '#F7F7F7',
+      'light': '#B5B5B5',
+      'success': '#2FAD02',
+      'error': '#940225',
+      'warning': '#D38C22',
+    },
+    fontFamily: {
+      sans: ['Outfit', 'sans-serif'],
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 };
