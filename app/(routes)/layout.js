@@ -41,8 +41,7 @@ export const metadata = {
     description: 'GlobalNex is a cutting-edge data analytics platform that revolutionizes the way organizations access, analyze, and leverage global trade data.',
     type: 'website',
     url: '/',
-    image: "url/og_photo.png",
-
+    image: "https://y2etwt0sktcajnaj.public.blob.vercel-storage.com/og_photo.png",
   }
 }
 
