@@ -14,7 +14,7 @@ const syne = Syne({
 })
 
 export const metadata = {
-  metadataBase: new URL('https://globalnex.com'),
+  metadataBase: new URL('https://glblnex.com'),
   title: {
     template: '%s | globalNex',
     default: 'globalNex - Global Trade Data Intelligence',
@@ -22,7 +22,7 @@ export const metadata = {
   description: 'GlobalNex is a cutting-edge data analytics platform that revolutionizes the way organizations access, analyze, and leverage global trade data. GlobalNex provides a centralized and intelligent solution for stakeholders across the international trade ecosystem, enabling them to gain unparalleled insights, optimize operations, and drive strategic decision-making.',
   keywords: ['Global Trade', 'Data', 'AI', 'Global AI', 'Global Trade Data', 'Analytics', 'Global Analytics', 'Data Intelligence', 'Global Intelligence', 'Logistics', 'Advanced Logistics', 'Global Tracking', ' AI Logistics', 'AI Global Trade', 'Trade Data', 'Logistical Data', 'Logistics Tracking'],
   type: 'website',
-  url: 'https://glblnex.com/',
+  url: '/',
   icons: {
     icon: 'icons/favicon.ico',
     shortcut: 'icons/favicon.ico',
@@ -40,8 +40,8 @@ export const metadata = {
     site_name: 'globalNex',
     description: 'GlobalNex is a cutting-edge data analytics platform that revolutionizes the way organizations access, analyze, and leverage global trade data.',
     type: 'website',
-    url: 'glblnex.com/',
-    image: "/og_photo.png",
+    url: '/',
+    image: "url/og_photo.png",
 
   }
 }
