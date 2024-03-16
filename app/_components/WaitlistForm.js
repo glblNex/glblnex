@@ -15,7 +15,7 @@ const formStyles = {
   buttonColor: "#027E94",
   successMessage: "thanks! we'll be in touch!",
   successFontColor: "#0277AD",
-  userGroup: ""
+  userGroup: "GlobalNex",
 }
 const domain = "app.loops.so"
 
@@ -70,7 +70,7 @@ export default function SignUpFormReact({ alignSelf }) {
     // build body
     const formBody = `userGroup=${encodeURIComponent(
       formStyles.userGroup
-    )}&email=${encodeURIComponent(email)}`
+    )}&email=${encodeURIComponent(email)}`;
 
     // API request to add user to newsletter
     fetch(`https://${domain}/api/newsletter-form/${formStyles.id}`, {
@@ -154,7 +154,6 @@ export default function SignUpFormReact({ alignSelf }) {
                 required={true}
                 className='bg-[#fff] rounded-md px-3 py-2 w-full lg:min-w-[50%] lg:w-min lg:float-right text-center'
               />
-              <input type="hidden" name="userGroup" value="GlobalNex"></input>
             </div>
             <div className='w-full h-full'>
               <SignUpFormButton />
