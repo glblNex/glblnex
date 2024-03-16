@@ -2,23 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @import url('/Syne-VariableFont_wght.woff');
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&amp;display=swap'); */
-/* :root {
-  background-color: F3F1EB;
-} */
-
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }} */
-
 body {
-  font-family: 'Syne', sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
   color: #F7F7F7;
   background-color: #111111;
 }
