@@ -17,7 +17,7 @@ module.exports = {
       'warning': '#D38C22',
     },
     fontFamily: {
-      sans: ['Outfit', 'sans-serif'],
+      sans: ['Syne', 'sans-serif'],
     },
   },
   plugins: [

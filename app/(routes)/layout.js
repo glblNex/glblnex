@@ -5,6 +5,7 @@ import Head from 'next/head';
 import '../_style/globals.css'
 import { Suspense } from "react";
 import Loading from './loading';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import CTABanner from '../_components/CTABanner';
 
 export const metadata = {
