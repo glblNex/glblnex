@@ -6,8 +6,9 @@ import '../_style/globals.css'
 import { Suspense } from "react";
 import Loading from './loading';
 import { SpeedInsights } from "@vercel/speed-insights/next"
-import { Inter } from 'next/font/google'
+import { Syne } from 'next/font/google'
 
+const syne = Syne({ subsets: ['latin'] })
 
 export const metadata = {
   title: {
@@ -33,7 +34,7 @@ export const metadata = {
 
 export default function Layout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning={true}>
+    <html lang="en" suppressHydrationWarning={true} className={syne.className}>
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
