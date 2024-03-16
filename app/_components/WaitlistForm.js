@@ -141,7 +141,7 @@ export default function SignUpFormReact({ alignSelf }) {
       return (
         <>
           <form
-            className="text-base grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-4 content-center"
+            className="text-base text-bg grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-4 content-center"
             onSubmit={handleSubmit}
           >
             <div className='w-full h-full place-content-center'>

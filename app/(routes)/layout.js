@@ -6,6 +6,7 @@ import '../_style/globals.css'
 import { Suspense } from "react";
 import Loading from './loading';
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import { GoogleTagManager } from '@next/third-parties/google'
 import { Syne } from 'next/font/google'
 
 const syne = Syne({
@@ -17,7 +18,7 @@ export const metadata = {
   metadataBase: new URL('https://glblnex.com'),
   title: {
     template: '%s | globalNex',
-    default: 'globalNex - Global Trade Data Intelligence',
+    default: 'globalNex - Global Trade Intelligence',
   },
   description: 'GlobalNex is a cutting-edge data analytics platform that revolutionizes the way organizations access, analyze, and leverage global trade data. GlobalNex provides a centralized and intelligent solution for stakeholders across the international trade ecosystem, enabling them to gain unparalleled insights, optimize operations, and drive strategic decision-making.',
   keywords: ['Global Trade', 'Data', 'AI', 'Global AI', 'Global Trade Data', 'Analytics', 'Global Analytics', 'Data Intelligence', 'Global Intelligence', 'Logistics', 'Advanced Logistics', 'Global Tracking', ' AI Logistics', 'AI Global Trade', 'Trade Data', 'Logistical Data', 'Logistics Tracking'],
@@ -35,7 +36,7 @@ export const metadata = {
   canonical: 'https://glblnex.com/',
   manifest: 'icons/site.webmanifest',
   openGraph: {
-    title: 'globalNex - Global Trade Data Intelligence',
+    title: 'globalNex - Global Trade Intelligence',
     name: 'globalNex',
     site_name: 'globalNex',
     description: 'GlobalNex is a cutting-edge data analytics platform that revolutionizes the way organizations access, analyze, and leverage global trade data.',
@@ -59,6 +60,7 @@ export default function Layout({ children }) {
         {/* <CTABanner/> */}
         <MainFooter />
       </body>
+      {/* <GoogleTagManager gtmId="G-GCQEVGZLP4" /> */}
     </html >
   )
 }
