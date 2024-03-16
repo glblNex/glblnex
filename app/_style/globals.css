@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('/Syne-VariableFont_wght.woff');
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&amp;display=swap');
+/* @import url('/Syne-VariableFont_wght.woff');
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&amp;display=swap'); */
 /* :root {
   background-color: F3F1EB;
 } */

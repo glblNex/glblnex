@@ -6,7 +6,7 @@ import '../_style/globals.css'
 import { Suspense } from "react";
 import Loading from './loading';
 import { SpeedInsights } from "@vercel/speed-insights/next"
-import CTABanner from '../_components/CTABanner';
+import { Inter } from 'next/font/google'
 
 
 export const metadata = {
@@ -29,14 +29,16 @@ export const metadata = {
   },
   canonical: 'https://glblnex.com/',
   manifest: 'icons/site.webmanifest',
-  preconnect: 'https://fonts.googleapis.com',
-  preconnect: { url: 'https://fonts.gstatic.com', crossorigin: 'anonymous' },
-  stylesheet: 'https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap',
 }
 
 export default function Layout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning={true}>
+      <Head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Syne&display=swap" rel="stylesheet" />
+      </Head>
       <body suppressHydrationWarning={true}>
         <MainNavbar />
         <Suspense fallback={<Loading />}>
