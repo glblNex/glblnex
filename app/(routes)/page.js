@@ -9,7 +9,7 @@ export default function Home() {
       <section className='relative overflow-hidden pb-10 md:pb-14 mb-10 h-screen px-10 lg:px-24'>
         <div className='absolute inset-0'>
           <video
-            src='https://y2etwt0sktcajnaj.public.blob.vercel-storage.com/webvideo.mp4'
+            src='https://media.glblnex.com/webvideo.mp4'
             autoPlay
             muted
             loop
