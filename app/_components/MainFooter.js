@@ -47,7 +47,7 @@ export default function MainFooter() {
                 </div>
                 <div className='mt-16 grid grid-cols-3 max-md:grid-cols-1 gap-x-6 max-md:gap-y-8 items-end text-light'>
                     <div className='justify-self-center text-center md:justify-self-start md:text-left'>
-                        <p>Powered by Nauvis</p>
+                        <p>Powered by <Link className='font-semibold hover:underline hover:decoration-highlight' href='https://nauvis.co/'>NAUVIS</Link>.</p>
                         <p>© 2024 globalNex. All rights reserved.</p>
                     </div>
                     <div className='justify-self-center'>
