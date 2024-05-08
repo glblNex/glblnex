@@ -53,19 +53,19 @@ export default function MainNavbar() {
               </Link>
             </div>
             <div className='flex items-center justify-self-center gap-12'>
-              <Link className="flex-auto decoration-2 hover:underline hover:decoration-highlight" href="/about">
-                about
+              <Link className="flex-auto hover:underline hover:decoration-highlight" href="/about">
+                About
               </Link>
-              <Link className="flex-auto decoration-2 hover:underline hover:decoration-highlight" href="/whyus">
-                why us
+              <Link className="flex-auto hover:underline hover:decoration-highlight" href="/whyus">
+                Why Us
               </Link>
-              <Link className="flex-auto decoration-2 hover:underline hover:decoration-highlight" href="/services">
-                our services
+              <Link className="flex-auto hover:underline hover:decoration-highlight" href="/services">
+                Our Services
               </Link>
             </div>
             <div className='flex items-center justify-self-end'>
               <Link href="/started" className=''>
-                <MainButton btn_txt='get started' />
+                <MainButton btn_txt='Get Started' />
               </Link>
             </div>
           </div>
@@ -94,16 +94,16 @@ export default function MainNavbar() {
           </div>
           {burgerOn ? <div className='grid grid-cols-1 auto-rows-auto gap-y-8 py-6 my-4 justify-items-center content-center bg-bg'>
             <Link className="self-center" href="/about">
-              about
+              About
             </Link>
             <Link className="self-center" href="/whyus">
-              why us
+              Why Us
             </Link>
             <Link className="self-center" href="/services">
-              our services
+              Our Services
             </Link>
             <Link href="/started" className='self-center'>
-              <MainButton btn_txt='get started' />
+              <MainButton btn_txt='Get Started' />
             </Link>
           </div> : null}
         </div>

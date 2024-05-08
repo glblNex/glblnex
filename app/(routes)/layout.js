@@ -1,7 +1,5 @@
-import { Metadata } from 'next'
 import MainNavbar from '../_components/MainNavbar'
 import MainFooter from '../_components/MainFooter'
-import Head from 'next/head';
 import '../_style/globals.css'
 import { Suspense } from "react";
 import Loading from './loading';

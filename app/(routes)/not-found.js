@@ -1,9 +1,7 @@
 import React from "react";
 import Image from 'next/image'
-import CircularProgress from '@mui/material/CircularProgress';
-import Box from '@mui/material/Box';
 
-export default function Loading() {
+export default function NotFound() {
     return (
         <div className='grid grid-cols-1 place-items-center gap-12 p-48 text-center'>
             <Image
@@ -17,9 +15,15 @@ export default function Loading() {
                 width={30}
                 height={30}
             />
-            <Box sx={{ display: 'flex'}}>
-                <CircularProgress color="inherit" />
-            </Box>
+            <p className='text-l text-light lg:text-xl'>
+                Looks like we ran into some kind of problem.
+            </p>
+            <h1 className='text-6xl lg:text-10xl'>
+                404 - Page Not Found
+            </h1>
+            <p className='text-l text-light lg:text-xl'>
+                We're still working on our website, we appreciate your patience!
+            </p>
         </div>
     )
 }

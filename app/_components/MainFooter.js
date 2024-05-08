@@ -31,17 +31,17 @@ export default function MainFooter() {
                     <div className='max-md:hidden'></div>
                     <div className='grid items-top justify-between justify-items-stretch gap-6 content-start justify-self-end max-md:justify-self-center'>
                         <Link className="hover:underline hover:decoration-highlight" href="/about">
-                            about
+                            About
                         </Link>
                     </div>
                     <div className='grid items-top justify-between justify-items-stretch gap-6 content-start justify-self-end max-md:justify-self-center'>
                         <Link className="hover:underline hover:decoration-highlight" href="/whyus">
-                            why us
+                            Why Us
                         </Link>
                     </div>
                     <div className='grid items-top justify-between justify-items-stretch gap-6 content-start justify-self-end max-md:justify-self-center'>
                         <Link className="hover:underline hover:decoration-highlight" href="/services">
-                            services
+                            Services
                         </Link>
                     </div>
                 </div>
