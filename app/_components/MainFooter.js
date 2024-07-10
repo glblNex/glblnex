@@ -3,7 +3,6 @@
 import React from "react";
 import Link from 'next/link';
 import Image from 'next/image'
-import MainButton from './MainButton'
 import { SiLinkedin, SiInstagram, SiX } from "react-icons/si";
 
 
@@ -15,15 +14,15 @@ export default function MainFooter() {
                     <div className='max-md:justify-self-center content-center'>
                         <Link href="/">
                             <Image
-                                src="SM - LightSVG.svg"
+                                src="SM-LightSVG.svg"
                                 alt="globalnex Icon Logo"
-                                sizes="100vw"
+                                sizes="10vw"
                                 style={{
                                     width: '30px',
-                                    height: '30px',
+                                    height: 'auto',
                                 }}
-                                width={30}
-                                height={30}
+                                width={2876}
+                                height={658}
                             />
                         </Link>
                     </div>

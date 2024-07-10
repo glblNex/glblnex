@@ -42,7 +42,7 @@ export default function MainNavbar() {
                 <Image
                   src="DarkSVG.svg"
                   alt="globalnex Full Logo"
-                  sizes="100vw"
+                  sizes="10vw"
                   style={{
                     width: 'auto',
                     height: '30px',
