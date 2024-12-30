@@ -38,10 +38,10 @@ export default function MainNavbar() {
         <div className='hidden lg:block '>
           <div className='grid grid-cols-3 gap-x-3.5 justify-stretch content-center'>
             <div className='flex items-center justify-self-start'>
-              <Link href="/">
+              <Link href="/" className="cursor-pointer">
                 <Image
                   src="DarkSVG.svg"
-                  alt="globalnex Full Logo"
+                  alt="globalNex Full Logo"
                   sizes="10vw"
                   style={{
                     width: 'auto',
@@ -52,16 +52,19 @@ export default function MainNavbar() {
                 />
               </Link>
             </div>
-            <div className='flex items-center justify-self-center gap-12'>
-              <Link className="flex-auto hover:underline hover:decoration-highlight" href="/about">
-                About
+            <div className='flex items-center justify-self-center gap-12 underline-offset-4 transition-all duration-500 ease-in-out'>
+              {/* <Link className="flex-auto group transition duration-300" href="/product">
+                Product
+                <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-highlight"></span>
               </Link>
-              <Link className="flex-auto hover:underline hover:decoration-highlight" href="/whyus">
-                Why Us
+              <Link className="lex-auto group transition duration-300" href="/resources">
+                Resources
+                <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-highlight"></span>
               </Link>
-              <Link className="flex-auto hover:underline hover:decoration-highlight" href="/services">
-                Our Services
-              </Link>
+              <Link className="lex-auto group transition duration-300" href="/company">
+                Company
+                <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-highlight"></span>
+              </Link> */}
             </div>
             <div className='flex items-center justify-self-end'>
               <Link href="/started" className=''>
@@ -77,7 +80,7 @@ export default function MainNavbar() {
               <Link href="/">
                 <Image
                   src="DarkSVG.svg"
-                  alt="globalnex Full Logo"
+                  alt="globalNex Full Logo"
                   sizes="100vw"
                   style={{
                     width: 'auto',
@@ -93,15 +96,15 @@ export default function MainNavbar() {
             </div>
           </div>
           {burgerOn ? <div className='grid grid-cols-1 auto-rows-auto gap-y-8 py-6 my-4 justify-items-center content-center bg-bg'>
-            <Link className="self-center" href="/about">
-              About
+            {/* <Link className="self-center" href="/solutions">
+              Product
             </Link>
-            <Link className="self-center" href="/whyus">
-              Why Us
+            <Link className="self-center" href="/resources">
+              Resources
             </Link>
-            <Link className="self-center" href="/services">
-              Our Services
-            </Link>
+            <Link className="self-center" href="/company">
+              Company
+            </Link> */}
             <Link href="/started" className='self-center'>
               <MainButton btn_txt='Get Started' />
             </Link>

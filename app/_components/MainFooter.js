@@ -15,7 +15,7 @@ export default function MainFooter() {
                         <Link href="/">
                             <Image
                                 src="SM-LightSVG.svg"
-                                alt="globalnex Icon Logo"
+                                alt="globalNex Icon Logo"
                                 sizes="10vw"
                                 style={{
                                     width: '30px',
@@ -28,48 +28,47 @@ export default function MainFooter() {
                     </div>
                     <div className='max-md:hidden'></div>
                     <div className='max-md:hidden'></div>
-                    <div className='grid items-top justify-between justify-items-stretch gap-6 content-start justify-self-end max-md:justify-self-center'>
-                        <Link className="hover:underline hover:decoration-highlight" href="/about">
-                            About
+                    {/* <div className='grid items-top justify-between justify-items-stretch gap-6 content-start justify-self-end max-md:justify-self-center'>
+                        <Link className="" href="/product">
+                            Product
                         </Link>
                     </div>
                     <div className='grid items-top justify-between justify-items-stretch gap-6 content-start justify-self-end max-md:justify-self-center'>
-                        <Link className="hover:underline hover:decoration-highlight" href="/whyus">
-                            Why Us
+                        <Link className="" href="/resources">
+                            Resources
                         </Link>
                     </div>
                     <div className='grid items-top justify-between justify-items-stretch gap-6 content-start justify-self-end max-md:justify-self-center'>
-                        <Link className="hover:underline hover:decoration-highlight" href="/services">
-                            Services
+                        <Link className="" href="/company">
+                            Company
                         </Link>
-                    </div>
+                    </div> */}
                 </div>
                 <div className='mt-16 grid grid-cols-3 max-md:grid-cols-1 gap-x-6 max-md:gap-y-8 items-end text-light'>
                     <div className='justify-self-center text-center md:justify-self-start md:text-left'>
-                        <p>Powered by <Link className='font-semibold hover:underline hover:decoration-highlight' href='https://nauvis.co/'>NAUVIS</Link>.</p>
+                        {/* <p>Powered by <Link className='font-semibold ' href='https://nauvis.co/'>NAUVIS</Link>.</p> */}
                         <p>© 2024 globalNex. All rights reserved.</p>
                     </div>
                     <div className='justify-self-center'>
-                        <Link className="hover:underline hover:decoration-highlight" href="/terms">
+                        <Link className="" href="/terms">
                             Terms
                         </Link>
                         <span>, </span>
-                        <Link className="hover:underline hover:decoration-highlight" href="/privacy">
+                        <Link className="" href="/privacy">
                             Privacy
                         </Link>
                         <span>, </span>
-                        <Link className="hover:underline hover:decoration-highlight" href="/cookies">
+                        <Link className="" href="/cookies">
                             Cookies
                         </Link>
                         <span>, & </span>
-                        <Link className="hover:underline hover:decoration-highlight" href="/use">
+                        <Link className="" href="/use">
                             Acceptable Use
                         </Link>
                     </div>
                     <div className='flex flex-row justify-self-end max-md:justify-self-center'>
                         <Link href="https://x.com/glblNex" target="_blank" className='ml-6'><SiX /></Link>
-                        <Link href="https://www.linkedin.com/company/nauvis/" target="_blank" className='ml-6'><SiLinkedin /></Link>
-                        <Link href="https://www.instagram.com/Nauvis.Co/" target="_blank" className='ml-6'><SiInstagram /></Link>
+                        <Link href="https://www.linkedin.com/company/glblnex/" target="_blank" className='ml-6'><SiLinkedin /></Link>
                     </div>
                 </div>
             </div>

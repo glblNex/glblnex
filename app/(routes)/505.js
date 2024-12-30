@@ -6,7 +6,7 @@ export default function Custom505() {
         <div className='grid grid-cols-1 place-items-center gap-12 p-48 text-center'>
             <Image
                 src="SM - DarkSVG.svg"
-                alt="globalnex Icon Logo"
+                alt="globalNex Icon Logo"
                 sizes="100vw"
                 style={{
                     width: 'auto',

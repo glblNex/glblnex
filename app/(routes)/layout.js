@@ -6,11 +6,13 @@ import Loading from './loading';
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { GoogleTagManager } from '@next/third-parties/google'
 import { Syne } from 'next/font/google'
+import CTABanner from '../_components/CTABanner';
 
 const syne = Syne({
   subsets: ['latin'],
   display: 'swap',
 })
+
 
 export const metadata = {
   metadataBase: new URL('https://glblnex.com'),
@@ -18,7 +20,7 @@ export const metadata = {
     template: '%s | globalNex',
     default: 'globalNex - Global Trade Intelligence',
   },
-  description: 'GlobalNex is a cutting-edge data analytics platform that revolutionizes the way organizations access, analyze, and leverage global trade data. GlobalNex provides a centralized and intelligent solution for stakeholders across the international trade ecosystem, enabling them to gain unparalleled insights, optimize operations, and drive strategic decision-making.',
+  description: 'globalNex is a cutting-edge data analytics platform that revolutionizes the way organizations access, analyze, and leverage global trade data. globalNex provides a centralized and intelligent solution for stakeholders across the international trade ecosystem, enabling them to gain unparalleled insights, optimize operations, and drive strategic decision-making.',
   keywords: ['Global Trade', 'Data', 'AI', 'Global AI', 'Global Trade Data', 'Analytics', 'Global Analytics', 'Data Intelligence', 'Global Intelligence', 'Logistics', 'Advanced Logistics', 'Global Tracking', ' AI Logistics', 'AI Global Trade', 'Trade Data', 'Logistical Data', 'Logistics Tracking'],
   type: 'website',
   url: '/',
@@ -37,7 +39,7 @@ export const metadata = {
     title: 'globalNex - Global Trade Intelligence',
     name: 'globalNex',
     site_name: 'globalNex',
-    description: 'GlobalNex is a cutting-edge data analytics platform that revolutionizes the way organizations access, analyze, and leverage global trade data.',
+    description: 'globalNex is a cutting-edge data analytics platform that revolutionizes the way organizations access, analyze, and leverage global trade data.',
     type: 'website',
     url: '/',
     images: "https://y2etwt0sktcajnaj.public.blob.vercel-storage.com/og_photo.png",
@@ -55,7 +57,6 @@ export default function Layout({ children }) {
             <main>{children}</main>
           </div>
         </Suspense>
-        {/* <CTABanner/> */}
         <MainFooter />
       </body>
       {/* <GoogleTagManager gtmId="G-GCQEVGZLP4" /> */}

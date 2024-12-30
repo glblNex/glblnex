@@ -10,6 +10,7 @@ module.exports = {
       'highlight': '#005B97',
       'highlight2': '#00385D',
       'bg': '#111111',
+      'black': '#000000',
       'bg2': '#F7F7F7',
       'light': '#B5B5B5',
       'success': '#2FAD02',
@@ -17,7 +18,8 @@ module.exports = {
       'warning': '#D38C22',
     },
     fontFamily: {
-      sans: ['Syne', 'sans-serif'],
+      syne: ['Syne', 'sans-serif'],
+      urbanist: ['Urbanist', 'sans-serif'],
     },
     fontWeight: {
       thin: '100',
