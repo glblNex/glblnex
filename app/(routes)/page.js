@@ -24,54 +24,38 @@ const HERO_PROOF = [
 
 const VALUE_ADDS = [
   {
-    stat: "Minutes",
-    title: "Decisions in minutes, not weeks",
-    body: "Replace slow analyst spreadsheets with instant scenario modeling on the exact grades you buy, so leadership can act while it still matters.",
+    stat: "One number",
+    title: "Not ten dashboards",
+    body: "Every alloy gets a single supply-risk score. Know what to watch at a glance.",
   },
   {
-    stat: "Margin",
-    title: "Margin you can defend",
-    body: "Quantify at-risk spend and the margin hit from any price or supply shock before it reaches the P&L, and take it to the board with numbers.",
+    stat: "In seconds",
+    title: "Not weeks of analysis",
+    body: "Model any shock and see cost, margin, and at-risk spend impact instantly.",
   },
   {
-    stat: "Zero",
-    title: "Zero blind spots",
-    body: "Expose the single-country dependencies hidden inside every alloy you buy, so a sanction or export ban never surprises your operation.",
+    stat: "Your BOM",
+    title: "Not the whole market",
+    body: "Only the grades you buy, decomposed to the metals that drive your risk.",
   },
 ]
 
 const PROBLEMS = [
   {
     title: "Geopolitics is rewriting supply",
-    body: "Tariffs, export controls, and sanctions are concentrating critical metals in fewer hands each year. The exposure sitting in your bill of materials is growing, whether you measure it or not.",
+    body: "Tariffs, export controls, and sanctions concentrate critical metals in fewer hands each year. Your exposure grows whether you measure it or not.",
   },
   {
     title: "One shock cascades to your margin",
-    body: "A single metal move ripples through your alloys into unit cost, availability, and gross margin. By the time it shows up in the P&L, your options are already gone.",
+    body: "A single metal move ripples through your alloys into unit cost and gross margin. By the time it hits the P&L, your options are gone.",
   },
   {
     title: "Your current tools are reactive",
-    body: "Price terminals and spreadsheets tell you what already happened. They cannot tell you what a shock does to 7075-T6 or Inconel 718, or what it costs you specifically.",
+    body: "Price terminals and spreadsheets report what already happened. Neither tells you what a shock does to 7075-T6, or what it costs you.",
   },
 ]
 
-const STEPS = [
-  {
-    n: "01",
-    title: "Select your metal",
-    body: "Start with the metal family you procure: aluminum, titanium, steel, copper, nickel, gold, and more.",
-  },
-  {
-    n: "02",
-    title: "Choose the alloy grade",
-    body: "Pick the exact grade you buy, such as 7075-T6, Ti-6Al-4V, or Inconel 718, and see its metals decomposed.",
-  },
-  {
-    n: "03",
-    title: "Run a scenario",
-    body: "Stress-test price shocks, production cuts, or export bans and see the impact on cost, availability, and margin.",
-  },
-]
+const STEPS = ["Pick the alloy grade you buy", "Model a price or supply shock", "See the cost and margin impact"]
 
 export default function Home() {
   return (
@@ -87,9 +71,8 @@ export default function Home() {
               Protect your margins from supply shocks you do not control
             </h1>
             <p className={`mt-5 text-base lg:text-lg text-light font-light max-w-xl leading-relaxed ${urbanist.className}`}>
-              globalNex turns metal price and supply data into a decision your leadership can make
-              today: exactly what a shock does to the alloys you buy, and what it costs you in margin,
-              spend, and continuity. In seconds, not weeks.
+              globalNex turns metal price and supply data into one decision: what a shock does to the
+              alloys you buy, and what it costs you in margin. All signal, no noise.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
               <Link href="/started">
@@ -117,12 +100,20 @@ export default function Home() {
       </GxSection>
 
       {/* Value adds */}
-      <GxSection className="py-2">
+      <GxSection>
+        <Reveal>
+          <SectionHeading
+            eyebrow="All signal, no noise"
+            title="We cut the market down to the one number you act on"
+            align="center"
+            className="mb-8"
+          />
+        </Reveal>
         <RevealGroup className="grid md:grid-cols-3 gap-6">
           {VALUE_ADDS.map((v) => (
             <RevealItem key={v.title}>
               <div className="h-full rounded-xl border border-line bg-white p-6">
-                <p className={`text-3xl font-light text-highlight mb-3 ${urbanist.className}`}>{v.stat}</p>
+                <p className={`text-2xl lg:text-3xl font-light text-highlight mb-2 ${urbanist.className}`}>{v.stat}</p>
                 <h3 className={`text-lg font-medium text-ink mb-2 ${urbanist.className}`}>{v.title}</h3>
                 <p className="text-light text-sm leading-relaxed">{v.body}</p>
               </div>
@@ -159,40 +150,31 @@ export default function Home() {
         </Reveal>
       </GxSection>
 
-      {/* How it works */}
-      <GxSection>
-        <Reveal>
-          <SectionHeading
-            eyebrow="How it works"
-            title="Three steps from metal to decision"
-            align="center"
-          />
-        </Reveal>
-        <RevealGroup className="grid md:grid-cols-3 gap-6 mt-8">
-          {STEPS.map((s) => (
-            <RevealItem key={s.n}>
-              <div className="group h-full rounded-xl border border-line bg-white p-6">
-                <span className={`text-4xl font-light text-line group-hover:text-highlight transition-colors duration-300 ${urbanist.className}`}>
-                  {s.n}
-                </span>
-                <h3 className={`mt-4 text-xl font-medium text-ink ${urbanist.className}`}>{s.title}</h3>
-                <p className="mt-2 text-light text-sm leading-relaxed">{s.body}</p>
-              </div>
-            </RevealItem>
-          ))}
-        </RevealGroup>
-      </GxSection>
-
       {/* Interactive demo */}
       <GxSection id="demo">
         <Reveal>
           <SectionHeading
             eyebrow="Live demo"
             title="What if aluminum goes up 20%?"
-            subtitle="Adjust price and production shocks on any alloy grade and watch cost, availability, demand, and lead time react in real time."
+            subtitle="Model a shock on any grade and watch cost, margin, and availability react in real time."
             align="center"
-            className="mb-8"
+            className="mb-6"
           />
+        </Reveal>
+        <Reveal delay={0.03}>
+          <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-2 mb-8 text-sm text-light">
+            {STEPS.map((s, i) => (
+              <React.Fragment key={s}>
+                <span className="flex items-center gap-2">
+                  <span className="flex h-5 w-5 items-center justify-center rounded-full bg-highlightSoft text-highlight text-xs font-semibold">
+                    {i + 1}
+                  </span>
+                  {s}
+                </span>
+                {i < STEPS.length - 1 ? <span className="text-line hidden sm:inline">/</span> : null}
+              </React.Fragment>
+            ))}
+          </div>
         </Reveal>
         <Reveal delay={0.05}>
           <ScenarioDemo />
@@ -205,7 +187,7 @@ export default function Home() {
           <SectionHeading
             eyebrow="Alloy decomposition"
             title="See what your alloys are really made of"
-            subtitle="Pick Ti-6Al-4V or Inconel 718 and see each constituent metal's composition share, price volatility, and exposure. This is the view nobody else gives you."
+            subtitle="Every grade broken into its metals, with the composition share and volatility that drive your exposure. The view nobody else gives you."
             className="mb-8"
           />
         </Reveal>
