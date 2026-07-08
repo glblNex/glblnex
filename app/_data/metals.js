@@ -209,8 +209,8 @@ export function demandPriceSeries(priceShockPct, productionChangePct, weightedVo
   for (let i = 0; i < n; i++) {
     const t = i / (n - 1);
     const ramp = 1 / (1 + Math.exp(-(t - 0.35) * 9));
-    const priceY = 0.55 + ramp * (priceFactor * 1.8 + prodDown * weightedVol * 0.6);
-    const demandY = 0.75 - ramp * (prodDown * 0.65 + priceFactor * weightedVol * 0.25);
+    const priceY = 0.35 + ramp * (priceFactor * 2.2 + prodDown * weightedVol * 0.8);
+    const demandY = 0.85 - ramp * (prodDown * 0.75 + priceFactor * weightedVol * 0.35);
     points.push({
       t,
       price: Math.max(0.08, Math.min(0.95, priceY)),

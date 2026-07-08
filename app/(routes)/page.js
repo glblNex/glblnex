@@ -88,21 +88,21 @@ export default function Home() {
   return (
     <main className="overflow-x-hidden">
       {/* Hero */}
-      <GxSection className="pt-28 lg:pt-36 pb-8 lg:pb-12">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <GxSection className="pt-24 lg:pt-28 pb-4 lg:pb-6">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <Reveal>
-            <p className="text-xs uppercase tracking-[0.2em] text-highlight font-semibold mb-4">
+            <p className="text-xs uppercase tracking-[0.2em] text-highlight font-semibold mb-3">
               Metals scenario analysis
             </p>
-            <h1 className={`text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-light leading-[1.08] text-ink ${urbanist.className}`}>
+            <h1 className={`text-4xl sm:text-5xl lg:text-6xl font-light leading-[1.08] text-ink ${urbanist.className}`}>
               Know your metal risk before it costs you
             </h1>
-            <p className={`mt-6 text-lg text-light font-light max-w-xl leading-relaxed ${urbanist.className}`}>
+            <p className={`mt-5 text-base lg:text-lg text-light font-light max-w-xl leading-relaxed ${urbanist.className}`}>
               globalNex turns raw price and supply data into one number you can act on: exactly what
               a price or supply shock does to the alloys you buy, and what it means for your cost and
               margin.
             </p>
-            <div className="mt-8 flex flex-wrap gap-4">
+            <div className="mt-7 flex flex-wrap gap-3">
               <Link href="/started">
                 <MainButton btn_txt="Join Waitlist" />
               </Link>
@@ -111,17 +111,14 @@ export default function Home() {
               </a>
             </div>
           </Reveal>
-          <Reveal delay={0.15} className="relative">
-            <div className="absolute -inset-4 gx-grid rounded-2xl opacity-40 pointer-events-none" />
-            <div className="relative">
-              <DashboardMockup />
-            </div>
-          </Reveal>
+          <div className="relative">
+            <DashboardMockup />
+          </div>
         </div>
       </GxSection>
 
       {/* Value adds */}
-      <GxSection className="py-4">
+      <GxSection className="py-2">
         <RevealGroup className="grid md:grid-cols-3 gap-6">
           {VALUE_ADDS.map((v) => (
             <RevealItem key={v.title}>
@@ -143,7 +140,7 @@ export default function Home() {
             title={<>Spot prices tell you what happened. globalNex tells you what happens next.</>}
           />
         </Reveal>
-        <RevealGroup className="grid md:grid-cols-3 gap-6 mt-12">
+        <RevealGroup className="grid md:grid-cols-3 gap-5 mt-8">
           {PROBLEMS.map((p) => (
             <RevealItem key={p.title}>
               <div className="h-full rounded-xl border border-line bg-white p-6 hover:border-highlight/40 transition-colors duration-200">
@@ -172,7 +169,7 @@ export default function Home() {
             align="center"
           />
         </Reveal>
-        <RevealGroup className="grid md:grid-cols-3 gap-8 lg:gap-10 mt-12">
+        <RevealGroup className="grid md:grid-cols-3 gap-6 mt-8">
           {STEPS.map((s) => (
             <RevealItem key={s.n}>
               <div className="group h-full rounded-xl border border-line bg-white p-6">
@@ -195,7 +192,7 @@ export default function Home() {
             title="What if aluminum goes up 20%?"
             subtitle="Adjust price and production shocks on any alloy grade and watch cost, availability, demand, and lead time react in real time."
             align="center"
-            className="mb-10"
+            className="mb-8"
           />
         </Reveal>
         <Reveal delay={0.05}>
@@ -210,7 +207,7 @@ export default function Home() {
             eyebrow="Alloy decomposition"
             title="See what your alloys are really made of"
             subtitle="Pick Ti-6Al-4V or Inconel 718 and see each constituent metal's composition share, price volatility, and exposure. This is the view nobody else gives you."
-            className="mb-10"
+            className="mb-8"
           />
         </Reveal>
         <Reveal delay={0.05}>
@@ -227,7 +224,7 @@ export default function Home() {
             align="center"
           />
         </Reveal>
-        <RevealGroup className="grid sm:grid-cols-2 gap-6 mt-12 max-w-4xl mx-auto">
+        <RevealGroup className="grid sm:grid-cols-2 gap-5 mt-8 max-w-4xl mx-auto">
           {BENEFITS.map((b) => (
             <RevealItem key={b.role}>
               <div className="h-full rounded-xl border border-line bg-white p-6 flex flex-col gap-3">
@@ -243,7 +240,7 @@ export default function Home() {
       </GxSection>
 
       {/* Coverage marquee */}
-      <section className="py-12 border-y border-line bg-bg2 overflow-hidden">
+      <section className="py-8 border-y border-line bg-bg2 overflow-hidden">
         <p className="text-center text-xs uppercase tracking-[0.2em] text-light font-medium mb-6">
           Metals and alloys covered
         </p>

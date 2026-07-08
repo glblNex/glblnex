@@ -1,19 +1,25 @@
 'use client'
 
 import React from "react";
-import { alloyMetals, riskColor, riskLevel } from "../_data/metals";
+import { motion } from "motion/react";
+import { alloyMetals, riskColor } from "../_data/metals";
 
 export default function AlloyBreakdown({ alloy }) {
   const metals = alloyMetals(alloy);
 
   return (
     <div className="w-full flex flex-col gap-5">
-      {metals.map((m) => {
+      {metals.map((m, i) => {
         const exposure = m.pct / 100;
         const volScore = m.volatility;
         const color = riskColor(volScore);
         return (
-          <div key={m.key}>
+          <motion.div
+            key={m.key}
+            initial={{ opacity: 0, x: 12 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.4, delay: i * 0.08 }}
+          >
             <div className="flex items-center justify-between mb-2">
               <div className="flex items-center gap-3">
                 <span
@@ -38,23 +44,28 @@ export default function AlloyBreakdown({ alloy }) {
               <div>
                 <p className="text-[10px] uppercase tracking-wider text-light mb-1.5">Composition</p>
                 <div className="h-2 w-full rounded-full bg-line overflow-hidden">
-                  <div
-                    className="h-full rounded-full bg-highlight transition-[width] duration-500 ease-out"
-                    style={{ width: `${Math.round(exposure * 100)}%` }}
+                  <motion.div
+                    className="h-full rounded-full bg-highlight"
+                    initial={{ width: 0 }}
+                    animate={{ width: `${Math.round(exposure * 100)}%` }}
+                    transition={{ duration: 0.7, delay: 0.1 + i * 0.08, ease: "easeOut" }}
                   />
                 </div>
               </div>
               <div>
                 <p className="text-[10px] uppercase tracking-wider text-light mb-1.5">Price exposure</p>
                 <div className="h-2 w-full rounded-full bg-line overflow-hidden">
-                  <div
-                    className="h-full rounded-full transition-[width] duration-500 ease-out"
-                    style={{ backgroundColor: color, width: `${Math.round(exposure * volScore * 100)}%` }}
+                  <motion.div
+                    className="h-full rounded-full"
+                    style={{ backgroundColor: color }}
+                    initial={{ width: 0 }}
+                    animate={{ width: `${Math.round(exposure * volScore * 100)}%` }}
+                    transition={{ duration: 0.7, delay: 0.15 + i * 0.08, ease: "easeOut" }}
                   />
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         );
       })}
     </div>

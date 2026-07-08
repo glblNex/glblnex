@@ -34,70 +34,93 @@ function KpiCard({ label, value, sub, tone = "ink", progress }) {
 }
 
 function DemandPriceChart({ series }) {
-  const w = 320;
-  const h = 132;
-  const pad = { top: 12, right: 12, bottom: 20, left: 12 };
+  const w = 400;
+  const h = 160;
+  const pad = { top: 16, right: 16, bottom: 28, left: 16 };
   const iw = w - pad.left - pad.right;
   const ih = h - pad.top - pad.bottom;
+
+  const allVals = series.flatMap((p) => [p.price, p.demand]);
+  const minV = Math.min(...allVals);
+  const maxV = Math.max(...allVals);
+  const range = maxV - minV || 0.1;
+  const padV = range * 0.15;
+
+  const toY = (v) => pad.top + (1 - (v - minV + padV) / (range + padV * 2)) * ih;
+  const toX = (t) => pad.left + t * iw;
 
   const toPath = (key) =>
     series
       .map((p, i) => {
-        const x = pad.left + p.t * iw;
-        const y = pad.top + (1 - p[key]) * ih;
+        const x = toX(p.t);
+        const y = toY(p[key]);
         return `${i === 0 ? "M" : "L"} ${x.toFixed(1)} ${y.toFixed(1)}`;
       })
       .join(" ");
 
   const pricePath = toPath("price");
   const demandPath = toPath("demand");
-  const areaPath = `${pricePath} L ${pad.left + iw} ${pad.top + ih} L ${pad.left} ${pad.top + ih} Z`;
+  const areaPath = `${pricePath} L ${toX(1).toFixed(1)} ${pad.top + ih} L ${toX(0).toFixed(1)} ${pad.top + ih} Z`;
 
   return (
-    <svg viewBox={`0 0 ${w} ${h}`} className="w-full h-auto" role="img" aria-label="Price versus demand trajectory">
-      <defs>
-        <linearGradient id="gxarea" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor="#005B97" stopOpacity="0.16" />
-          <stop offset="100%" stopColor="#005B97" stopOpacity="0" />
-        </linearGradient>
-      </defs>
-      {[0.25, 0.5, 0.75].map((g) => (
-        <line
-          key={g}
-          x1={pad.left}
-          x2={pad.left + iw}
-          y1={pad.top + g * ih}
-          y2={pad.top + g * ih}
-          stroke="#E6E8EC"
-          strokeWidth="1"
+    <div className="w-full" style={{ aspectRatio: `${w}/${h}` }}>
+      <svg
+        viewBox={`0 0 ${w} ${h}`}
+        className="w-full h-full"
+        preserveAspectRatio="xMidYMid meet"
+        role="img"
+        aria-label="Price versus demand trajectory"
+      >
+        <defs>
+          <linearGradient id="gxchart-area" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor="#005B97" stopOpacity="0.18" />
+            <stop offset="100%" stopColor="#005B97" stopOpacity="0" />
+          </linearGradient>
+        </defs>
+        {[0.25, 0.5, 0.75].map((g) => (
+          <line
+            key={g}
+            x1={pad.left}
+            x2={pad.left + iw}
+            y1={pad.top + g * ih}
+            y2={pad.top + g * ih}
+            stroke="#E6E8EC"
+            strokeWidth="1"
+          />
+        ))}
+        <motion.path
+          d={areaPath}
+          fill="url(#gxchart-area)"
+          initial={false}
+          animate={{ d: areaPath }}
+          transition={{ duration: 0.45, ease: "easeOut" }}
         />
-      ))}
-      <motion.path d={areaPath} fill="url(#gxarea)" initial={false} animate={{ d: areaPath }} transition={{ duration: 0.4 }} />
-      <motion.path
-        d={demandPath}
-        fill="none"
-        stroke="#9CA3AF"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        initial={false}
-        animate={{ d: demandPath }}
-        transition={{ duration: 0.4 }}
-      />
-      <motion.path
-        d={pricePath}
-        fill="none"
-        stroke="#005B97"
-        strokeWidth="2.4"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        initial={false}
-        animate={{ d: pricePath }}
-        transition={{ duration: 0.4 }}
-      />
-      <text x={pad.left} y={h - 5} fontSize="9" fill="#9CA3AF">Today</text>
-      <text x={pad.left + iw} y={h - 5} fontSize="9" fill="#9CA3AF" textAnchor="end">12 months</text>
-    </svg>
+        <motion.path
+          d={demandPath}
+          fill="none"
+          stroke="#9CA3AF"
+          strokeWidth="2.2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          initial={false}
+          animate={{ d: demandPath }}
+          transition={{ duration: 0.45, ease: "easeOut" }}
+        />
+        <motion.path
+          d={pricePath}
+          fill="none"
+          stroke="#005B97"
+          strokeWidth="2.6"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          initial={false}
+          animate={{ d: pricePath }}
+          transition={{ duration: 0.45, ease: "easeOut" }}
+        />
+        <text x={pad.left} y={h - 8} fontSize="10" fill="#9CA3AF">Today</text>
+        <text x={pad.left + iw} y={h - 8} fontSize="10" fill="#9CA3AF" textAnchor="end">12 months</text>
+      </svg>
+    </div>
   );
 }
 
