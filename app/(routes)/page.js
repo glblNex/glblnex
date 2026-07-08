@@ -13,6 +13,8 @@ import AlloyExposureSection from '../_components/AlloyExposureSection'
 import BenefitsSection from '../_components/BenefitsSection'
 import CoverageMarquee from '../_components/CoverageMarquee'
 import WhyGlobalNex from '../_components/WhyGlobalNex'
+import ShockMoment from '../_components/ShockMoment'
+import BusinessCase from '../_components/BusinessCase'
 import SectionHeading from '../_components/SectionHeading'
 import Reveal, { RevealGroup, RevealItem } from '../_components/Reveal'
 
@@ -140,14 +142,11 @@ export default function Home() {
             </RevealItem>
           ))}
         </RevealGroup>
-        <Reveal delay={0.1}>
-          <div className="mt-10 rounded-2xl bg-ink text-white p-8 lg:p-12 text-center">
-            <p className={`text-2xl lg:text-3xl font-light leading-snug max-w-3xl mx-auto ${urbanist.className}`}>
-              The cost of finding out too late is measured in stopped lines, blown budgets, and
-              margin you can never recover. globalNex puts that number in front of you first.
-            </p>
-          </div>
-        </Reveal>
+      </GxSection>
+
+      {/* The unanswerable question */}
+      <GxSection>
+        <ShockMoment />
       </GxSection>
 
       {/* Interactive demo */}
@@ -199,6 +198,11 @@ export default function Home() {
       {/* Why globalNex / differentiation */}
       <GxSection>
         <WhyGlobalNex />
+      </GxSection>
+
+      {/* Business case / ROI */}
+      <GxSection>
+        <BusinessCase />
       </GxSection>
 
       {/* Who benefits and how */}
