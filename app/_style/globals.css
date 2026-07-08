@@ -6,6 +6,10 @@
   color-scheme: light;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   color: #0A0A0A;
@@ -24,44 +28,61 @@ body {
 /* Subtle grid texture used behind hero / map mockups */
 .gx-grid {
   background-image:
-    linear-gradient(to right, rgba(10, 10, 10, 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(10, 10, 10, 0.05) 1px, transparent 1px);
-  background-size: 32px 32px;
+    linear-gradient(to right, rgba(10, 10, 10, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(10, 10, 10, 0.04) 1px, transparent 1px);
+  background-size: 34px 34px;
 }
 
 .gx-fade-mask {
-  -webkit-mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
-  mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 14%, #000 86%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 14%, #000 86%, transparent);
 }
 
+/* Coverage marquee: single, GPU-friendly transform loop */
 @keyframes gx-marquee {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(-50%, 0, 0); }
 }
 
 .gx-marquee-track {
-  animation: gx-marquee 32s linear infinite;
+  animation: gx-marquee 40s linear infinite;
+  will-change: transform;
 }
 
+/* Animated supply flow, applied only to the active arc */
 @keyframes gx-dash {
-  to { stroke-dashoffset: -1000; }
+  to { stroke-dashoffset: -400; }
 }
 
 .gx-flow {
-  stroke-dasharray: 6 10;
-  animation: gx-dash 18s linear infinite;
+  stroke-dasharray: 5 9;
+  animation: gx-dash 12s linear infinite;
 }
 
-@keyframes gx-pulse {
-  0% { transform: scale(1); opacity: 0.55; }
-  70% { transform: scale(2.4); opacity: 0; }
-  100% { transform: scale(2.4); opacity: 0; }
+/* Single ping for the active hotspot */
+@keyframes gx-ping {
+  0% { transform: scale(1); opacity: 0.5; }
+  75%, 100% { transform: scale(2.2); opacity: 0; }
 }
 
-.gx-hotspot-ring {
+.gx-ping {
   transform-origin: center;
   transform-box: fill-box;
-  animation: gx-pulse 2.6s ease-out infinite;
+  animation: gx-ping 2.8s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+/* Lightweight loading spinner (replaces heavy UI library) */
+@keyframes gx-spin {
+  to { transform: rotate(360deg); }
+}
+
+.gx-spinner {
+  width: 34px;
+  height: 34px;
+  border-radius: 9999px;
+  border: 3px solid #E6E8EC;
+  border-top-color: #005B97;
+  animation: gx-spin 0.8s linear infinite;
 }
 
 /* Range slider (scenario controls) */
@@ -94,4 +115,21 @@ input[type="range"].gx-range::-moz-range-thumb {
   background: #005B97;
   border: 2px solid #FFFFFF;
   cursor: pointer;
+}
+
+input[type="range"].gx-range:focus-visible {
+  box-shadow: 0 0 0 3px rgba(0, 91, 151, 0.2);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .gx-marquee-track,
+  .gx-flow,
+  .gx-ping,
+  .gx-spinner {
+    animation: none !important;
+  }
 }

@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useMemo } from "react";
-import { motion } from "motion/react";
 import {
   REGIONS,
   DESTINATION,
@@ -15,9 +14,9 @@ function arcPath(a, b) {
   const dist = Math.hypot(dx, dy) || 1;
   const nx = -dy / dist;
   const ny = dx / dist;
-  const curve = Math.min(130, dist * 0.32);
+  const curve = Math.min(120, dist * 0.3);
   const mx = (a.x + b.x) / 2 + nx * curve;
-  const my = (a.y + b.y) / 2 + ny * curve - 24;
+  const my = (a.y + b.y) / 2 + ny * curve - 20;
   return `M ${a.x} ${a.y} Q ${mx} ${my} ${b.x} ${b.y}`;
 }
 
@@ -27,17 +26,16 @@ function sourceNodes(alloy) {
   for (const m of alloyMetals(alloy)) {
     for (const [code, share] of m.meta.sources) {
       const weight = (m.pct / 100) * (share / 100);
-      const prev = map.get(code) || { code, weight: 0, conc: 0, metals: [] };
+      const prev = map.get(code) || { code, weight: 0, conc: 0 };
       prev.weight += weight;
       prev.conc = Math.max(prev.conc, m.conc);
-      if (!prev.metals.includes(m.meta.symbol)) prev.metals.push(m.meta.symbol);
       map.set(code, prev);
     }
   }
   return [...map.values()]
     .filter((n) => REGIONS[n.code])
     .sort((a, b) => b.weight - a.weight)
-    .slice(0, 8);
+    .slice(0, 7);
 }
 
 export default function GeoRiskMap({
@@ -54,11 +52,11 @@ export default function GeoRiskMap({
       viewBox="0 0 1000 500"
       className={`w-full h-auto ${className}`}
       role="img"
-      aria-label="Global metals supply-risk map"
+      aria-label="Global metals supply map"
     >
       <defs>
-        <pattern id="gxdots" width="22" height="22" patternUnits="userSpaceOnUse">
-          <circle cx="1.4" cy="1.4" r="1.4" fill="#0A0A0A" opacity="0.06" />
+        <pattern id="gxdots" width="24" height="24" patternUnits="userSpaceOnUse">
+          <circle cx="1.4" cy="1.4" r="1.4" fill="#0A0A0A" opacity="0.05" />
         </pattern>
         <radialGradient id="gxglow" cx="50%" cy="50%" r="50%">
           <stop offset="0%" stopColor="#005B97" stopOpacity="0.16" />
@@ -70,71 +68,77 @@ export default function GeoRiskMap({
       <rect x="0" y="0" width="1000" height="500" rx="18" fill="url(#gxdots)" />
       <rect x="0.5" y="0.5" width="999" height="499" rx="18" fill="none" stroke="#E6E8EC" />
 
-      {/* globe graticule to signal a world map */}
-      <g stroke="#0A0A0A" strokeOpacity="0.05" fill="none">
-        <ellipse cx="500" cy="250" rx="470" ry="220" />
-        <ellipse cx="500" cy="250" rx="330" ry="220" />
-        <ellipse cx="500" cy="250" rx="170" ry="220" />
+      {/* graticule to signal a world map */}
+      <g stroke="#0A0A0A" strokeOpacity="0.045" fill="none">
+        <ellipse cx="500" cy="250" rx="470" ry="215" />
+        <ellipse cx="500" cy="250" rx="320" ry="215" />
+        <ellipse cx="500" cy="250" rx="165" ry="215" />
         <line x1="30" y1="250" x2="970" y2="250" />
         <line x1="30" y1="150" x2="970" y2="150" />
         <line x1="30" y1="350" x2="970" y2="350" />
       </g>
 
-      {/* flow arcs from sources to destination */}
+      {/* base flow arcs (static) */}
       <g fill="none">
-        {nodes.map((n, i) => {
+        {nodes.map((n) => {
           const from = REGIONS[n.code];
           const isActive = activeRegion === n.code;
+          if (isActive) return null;
           return (
-            <motion.path
+            <path
               key={`arc-${n.code}`}
               d={arcPath(from, DESTINATION)}
-              stroke={isActive ? "#B00020" : "#005B97"}
-              strokeOpacity={isActive ? 0.85 : 0.4}
-              strokeWidth={isActive ? 2.4 : 1.3}
+              stroke="#005B97"
+              strokeOpacity="0.28"
+              strokeWidth="1.2"
+            />
+          );
+        })}
+        {/* active arc: highlighted + animated flow */}
+        {nodes.map((n) => {
+          const from = REGIONS[n.code];
+          const isActive = activeRegion === n.code;
+          if (!isActive) return null;
+          return (
+            <path
+              key={`arc-active-${n.code}`}
+              d={arcPath(from, DESTINATION)}
+              stroke="#B00020"
+              strokeOpacity="0.8"
+              strokeWidth="2.2"
               className="gx-flow"
-              initial={{ pathLength: 0, opacity: 0 }}
-              whileInView={{ pathLength: 1, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 1.1, delay: 0.15 * i }}
             />
           );
         })}
       </g>
 
       {/* source nodes */}
-      {nodes.map((n, i) => {
+      {nodes.map((n) => {
         const p = REGIONS[n.code];
         const isActive = activeRegion === n.code;
-        const r = 5 + (n.weight / maxW) * 9;
+        const r = 5 + (n.weight / maxW) * 8;
         const color = isActive ? "#B00020" : riskColor(n.conc);
         return (
-          <motion.g
-            key={`node-${n.code}`}
-            initial={{ opacity: 0, scale: 0.4 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.4, delay: 0.1 * i }}
-          >
+          <g key={`node-${n.code}`}>
             {isActive && (
-              <circle cx={p.x} cy={p.y} r={r} fill={color} className="gx-hotspot-ring" opacity="0.5" />
+              <circle cx={p.x} cy={p.y} r={r} fill={color} className="gx-ping" opacity="0.5" />
             )}
             <circle cx={p.x} cy={p.y} r={r + 6} fill="url(#gxglow)" />
             <circle cx={p.x} cy={p.y} r={r} fill={color} fillOpacity="0.9" stroke="#fff" strokeWidth="1.5" />
             {showLabels && (
               <text
                 x={p.x}
-                y={p.y - r - 6}
+                y={p.y - r - 7}
                 textAnchor="middle"
                 fontSize="13"
                 fontWeight="600"
                 fill="#0A0A0A"
-                fillOpacity="0.72"
+                fillOpacity="0.7"
               >
                 {p.name}
               </text>
             )}
-          </motion.g>
+          </g>
         );
       })}
 

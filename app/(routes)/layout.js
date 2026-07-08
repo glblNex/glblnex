@@ -4,12 +4,7 @@ import '../_style/globals.css'
 import { Suspense } from "react";
 import Loading from './loading';
 import { SpeedInsights } from "@vercel/speed-insights/next"
-import { Syne } from 'next/font/google'
-
-const syne = Syne({
-  subsets: ['latin'],
-  display: 'swap',
-})
+import { syne } from '../_style/fonts'
 
 const siteDescription =
   'globalNex is a metals scenario analysis platform. Decompose the alloys you buy, stress-test price and supply shocks, and quantify the impact on cost, availability, and margin.';
@@ -20,7 +15,7 @@ export const metadata = {
   metadataBase: new URL('https://glblnex.com'),
   title: {
     template: '%s | globalNex',
-    default: 'globalNex — Metals Scenario Analysis',
+    default: 'globalNex: Metals Scenario Analysis',
   },
   description: siteDescription,
   applicationName: 'globalNex',
@@ -59,8 +54,8 @@ export const metadata = {
   },
   manifest: '/icons/site.webmanifest',
   openGraph: {
-    title: 'globalNex — Metals Scenario Analysis',
-    description: 'Stress-test the exact alloys you buy. See what a price or supply shock does to cost, availability, and margin — in seconds.',
+    title: 'globalNex: Metals Scenario Analysis',
+    description: 'Stress-test the exact alloys you buy. See what a price or supply shock does to cost, availability, and margin in seconds.',
     url: 'https://glblnex.com/',
     siteName: 'globalNex',
     locale: 'en_US',
@@ -70,13 +65,13 @@ export const metadata = {
         url: ogImage,
         width: 1200,
         height: 630,
-        alt: 'globalNex — Metals Scenario Analysis',
+        alt: 'globalNex: Metals Scenario Analysis',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'globalNex — Metals Scenario Analysis',
+    title: 'globalNex: Metals Scenario Analysis',
     description: 'Stress-test the exact alloys you buy. Quantify cost, availability, and margin impact from price and supply shocks.',
     site: '@glblNex',
     creator: '@glblNex',

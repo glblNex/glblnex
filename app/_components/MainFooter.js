@@ -3,7 +3,7 @@
 import React from "react";
 import Link from 'next/link';
 import Image from 'next/image'
-import { SiLinkedin, SiX } from "react-icons/si";
+import { FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
 
 export default function MainFooter() {
     return (
@@ -48,8 +48,8 @@ export default function MainFooter() {
                         <Link className="hover:text-ink transition-colors" href="/use">Acceptable Use</Link>
                     </div>
                     <div className='flex flex-row justify-self-end max-md:justify-self-center text-ink'>
-                        <Link href="https://x.com/glblNex" target="_blank" className='ml-6 hover:text-highlight transition-colors'><SiX /></Link>
-                        <Link href="https://www.linkedin.com/company/glblnex/" target="_blank" className='ml-6 hover:text-highlight transition-colors'><SiLinkedin /></Link>
+                        <Link href="https://x.com/glblNex" target="_blank" aria-label="globalNex on X" className='ml-6 hover:text-highlight transition-colors'><FaXTwitter /></Link>
+                        <Link href="https://www.linkedin.com/company/glblnex/" target="_blank" aria-label="globalNex on LinkedIn" className='ml-6 hover:text-highlight transition-colors'><FaLinkedinIn /></Link>
                     </div>
                 </div>
             </div>

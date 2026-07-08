@@ -20,7 +20,7 @@ export default function AlloyExposureSection() {
             <button
               key={a.id}
               onClick={() => setAlloyId(a.id)}
-              className={`text-sm px-4 py-2 rounded-full border transition-all duration-300 ${
+              className={`text-sm px-4 py-2 rounded-full border transition-colors duration-200 ${
                 active
                   ? "bg-ink text-white border-ink"
                   : "bg-white text-ink border-line hover:border-ink"
@@ -32,14 +32,14 @@ export default function AlloyExposureSection() {
         })}
       </div>
 
-      <div className="grid lg:grid-cols-2 gap-10 items-start">
+      <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
         <div>
           <p className="text-xs uppercase tracking-wider text-highlight font-semibold mb-2">
             {alloy.name}
           </p>
-          <p className="text-light text-sm mb-6 max-w-md">
-            {alloy.use}. Each constituent metal carries its own price volatility and
-            supply-concentration exposure — invisible when you only watch spot commodities.
+          <p className="text-light text-sm leading-relaxed max-w-md">
+            {alloy.use}. Each constituent metal carries its own price volatility and supply
+            concentration. That exposure stays invisible when you only watch spot commodities.
           </p>
         </div>
         <AlloyBreakdown alloy={alloy} />

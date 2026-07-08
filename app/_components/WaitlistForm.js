@@ -1,12 +1,6 @@
 import { useState } from 'react';
-import { Urbanist } from 'next/font/google'
+import { urbanist } from '../_style/fonts'
 import MainButton from '../_components/MainButton'
-import SecondButton from '../_components/SecondButton'
-
-const urbanist = Urbanist({
-  subsets: ['latin'],
-  display: 'swap',
-})
 
 const INIT = 'INIT';
 const SUBMITTING = 'SUBMITTING';

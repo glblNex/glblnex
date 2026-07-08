@@ -1,6 +1,6 @@
 export const metadata = {
   title: 'Join the Waitlist',
-  description: 'Join the globalNex waitlist for early access to metals scenario analysis — stress-test the alloys you buy and quantify supply risk before disruption hits production.',
+  description: 'Join the globalNex waitlist for early access to metals scenario analysis. Stress-test the alloys you buy and quantify supply risk before disruption hits production.',
   alternates: {
     canonical: 'https://glblnex.com/started',
   },

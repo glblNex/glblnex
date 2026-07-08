@@ -2,7 +2,7 @@
 
 import React from 'react'
 import Link from 'next/link'
-import { Urbanist } from 'next/font/google'
+import { urbanist } from '../_style/fonts'
 import GxSection from '../_components/GxSection'
 import MainButton from '../_components/MainButton'
 import SecondButton from '../_components/SecondButton'
@@ -10,26 +10,40 @@ import CTABanner from '../_components/CTABanner'
 import DashboardMockup from '../_components/DashboardMockup'
 import ScenarioDemo from '../_components/ScenarioDemo'
 import AlloyExposureSection from '../_components/AlloyExposureSection'
-import Reveal from '../_components/Reveal'
+import SectionHeading from '../_components/SectionHeading'
+import Reveal, { RevealGroup, RevealItem } from '../_components/Reveal'
 import { COVERAGE } from '../_data/metals'
 
-const urbanist = Urbanist({
-  subsets: ['latin'],
-  display: 'swap',
-})
+const VALUE_ADDS = [
+  {
+    stat: "1 score",
+    title: "One clear risk number",
+    body: "Every alloy gets a single supply-risk score, so you know what to watch without reading ten dashboards.",
+  },
+  {
+    stat: "Seconds",
+    title: "Cost and margin impact fast",
+    body: "Model any price or supply shock and see the dollar impact on the exact grades you buy, instantly.",
+  },
+  {
+    stat: "100%",
+    title: "See hidden dependencies",
+    body: "We break each alloy into its metals and show where they come from, exposing single-country risk.",
+  },
+]
 
 const PROBLEMS = [
   {
     title: "Price volatility",
-    body: "Metal prices swing on macro shocks, tariffs, and energy costs. Buyers need to know what a 20% move does to the alloys they actually procure — not just the LME spot.",
+    body: "Metal prices swing on macro shocks, tariffs, and energy costs. You need to know what a 20% move does to the alloys you actually procure, not just the LME spot.",
   },
   {
     title: "Concentrated supply",
-    body: "Most metals are mined or refined in a handful of countries. Geopolitical events, export bans, and sanctions can cut supply before prices fully reflect the risk.",
+    body: "Most metals are mined or refined in a handful of countries. Export bans, sanctions, and outages can cut supply before prices reflect the risk.",
   },
   {
     title: "Alloy exposure is invisible",
-    body: "You buy 7075-T6 or Inconel 718 — not \"aluminum\" or \"nickel.\" Spot prices don't show how a shock propagates through your exact alloy composition.",
+    body: "You buy 7075-T6 or Inconel 718, not \"aluminum\" or \"nickel.\" Spot prices never show how a shock propagates through your exact alloy composition.",
   },
 ]
 
@@ -37,36 +51,36 @@ const STEPS = [
   {
     n: "01",
     title: "Select your metal",
-    body: "Start with the metal family you procure — aluminum, titanium, steel, copper, nickel, gold, and more.",
+    body: "Start with the metal family you procure: aluminum, titanium, steel, copper, nickel, gold, and more.",
   },
   {
     n: "02",
     title: "Choose the alloy grade",
-    body: "Pick the exact grade you buy — 7075-T6, Ti-6Al-4V, Inconel 718 — and see its constituent metals decomposed.",
+    body: "Pick the exact grade you buy, such as 7075-T6, Ti-6Al-4V, or Inconel 718, and see its metals decomposed.",
   },
   {
     n: "03",
     title: "Run a scenario",
-    body: "Stress-test price shocks, production cuts, export bans, or demand surges and see the impact on cost, availability, and margin.",
+    body: "Stress-test price shocks, production cuts, or export bans and see the impact on cost, availability, and margin.",
   },
 ]
 
-const AUDIENCES = [
+const BENEFITS = [
   {
-    title: "Aerospace",
-    body: "Titanium, nickel superalloys, and high-strength aluminum drive airframe and turbine programs. One supply shock can halt production lines.",
+    role: "Procurement & Sourcing",
+    outcome: "Know your true cost exposure before you sign a PO, and negotiate from data instead of guesswork.",
   },
   {
-    title: "Automotive & EV",
-    body: "Aluminum castings, copper busbar, and magnesium housings face tightening supply and rising exposure as volumes scale.",
+    role: "Supply Chain & Operations",
+    outcome: "Spot single-country dependencies early and line up backup sources before a disruption stops your line.",
   },
   {
-    title: "Electronics",
-    body: "Copper, gold bonding wire, and specialty alloys sit at the center of connector and PCB supply chains with hidden concentration risk.",
+    role: "Finance & Risk",
+    outcome: "Quantify at-risk spend and margin impact for budgeting, hedging, and board-level reporting.",
   },
   {
-    title: "Industrial & Defense",
-    body: "Steel, stainless, and specialty alloys power tooling, infrastructure, and defense programs where supply continuity is non-negotiable.",
+    role: "Engineering & Design",
+    outcome: "Compare alloy grades on supply risk, not just spec, and design around fragile inputs from day one.",
   },
 ]
 
@@ -81,12 +95,12 @@ export default function Home() {
               Metals scenario analysis
             </p>
             <h1 className={`text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-light leading-[1.08] text-ink ${urbanist.className}`}>
-              Stress-test the alloys you buy — before a shock hits your line
+              Know your metal risk before it costs you
             </h1>
             <p className={`mt-6 text-lg text-light font-light max-w-xl leading-relaxed ${urbanist.className}`}>
-              globalNex decomposes each alloy into its constituent metals, maps global supply
-              concentration, and runs what-if scenarios so procurement teams can quantify cost,
-              availability, and margin impact in seconds.
+              globalNex turns raw price and supply data into one number you can act on: exactly what
+              a price or supply shock does to the alloys you buy, and what it means for your cost and
+              margin.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Link href="/started">
@@ -98,39 +112,52 @@ export default function Home() {
             </div>
           </Reveal>
           <Reveal delay={0.15} className="relative">
-            <div className="absolute inset-0 gx-grid rounded-xl opacity-40 pointer-events-none" />
-            <DashboardMockup />
+            <div className="absolute -inset-4 gx-grid rounded-2xl opacity-40 pointer-events-none" />
+            <div className="relative">
+              <DashboardMockup />
+            </div>
           </Reveal>
         </div>
       </GxSection>
 
-      {/* Problem / value */}
+      {/* Value adds */}
+      <GxSection className="py-4">
+        <RevealGroup className="grid md:grid-cols-3 gap-6">
+          {VALUE_ADDS.map((v) => (
+            <RevealItem key={v.title}>
+              <div className="h-full rounded-xl border border-line bg-white p-6">
+                <p className={`text-3xl font-light text-highlight mb-3 ${urbanist.className}`}>{v.stat}</p>
+                <h3 className={`text-lg font-medium text-ink mb-2 ${urbanist.className}`}>{v.title}</h3>
+                <p className="text-light text-sm leading-relaxed">{v.body}</p>
+              </div>
+            </RevealItem>
+          ))}
+        </RevealGroup>
+      </GxSection>
+
+      {/* Problem */}
       <GxSection>
         <Reveal>
-          <div className="max-w-3xl">
-            <p className="text-xs uppercase tracking-[0.2em] text-highlight font-semibold mb-3">
-              The problem
-            </p>
-            <h2 className={`text-3xl lg:text-5xl font-light text-ink leading-tight ${urbanist.className}`}>
-              Spot prices tell you what happened. globalNex tells you what happens next.
-            </h2>
-          </div>
+          <SectionHeading
+            eyebrow="The problem"
+            title={<>Spot prices tell you what happened. globalNex tells you what happens next.</>}
+          />
         </Reveal>
-        <div className="grid md:grid-cols-3 gap-6 mt-12">
-          {PROBLEMS.map((p, i) => (
-            <Reveal key={p.title} delay={0.1 * i}>
-              <div className="h-full rounded-xl border border-line bg-white p-6 hover:border-highlight/30 transition-colors duration-300">
+        <RevealGroup className="grid md:grid-cols-3 gap-6 mt-12">
+          {PROBLEMS.map((p) => (
+            <RevealItem key={p.title}>
+              <div className="h-full rounded-xl border border-line bg-white p-6 hover:border-highlight/40 transition-colors duration-200">
                 <h3 className={`text-xl font-medium text-ink mb-3 ${urbanist.className}`}>{p.title}</h3>
                 <p className="text-light text-sm leading-relaxed">{p.body}</p>
               </div>
-            </Reveal>
+            </RevealItem>
           ))}
-        </div>
-        <Reveal delay={0.35}>
-          <div className="mt-10 rounded-xl bg-ink text-white p-8 lg:p-10">
-            <p className={`text-2xl lg:text-3xl font-light leading-snug max-w-3xl ${urbanist.className}`}>
+        </RevealGroup>
+        <Reveal delay={0.1}>
+          <div className="mt-10 rounded-2xl bg-ink text-white p-8 lg:p-12 text-center">
+            <p className={`text-2xl lg:text-3xl font-light leading-snug max-w-3xl mx-auto ${urbanist.className}`}>
               Stress-test the exact alloys you buy. See what a price or supply shock does to cost,
-              availability, and margin — in seconds.
+              availability, and margin in seconds.
             </p>
           </div>
         </Reveal>
@@ -139,46 +166,39 @@ export default function Home() {
       {/* How it works */}
       <GxSection>
         <Reveal>
-          <p className="text-xs uppercase tracking-[0.2em] text-highlight font-semibold mb-3">
-            How it works
-          </p>
-          <h2 className={`text-3xl lg:text-5xl font-light text-ink ${urbanist.className}`}>
-            Three steps from metal to decision
-          </h2>
+          <SectionHeading
+            eyebrow="How it works"
+            title="Three steps from metal to decision"
+            align="center"
+          />
         </Reveal>
-        <div className="grid md:grid-cols-3 gap-8 mt-12">
-          {STEPS.map((s, i) => (
-            <Reveal key={s.n} delay={0.1 * i}>
-              <div className="group">
-                <span className="text-5xl font-light text-line group-hover:text-highlight transition-colors duration-500">
+        <RevealGroup className="grid md:grid-cols-3 gap-8 lg:gap-10 mt-12">
+          {STEPS.map((s) => (
+            <RevealItem key={s.n}>
+              <div className="group h-full rounded-xl border border-line bg-white p-6">
+                <span className={`text-4xl font-light text-line group-hover:text-highlight transition-colors duration-300 ${urbanist.className}`}>
                   {s.n}
                 </span>
                 <h3 className={`mt-4 text-xl font-medium text-ink ${urbanist.className}`}>{s.title}</h3>
                 <p className="mt-2 text-light text-sm leading-relaxed">{s.body}</p>
-                <span className="block mt-4 max-w-0 group-hover:max-w-[40%] transition-all duration-500 h-0.5 bg-highlight" />
               </div>
-            </Reveal>
+            </RevealItem>
           ))}
-        </div>
+        </RevealGroup>
       </GxSection>
 
       {/* Interactive demo */}
       <GxSection id="demo">
         <Reveal>
-          <div className="text-center max-w-2xl mx-auto mb-10">
-            <p className="text-xs uppercase tracking-[0.2em] text-highlight font-semibold mb-3">
-              Live demo
-            </p>
-            <h2 className={`text-3xl lg:text-5xl font-light text-ink ${urbanist.className}`}>
-              What if aluminum goes up 20%?
-            </h2>
-            <p className="mt-4 text-light text-sm lg:text-base">
-              Adjust price and production shocks on any alloy grade. Watch cost, availability,
-              demand, and lead time react in real time.
-            </p>
-          </div>
+          <SectionHeading
+            eyebrow="Live demo"
+            title="What if aluminum goes up 20%?"
+            subtitle="Adjust price and production shocks on any alloy grade and watch cost, availability, demand, and lead time react in real time."
+            align="center"
+            className="mb-10"
+          />
         </Reveal>
-        <Reveal delay={0.1}>
+        <Reveal delay={0.05}>
           <ScenarioDemo />
         </Reveal>
       </GxSection>
@@ -186,60 +206,56 @@ export default function Home() {
       {/* Alloy decomposition */}
       <GxSection>
         <Reveal>
-          <div className="max-w-2xl mb-10">
-            <p className="text-xs uppercase tracking-[0.2em] text-highlight font-semibold mb-3">
-              Alloy decomposition
-            </p>
-            <h2 className={`text-3xl lg:text-5xl font-light text-ink ${urbanist.className}`}>
-              See what your alloys are really made of
-            </h2>
-            <p className="mt-4 text-light text-sm lg:text-base">
-              Pick Ti-6Al-4V or Inconel 718 and see each constituent metal&apos;s composition share,
-              price volatility, and exposure — the wedge nobody else gives you.
-            </p>
-          </div>
+          <SectionHeading
+            eyebrow="Alloy decomposition"
+            title="See what your alloys are really made of"
+            subtitle="Pick Ti-6Al-4V or Inconel 718 and see each constituent metal's composition share, price volatility, and exposure. This is the view nobody else gives you."
+            className="mb-10"
+          />
         </Reveal>
-        <Reveal delay={0.1}>
+        <Reveal delay={0.05}>
           <AlloyExposureSection />
         </Reveal>
       </GxSection>
 
-      {/* Who it's for */}
+      {/* Who benefits and how */}
       <GxSection>
         <Reveal>
-          <p className="text-xs uppercase tracking-[0.2em] text-highlight font-semibold mb-3">
-            Built for
-          </p>
-          <h2 className={`text-3xl lg:text-5xl font-light text-ink ${urbanist.className}`}>
-            Procurement teams under metals pressure
-          </h2>
+          <SectionHeading
+            eyebrow="Who benefits, and how"
+            title="Clear answers for every team touching metals"
+            align="center"
+          />
         </Reveal>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
-          {AUDIENCES.map((a, i) => (
-            <Reveal key={a.title} delay={0.08 * i}>
-              <div className="h-full rounded-xl border border-line p-6 hover:shadow-md transition-shadow duration-300">
-                <h3 className={`text-lg font-medium text-ink mb-2 ${urbanist.className}`}>{a.title}</h3>
-                <p className="text-light text-sm leading-relaxed">{a.body}</p>
+        <RevealGroup className="grid sm:grid-cols-2 gap-6 mt-12 max-w-4xl mx-auto">
+          {BENEFITS.map((b) => (
+            <RevealItem key={b.role}>
+              <div className="h-full rounded-xl border border-line bg-white p-6 flex flex-col gap-3">
+                <div className="flex items-center gap-3">
+                  <span className="h-8 w-1 rounded-full bg-highlight shrink-0" />
+                  <h3 className={`text-lg font-medium text-ink ${urbanist.className}`}>{b.role}</h3>
+                </div>
+                <p className="text-light text-sm leading-relaxed">{b.outcome}</p>
               </div>
-            </Reveal>
+            </RevealItem>
           ))}
-        </div>
+        </RevealGroup>
       </GxSection>
 
       {/* Coverage marquee */}
-      <section className="py-10 border-y border-line bg-bg2 overflow-hidden">
+      <section className="py-12 border-y border-line bg-bg2 overflow-hidden">
         <p className="text-center text-xs uppercase tracking-[0.2em] text-light font-medium mb-6">
-          Metals & alloys covered
+          Metals and alloys covered
         </p>
         <div className="gx-fade-mask overflow-hidden">
           <div className="gx-marquee-track flex whitespace-nowrap w-max">
             {[...COVERAGE, ...COVERAGE].map((m, i) => (
               <span
                 key={`${m}-${i}`}
-                className="mx-6 text-lg lg:text-xl font-light text-ink/70"
+                className={`flex items-center text-lg lg:text-xl font-light text-ink/70 ${urbanist.className}`}
               >
-                {m}
-                <span className="ml-6 text-highlight">·</span>
+                <span className="mx-6">{m}</span>
+                <span className="h-1.5 w-1.5 rounded-full bg-highlight/60" />
               </span>
             ))}
           </div>
