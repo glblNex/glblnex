@@ -12,39 +12,46 @@ import ScenarioDemo from '../_components/ScenarioDemo'
 import AlloyExposureSection from '../_components/AlloyExposureSection'
 import BenefitsSection from '../_components/BenefitsSection'
 import CoverageMarquee from '../_components/CoverageMarquee'
+import WhyGlobalNex from '../_components/WhyGlobalNex'
 import SectionHeading from '../_components/SectionHeading'
 import Reveal, { RevealGroup, RevealItem } from '../_components/Reveal'
 
+const HERO_PROOF = [
+  { value: "Seconds", label: "to model any price or supply shock" },
+  { value: "Alloy-grade", label: "exposure, not just spot commodity" },
+  { value: "Board-ready", label: "risk in one score and dollar figure" },
+]
+
 const VALUE_ADDS = [
   {
-    stat: "1 score",
-    title: "One clear risk number",
-    body: "Every alloy gets a single supply-risk score, so you know what to watch without reading ten dashboards.",
+    stat: "Minutes",
+    title: "Decisions in minutes, not weeks",
+    body: "Replace slow analyst spreadsheets with instant scenario modeling on the exact grades you buy, so leadership can act while it still matters.",
   },
   {
-    stat: "Seconds",
-    title: "Cost and margin impact fast",
-    body: "Model any price or supply shock and see the dollar impact on the exact grades you buy, instantly.",
+    stat: "Margin",
+    title: "Margin you can defend",
+    body: "Quantify at-risk spend and the margin hit from any price or supply shock before it reaches the P&L, and take it to the board with numbers.",
   },
   {
-    stat: "100%",
-    title: "See hidden dependencies",
-    body: "We break each alloy into its metals and show where they come from, exposing single-country risk.",
+    stat: "Zero",
+    title: "Zero blind spots",
+    body: "Expose the single-country dependencies hidden inside every alloy you buy, so a sanction or export ban never surprises your operation.",
   },
 ]
 
 const PROBLEMS = [
   {
-    title: "Price volatility",
-    body: "Metal prices swing on macro shocks, tariffs, and energy costs. You need to know what a 20% move does to the alloys you actually procure, not just the LME spot.",
+    title: "Geopolitics is rewriting supply",
+    body: "Tariffs, export controls, and sanctions are concentrating critical metals in fewer hands each year. The exposure sitting in your bill of materials is growing, whether you measure it or not.",
   },
   {
-    title: "Concentrated supply",
-    body: "Most metals are mined or refined in a handful of countries. Export bans, sanctions, and outages can cut supply before prices reflect the risk.",
+    title: "One shock cascades to your margin",
+    body: "A single metal move ripples through your alloys into unit cost, availability, and gross margin. By the time it shows up in the P&L, your options are already gone.",
   },
   {
-    title: "Alloy exposure is invisible",
-    body: "You buy 7075-T6 or Inconel 718, not \"aluminum\" or \"nickel.\" Spot prices never show how a shock propagates through your exact alloy composition.",
+    title: "Your current tools are reactive",
+    body: "Price terminals and spreadsheets tell you what already happened. They cannot tell you what a shock does to 7075-T6 or Inconel 718, or what it costs you specifically.",
   },
 ]
 
@@ -74,15 +81,15 @@ export default function Home() {
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <Reveal>
             <p className="text-xs uppercase tracking-[0.2em] text-highlight font-semibold mb-3">
-              Metals scenario analysis
+              Material risk intelligence for manufacturers
             </p>
             <h1 className={`text-4xl sm:text-5xl lg:text-6xl font-light leading-[1.08] text-ink ${urbanist.className}`}>
-              Know your metal risk before it costs you
+              Protect your margins from supply shocks you do not control
             </h1>
             <p className={`mt-5 text-base lg:text-lg text-light font-light max-w-xl leading-relaxed ${urbanist.className}`}>
-              globalNex turns raw price and supply data into one number you can act on: exactly what
-              a price or supply shock does to the alloys you buy, and what it means for your cost and
-              margin.
+              globalNex turns metal price and supply data into a decision your leadership can make
+              today: exactly what a shock does to the alloys you buy, and what it costs you in margin,
+              spend, and continuity. In seconds, not weeks.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
               <Link href="/started">
@@ -92,6 +99,16 @@ export default function Home() {
                 <SecondButton btn_txt="See how it works" />
               </a>
             </div>
+            <dl className="mt-8 grid grid-cols-3 gap-4 max-w-xl border-t border-line pt-6">
+              {HERO_PROOF.map((p) => (
+                <div key={p.value}>
+                  <dt className={`text-lg lg:text-xl font-medium text-highlight ${urbanist.className}`}>
+                    {p.value}
+                  </dt>
+                  <dd className="mt-1 text-xs text-light leading-snug">{p.label}</dd>
+                </div>
+              ))}
+            </dl>
           </Reveal>
           <div className="relative">
             <DashboardMockup />
@@ -118,8 +135,8 @@ export default function Home() {
       <GxSection>
         <Reveal>
           <SectionHeading
-            eyebrow="The problem"
-            title={<>Spot prices tell you what happened. globalNex tells you what happens next.</>}
+            eyebrow="Why this matters now"
+            title={<>The exposure is growing, and the tools you have cannot see it.</>}
           />
         </Reveal>
         <RevealGroup className="grid md:grid-cols-3 gap-5 mt-8">
@@ -135,8 +152,8 @@ export default function Home() {
         <Reveal delay={0.1}>
           <div className="mt-10 rounded-2xl bg-ink text-white p-8 lg:p-12 text-center">
             <p className={`text-2xl lg:text-3xl font-light leading-snug max-w-3xl mx-auto ${urbanist.className}`}>
-              Stress-test the exact alloys you buy. See what a price or supply shock does to cost,
-              availability, and margin in seconds.
+              The cost of finding out too late is measured in stopped lines, blown budgets, and
+              margin you can never recover. globalNex puts that number in front of you first.
             </p>
           </div>
         </Reveal>
@@ -195,6 +212,11 @@ export default function Home() {
         <Reveal delay={0.05}>
           <AlloyExposureSection />
         </Reveal>
+      </GxSection>
+
+      {/* Why globalNex / differentiation */}
+      <GxSection>
+        <WhyGlobalNex />
       </GxSection>
 
       {/* Who benefits and how */}
