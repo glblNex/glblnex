@@ -2,13 +2,11 @@
 
 import React, { useMemo, useState } from "react";
 import { motion } from "motion/react";
-import GeoRiskMap from "./GeoRiskMap";
 import {
   ALLOY_GROUPS,
-  SCENARIOS,
   getAlloy,
-  getScenario,
-  computeImpact,
+  computeScenarioImpact,
+  demandPriceSeries,
 } from "../_data/metals";
 
 function KpiCard({ label, value, sub, tone = "ink", progress }) {
@@ -34,72 +32,83 @@ function KpiCard({ label, value, sub, tone = "ink", progress }) {
   );
 }
 
-function Trendline({ impact }) {
-  const points = useMemo(() => {
-    const n = 24;
-    const amp = impact.costImpactPct / 100;
-    const arr = [];
-    for (let i = 0; i < n; i++) {
-      const t = i / (n - 1);
-      const ramp = 1 / (1 + Math.exp(-(t - 0.45) * 10));
-      const wobble = Math.sin(t * 9) * 0.02;
-      const y = 0.72 - (ramp * amp * 1.6 + wobble) ;
-      arr.push([t * 300, Math.max(6, Math.min(92, y * 100))]);
-    }
-    return arr;
-  }, [impact.costImpactPct]);
+function DemandPriceChart({ series }) {
+  const w = 300;
+  const h = 100;
+  const toPath = (key) =>
+    series
+      .map((p, i) => {
+        const x = p.t * w;
+        const y = (1 - p[key]) * h;
+        return `${i === 0 ? "M" : "L"} ${x.toFixed(1)} ${y.toFixed(1)}`;
+      })
+      .join(" ");
 
-  const d = points.map(([x, y], i) => `${i === 0 ? "M" : "L"} ${x.toFixed(1)} ${y.toFixed(1)}`).join(" ");
-  const area = `${d} L 300 100 L 0 100 Z`;
+  const pricePath = toPath("price");
+  const demandPath = toPath("demand");
 
   return (
-    <svg viewBox="0 0 300 100" className="w-full h-24" preserveAspectRatio="none">
-      <defs>
-        <linearGradient id="gxtrend" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor="#005B97" stopOpacity="0.18" />
-          <stop offset="100%" stopColor="#005B97" stopOpacity="0" />
-        </linearGradient>
-      </defs>
-      <line x1="0" y1="28" x2="300" y2="28" stroke="#E6E8EC" strokeWidth="0.6" strokeDasharray="3 4" />
-      <motion.path d={area} fill="url(#gxtrend)" initial={false} animate={{ d: area }} transition={{ duration: 0.6 }} />
+    <svg viewBox={`0 0 ${w} ${h}`} className="w-full h-28" preserveAspectRatio="none">
+      <line x1="0" y1={h * 0.5} x2={w} y2={h * 0.5} stroke="#E6E8EC" strokeWidth="0.6" strokeDasharray="3 4" />
       <motion.path
-        d={d}
+        d={demandPath}
+        fill="none"
+        stroke="#0A0A0A"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeOpacity="0.35"
+        initial={false}
+        animate={{ d: demandPath }}
+        transition={{ duration: 0.5 }}
+      />
+      <motion.path
+        d={pricePath}
         fill="none"
         stroke="#005B97"
         strokeWidth="2"
         strokeLinecap="round"
         initial={false}
-        animate={{ d }}
-        transition={{ duration: 0.6 }}
+        animate={{ d: pricePath }}
+        transition={{ duration: 0.5 }}
       />
+      <g fontSize="10" fill="#6B7280">
+        <circle cx="8" cy="10" r="3" fill="#005B97" />
+        <text x="16" y="13">Price index</text>
+        <circle cx="88" cy="10" r="3" fill="#0A0A0A" fillOpacity="0.35" />
+        <text x="96" y="13">Global demand</text>
+      </g>
     </svg>
   );
 }
 
 export default function ScenarioDemo() {
-  const [alloyId, setAlloyId] = useState("ti-6al4v");
-  const [scenarioId, setScenarioId] = useState("cn-ti");
-  const [severity, setSeverity] = useState(0.55);
+  const [alloyId, setAlloyId] = useState("al-7075");
+  const [priceShock, setPriceShock] = useState(20);
+  const [productionChange, setProductionChange] = useState(-50);
 
   const alloy = getAlloy(alloyId);
-  const scenario = getScenario(scenarioId);
-  const impact = useMemo(() => computeImpact(alloy, scenario, severity), [alloy, scenario, severity]);
+  const impact = useMemo(
+    () => computeScenarioImpact(alloy, priceShock, productionChange),
+    [alloy, priceShock, productionChange]
+  );
+  const series = useMemo(
+    () => demandPriceSeries(priceShock, productionChange, impact.weightedVol),
+    [priceShock, productionChange, impact.weightedVol]
+  );
 
   return (
     <div className="rounded-xl border border-line bg-white shadow-[0_20px_60px_-30px_rgba(10,10,10,0.35)] overflow-hidden">
-      {/* window chrome */}
       <div className="flex items-center gap-2 px-4 py-3 border-b border-line bg-bg2">
         <span className="h-2.5 w-2.5 rounded-full bg-line" />
         <span className="h-2.5 w-2.5 rounded-full bg-line" />
         <span className="h-2.5 w-2.5 rounded-full bg-line" />
-        <span className="ml-3 text-xs font-medium text-light">globalnex · Geo-Risk Studio</span>
+        <span className="ml-3 text-xs font-medium text-light">globalNex · Scenario Studio</span>
         <span className="ml-auto text-[10px] font-semibold uppercase tracking-wider text-highlight bg-highlightSoft px-2 py-0.5 rounded">
           Live demo
         </span>
       </div>
 
       <div className="grid lg:grid-cols-[300px_1fr]">
-        {/* controls */}
         <div className="p-5 border-b lg:border-b-0 lg:border-r border-line bg-white">
           <label className="block text-xs font-medium text-light mb-1.5">Alloy grade</label>
           <select
@@ -117,52 +126,63 @@ export default function ScenarioDemo() {
           </select>
           <p className="mt-1.5 text-xs text-light">{alloy.use}</p>
 
-          <label className="block text-xs font-medium text-light mb-1.5 mt-5">Geo-shock scenario</label>
-          <select
-            value={scenarioId}
-            onChange={(e) => setScenarioId(e.target.value)}
-            className="w-full rounded-md border border-line bg-white text-ink text-sm px-3 py-2.5 focus:outline-none focus:border-highlight focus:ring-2 focus:ring-highlight/20"
-          >
-            {SCENARIOS.map((s) => (
-              <option key={s.id} value={s.id}>{s.label}</option>
-            ))}
-          </select>
-          <p className="mt-1.5 text-xs text-light">{scenario.kind}</p>
-
-          <div className="mt-5">
+          <div className="mt-6">
             <div className="flex items-center justify-between mb-2">
-              <label className="text-xs font-medium text-light">Shock severity</label>
-              <span className="text-xs font-semibold text-ink tabular-nums">{Math.round(severity * 100)}%</span>
+              <label className="text-xs font-medium text-light">Price shock</label>
+              <span className="text-xs font-semibold text-ink tabular-nums">
+                {priceShock >= 0 ? "+" : ""}{priceShock}%
+              </span>
             </div>
             <input
               type="range"
-              min="0"
-              max="1"
-              step="0.01"
-              value={severity}
-              onChange={(e) => setSeverity(parseFloat(e.target.value))}
+              min="-10"
+              max="50"
+              step="1"
+              value={priceShock}
+              onChange={(e) => setPriceShock(parseInt(e.target.value, 10))}
               className="gx-range"
             />
+            <p className="mt-1 text-[11px] text-light">What if the metal price moves?</p>
+          </div>
+
+          <div className="mt-5">
+            <div className="flex items-center justify-between mb-2">
+              <label className="text-xs font-medium text-light">Production change</label>
+              <span className="text-xs font-semibold text-ink tabular-nums">
+                {productionChange >= 0 ? "+" : ""}{productionChange}%
+              </span>
+            </div>
+            <input
+              type="range"
+              min="-70"
+              max="20"
+              step="1"
+              value={productionChange}
+              onChange={(e) => setProductionChange(parseInt(e.target.value, 10))}
+              className="gx-range"
+            />
+            <p className="mt-1 text-[11px] text-light">What if global production shifts?</p>
           </div>
 
           <div className="mt-5 rounded-lg border border-line bg-bg2 p-3">
-            <p className="text-xs text-light">Overall supply-risk</p>
-            <p className="text-lg font-semibold text-error">{impact.risk.label}</p>
+            <p className="text-xs text-light">Scenario risk level</p>
+            <p className={`text-lg font-semibold ${impact.risk.token === "error" ? "text-error" : impact.risk.token === "warning" ? "text-warning" : "text-success"}`}>
+              {impact.risk.label}
+            </p>
             <p className="text-xs text-light mt-1">
-              {impact.affected.length
-                ? `Exposed inputs: ${impact.affected.map((a) => a.name).join(", ")}`
-                : "No direct exposure for this alloy."}
+              Annual spend baseline: ${alloy.annualSpend}M
             </p>
           </div>
         </div>
 
-        {/* map + kpis */}
         <div className="p-5">
-          <div className="rounded-lg border border-line overflow-hidden">
-            <GeoRiskMap alloy={alloy} activeRegion={scenario.region} />
-          </div>
-
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mt-4">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
+            <KpiCard
+              label="Est. cost impact"
+              value={`+${impact.costImpactPct.toFixed(1)}%`}
+              tone="highlight"
+              progress={Math.min(1, impact.costImpactPct / 40)}
+            />
             <KpiCard
               label="At-risk spend"
               value={`$${impact.atRiskSpend.toFixed(1)}M`}
@@ -170,30 +190,39 @@ export default function ScenarioDemo() {
               progress={Math.min(1, impact.atRiskSpend / alloy.annualSpend)}
             />
             <KpiCard
-              label="Supply availability"
-              value={`−${Math.round(impact.availabilityDrop * 100)}%`}
+              label="Margin hit"
+              value={`−${impact.marginHitPts.toFixed(1)} pts`}
               tone="risk"
-              progress={impact.availabilityDrop}
+              progress={Math.min(1, impact.marginHitPts / 8)}
             />
             <KpiCard
-              label="Lead-time added"
+              label="Lead-time change"
               value={`+${impact.leadTimeWeeks.toFixed(1)} wks`}
               sub="vs. baseline"
             />
-            <KpiCard
-              label="Est. cost impact"
-              value={`+${impact.costImpactPct.toFixed(1)}%`}
-              tone="highlight"
-              sub={`≈ ${impact.marginHitPts.toFixed(1)} pts margin`}
-            />
+          </div>
+
+          <div className="mt-4 grid sm:grid-cols-2 gap-3">
+            <div className="rounded-lg border border-line p-4">
+              <p className="text-xs text-light">Supply availability</p>
+              <p className="text-xl font-semibold text-error tabular-nums">
+                −{Math.round(impact.availabilityDrop * 100)}%
+              </p>
+            </div>
+            <div className="rounded-lg border border-line p-4">
+              <p className="text-xs text-light">Global demand impact</p>
+              <p className="text-xl font-semibold text-ink tabular-nums">
+                −{Math.round(impact.demandDrop * 100)}%
+              </p>
+            </div>
           </div>
 
           <div className="mt-4 rounded-lg border border-line p-4">
-            <div className="flex items-center justify-between mb-1">
-              <p className="text-xs font-medium text-ink">Projected unit-cost trajectory</p>
-              <p className="text-[11px] text-light">next 12 months (illustrative)</p>
+            <div className="flex items-center justify-between mb-2">
+              <p className="text-xs font-medium text-ink">Price vs. demand trajectory</p>
+              <p className="text-[11px] text-light">illustrative · next 12 months</p>
             </div>
-            <Trendline impact={impact} />
+            <DemandPriceChart series={series} />
           </div>
         </div>
       </div>

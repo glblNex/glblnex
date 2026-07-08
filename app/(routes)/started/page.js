@@ -19,11 +19,11 @@ export default function StartedPage() {
                             Early access
                         </p>
                         <h1 className={`lg:max-w-[75%] text-4xl lg:text-5xl font-light text-ink ${urbanist.className}`}>
-                            Join the globalnex waitlist
+                            Join the globalNex waitlist
                         </h1>
                         <h2 className={`lg:max-w-[65%] text-base lg:text-lg text-light font-light leading-relaxed ${urbanist.className}`}>
-                            Be first to access the metals geo-risk analyzer — map global supply,
-                            stress-test geo-shocks on your alloys, and quantify exposure before
+                            Be first to access metals scenario analysis — decompose the alloys you
+                            buy, stress-test price and supply shocks, and quantify exposure before
                             disruption hits production.
                         </h2>
                     </div>

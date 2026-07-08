@@ -3,17 +3,16 @@
 import React from "react";
 import { motion } from "motion/react";
 import GeoRiskMap from "./GeoRiskMap";
-import { getAlloy, getScenario, computeImpact } from "../_data/metals";
+import { getAlloy, computeScenarioImpact } from "../_data/metals";
 
 export default function DashboardMockup() {
-  const alloy = getAlloy("ti-6al4v");
-  const scenario = getScenario("cn-ti");
-  const impact = computeImpact(alloy, scenario, scenario.severity);
+  const alloy = getAlloy("al-7075");
+  const impact = computeScenarioImpact(alloy, 20, -50);
 
   const kpis = [
+    { label: "Cost impact", value: `+${impact.costImpactPct.toFixed(1)}%`, tone: "text-highlight" },
     { label: "At-risk spend", value: `$${impact.atRiskSpend.toFixed(1)}M`, tone: "text-error" },
     { label: "Availability", value: `−${Math.round(impact.availabilityDrop * 100)}%`, tone: "text-error" },
-    { label: "Cost impact", value: `+${impact.costImpactPct.toFixed(1)}%`, tone: "text-highlight" },
   ];
 
   return (
@@ -27,7 +26,7 @@ export default function DashboardMockup() {
         <span className="h-2.5 w-2.5 rounded-full bg-line" />
         <span className="h-2.5 w-2.5 rounded-full bg-line" />
         <span className="h-2.5 w-2.5 rounded-full bg-line" />
-        <span className="ml-3 text-xs font-medium text-light">globalnex · Supply-Risk Map</span>
+        <span className="ml-3 text-xs font-medium text-light">globalNex · Scenario Analysis</span>
         <span className="ml-auto text-[10px] font-semibold px-2 py-0.5 rounded bg-highlightSoft text-highlight">
           {alloy.name}
         </span>
@@ -35,12 +34,12 @@ export default function DashboardMockup() {
 
       <div className="grid md:grid-cols-[1fr_190px]">
         <div className="p-4 md:border-r border-line">
-          <GeoRiskMap alloy={alloy} activeRegion={scenario.region} />
+          <GeoRiskMap alloy={alloy} activeRegion="CN" />
         </div>
         <div className="p-4 flex flex-col gap-3 border-t md:border-t-0 border-line">
           <div className="rounded-lg border border-line bg-bg2 p-3">
             <p className="text-[11px] text-light">Scenario</p>
-            <p className="text-sm font-medium text-ink leading-snug mt-0.5">{scenario.label}</p>
+            <p className="text-sm font-medium text-ink leading-snug mt-0.5">Price +20% · Production −50%</p>
           </div>
           {kpis.map((k, i) => (
             <motion.div
@@ -55,7 +54,7 @@ export default function DashboardMockup() {
             </motion.div>
           ))}
           <div className="rounded-lg bg-ink text-white p-3">
-            <p className="text-[11px] text-white/60">Overall risk</p>
+            <p className="text-[11px] text-white/60">Risk level</p>
             <p className="text-lg font-semibold">{impact.risk.label}</p>
           </div>
         </div>

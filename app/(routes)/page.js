@@ -20,16 +20,16 @@ const urbanist = Urbanist({
 
 const PROBLEMS = [
   {
-    title: "Supply is concentrated",
-    body: "Most metals are mined or refined in a handful of countries. A single policy shift can cut off a critical input overnight.",
+    title: "Price volatility",
+    body: "Metal prices swing on macro shocks, tariffs, and energy costs. Buyers need to know what a 20% move does to the alloys they actually procure — not just the LME spot.",
   },
   {
-    title: "Movement has chokepoints",
-    body: "Shipping lanes, export controls, and logistics disruptions ripple through global supply chains long before spot prices move.",
+    title: "Concentrated supply",
+    body: "Most metals are mined or refined in a handful of countries. Geopolitical events, export bans, and sanctions can cut supply before prices fully reflect the risk.",
   },
   {
     title: "Alloy exposure is invisible",
-    body: "You buy 7075-T6 or Inconel 718 — not \"aluminum\" or \"nickel.\" Spot prices don't show where your real risk lives.",
+    body: "You buy 7075-T6 or Inconel 718 — not \"aluminum\" or \"nickel.\" Spot prices don't show how a shock propagates through your exact alloy composition.",
   },
 ]
 
@@ -46,8 +46,8 @@ const STEPS = [
   },
   {
     n: "03",
-    title: "Run a geo-shock",
-    body: "Stress-test export bans, mine outages, sanctions, or price spikes and watch supply risk move across the map.",
+    title: "Run a scenario",
+    body: "Stress-test price shocks, production cuts, export bans, or demand surges and see the impact on cost, availability, and margin.",
   },
 ]
 
@@ -58,7 +58,7 @@ const AUDIENCES = [
   },
   {
     title: "Automotive & EV",
-    body: "Aluminum castings, copper busbar, and magnesium housings face tightening supply and rising geo-exposure as volumes scale.",
+    body: "Aluminum castings, copper busbar, and magnesium housings face tightening supply and rising exposure as volumes scale.",
   },
   {
     title: "Electronics",
@@ -78,22 +78,22 @@ export default function Home() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <Reveal>
             <p className="text-xs uppercase tracking-[0.2em] text-highlight font-semibold mb-4">
-              Metals geo-risk analyzer
+              Metals scenario analysis
             </p>
             <h1 className={`text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-light leading-[1.08] text-ink ${urbanist.className}`}>
-              See where your metals come from — before a shock hits your line
+              Stress-test the alloys you buy — before a shock hits your line
             </h1>
             <p className={`mt-6 text-lg text-light font-light max-w-xl leading-relaxed ${urbanist.className}`}>
-              globalnex maps global supply, movement, and concentration risk for the alloys
-              manufacturers buy — then stress-tests geo-shocks so procurement teams can act before
-              disruption becomes downtime.
+              globalNex decomposes each alloy into its constituent metals, maps global supply
+              concentration, and runs what-if scenarios so procurement teams can quantify cost,
+              availability, and margin impact in seconds.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Link href="/started">
                 <MainButton btn_txt="Join Waitlist" />
               </Link>
               <a href="#demo">
-                <SecondButton btn_txt="See it in action" />
+                <SecondButton btn_txt="See how it works" />
               </a>
             </div>
           </Reveal>
@@ -112,7 +112,7 @@ export default function Home() {
               The problem
             </p>
             <h2 className={`text-3xl lg:text-5xl font-light text-ink leading-tight ${urbanist.className}`}>
-              Global trade data tells you what moved. globalnex tells you what breaks.
+              Spot prices tell you what happened. globalNex tells you what happens next.
             </h2>
           </div>
         </Reveal>
@@ -129,8 +129,8 @@ export default function Home() {
         <Reveal delay={0.35}>
           <div className="mt-10 rounded-xl bg-ink text-white p-8 lg:p-10">
             <p className={`text-2xl lg:text-3xl font-light leading-snug max-w-3xl ${urbanist.className}`}>
-              Stress-test the exact alloys you buy. Quantify at-risk spend, availability, lead time,
-              and cost impact — in seconds.
+              Stress-test the exact alloys you buy. See what a price or supply shock does to cost,
+              availability, and margin — in seconds.
             </p>
           </div>
         </Reveal>
@@ -170,11 +170,11 @@ export default function Home() {
               Live demo
             </p>
             <h2 className={`text-3xl lg:text-5xl font-light text-ink ${urbanist.className}`}>
-              Run a geo-shock on any alloy
+              What if aluminum goes up 20%?
             </h2>
             <p className="mt-4 text-light text-sm lg:text-base">
-              Pick an alloy and a scenario — export controls, mine outage, sanctions — and watch
-              supply risk propagate across the map.
+              Adjust price and production shocks on any alloy grade. Watch cost, availability,
+              demand, and lead time react in real time.
             </p>
           </div>
         </Reveal>
@@ -183,19 +183,19 @@ export default function Home() {
         </Reveal>
       </GxSection>
 
-      {/* Alloy exposure */}
+      {/* Alloy decomposition */}
       <GxSection>
         <Reveal>
           <div className="max-w-2xl mb-10">
             <p className="text-xs uppercase tracking-[0.2em] text-highlight font-semibold mb-3">
-              Alloy → geography
+              Alloy decomposition
             </p>
             <h2 className={`text-3xl lg:text-5xl font-light text-ink ${urbanist.className}`}>
-              Every alloy decomposed to its source countries
+              See what your alloys are really made of
             </h2>
             <p className="mt-4 text-light text-sm lg:text-base">
-              See which metals drive your exposure and where they concentrate — the view spot
-              prices and trade dashboards never give you.
+              Pick Ti-6Al-4V or Inconel 718 and see each constituent metal&apos;s composition share,
+              price volatility, and exposure — the wedge nobody else gives you.
             </p>
           </div>
         </Reveal>

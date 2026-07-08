@@ -27,7 +27,8 @@ export default function MainFooter() {
                     </div>
                     <div className='col-span-3 max-md:hidden'>
                         <p className='text-light max-w-md text-sm leading-relaxed'>
-                            Geo-risk analytics for the metals and alloys manufacturers depend on. Map global supply, spot concentration, and stress-test shocks before they hit your line.
+                            Metals scenario analysis for the alloys manufacturers depend on. Decompose
+                            composition, stress-test shocks, and quantify cost and availability impact.
                         </p>
                     </div>
                     <div className='max-md:hidden'></div>
@@ -35,7 +36,7 @@ export default function MainFooter() {
                 </div>
                 <div className='mt-14 grid grid-cols-3 max-md:grid-cols-1 gap-x-6 max-md:gap-y-6 items-end text-light text-sm'>
                     <div className='justify-self-center text-center md:justify-self-start md:text-left'>
-                        <p>© 2026 globalnex. All rights reserved.</p>
+                        <p>© 2026 globalNex. All rights reserved.</p>
                     </div>
                     <div className='justify-self-center'>
                         <Link className="hover:text-ink transition-colors" href="/terms">Terms</Link>

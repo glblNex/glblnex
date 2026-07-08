@@ -1,4 +1,4 @@
-// Illustrative mockup dataset for the globalnex metals geo-risk analyzer.
+// Illustrative mockup dataset for the globalNex metals scenario analyzer.
 // All figures are simplified approximations used to power the marketing
 // mockups and the interactive demo. They are NOT live market data.
 
@@ -25,22 +25,22 @@ export const REGIONS = {
 export const DESTINATION = { name: "Your facility", x: 500, y: 128 };
 
 // Metals: refined-production / supply concentration by country (share %).
-// basePrice is an illustrative USD/tonne index used for exposure weighting.
+// basePrice is an illustrative USD/tonne index; volatility is annualized (0..1).
 export const METALS = {
-  aluminum: { name: "Aluminum", symbol: "Al", basePrice: 2400, sources: [["CN", 59], ["IN", 6], ["RU", 5], ["CA", 5]] },
-  iron: { name: "Steel (iron)", symbol: "Fe", basePrice: 800, sources: [["CN", 54], ["IN", 7], ["JP", 5], ["RU", 4], ["US", 4]] },
-  titanium: { name: "Titanium", symbol: "Ti", basePrice: 12000, sources: [["CN", 57], ["JP", 17], ["RU", 13], ["KZ", 7]] },
-  copper: { name: "Copper", symbol: "Cu", basePrice: 9000, sources: [["CN", 42], ["CL", 9], ["CD", 8], ["JP", 6]] },
-  nickel: { name: "Nickel", symbol: "Ni", basePrice: 18000, sources: [["ID", 50], ["CN", 15], ["PH", 11], ["RU", 9]] },
-  gold: { name: "Gold", symbol: "Au", basePrice: 62000000, sources: [["CN", 10], ["RU", 9], ["AU", 9], ["US", 6], ["CA", 5]] },
-  zinc: { name: "Zinc", symbol: "Zn", basePrice: 2700, sources: [["CN", 33], ["IN", 8], ["KZ", 6], ["AU", 5]] },
-  magnesium: { name: "Magnesium", symbol: "Mg", basePrice: 3000, sources: [["CN", 88], ["RU", 4], ["US", 3]] },
-  vanadium: { name: "Vanadium", symbol: "V", basePrice: 30000, sources: [["CN", 65], ["RU", 18], ["ZA", 8]] },
-  chromium: { name: "Chromium", symbol: "Cr", basePrice: 9500, sources: [["ZA", 43], ["KZ", 26], ["IN", 12]] },
-  niobium: { name: "Niobium", symbol: "Nb", basePrice: 45000, sources: [["BR", 88], ["CA", 10]] },
-  molybdenum: { name: "Molybdenum", symbol: "Mo", basePrice: 40000, sources: [["CN", 45], ["CL", 20], ["US", 15]] },
-  manganese: { name: "Manganese", symbol: "Mn", basePrice: 2000, sources: [["ZA", 36], ["AU", 15], ["CN", 12]] },
-  silicon: { name: "Silicon", symbol: "Si", basePrice: 2500, sources: [["CN", 79], ["RU", 6], ["US", 4]] },
+  aluminum: { name: "Aluminum", symbol: "Al", basePrice: 2400, volatility: 0.32, sources: [["CN", 59], ["IN", 6], ["RU", 5], ["CA", 5]] },
+  iron: { name: "Steel (iron)", symbol: "Fe", basePrice: 800, volatility: 0.28, sources: [["CN", 54], ["IN", 7], ["JP", 5], ["RU", 4], ["US", 4]] },
+  titanium: { name: "Titanium", symbol: "Ti", basePrice: 12000, volatility: 0.45, sources: [["CN", 57], ["JP", 17], ["RU", 13], ["KZ", 7]] },
+  copper: { name: "Copper", symbol: "Cu", basePrice: 9000, volatility: 0.38, sources: [["CN", 42], ["CL", 9], ["CD", 8], ["JP", 6]] },
+  nickel: { name: "Nickel", symbol: "Ni", basePrice: 18000, volatility: 0.52, sources: [["ID", 50], ["CN", 15], ["PH", 11], ["RU", 9]] },
+  gold: { name: "Gold", symbol: "Au", basePrice: 62000000, volatility: 0.25, sources: [["CN", 10], ["RU", 9], ["AU", 9], ["US", 6], ["CA", 5]] },
+  zinc: { name: "Zinc", symbol: "Zn", basePrice: 2700, volatility: 0.35, sources: [["CN", 33], ["IN", 8], ["KZ", 6], ["AU", 5]] },
+  magnesium: { name: "Magnesium", symbol: "Mg", basePrice: 3000, volatility: 0.48, sources: [["CN", 88], ["RU", 4], ["US", 3]] },
+  vanadium: { name: "Vanadium", symbol: "V", basePrice: 30000, volatility: 0.55, sources: [["CN", 65], ["RU", 18], ["ZA", 8]] },
+  chromium: { name: "Chromium", symbol: "Cr", basePrice: 9500, volatility: 0.40, sources: [["ZA", 43], ["KZ", 26], ["IN", 12]] },
+  niobium: { name: "Niobium", symbol: "Nb", basePrice: 45000, volatility: 0.42, sources: [["BR", 88], ["CA", 10]] },
+  molybdenum: { name: "Molybdenum", symbol: "Mo", basePrice: 40000, volatility: 0.44, sources: [["CN", 45], ["CL", 20], ["US", 15]] },
+  manganese: { name: "Manganese", symbol: "Mn", basePrice: 2000, volatility: 0.33, sources: [["ZA", 36], ["AU", 15], ["CN", 12]] },
+  silicon: { name: "Silicon", symbol: "Si", basePrice: 2500, volatility: 0.36, sources: [["CN", 79], ["RU", 6], ["US", 4]] },
 };
 
 // Alloys grouped by parent metal. `composition` is by weight %.
@@ -149,11 +149,78 @@ export function riskColor(score) {
 export function alloyMetals(alloy) {
   return Object.entries(alloy.composition)
     .filter(([key, pct]) => METALS[key] && pct > 0)
-    .map(([key, pct]) => ({ key, pct, meta: METALS[key], conc: concentration(key) }))
+    .map(([key, pct]) => ({
+      key,
+      pct,
+      meta: METALS[key],
+      conc: concentration(key),
+      volatility: METALS[key].volatility ?? 0.3,
+    }))
     .sort((a, b) => b.pct - a.pct);
 }
 
-// Deterministic, illustrative impact model for the interactive demo.
+// Scenario impact from price and production shocks (illustrative model).
+// priceShockPct: e.g. +20 means price up 20%
+// productionChangePct: e.g. -50 means production down 50%
+export function computeScenarioImpact(alloy, priceShockPct, productionChangePct) {
+  const metals = alloyMetals(alloy);
+  const priceFactor = Math.max(0, priceShockPct) / 100;
+  const prodDown = Math.max(0, -productionChangePct) / 100;
+
+  let weightedVol = 0;
+  let weightedConc = 0;
+  for (const m of metals) {
+    const w = m.pct / 100;
+    weightedVol += w * m.volatility;
+    weightedConc += w * m.conc;
+  }
+
+  const costImpactPct = priceFactor * 100 * weightedVol * 1.35 + prodDown * weightedConc * 32;
+  const availabilityDrop = Math.min(0.92, prodDown * (0.45 + weightedConc * 0.85));
+  const demandDrop = Math.min(0.75, prodDown * 0.55 + priceFactor * weightedVol * 0.35);
+  const leadTimeWeeks = availabilityDrop * 12 + prodDown * 5;
+  const shockIntensity = Math.max(priceFactor, prodDown);
+  const atRiskSpend = alloy.annualSpend * (0.25 + weightedConc * 0.55) * shockIntensity;
+  const marginHitPts = costImpactPct * 0.18;
+
+  const score = Math.min(1, shockIntensity * 0.7 + weightedConc * 0.5 + weightedVol * 0.3);
+
+  return {
+    costImpactPct,
+    availabilityDrop,
+    demandDrop,
+    leadTimeWeeks,
+    atRiskSpend,
+    marginHitPts,
+    weightedVol,
+    weightedConc,
+    score,
+    risk: riskLevel(score),
+  };
+}
+
+// Generate demand/price curve points for the scenario chart (0..1 x-axis).
+export function demandPriceSeries(priceShockPct, productionChangePct, weightedVol) {
+  const n = 24;
+  const priceFactor = Math.max(0, priceShockPct) / 100;
+  const prodDown = Math.max(0, -productionChangePct) / 100;
+  const points = [];
+
+  for (let i = 0; i < n; i++) {
+    const t = i / (n - 1);
+    const ramp = 1 / (1 + Math.exp(-(t - 0.35) * 9));
+    const priceY = 0.55 + ramp * (priceFactor * 1.8 + prodDown * weightedVol * 0.6);
+    const demandY = 0.75 - ramp * (prodDown * 0.65 + priceFactor * weightedVol * 0.25);
+    points.push({
+      t,
+      price: Math.max(0.08, Math.min(0.95, priceY)),
+      demand: Math.max(0.08, Math.min(0.95, demandY)),
+    });
+  }
+  return points;
+}
+
+// Deterministic, illustrative impact model for geo-shock scenarios (map views).
 // Returns dollar/percent KPIs plus the affected metals in the region.
 export function computeImpact(alloy, scenario, severity) {
   const metals = alloyMetals(alloy);

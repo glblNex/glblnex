@@ -41,7 +41,7 @@ export default function MainNavbar() {
               <Link href="/" className="cursor-pointer">
                 <Image
                   src="LightSVG.svg"
-                  alt="globalnex Full Logo"
+                  alt="globalNex Full Logo"
                   sizes="10vw"
                   style={{
                     width: 'auto',
@@ -80,7 +80,7 @@ export default function MainNavbar() {
               <Link href="/">
                 <Image
                   src="LightSVG.svg"
-                  alt="globalnex Full Logo"
+                  alt="globalNex Full Logo"
                   sizes="100vw"
                   style={{
                     width: 'auto',

@@ -1,14 +1,13 @@
 'use client'
 
 import React, { useState } from "react";
-import GeoRiskMap from "./GeoRiskMap";
-import AlloyExposure from "./AlloyExposure";
+import AlloyBreakdown from "./AlloyBreakdown";
 import { getAlloy } from "../_data/metals";
 
-const FEATURED = ["ti-6al4v", "inconel-718", "al-7075", "ss-316l", "cu-c26000", "mg-az31"];
+const FEATURED = ["ti-6al4v", "inconel-718", "al-7075", "ss-316l"];
 
 export default function AlloyExposureSection() {
-  const [alloyId, setAlloyId] = useState("inconel-718");
+  const [alloyId, setAlloyId] = useState("ti-6al4v");
   const alloy = getAlloy(alloyId);
   const chips = FEATURED.map((id) => getAlloy(id)).filter(Boolean);
 
@@ -33,20 +32,17 @@ export default function AlloyExposureSection() {
         })}
       </div>
 
-      <div className="grid lg:grid-cols-[1fr_1.1fr] gap-8 items-center">
+      <div className="grid lg:grid-cols-2 gap-10 items-start">
         <div>
           <p className="text-xs uppercase tracking-wider text-highlight font-semibold mb-2">
-            {alloy.name} · {alloy.use}
+            {alloy.name}
           </p>
           <p className="text-light text-sm mb-6 max-w-md">
-            Every alloy is decomposed into the metals you actually depend on — each mapped to its
-            source countries and concentration risk.
+            {alloy.use}. Each constituent metal carries its own price volatility and
+            supply-concentration exposure — invisible when you only watch spot commodities.
           </p>
-          <AlloyExposure alloy={alloy} />
         </div>
-        <div className="rounded-lg border border-line overflow-hidden">
-          <GeoRiskMap alloy={alloy} />
-        </div>
+        <AlloyBreakdown alloy={alloy} />
       </div>
     </div>
   );
