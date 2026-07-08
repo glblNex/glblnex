@@ -14,7 +14,7 @@ export default function MainFooter() {
                         <Link href="/">
                             <Image
                                 src="SM-LightSVG.svg"
-                                alt="globalnex Icon Logo"
+                                alt="globalNex icon"
                                 sizes="10vw"
                                 style={{
                                     width: '30px',

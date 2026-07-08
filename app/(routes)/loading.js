@@ -8,7 +8,7 @@ export default function Loading() {
         <div className='grid grid-cols-1 place-items-center gap-12 p-48 text-center'>
             <Image
                 src="SM-LightSVG.svg"
-                alt="globalNex Icon Logo"
+                alt="globalNex icon"
                 sizes="100vw"
                 style={{
                     width: 'auto',

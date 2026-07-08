@@ -6,5 +6,6 @@ export default function robots() {
             disallow: [],
         },
         sitemap: 'https://glblnex.com/sitemap.xml',
+        host: 'https://glblnex.com',
     }
 }
