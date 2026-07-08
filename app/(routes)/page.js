@@ -12,6 +12,7 @@ import ScenarioDemo from '../_components/ScenarioDemo'
 import AlloyExposureSection from '../_components/AlloyExposureSection'
 import BenefitsSection from '../_components/BenefitsSection'
 import CoverageMarquee from '../_components/CoverageMarquee'
+import IndustriesStrip from '../_components/IndustriesStrip'
 import WhyGlobalNex from '../_components/WhyGlobalNex'
 import ShockMoment from '../_components/ShockMoment'
 import BusinessCase from '../_components/BusinessCase'
@@ -44,16 +45,16 @@ const VALUE_ADDS = [
 
 const PROBLEMS = [
   {
-    title: "Geopolitics is rewriting supply",
-    body: "Tariffs, export controls, and sanctions concentrate critical metals in fewer hands each year. Your exposure grows whether you measure it or not.",
+    title: "Supply is concentrating",
+    body: "Tariffs, export controls, and sanctions are reshaping where critical metals are refined. The exposure inside your BOM deserves the same precision as your financials.",
   },
   {
-    title: "One shock cascades to your margin",
-    body: "A single metal move ripples through your alloys into unit cost and gross margin. By the time it hits the P&L, your options are gone.",
+    title: "Shocks move through alloys",
+    body: "A single metal move ripples into unit cost and gross margin across the grades you buy. Seeing that path early is the difference between reacting and leading.",
   },
   {
-    title: "Your current tools are reactive",
-    body: "Price terminals and spreadsheets report what already happened. Neither tells you what a shock does to 7075-T6, or what it costs you.",
+    title: "Legacy tools look backward",
+    body: "Price terminals and spreadsheets report what already happened. Neither models what a shock does to 7075-T6, or what it means for your margin.",
   },
 ]
 
@@ -67,21 +68,21 @@ export default function Home() {
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <Reveal>
             <p className="text-xs uppercase tracking-[0.2em] text-highlight font-semibold mb-3">
-              Material risk intelligence for manufacturers
+              Material risk intelligence
             </p>
             <h1 className={`text-4xl sm:text-5xl lg:text-6xl font-light leading-[1.08] text-ink ${urbanist.className}`}>
-              Protect your margins from supply shocks you do not control
+              Material risk, refined to a single decision
             </h1>
             <p className={`mt-5 text-base lg:text-lg text-light font-light max-w-xl leading-relaxed ${urbanist.className}`}>
-              globalNex turns metal price and supply data into one decision: what a shock does to the
-              alloys you buy, and what it costs you in margin. All signal, no noise.
+              globalNex turns metal price and supply data into alloy-grade clarity: what a shock does
+              to the grades you buy, and what it means for your margin. All signal, no noise.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
               <Link href="/started">
-                <MainButton btn_txt="Join Waitlist" />
+                <MainButton btn_txt="Join early access" />
               </Link>
               <a href="#demo">
-                <SecondButton btn_txt="See how it works" />
+                <SecondButton btn_txt="Try the demo" />
               </a>
             </div>
             <dl className="mt-8 grid grid-cols-3 gap-4 max-w-xl border-t border-line pt-6">
@@ -99,6 +100,11 @@ export default function Home() {
             <DashboardMockup />
           </div>
         </div>
+      </GxSection>
+
+      {/* Industries */}
+      <GxSection className="py-2">
+        <IndustriesStrip />
       </GxSection>
 
       {/* Value adds */}
@@ -128,8 +134,8 @@ export default function Home() {
       <GxSection>
         <Reveal>
           <SectionHeading
-            eyebrow="Why this matters now"
-            title={<>The exposure is growing, and the tools you have cannot see it.</>}
+            eyebrow="The landscape"
+            title={<>Material exposure is rising. Visibility has not kept pace.</>}
           />
         </Reveal>
         <RevealGroup className="grid md:grid-cols-3 gap-5 mt-8">

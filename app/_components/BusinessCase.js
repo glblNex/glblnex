@@ -5,36 +5,36 @@ import { urbanist } from '../_style/fonts'
 import SectionHeading from './SectionHeading'
 import Reveal, { RevealGroup, RevealItem } from './Reveal'
 
-const MATH = [
+const PILLARS = [
   {
-    label: 'Typical metals spend',
-    value: '$80M+',
-    detail: 'Annual alloy and metal spend for a mid-market manufacturer',
+    label: 'Precision',
+    value: 'Alloy-grade',
+    detail: 'Every figure is tied to the exact grades on your bill of materials, not a commodity index.',
   },
   {
-    label: 'One unmodeled shock',
-    value: '$2–14M',
-    detail: 'At-risk spend from a single concentrated price or supply event',
+    label: 'Speed',
+    value: 'Seconds',
+    detail: 'Scenario answers arrive at the pace of a leadership conversation, not a research cycle.',
   },
   {
-    label: 'Payback logic',
-    value: '1 shock',
-    detail: 'One avoided miss, one better-negotiated contract, or one dual-source decision pays for the platform many times over',
+    label: 'Stewardship',
+    value: 'Board-ready',
+    detail: 'One risk score and one exposure figure your leadership can trust and act on.',
   },
 ]
 
-const PAYOFFS = [
+const STANDARDS = [
   {
-    title: 'Negotiate from exposure',
-    body: 'Walk into supplier talks knowing which grades are fragile and what a move actually costs you.',
+    title: 'Negotiate with composure',
+    body: 'Enter supplier conversations knowing which grades carry concentration risk and what a move means in dollars.',
   },
   {
-    title: 'Act before the P&L does',
-    body: 'Hedge, dual-source, or redesign while you still have options, not after margin is gone.',
+    title: 'Decide with foresight',
+    body: 'Model dual-sourcing, redesign, and hedging options while the window to act is still open.',
   },
   {
-    title: 'Own the board answer',
-    body: 'Be the person who puts a dollar figure on material risk instead of promising a follow-up.',
+    title: 'Lead with clarity',
+    body: 'Bring a precise material-risk figure into every review, not a promise to follow up.',
   },
 ]
 
@@ -43,21 +43,21 @@ export default function BusinessCase() {
     <section className="w-full">
       <Reveal>
         <SectionHeading
-          eyebrow="The business case"
-          title="One avoided shock pays for this many times over"
-          subtitle="You do not buy globalNex for another chart. You buy it because the cost of not knowing dwarfs the cost of knowing."
+          eyebrow="The standard"
+          title="Built for operators who refuse to guess"
+          subtitle="globalNex is not another feed or spreadsheet. It is the material-risk layer serious manufacturers use to see clearly and decide well."
           align="center"
         />
       </Reveal>
 
       <RevealGroup className="mt-8 lg:mt-10 grid md:grid-cols-3 gap-4 lg:gap-5">
-        {MATH.map((m) => (
+        {PILLARS.map((m) => (
           <RevealItem key={m.label}>
-            <div className="h-full rounded-2xl border border-line bg-white p-6 lg:p-7">
+            <div className="h-full rounded-2xl border border-line bg-white p-6 lg:p-8">
               <p className="text-[10px] uppercase tracking-[0.16em] text-light font-medium">
                 {m.label}
               </p>
-              <p className={`mt-3 text-3xl lg:text-4xl font-light text-highlight tabular-nums ${urbanist.className}`}>
+              <p className={`mt-3 text-3xl lg:text-4xl font-light text-highlight ${urbanist.className}`}>
                 {m.value}
               </p>
               <p className="mt-3 text-sm text-light leading-relaxed">{m.detail}</p>
@@ -68,10 +68,10 @@ export default function BusinessCase() {
 
       <Reveal delay={0.08}>
         <div className="mt-4 lg:mt-5 grid md:grid-cols-3 gap-4 lg:gap-5">
-          {PAYOFFS.map((p) => (
+          {STANDARDS.map((p) => (
             <div
               key={p.title}
-              className="rounded-xl border border-line bg-bg2/60 p-5 lg:p-6"
+              className="rounded-xl border border-line bg-bg2/50 p-5 lg:p-6"
             >
               <h3 className={`text-base lg:text-lg font-medium text-ink ${urbanist.className}`}>
                 {p.title}

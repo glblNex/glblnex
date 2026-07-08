@@ -1,12 +1,12 @@
 export const metadata = {
-  title: 'Join the Waitlist',
-  description: 'Join the globalNex waitlist for early access to metals scenario analysis. Stress-test the alloys you buy and quantify supply risk before disruption hits production.',
+  title: 'Join Early Access',
+  description: 'Join early access to globalNex. Help shape alloy-grade material risk intelligence for manufacturers.',
   alternates: {
     canonical: 'https://glblnex.com/started',
   },
   openGraph: {
-    title: 'Join the globalNex Waitlist',
-    description: 'Early access to metals scenario analysis for procurement and supply chain teams.',
+    title: 'Join globalNex Early Access',
+    description: 'We are building globalNex with manufacturers who feel this gap. Join early access.',
     url: 'https://glblnex.com/started',
   },
 }

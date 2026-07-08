@@ -9,6 +9,17 @@ const FORM_STATES = {
   SUCCESS: 'SUCCESS',
 };
 
+const INTENT_OPTIONS = [
+  { value: '', label: 'What is your biggest metal exposure? (optional)' },
+  { value: 'aluminum-alloys', label: 'Aluminum alloys' },
+  { value: 'titanium', label: 'Titanium' },
+  { value: 'nickel-superalloys', label: 'Nickel / superalloys' },
+  { value: 'steel-stainless', label: 'Steel / stainless' },
+  { value: 'copper', label: 'Copper' },
+  { value: 'multi-metal', label: 'Multi-metal / full BOM' },
+  { value: 'other', label: 'Other / not sure yet' },
+]
+
 const formConfig = {
   id: 'cm3nq2ajn01y6t7yl8qxdn4sd',
   name: 'Interest Form',
@@ -19,8 +30,8 @@ const formConfig = {
     company: 'Company Name',
     role: 'Your Role/Title',
   },
-  buttonText: 'Join Waitlist',
-  successMessage: "Thanks for signing up! We'll be in touch soon.",
+  buttonText: 'Join early access',
+  successMessage: "You're on the list. We'll be in touch.",
   userGroup: 'gxWaitlistInterest',
   domain: 'app.loops.so',
 };
@@ -34,6 +45,7 @@ export default function FullForm() {
     email: '',
     company: '',
     role: '',
+    metalExposure: '',
   });
 
   const resetForm = () => {
@@ -43,6 +55,7 @@ export default function FullForm() {
       email: '',
       company: '',
       role: '',
+      metalExposure: '',
     });
     setFormState(FORM_STATES.INIT);
     setErrorMessage('');
@@ -107,7 +120,7 @@ export default function FullForm() {
       onSubmit={handleSubmit}
       className="flex flex-col items-center text-center justify-center w-full"
     >
-      {Object.keys(fields).map((field) => (
+      {['firstName', 'lastName', 'email', 'company', 'role'].map((field) => (
         <input
           key={field}
           type={field === 'email' ? 'email' : 'text'}
@@ -120,9 +133,22 @@ export default function FullForm() {
           autoComplete="off"
         />
       ))}
-      <MainButton btn_txt={formConfig.buttonText}>
-        {formState === FORM_STATES.SUBMITTING ? 'Please wait...' : formConfig.buttonText}
-      </MainButton>
+      <select
+        name="metalExposure"
+        value={fields.metalExposure}
+        onChange={handleInputChange}
+        aria-label="Biggest metal exposure"
+        className={`w-full mb-5 max-w-md min-w-[100px] bg-white border border-line rounded-md px-4 py-2.5 font-light focus:outline-none focus:border-highlight focus:ring-2 focus:ring-highlight/20 transition-all appearance-none ${
+          fields.metalExposure ? 'text-ink' : 'text-light'
+        } ${urbanist.className}`}
+      >
+        {INTENT_OPTIONS.map((opt) => (
+          <option key={opt.value || 'empty'} value={opt.value}>
+            {opt.label}
+          </option>
+        ))}
+      </select>
+      <MainButton btn_txt={formState === FORM_STATES.SUBMITTING ? 'Please wait...' : formConfig.buttonText} />
     </form>
   );
 

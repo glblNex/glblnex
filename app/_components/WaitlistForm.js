@@ -1,3 +1,5 @@
+'use client'
+
 import { useState } from 'react';
 import { urbanist } from '../_style/fonts'
 import MainButton from '../_components/MainButton'
@@ -6,15 +8,25 @@ const INIT = 'INIT';
 const SUBMITTING = 'SUBMITTING';
 const ERROR = 'ERROR';
 const SUCCESS = 'SUCCESS';
-const formStates = [INIT, SUBMITTING, ERROR, SUCCESS];
+
+const INTENT_OPTIONS = [
+  { value: '', label: 'What is your biggest metal exposure? (optional)' },
+  { value: 'aluminum-alloys', label: 'Aluminum alloys' },
+  { value: 'titanium', label: 'Titanium' },
+  { value: 'nickel-superalloys', label: 'Nickel / superalloys' },
+  { value: 'steel-stainless', label: 'Steel / stainless' },
+  { value: 'copper', label: 'Copper' },
+  { value: 'multi-metal', label: 'Multi-metal / full BOM' },
+  { value: 'other', label: 'Other / not sure yet' },
+]
 
 const formStyles = {
   id: 'cm3nq2ajn01y6t7yl8qxdn4sd',
   name: 'Default',
   formStyle: 'buttonBelow',
-  placeholderText: 'you@example.com',
-  buttonText: 'Join Waitlist',
-  successMessage: "Thanks! We'll be in touch!",
+  placeholderText: 'you@company.com',
+  buttonText: 'Join early access',
+  successMessage: "You're on the list. We'll be in touch.",
   userGroup: 'gxWebsite',
 };
 
@@ -22,20 +34,17 @@ const domain = 'app.loops.so';
 
 export default function SignUpFormReact() {
   const [email, setEmail] = useState('');
+  const [intent, setIntent] = useState('');
   const [formState, setFormState] = useState(INIT);
   const [errorMessage, setErrorMessage] = useState('');
-  const [fields, setFields] = useState({});
 
   const resetForm = () => {
     setEmail('');
+    setIntent('');
     setFormState(INIT);
     setErrorMessage('');
   };
 
-  /**
-   * Rate limit the number of submissions allowed
-   * @returns {boolean} true if the form has been successfully submitted in the past minute
-   */
   const hasRecentSubmission = () => {
     if (typeof window === 'undefined') return false;
 
@@ -43,7 +52,6 @@ export default function SignUpFormReact() {
     const timestamp = time.valueOf();
     const previousTimestamp = localStorage.getItem('loops-form-timestamp');
 
-    // Indicate if the last sign up was less than a minute ago
     if (previousTimestamp && Number(previousTimestamp) + 60 * 1000 > timestamp) {
       setFormState(ERROR);
       setErrorMessage('Too many signups, please try again in a little while');
@@ -66,20 +74,14 @@ export default function SignUpFormReact() {
     if (hasRecentSubmission()) return;
     setFormState(SUBMITTING);
 
-    // Build additional fields
-    const additionalFields = Object.entries(fields).reduce((acc, [key, val]) => {
-      if (val) {
-        return acc + '&' + key + '=' + encodeURIComponent(val);
-      }
-      return acc;
-    }, '');
+    const additionalFields = intent
+      ? `&metalExposure=${encodeURIComponent(intent)}`
+      : '';
 
-    // Build body
     const formBody = `userGroup=${encodeURIComponent(
       formStyles.userGroup
     )}&email=${encodeURIComponent(email)}&mailingLists=`;
 
-    // API request to add user to newsletter
     fetch(`https://${domain}/api/newsletter-form/${formStyles.id}`, {
       method: 'POST',
       body: formBody + additionalFields,
@@ -115,8 +117,6 @@ export default function SignUpFormReact() {
       });
   };
 
-  const isInline = formStyles.formStyle === 'inline';
-
   switch (formState) {
     case SUCCESS:
       return (
@@ -135,25 +135,39 @@ export default function SignUpFormReact() {
       );
     default:
       return (
-        <>
-          <form
-            onSubmit={handleSubmit}
-            className={`flex ${isInline ? 'flex-row' : 'flex-col'} items-center justify-center w-full`}
+        <form
+          onSubmit={handleSubmit}
+          className="flex flex-col items-center justify-center w-full gap-3 max-w-md mx-auto"
+        >
+          <input
+            type="email"
+            name="email"
+            placeholder={formStyles.placeholderText}
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+            className={`w-full bg-white text-ink border border-line rounded-md text-center py-2.5 px-4 font-light focus:outline-none focus:border-highlight focus:ring-2 focus:ring-highlight/20 transition-all ${urbanist.className}`}
+          />
+          <select
+            name="metalExposure"
+            value={intent}
+            onChange={(e) => setIntent(e.target.value)}
+            aria-label="Biggest metal exposure"
+            className={`w-full bg-white text-ink border border-line rounded-md text-center py-2.5 px-4 font-light focus:outline-none focus:border-highlight focus:ring-2 focus:ring-highlight/20 transition-all appearance-none ${
+              intent ? 'text-ink' : 'text-light'
+            } ${urbanist.className}`}
           >
-            <input
-              type="text"
-              name="email"
-              placeholder={formStyles.placeholderText}
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-              className={`${isInline ? 'mr-2' : 'mb-2'
-                } w-full mb-7 max-w-sm min-w-[100px] bg-white text-ink border border-line rounded-md text-center py-2.5 px-4 font-light focus:outline-none focus:border-highlight focus:ring-2 focus:ring-highlight/20 transition-all ${urbanist.className}`}
-            />
-            <div aria-hidden="true" className="absolute left-[-2024px]"></div>
-            <SignUpFormButton/>
-          </form>
-        </>
+            {INTENT_OPTIONS.map((opt) => (
+              <option key={opt.value || 'empty'} value={opt.value}>
+                {opt.label}
+              </option>
+            ))}
+          </select>
+          <div aria-hidden="true" className="absolute left-[-2024px]" />
+          <div className="mt-2">
+            <SignUpFormButton />
+          </div>
+        </form>
       );
   }
 
@@ -172,8 +186,10 @@ export default function SignUpFormReact() {
 
     return (
       <button
-        className={`mt-8 flex items-center justify-center w-full text-gray-500 text-center font-sans text-sm my-2 mx-auto text-center bg-transparent border-none cursor-pointer ${isHovered ? 'underline' : ''
-          }`}
+        type="button"
+        className={`mt-8 flex items-center justify-center w-full text-light text-center font-sans text-sm my-2 mx-auto bg-transparent border-none cursor-pointer ${
+          isHovered ? 'underline' : ''
+        }`}
         onMouseOut={() => setIsHovered(false)}
         onMouseOver={() => setIsHovered(true)}
         onClick={resetForm}
@@ -185,9 +201,7 @@ export default function SignUpFormReact() {
 
   function SignUpFormButton() {
     return (
-      <MainButton btn_txt='Sign Up'>
-        {formState === SUBMITTING ? 'Please wait...' : formStyles.buttonText}
-      </MainButton>
+      <MainButton btn_txt={formState === SUBMITTING ? 'Please wait...' : formStyles.buttonText} />
     );
   }
 }

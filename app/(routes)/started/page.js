@@ -14,12 +14,11 @@ export default function StartedPage() {
                             Early access
                         </p>
                         <h1 className={`lg:max-w-[75%] text-4xl lg:text-5xl font-light text-ink ${urbanist.className}`}>
-                            Join the globalNex waitlist
+                            Help shape what we build next
                         </h1>
                         <h2 className={`lg:max-w-[60%] text-base lg:text-lg text-light font-light leading-relaxed ${urbanist.className}`}>
-                            Be first to access metals scenario analysis. Decompose the alloys you buy,
-                            stress-test price and supply shocks, and quantify exposure before
-                            disruption hits production.
+                            We are building globalNex with manufacturers who feel this gap.
+                            Join early access and tell us where metal risk shows up for you.
                         </h2>
                     </div>
                 </header>
