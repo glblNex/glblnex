@@ -38,8 +38,23 @@ body {
 }
 
 @keyframes gx-marquee {
-  from { transform: translate3d(0, 0, 0); }
-  to { transform: translate3d(-50%, 0, 0); }
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
+}
+
+.gx-marquee-inner {
+  display: flex;
+  width: max-content;
+  animation: gx-marquee var(--gx-marquee-duration, 38s) linear infinite;
+  will-change: transform;
+}
+
+.gx-marquee-reverse {
+  animation-direction: reverse;
+}
+
+.gx-marquee-wrap:hover .gx-marquee-inner {
+  animation-play-state: paused;
 }
 
 .gx-marquee-track {
@@ -144,9 +159,24 @@ input[type="range"].gx-range:focus-visible {
   box-shadow: 0 0 0 3px rgba(0, 91, 151, 0.2);
 }
 
+.gx-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #E6E8EC transparent;
+}
+
+.gx-scrollbar::-webkit-scrollbar {
+  height: 4px;
+}
+
+.gx-scrollbar::-webkit-scrollbar-thumb {
+  background: #E6E8EC;
+  border-radius: 9999px;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .gx-marquee-track,
+  .gx-marquee-inner,
   .gx-flow,
   .gx-ping,
   .gx-float,
