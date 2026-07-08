@@ -10,9 +10,10 @@ import CTABanner from '../_components/CTABanner'
 import DashboardMockup from '../_components/DashboardMockup'
 import ScenarioDemo from '../_components/ScenarioDemo'
 import AlloyExposureSection from '../_components/AlloyExposureSection'
+import BenefitsSection from '../_components/BenefitsSection'
+import CoverageMarquee from '../_components/CoverageMarquee'
 import SectionHeading from '../_components/SectionHeading'
 import Reveal, { RevealGroup, RevealItem } from '../_components/Reveal'
-import { COVERAGE } from '../_data/metals'
 
 const VALUE_ADDS = [
   {
@@ -62,25 +63,6 @@ const STEPS = [
     n: "03",
     title: "Run a scenario",
     body: "Stress-test price shocks, production cuts, or export bans and see the impact on cost, availability, and margin.",
-  },
-]
-
-const BENEFITS = [
-  {
-    role: "Procurement & Sourcing",
-    outcome: "Know your true cost exposure before you sign a PO, and negotiate from data instead of guesswork.",
-  },
-  {
-    role: "Supply Chain & Operations",
-    outcome: "Spot single-country dependencies early and line up backup sources before a disruption stops your line.",
-  },
-  {
-    role: "Finance & Risk",
-    outcome: "Quantify at-risk spend and margin impact for budgeting, hedging, and board-level reporting.",
-  },
-  {
-    role: "Engineering & Design",
-    outcome: "Compare alloy grades on supply risk, not just spec, and design around fragile inputs from day one.",
   },
 ]
 
@@ -217,47 +199,10 @@ export default function Home() {
 
       {/* Who benefits and how */}
       <GxSection>
-        <Reveal>
-          <SectionHeading
-            eyebrow="Who benefits, and how"
-            title="Clear answers for every team touching metals"
-            align="center"
-          />
-        </Reveal>
-        <RevealGroup className="grid sm:grid-cols-2 gap-5 mt-8 max-w-4xl mx-auto">
-          {BENEFITS.map((b) => (
-            <RevealItem key={b.role}>
-              <div className="h-full rounded-xl border border-line bg-white p-6 flex flex-col gap-3">
-                <div className="flex items-center gap-3">
-                  <span className="h-8 w-1 rounded-full bg-highlight shrink-0" />
-                  <h3 className={`text-lg font-medium text-ink ${urbanist.className}`}>{b.role}</h3>
-                </div>
-                <p className="text-light text-sm leading-relaxed">{b.outcome}</p>
-              </div>
-            </RevealItem>
-          ))}
-        </RevealGroup>
+        <BenefitsSection />
       </GxSection>
 
-      {/* Coverage marquee */}
-      <section className="py-8 border-y border-line bg-bg2 overflow-hidden">
-        <p className="text-center text-xs uppercase tracking-[0.2em] text-light font-medium mb-6">
-          Metals and alloys covered
-        </p>
-        <div className="gx-fade-mask overflow-hidden">
-          <div className="gx-marquee-track flex whitespace-nowrap w-max">
-            {[...COVERAGE, ...COVERAGE].map((m, i) => (
-              <span
-                key={`${m}-${i}`}
-                className={`flex items-center text-lg lg:text-xl font-light text-ink/70 ${urbanist.className}`}
-              >
-                <span className="mx-6">{m}</span>
-                <span className="h-1.5 w-1.5 rounded-full bg-highlight/60" />
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
+      <CoverageMarquee />
 
       <CTABanner />
     </main>
