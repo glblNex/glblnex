@@ -161,22 +161,22 @@ export default function Home() {
           <SectionHeading
             eyebrow="Live demo"
             title="What if aluminum goes up 20%?"
-            subtitle="Model a shock on any grade and watch cost, margin, and availability react in real time."
+            subtitle="Pick a grade, run a shock, read the impact. Alloy-grade precision in seconds."
             align="center"
-            className="mb-6"
+            className="mb-5"
           />
         </Reveal>
         <Reveal delay={0.03}>
-          <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-2 mb-8 text-sm text-light">
+          <div className="flex flex-wrap items-center justify-center gap-x-2.5 gap-y-1.5 mb-6 text-[13px] text-light">
             {STEPS.map((s, i) => (
               <React.Fragment key={s}>
-                <span className="flex items-center gap-2">
-                  <span className="flex h-5 w-5 items-center justify-center rounded-full bg-highlightSoft text-highlight text-xs font-semibold">
+                <span className="flex items-center gap-1.5">
+                  <span className="flex h-4 w-4 items-center justify-center rounded-full bg-highlightSoft text-highlight text-[10px] font-semibold">
                     {i + 1}
                   </span>
                   {s}
                 </span>
-                {i < STEPS.length - 1 ? <span className="text-line hidden sm:inline">/</span> : null}
+                {i < STEPS.length - 1 ? <span className="text-line/80 hidden sm:inline">·</span> : null}
               </React.Fragment>
             ))}
           </div>

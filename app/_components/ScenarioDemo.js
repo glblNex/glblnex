@@ -14,21 +14,23 @@ import { TrajectoryChart, ImpactBarChart, CompositionBars } from './ScenarioChar
 const PRESETS = [
   { id: 'baseline', label: 'Baseline', price: 0, production: 0 },
   { id: 'price-shock', label: 'Price +20%', price: 20, production: 0 },
-  { id: 'prod-cut', label: 'Production -50%', price: 0, production: -50 },
-  { id: 'combined', label: 'Combined shock', price: 20, production: -50 },
+  { id: 'prod-cut', label: 'Prod -50%', price: 0, production: -50 },
+  { id: 'combined', label: 'Combined', price: 20, production: -50 },
   { id: 'export-ban', label: 'Export ban', price: 15, production: -70 },
 ]
 
-function AnimatedValue({ value, className = '' }) {
+const EASE = [0.22, 1, 0.36, 1]
+
+function AnimatedValue({ value }) {
   return (
-    <AnimatePresence mode="popLayout">
+    <AnimatePresence mode="popLayout" initial={false}>
       <motion.span
-        key={value}
-        initial={{ opacity: 0, y: 8 }}
+        key={String(value)}
+        initial={{ opacity: 0, y: 6 }}
         animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -8 }}
-        transition={{ duration: 0.2 }}
-        className={className}
+        exit={{ opacity: 0, y: -6 }}
+        transition={{ duration: 0.22, ease: EASE }}
+        className="inline-block tabular-nums"
       >
         {value}
       </motion.span>
@@ -36,29 +38,52 @@ function AnimatedValue({ value, className = '' }) {
   )
 }
 
-function KpiTile({ label, value, sub, tone = 'ink', progress }) {
+function KpiCell({ label, value, tone = 'ink', progress }) {
   const toneClass =
     tone === 'risk' ? 'text-error' : tone === 'highlight' ? 'text-highlight' : 'text-ink'
-  const barColor = tone === 'risk' ? '#B00020' : '#005B97'
+  const barColor = tone === 'risk' ? '#B00020' : tone === 'warning' ? '#D38C22' : '#005B97'
 
   return (
-    <div className="rounded-xl border border-line bg-white p-4 lg:p-5 h-full">
-      <p className="text-[11px] uppercase tracking-wide text-light">{label}</p>
-      <p className={`mt-1.5 text-2xl lg:text-3xl font-semibold tabular-nums ${toneClass}`}>
+    <div className="min-w-0 px-3 py-2.5 lg:px-4 lg:py-3">
+      <p className="text-[10px] uppercase tracking-[0.12em] text-light truncate">{label}</p>
+      <p className={`mt-1 text-lg lg:text-xl font-semibold leading-none ${toneClass}`}>
         <AnimatedValue value={value} />
       </p>
       {typeof progress === 'number' ? (
-        <div className="mt-3 h-1.5 w-full rounded-full bg-line overflow-hidden">
+        <div className="mt-2 h-1 w-full rounded-full bg-line/80 overflow-hidden">
           <motion.div
             className="h-full rounded-full"
             style={{ backgroundColor: barColor }}
             animate={{ width: `${Math.min(100, Math.round(progress * 100))}%` }}
-            transition={{ duration: 0.4, ease: 'easeOut' }}
+            transition={{ duration: 0.45, ease: EASE }}
           />
         </div>
-      ) : (
-        <p className="mt-1.5 text-xs text-light">{sub}</p>
-      )}
+      ) : null}
+    </div>
+  )
+}
+
+function SliderField({ label, value, min, max, onChange, ariaLabel }) {
+  const pct = ((value - min) / (max - min)) * 100
+  return (
+    <div>
+      <div className="flex items-center justify-between mb-2">
+        <label className="text-[11px] font-medium text-ink">{label}</label>
+        <span className="text-[11px] font-semibold text-highlight tabular-nums">
+          {value >= 0 ? '+' : ''}{value}%
+        </span>
+      </div>
+      <input
+        type="range"
+        min={min}
+        max={max}
+        step="1"
+        value={value}
+        onChange={(e) => onChange(parseInt(e.target.value, 10))}
+        className="gx-range"
+        style={{ '--gx-range-fill': `${pct}%` }}
+        aria-label={ariaLabel}
+      />
     </div>
   )
 }
@@ -70,6 +95,10 @@ export default function ScenarioDemo() {
   const [activePreset, setActivePreset] = useState('combined')
 
   const alloy = getAlloy(alloyId)
+  const family =
+    ALLOY_GROUPS.find((g) => g.alloys.some((a) => a.id === alloyId))?.metal ||
+    ALLOY_GROUPS[0].metal
+  const activeGroup = ALLOY_GROUPS.find((g) => g.metal === family) || ALLOY_GROUPS[0]
   const impact = useMemo(
     () => computeScenarioImpact(alloy, priceShock, productionChange),
     [alloy, priceShock, productionChange]
@@ -78,6 +107,13 @@ export default function ScenarioDemo() {
     () => demandPriceSeries(priceShock, productionChange, impact.weightedVol),
     [priceShock, productionChange, impact.weightedVol]
   )
+
+  const riskColor =
+    impact.risk.token === 'error'
+      ? '#B00020'
+      : impact.risk.token === 'warning'
+      ? '#D38C22'
+      : '#2FAD02'
 
   const riskTone =
     impact.risk.token === 'error'
@@ -92,234 +128,264 @@ export default function ScenarioDemo() {
     setProductionChange(preset.production)
   }
 
+  const selectFamily = (metal) => {
+    const group = ALLOY_GROUPS.find((g) => g.metal === metal)
+    if (!group) return
+    if (!group.alloys.some((a) => a.id === alloyId)) {
+      setAlloyId(group.alloys[0].id)
+      setActivePreset('')
+    }
+  }
+
   const selectAlloy = (id) => {
     setAlloyId(id)
     setActivePreset('')
   }
 
+  const onPrice = (v) => {
+    setActivePreset('')
+    setPriceShock(v)
+  }
+
+  const onProduction = (v) => {
+    setActivePreset('')
+    setProductionChange(v)
+  }
+
   return (
-    <div className="rounded-2xl border border-line bg-white shadow-[0_24px_80px_-36px_rgba(10,10,10,0.4)] overflow-hidden">
-      <div className="flex items-center gap-2 px-4 lg:px-5 py-3 border-b border-line bg-bg2">
-        <span className="h-2.5 w-2.5 rounded-full bg-line" />
-        <span className="h-2.5 w-2.5 rounded-full bg-line" />
-        <span className="h-2.5 w-2.5 rounded-full bg-line" />
-        <span className="ml-3 text-xs font-medium text-light">globalNex Scenario Studio</span>
-        <span className="ml-auto text-[10px] font-semibold uppercase tracking-wider text-highlight bg-highlightSoft px-2 py-0.5 rounded">
-          Live demo
+    <div className="rounded-2xl border border-line bg-white shadow-[0_28px_80px_-40px_rgba(10,10,10,0.38)] overflow-hidden">
+      {/* Chrome */}
+      <div className="flex items-center gap-2 px-4 lg:px-5 h-10 border-b border-line bg-bg2">
+        <span className="h-2 w-2 rounded-full bg-line" />
+        <span className="h-2 w-2 rounded-full bg-line" />
+        <span className="h-2 w-2 rounded-full bg-line" />
+        <span className="ml-2.5 text-[11px] font-medium text-light tracking-wide">
+          Scenario Studio
+        </span>
+        <span className="ml-auto text-[9px] font-semibold uppercase tracking-[0.14em] text-highlight bg-highlightSoft px-2 py-0.5 rounded">
+          Live
         </span>
       </div>
 
-      <div className="px-4 lg:px-6 py-4 border-b border-line bg-white">
-        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-3 mb-3">
-          <p className="text-xs font-medium text-light">Select alloy grade</p>
-          <p className="text-xs text-light">{alloy.use}</p>
-        </div>
-        <div className="flex gap-2 overflow-x-auto pb-1 -mx-1 px-1 gx-scrollbar">
-          {ALLOY_GROUPS.flatMap((group) =>
-            group.alloys.map((a) => {
-              const selected = alloyId === a.id
+      {/* Alloy + presets toolbar */}
+      <div className="border-b border-line bg-white">
+        <div className="px-4 lg:px-5 pt-3.5 pb-2.5">
+          <div className="flex items-center gap-1 overflow-x-auto gx-scrollbar pb-0.5">
+            {ALLOY_GROUPS.map((g) => {
+              const on = family === g.metal
               return (
                 <button
-                  key={a.id}
+                  key={g.metal}
                   type="button"
-                  onClick={() => selectAlloy(a.id)}
-                  className={`shrink-0 text-xs px-3.5 py-2 rounded-full border transition-all duration-200 ${
-                    selected
-                      ? 'border-highlight bg-highlight text-white shadow-sm'
-                      : 'border-line bg-white text-ink hover:border-highlight/40 hover:bg-highlightSoft/50'
+                  onClick={() => selectFamily(g.metal)}
+                  className={`shrink-0 text-[11px] px-2.5 py-1 rounded-md transition-colors duration-200 ${
+                    on
+                      ? 'bg-ink text-white'
+                      : 'text-light hover:text-ink hover:bg-bg2'
                   }`}
                 >
-                  <span className="text-[10px] opacity-70 mr-1.5">{group.metal.split(' ')[0]}</span>
-                  {a.name}
+                  {g.metal.split(' / ')[0]}
                 </button>
               )
-            })
-          )}
+            })}
+          </div>
+
+          <div className="mt-2.5 flex items-center gap-2">
+            <div className="flex gap-1.5 overflow-x-auto gx-scrollbar flex-1 min-w-0 pb-0.5">
+              {activeGroup.alloys.map((a) => {
+                const selected = alloyId === a.id
+                return (
+                  <button
+                    key={a.id}
+                    type="button"
+                    onClick={() => selectAlloy(a.id)}
+                    className={`shrink-0 text-[11px] px-3 py-1.5 rounded-full border transition-all duration-200 ${
+                      selected
+                        ? 'border-highlight bg-highlight text-white'
+                        : 'border-line bg-white text-ink hover:border-highlight/35'
+                    }`}
+                  >
+                    {a.name}
+                  </button>
+                )
+              })}
+            </div>
+            <p className="hidden lg:block shrink-0 text-[11px] text-light max-w-[200px] text-right leading-snug">
+              {alloy.use}
+            </p>
+          </div>
+        </div>
+
+        <div className="px-4 lg:px-5 py-2 border-t border-line bg-bg2/40 flex items-center gap-2 overflow-x-auto gx-scrollbar">
+          <span className="shrink-0 text-[9px] uppercase tracking-[0.14em] text-muted">
+            Scenario
+          </span>
+          <div className="flex items-center gap-1">
+            {PRESETS.map((preset) => {
+              const on = activePreset === preset.id
+              return (
+                <button
+                  key={preset.id}
+                  type="button"
+                  onClick={() => applyPreset(preset)}
+                  className={`shrink-0 text-[11px] px-2.5 py-1 rounded-md transition-colors duration-200 ${
+                    on
+                      ? 'bg-white text-highlight border border-highlight/25 shadow-sm font-medium'
+                      : 'text-light hover:text-ink border border-transparent'
+                  }`}
+                >
+                  {preset.label}
+                </button>
+              )
+            })}
+          </div>
         </div>
       </div>
 
-      <div className="px-4 lg:px-6 py-3 border-b border-line bg-bg2/60 flex flex-wrap items-center gap-2">
-        <span className="text-[10px] uppercase tracking-wider text-light mr-1">Quick scenarios</span>
-        {PRESETS.map((preset) => (
-          <button
-            key={preset.id}
-            type="button"
-            onClick={() => applyPreset(preset)}
-            className={`text-xs px-3 py-1.5 rounded-md border transition-colors duration-200 ${
-              activePreset === preset.id
-                ? 'border-highlight bg-highlightSoft text-highlight font-medium'
-                : 'border-line bg-white text-ink hover:border-highlight/30'
-            }`}
-          >
-            {preset.label}
-          </button>
-        ))}
-      </div>
+      {/* Workspace */}
+      <div className="grid xl:grid-cols-[280px_1fr]">
+        {/* Left controls */}
+        <aside className="p-4 lg:p-5 border-b xl:border-b-0 xl:border-r border-line bg-white space-y-4">
+          <SliderField
+            label="Price shock"
+            value={priceShock}
+            min={-10}
+            max={50}
+            onChange={onPrice}
+            ariaLabel="Price shock percentage"
+          />
+          <SliderField
+            label="Production change"
+            value={productionChange}
+            min={-70}
+            max={20}
+            onChange={onProduction}
+            ariaLabel="Production change percentage"
+          />
 
-      <div className="grid xl:grid-cols-[minmax(300px,360px)_1fr]">
-        <div className="p-5 lg:p-6 border-b xl:border-b-0 xl:border-r border-line space-y-5 bg-white">
-          <div className="grid sm:grid-cols-2 xl:grid-cols-1 gap-5">
-            <div>
-              <div className="flex items-center justify-between mb-2">
-                <label className="text-xs font-medium text-ink">Price shock</label>
-                <span className="text-xs font-semibold text-highlight tabular-nums">
-                  {priceShock >= 0 ? '+' : ''}{priceShock}%
-                </span>
-              </div>
-              <input
-                type="range"
-                min="-10"
-                max="50"
-                step="1"
-                value={priceShock}
-                onChange={(e) => {
-                  setActivePreset('')
-                  setPriceShock(parseInt(e.target.value, 10))
-                }}
-                className="gx-range"
-                aria-label="Price shock percentage"
-              />
+          <div className="rounded-xl border border-line bg-bg2/70 p-3.5">
+            <div className="flex items-center justify-between gap-2">
+              <p className="text-[10px] uppercase tracking-[0.12em] text-light">Risk</p>
+              <p className={`text-xs font-semibold ${riskTone}`}>{impact.risk.label}</p>
             </div>
-            <div>
-              <div className="flex items-center justify-between mb-2">
-                <label className="text-xs font-medium text-ink">Production change</label>
-                <span className="text-xs font-semibold text-highlight tabular-nums">
-                  {productionChange >= 0 ? '+' : ''}{productionChange}%
-                </span>
-              </div>
-              <input
-                type="range"
-                min="-70"
-                max="20"
-                step="1"
-                value={productionChange}
-                onChange={(e) => {
-                  setActivePreset('')
-                  setProductionChange(parseInt(e.target.value, 10))
-                }}
-                className="gx-range"
-                aria-label="Production change percentage"
-              />
-            </div>
-          </div>
-
-          <div className="rounded-xl border border-line bg-bg2 p-4">
-            <div className="flex items-center justify-between">
-              <p className="text-xs text-light">Overall risk</p>
-              <p className={`text-sm font-semibold ${riskTone}`}>{impact.risk.label}</p>
-            </div>
-            <div className="mt-2 h-2.5 w-full rounded-full bg-line overflow-hidden">
+            <div className="mt-2 h-1.5 w-full rounded-full bg-line overflow-hidden">
               <motion.div
                 className="h-full rounded-full"
-                style={{
-                  backgroundColor:
-                    impact.risk.token === 'error'
-                      ? '#B00020'
-                      : impact.risk.token === 'warning'
-                      ? '#D38C22'
-                      : '#2FAD02',
-                }}
+                style={{ backgroundColor: riskColor }}
                 animate={{ width: `${Math.round(impact.score * 100)}%` }}
-                transition={{ duration: 0.4, ease: 'easeOut' }}
+                transition={{ duration: 0.45, ease: EASE }}
               />
             </div>
-            <p className="text-[11px] text-light mt-2">
-              Annual spend baseline ${alloy.annualSpend}M on {alloy.name}
+            <p className="text-[10px] text-light mt-2 tabular-nums">
+              ${alloy.annualSpend}M baseline · {alloy.name}
             </p>
           </div>
 
           <div>
-            <p className="text-xs font-medium text-ink mb-3">Alloy composition</p>
+            <p className="text-[10px] uppercase tracking-[0.12em] text-light mb-2.5">
+              Composition
+            </p>
             <CompositionBars alloy={alloy} />
           </div>
 
           <div className="rounded-xl border border-line overflow-hidden">
-            <p className="text-[10px] uppercase tracking-wider text-light px-3 pt-3 pb-1">
-              Supply origins
-            </p>
-            <GeoRiskMap alloy={alloy} animated showLabels={false} className="opacity-90" />
+            <div className="flex items-center justify-between px-3 pt-2.5 pb-1">
+              <p className="text-[10px] uppercase tracking-[0.12em] text-light">Origins</p>
+            </div>
+            <div className="px-1 pb-1">
+              <GeoRiskMap alloy={alloy} animated showLabels={false} className="opacity-95" />
+            </div>
           </div>
-        </div>
+        </aside>
 
-        <div className="p-5 lg:p-6 bg-white flex flex-col">
-          <p className="text-sm lg:text-base text-ink leading-relaxed mb-5">
-            A{' '}
-            <span className="font-semibold text-highlight">
-              {priceShock >= 0 ? '+' : ''}{priceShock}%
-            </span>{' '}
-            price move and{' '}
-            <span className="font-semibold text-highlight">{productionChange}%</span> production
-            change on <span className="font-semibold">{alloy.name}</span> would raise unit cost by{' '}
-            <span className="font-semibold text-highlight">
-              {impact.costImpactPct.toFixed(1)}%
-            </span>{' '}
-            and put{' '}
-            <span className="font-semibold text-error">${impact.atRiskSpend.toFixed(1)}M</span> of
-            spend at risk.
-          </p>
+        {/* Right results */}
+        <div className="bg-white flex flex-col min-h-0">
+          <div className="px-4 lg:px-5 pt-4 pb-3 border-b border-line">
+            <p className="text-[13px] lg:text-sm text-ink leading-relaxed">
+              <span className="font-semibold text-highlight">
+                {priceShock >= 0 ? '+' : ''}{priceShock}%
+              </span>
+              {' '}price ·{' '}
+              <span className="font-semibold text-highlight">{productionChange}%</span>
+              {' '}production on{' '}
+              <span className="font-semibold">{alloy.name}</span>
+              {' '}→ cost{' '}
+              <span className="font-semibold text-highlight">
+                +{impact.costImpactPct.toFixed(1)}%
+              </span>
+              ,{' '}
+              <span className="font-semibold text-error">
+                ${impact.atRiskSpend.toFixed(1)}M
+              </span>
+              {' '}at risk
+            </p>
+          </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
-            <KpiTile
-              label="Cost impact"
+          <div className="grid grid-cols-3 lg:grid-cols-6 divide-x divide-line border-b border-line">
+            <KpiCell
+              label="Cost"
               value={`+${impact.costImpactPct.toFixed(1)}%`}
               tone="highlight"
               progress={Math.min(1, impact.costImpactPct / 40)}
             />
-            <KpiTile
-              label="At-risk spend"
+            <KpiCell
+              label="At risk"
               value={`$${impact.atRiskSpend.toFixed(1)}M`}
               tone="risk"
               progress={Math.min(1, impact.atRiskSpend / alloy.annualSpend)}
             />
-            <KpiTile
-              label="Margin hit"
+            <KpiCell
+              label="Margin"
               value={`${impact.marginHitPts.toFixed(1)} pts`}
               tone="risk"
               progress={Math.min(1, impact.marginHitPts / 8)}
             />
-            <KpiTile
-              label="Lead-time change"
-              value={`+${impact.leadTimeWeeks.toFixed(1)} wks`}
-              sub="vs. baseline"
+            <KpiCell
+              label="Lead time"
+              value={`+${impact.leadTimeWeeks.toFixed(1)}w`}
+            />
+            <KpiCell
+              label="Availability"
+              value={`${Math.round(impact.availabilityDrop * 100)}%`}
+              tone="risk"
+              progress={impact.availabilityDrop}
+            />
+            <KpiCell
+              label="Demand"
+              value={`${Math.round(impact.demandDrop * 100)}%`}
+              progress={impact.demandDrop}
             />
           </div>
 
-          <div className="mt-4 grid grid-cols-2 gap-3">
-            <div className="rounded-xl border border-line bg-bg2 px-4 py-3">
-              <p className="text-[10px] uppercase tracking-wide text-light">Supply availability</p>
-              <p className="text-xl lg:text-2xl font-semibold text-error tabular-nums mt-1">
-                <AnimatedValue value={`${Math.round(impact.availabilityDrop * 100)}% drop`} />
+          <div className="grid lg:grid-cols-2 flex-1 min-h-[280px]">
+            <div className="p-4 lg:p-5 border-b lg:border-b-0 lg:border-r border-line flex flex-col">
+              <p className="text-[10px] uppercase tracking-[0.12em] text-light mb-3.5">
+                Impact breakdown
               </p>
+              <div className="flex-1 flex flex-col justify-center">
+                <ImpactBarChart impact={impact} alloy={alloy} />
+              </div>
             </div>
-            <div className="rounded-xl border border-line bg-bg2 px-4 py-3">
-              <p className="text-[10px] uppercase tracking-wide text-light">Global demand impact</p>
-              <p className="text-xl lg:text-2xl font-semibold text-ink tabular-nums mt-1">
-                <AnimatedValue value={`${Math.round(impact.demandDrop * 100)}% drop`} />
-              </p>
+
+            <div className="p-4 lg:p-5 flex flex-col">
+              <div className="flex items-center justify-between mb-2">
+                <p className="text-[10px] uppercase tracking-[0.12em] text-light">
+                  Price vs demand
+                </p>
+                <div className="flex items-center gap-3 text-[10px] text-light">
+                  <span className="flex items-center gap-1">
+                    <span className="h-1.5 w-1.5 rounded-full bg-highlight" /> Price
+                  </span>
+                  <span className="flex items-center gap-1">
+                    <span className="h-1.5 w-1.5 rounded-full bg-muted" /> Demand
+                  </span>
+                </div>
+              </div>
+              <div className="flex-1 min-h-[200px]">
+                <TrajectoryChart series={series} height={220} />
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-
-      <div className="border-t border-line bg-bg2/40 p-5 lg:p-6 grid lg:grid-cols-2 gap-4 lg:gap-6">
-        <div className="rounded-xl border border-line bg-white p-5 lg:p-6">
-          <p className="text-xs font-medium text-ink mb-5">Scenario impact breakdown</p>
-          <ImpactBarChart impact={impact} alloy={alloy} />
-        </div>
-
-        <div className="rounded-xl border border-line bg-white p-5 lg:p-6">
-          <div className="flex items-center justify-between mb-4">
-            <p className="text-xs font-medium text-ink">Price vs. demand trajectory</p>
-            <div className="flex items-center gap-3 text-[11px] text-light">
-              <span className="flex items-center gap-1.5">
-                <span className="h-2 w-2 rounded-full bg-highlight" /> Price
-              </span>
-              <span className="flex items-center gap-1.5">
-                <span className="h-2 w-2 rounded-full bg-muted" /> Demand
-              </span>
-            </div>
-          </div>
-          <TrajectoryChart series={series} height={260} />
         </div>
       </div>
     </div>
