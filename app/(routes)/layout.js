@@ -4,24 +4,25 @@ import '../_style/globals.css'
 import { Suspense } from "react";
 import Loading from './loading';
 import { SpeedInsights } from "@vercel/speed-insights/next"
-import { GoogleTagManager } from '@next/third-parties/google'
 import { Syne } from 'next/font/google'
-import CTABanner from '../_components/CTABanner';
 
 const syne = Syne({
   subsets: ['latin'],
   display: 'swap',
 })
 
-
 export const metadata = {
   metadataBase: new URL('https://glblnex.com'),
   title: {
-    template: '%s | globalNex',
-    default: 'globalNex - Global Trade Intelligence',
+    template: '%s | globalnex',
+    default: 'globalnex — Metals Geo-Risk Analyzer',
   },
-  description: 'globalNex is a cutting-edge data analytics platform that revolutionizes the way organizations access, analyze, and leverage global trade data. globalNex provides a centralized and intelligent solution for stakeholders across the international trade ecosystem, enabling them to gain unparalleled insights, optimize operations, and drive strategic decision-making.',
-  keywords: ['Global Trade', 'Data', 'AI', 'Global AI', 'Global Trade Data', 'Analytics', 'Global Analytics', 'Data Intelligence', 'Global Intelligence', 'Logistics', 'Advanced Logistics', 'Global Tracking', ' AI Logistics', 'AI Global Trade', 'Trade Data', 'Logistical Data', 'Logistics Tracking'],
+  description: 'globalnex is a geo-risk analyzer for metals supply. Map where the alloys you buy come from, track global supply movement and concentration, and stress-test geo-shocks on cost, availability, and lead time.',
+  keywords: [
+    'Metals', 'Geo-Risk', 'Supply Chain Risk', 'Scenario Analysis', 'Aluminum',
+    'Titanium', 'Steel', 'Copper', 'Nickel', 'Gold', 'Alloys', 'Procurement',
+    'Commodity Risk', 'Geopolitical Risk', 'Supply Risk', 'Manufacturing Metals',
+  ],
   type: 'website',
   url: '/',
   icons: {
@@ -36,10 +37,10 @@ export const metadata = {
   canonical: 'https://glblnex.com/',
   manifest: 'icons/site.webmanifest',
   openGraph: {
-    title: 'globalNex - Global Trade Intelligence',
-    name: 'globalNex',
-    site_name: 'globalNex',
-    description: 'globalNex is a cutting-edge data analytics platform that revolutionizes the way organizations access, analyze, and leverage global trade data.',
+    title: 'globalnex — Metals Geo-Risk Analyzer',
+    name: 'globalnex',
+    site_name: 'globalnex',
+    description: 'Map global metals supply, spot concentration risk, and stress-test geo-shocks on the alloys manufacturers buy.',
     type: 'website',
     url: '/',
     images: "https://y2etwt0sktcajnaj.public.blob.vercel-storage.com/og_photo.png",
@@ -59,7 +60,6 @@ export default function Layout({ children }) {
         </Suspense>
         <MainFooter />
       </body>
-      {/* <GoogleTagManager gtmId="G-GCQEVGZLP4" /> */}
     </html >
   )
 }

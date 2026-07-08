@@ -1,9 +1,7 @@
 'use client'
 
 import React from "react";
-import Link from 'next/link';
 import GxSection from "./GxSection";
-// import AutoTyperNL from '../_components/AutoTyperNL';
 import WaitlistForm from '../_components/WaitlistForm';
 import { Urbanist } from 'next/font/google'
 
@@ -15,8 +13,16 @@ const urbanist = Urbanist({
 export default function CTABanner() {
     return (
         <GxSection>
-            <h2 className={`text-4xl lg:text-6xl font-light text-center mb-12 ${urbanist.className}`}>Join the Waitlist</h2>
-            <WaitlistForm></WaitlistForm>
+            <div className="rounded-2xl border border-line bg-bg2 px-6 py-12 lg:px-16 lg:py-16 text-center">
+                <h2 className={`text-3xl lg:text-5xl font-light text-ink mb-4 ${urbanist.className}`}>
+                    Get early access to globalnex
+                </h2>
+                <p className={`text-light max-w-lg mx-auto mb-10 text-sm lg:text-base ${urbanist.className}`}>
+                    Join the waitlist for the metals geo-risk analyzer — map supply, stress-test
+                    shocks, and quantify exposure before disruption hits production.
+                </p>
+                <WaitlistForm />
+            </div>
         </GxSection>
     )
 }

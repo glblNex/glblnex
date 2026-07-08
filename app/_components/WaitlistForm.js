@@ -154,7 +154,7 @@ export default function SignUpFormReact() {
               onChange={(e) => setEmail(e.target.value)}
               required
               className={`${isInline ? 'mr-2' : 'mb-2'
-                } w-full mb-7 max-w-xs min-w-[100px] bg-bg border rounded-sm text-center x-3 py-2 px-3 font-extralight ${urbanist.className}`}
+                } w-full mb-7 max-w-sm min-w-[100px] bg-white text-ink border border-line rounded-md text-center py-2.5 px-4 font-light focus:outline-none focus:border-highlight focus:ring-2 focus:ring-highlight/20 transition-all ${urbanist.className}`}
             />
             <div aria-hidden="true" className="absolute left-[-2024px]"></div>
             <SignUpFormButton/>

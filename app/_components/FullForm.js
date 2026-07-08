@@ -113,19 +113,17 @@ export default function FullForm() {
       className="flex flex-col items-center text-center justify-center w-full"
     >
       {Object.keys(fields).map((field) => (
-        <>
-          <input
-            key={field}
-            type={field === 'email' ? 'email' : 'text'}
-            name={field}
-            placeholder={formConfig.placeholderText[field]}
-            value={fields[field]}
-            onChange={handleInputChange}
-            required
-            className={`w-full mb-7 max-w-md min-w-[100px] bg-bg border border-gray-300 rounded-sm px-3 py-2 font-extralight ${urbanist.className}`}
-            autoComplete="off"
-          />
-        </>
+        <input
+          key={field}
+          type={field === 'email' ? 'email' : 'text'}
+          name={field}
+          placeholder={formConfig.placeholderText[field]}
+          value={fields[field]}
+          onChange={handleInputChange}
+          required
+          className={`w-full mb-5 max-w-md min-w-[100px] bg-white text-ink border border-line rounded-md px-4 py-2.5 font-light focus:outline-none focus:border-highlight focus:ring-2 focus:ring-highlight/20 transition-all ${urbanist.className}`}
+          autoComplete="off"
+        />
       ))}
       <MainButton btn_txt={formConfig.buttonText}>
         {formState === FORM_STATES.SUBMITTING ? 'Please wait...' : formConfig.buttonText}

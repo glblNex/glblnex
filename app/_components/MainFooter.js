@@ -3,19 +3,18 @@
 import React from "react";
 import Link from 'next/link';
 import Image from 'next/image'
-import { SiLinkedin, SiInstagram, SiX } from "react-icons/si";
-
+import { SiLinkedin, SiX } from "react-icons/si";
 
 export default function MainFooter() {
     return (
-        <nav className="container mx-auto min-w-full z-40">
-            <div className="relative bottom-0 left-0 right-0 px-10 lg:px-24 py-12 z-39 bg-bg2 text-bg">
+        <footer className="container mx-auto min-w-full">
+            <div className="relative bottom-0 left-0 right-0 px-6 lg:px-24 py-14 bg-bg2 text-ink border-t border-line">
                 <div className='grid grid-cols-6 max-md:grid-cols-1 gap-x-6 max-md:gap-y-8 justify-between justify-items-stretch content-start'>
                     <div className='max-md:justify-self-center content-center'>
                         <Link href="/">
                             <Image
                                 src="SM-LightSVG.svg"
-                                alt="globalNex Icon Logo"
+                                alt="globalnex Icon Logo"
                                 sizes="10vw"
                                 style={{
                                     width: '30px',
@@ -26,52 +25,33 @@ export default function MainFooter() {
                             />
                         </Link>
                     </div>
+                    <div className='col-span-3 max-md:hidden'>
+                        <p className='text-light max-w-md text-sm leading-relaxed'>
+                            Geo-risk analytics for the metals and alloys manufacturers depend on. Map global supply, spot concentration, and stress-test shocks before they hit your line.
+                        </p>
+                    </div>
                     <div className='max-md:hidden'></div>
                     <div className='max-md:hidden'></div>
-                    {/* <div className='grid items-top justify-between justify-items-stretch gap-6 content-start justify-self-end max-md:justify-self-center'>
-                        <Link className="" href="/product">
-                            Product
-                        </Link>
-                    </div>
-                    <div className='grid items-top justify-between justify-items-stretch gap-6 content-start justify-self-end max-md:justify-self-center'>
-                        <Link className="" href="/resources">
-                            Resources
-                        </Link>
-                    </div>
-                    <div className='grid items-top justify-between justify-items-stretch gap-6 content-start justify-self-end max-md:justify-self-center'>
-                        <Link className="" href="/company">
-                            Company
-                        </Link>
-                    </div> */}
                 </div>
-                <div className='mt-16 grid grid-cols-3 max-md:grid-cols-1 gap-x-6 max-md:gap-y-8 items-end text-light'>
+                <div className='mt-14 grid grid-cols-3 max-md:grid-cols-1 gap-x-6 max-md:gap-y-6 items-end text-light text-sm'>
                     <div className='justify-self-center text-center md:justify-self-start md:text-left'>
-                        {/* <p>Powered by <Link className='font-semibold ' href='https://nauvis.co/'>NAUVIS</Link>.</p> */}
-                        <p>© 2024 globalNex. All rights reserved.</p>
+                        <p>© 2026 globalnex. All rights reserved.</p>
                     </div>
                     <div className='justify-self-center'>
-                        <Link className="" href="/terms">
-                            Terms
-                        </Link>
+                        <Link className="hover:text-ink transition-colors" href="/terms">Terms</Link>
                         <span>, </span>
-                        <Link className="" href="/privacy">
-                            Privacy
-                        </Link>
+                        <Link className="hover:text-ink transition-colors" href="/privacy">Privacy</Link>
                         <span>, </span>
-                        <Link className="" href="/cookies">
-                            Cookies
-                        </Link>
+                        <Link className="hover:text-ink transition-colors" href="/cookies">Cookies</Link>
                         <span>, & </span>
-                        <Link className="" href="/use">
-                            Acceptable Use
-                        </Link>
+                        <Link className="hover:text-ink transition-colors" href="/use">Acceptable Use</Link>
                     </div>
-                    <div className='flex flex-row justify-self-end max-md:justify-self-center'>
-                        <Link href="https://x.com/glblNex" target="_blank" className='ml-6'><SiX /></Link>
-                        <Link href="https://www.linkedin.com/company/glblnex/" target="_blank" className='ml-6'><SiLinkedin /></Link>
+                    <div className='flex flex-row justify-self-end max-md:justify-self-center text-ink'>
+                        <Link href="https://x.com/glblNex" target="_blank" className='ml-6 hover:text-highlight transition-colors'><SiX /></Link>
+                        <Link href="https://www.linkedin.com/company/glblnex/" target="_blank" className='ml-6 hover:text-highlight transition-colors'><SiLinkedin /></Link>
                     </div>
                 </div>
             </div>
-        </nav>
+        </footer>
     )
 }

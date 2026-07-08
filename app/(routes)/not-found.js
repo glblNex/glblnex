@@ -5,8 +5,8 @@ export default function NotFound() {
     return (
         <div className='grid grid-cols-1 place-items-center gap-12 p-48 text-center'>
             <Image
-                src="SM - DarkSVG.svg"
-                alt="globalNex Icon Logo"
+                src="SM-LightSVG.svg"
+                alt="globalnex Icon Logo"
                 sizes="100vw"
                 style={{
                     width: 'auto',
@@ -22,7 +22,7 @@ export default function NotFound() {
                 404 - Page Not Found
             </h1>
             <p className='text-l text-light lg:text-xl'>
-                We're still working on our website, we appreciate your patience!
+                We&apos;re still working on our website, we appreciate your patience!
             </p>
         </div>
     )
