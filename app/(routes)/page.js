@@ -188,7 +188,7 @@ export default function Home() {
       </GxSection>
 
       {/* Alloy decomposition */}
-      <GxSection>
+      <GxSection id="alloys">
         <Reveal>
           <SectionHeading
             eyebrow="Alloy decomposition"
@@ -203,7 +203,7 @@ export default function Home() {
       </GxSection>
 
       {/* Why globalNex / differentiation */}
-      <GxSection>
+      <GxSection id="compare">
         <WhyGlobalNex />
       </GxSection>
 
