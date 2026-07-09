@@ -1,5 +1,6 @@
 import MainNavbar from '../_components/MainNavbar'
 import MainFooter from '../_components/MainFooter'
+import StructuredData from '../_components/StructuredData'
 import '../_style/globals.css'
 import { Suspense } from "react";
 import Loading from './loading';
@@ -7,7 +8,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 import { syne } from '../_style/fonts'
 
 const siteDescription =
-  'globalNex is a metals scenario analysis platform. Decompose the alloys you buy, stress-test price and supply shocks, and quantify the impact on cost, availability, and margin.';
+  'globalNex is the alloy-grade supply risk analysis platform for manufacturers. Decompose the alloys you buy (7075-T6, Ti-6Al-4V, Inconel 718), model price and supply shocks, and quantify cost, margin, and at-risk spend in seconds. All signal, no noise.';
 
 const ogImage = 'https://y2etwt0sktcajnaj.public.blob.vercel-storage.com/og_photo.png';
 
@@ -15,7 +16,7 @@ export const metadata = {
   metadataBase: new URL('https://glblnex.com'),
   title: {
     template: '%s | globalNex',
-    default: 'globalNex: Metals Scenario Analysis',
+    default: 'globalNex: Alloy-Grade Supply Risk Analysis',
   },
   description: siteDescription,
   applicationName: 'globalNex',
@@ -24,9 +25,12 @@ export const metadata = {
   publisher: 'globalNex',
   category: 'technology',
   keywords: [
-    'Metals', 'Scenario Analysis', 'Supply Chain Risk', 'Aluminum', 'Titanium',
-    'Steel', 'Copper', 'Nickel', 'Gold', 'Alloys', 'Procurement', 'Commodity Risk',
-    'Risk Analysis', 'Manufacturing Metals', 'Supply Risk', 'globalNex',
+    'alloy-grade supply risk', 'alloy-grade exposure', 'metal supply risk analysis',
+    'BOM metal risk', '7075-T6 supply risk', 'Ti-6Al-4V exposure', 'Inconel 718 risk',
+    'metal price shock modeling', 'at-risk spend metals', 'composition decomposition',
+    'Metals Scenario Analysis', 'Supply Chain Risk', 'Aluminum', 'Titanium',
+    'Steel', 'Copper', 'Nickel', 'Alloys', 'Procurement', 'Commodity Risk',
+    'Manufacturing Metals', 'globalNex',
   ],
   robots: {
     index: true,
@@ -38,6 +42,9 @@ export const metadata = {
   },
   alternates: {
     canonical: 'https://glblnex.com/',
+    types: {
+      'text/plain': 'https://glblnex.com/llms.txt',
+    },
   },
   icons: {
     icon: [
@@ -54,8 +61,8 @@ export const metadata = {
   },
   manifest: '/icons/site.webmanifest',
   openGraph: {
-    title: 'globalNex: Metals Scenario Analysis',
-    description: 'Stress-test the exact alloys you buy. See what a price or supply shock does to cost, availability, and margin in seconds.',
+    title: 'globalNex: Alloy-Grade Supply Risk Analysis',
+    description: 'Model what a price or supply shock does to the exact alloy grades on your BOM. Cost, margin, and at-risk spend in seconds.',
     url: 'https://glblnex.com/',
     siteName: 'globalNex',
     locale: 'en_US',
@@ -71,8 +78,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'globalNex: Metals Scenario Analysis',
-    description: 'Stress-test the exact alloys you buy. Quantify cost, availability, and margin impact from price and supply shocks.',
+    title: 'globalNex: Alloy-Grade Supply Risk Analysis',
+    description: 'Decompose alloys, model shocks, quantify cost and margin impact. The alloy-grade layer your price feeds and supplier tools leave open.',
     site: '@glblNex',
     creator: '@glblNex',
     images: [ogImage],
@@ -88,6 +95,7 @@ export default function Layout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning={true} className={syne.className}>
       <body suppressHydrationWarning={true}>
+        <StructuredData />
         <MainNavbar />
         <Suspense fallback={<Loading />}>
           <div className='container mx-auto min-w-full z-1'>

@@ -1,0 +1,40 @@
+# globalNex
+
+> globalNex is an alloy-grade supply risk analysis platform for manufacturers. It decomposes the exact alloy grades on your bill of materials into constituent metals, models price and supply shocks, and quantifies the impact on cost, margin, and at-risk spend in seconds.
+
+globalNex answers the question price feeds and supplier platforms leave open: what does a shock do to 7075-T6, Ti-6Al-4V, or Inconel 718, and what does it cost you in dollars?
+
+All signal, no noise. One risk score. One exposure figure. Alloy-grade precision.
+
+## Core capabilities
+
+- Alloy-grade composition decomposition (7075-T6, Ti-6Al-4V, Inconel 718, and more)
+- Interactive scenario modeling: price shocks, production cuts, export bans
+- Dollar impact: cost, at-risk spend, margin hit, availability, lead time
+- Geographic supply concentration mapped to each grade's constituent metals
+- Board-ready risk score and exposure figure in seconds
+
+## Key pages
+
+- [Home](https://glblnex.com/): Product overview, live demo, comparison, FAQ
+- [Early access](https://glblnex.com/started): Join waitlist for manufacturers building with globalNex
+
+## Who it is for
+
+Aerospace, automotive and EV, industrial manufacturing, defense, medical devices, and energy companies where metal spend is material to cost and margin.
+
+## How globalNex compares
+
+- **Price and forecast providers** (Fastmarkets, CRU, MetalMiner, Argus): excel at market-level prices and forecasts. globalNex operates at the alloy-grade layer on your BOM.
+- **Supply-chain risk platforms** (Everstream, Interos, Resilinc): excel at multi-tier supplier mapping. globalNex maps metal and geo concentration behind each alloy grade.
+- **globalNex**: purpose-built for alloy-grade shock to grade and BOM dollars.
+
+## Extended documentation
+
+For full FAQ, glossary, and detailed product information: [llms-full.txt](https://glblnex.com/llms-full.txt)
+
+## Contact
+
+- Website: https://glblnex.com
+- X: https://x.com/glblNex
+- LinkedIn: https://www.linkedin.com/company/glblnex/

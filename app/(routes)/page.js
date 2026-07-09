@@ -12,6 +12,7 @@ import ScenarioDemo from '../_components/ScenarioDemo'
 import AlloyExposureSection from '../_components/AlloyExposureSection'
 import BenefitsSection from '../_components/BenefitsSection'
 import CoverageMarquee from '../_components/CoverageMarquee'
+import FaqSection from '../_components/FaqSection'
 import IndustriesStrip from '../_components/IndustriesStrip'
 import WhyGlobalNex from '../_components/WhyGlobalNex'
 import ShockMoment from '../_components/ShockMoment'
@@ -217,6 +218,10 @@ export default function Home() {
       </GxSection>
 
       <CoverageMarquee />
+
+      <GxSection>
+        <FaqSection />
+      </GxSection>
 
       <CTABanner />
     </main>
