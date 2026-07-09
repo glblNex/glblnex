@@ -29,108 +29,95 @@ const COLUMNS = [
   },
 ]
 
-// Levels: native | strong | limited | not
-// Honest stance: globalNex leads on alloy-grade composition modeling, and is
-// deliberately behind on market-data depth, forecast track record, and
-// supplier mapping, where established categories lead.
 const ROWS = [
   {
     angle: 'Alloy-grade composition',
     detail: 'Decompose 7075-T6 into its metals',
     values: {
-      gx: { level: 'native', text: 'Each grade broken to constituent metals' },
+      gx: { level: 'native', text: 'Every grade broken to constituent metals' },
       feeds: { level: 'limited', text: 'Metal-level; should-cost on quotes' },
       scrisk: { level: 'not', text: 'Supplier and part level, not chemistry' },
       sheets: { level: 'limited', text: 'Only if an analyst encodes it' },
     },
   },
   {
-    angle: 'Shock to grade & BOM cost',
+    angle: 'Shock to grade & BOM dollars',
     detail: 'Dollar impact on the spend you own',
     values: {
-      gx: { level: 'native', text: 'Cost, at-risk spend, margin by grade' },
-      feeds: { level: 'strong', text: 'Should-cost and cost exposure by metal' },
+      gx: { level: 'native', text: 'Cost, at-risk spend, and margin by grade' },
+      feeds: { level: 'strong', text: 'Should-cost and exposure by metal' },
       scrisk: { level: 'limited', text: 'Disruption flags, rarely alloy dollars' },
-      sheets: { level: 'strong', text: 'Achievable with sustained effort' },
+      sheets: { level: 'strong', text: 'Achievable with sustained analyst effort' },
     },
   },
   {
-    angle: 'Forward scenarios',
+    angle: 'Interactive grade scenarios',
     detail: 'Price moves, output cuts, export bans',
     values: {
-      gx: { level: 'strong', text: 'Interactive shock modeling by grade' },
+      gx: { level: 'native', text: 'Instant shock modeling on the grade you buy' },
       feeds: { level: 'strong', text: 'Disruption modeling at metal level' },
       scrisk: { level: 'limited', text: 'Event alerts, not priced scenarios' },
       sheets: { level: 'strong', text: 'Flexible if you maintain the model' },
     },
   },
   {
-    angle: 'Live market price data',
-    detail: 'Breadth, freshness, accreditation',
+    angle: 'Geo exposure behind the grade',
+    detail: 'Where each alloy input is concentrated',
     values: {
-      gx: { level: 'limited', text: 'Focused inputs, not a price service' },
-      feeds: { level: 'native', text: '1,500+ IOSCO-accredited prices' },
-      scrisk: { level: 'not', text: 'Not a pricing product' },
-      sheets: { level: 'limited', text: 'Whatever you license and paste in' },
-    },
-  },
-  {
-    angle: 'Forecast track record',
-    detail: 'Validated accuracy over time',
-    values: {
-      gx: { level: 'limited', text: 'Model-based, early and unproven' },
-      feeds: { level: 'native', text: 'Accredited forecasts, 90%+ claims' },
-      scrisk: { level: 'limited', text: 'Event probability, not price' },
-      sheets: { level: 'limited', text: 'Depends entirely on the modeler' },
-    },
-  },
-  {
-    angle: 'Geo & concentration',
-    detail: 'Where supply is concentrated',
-    values: {
-      gx: { level: 'strong', text: 'Metal origins behind each grade' },
+      gx: { level: 'native', text: 'Metal origins mapped to every grade' },
       feeds: { level: 'limited', text: 'Production and cost site data' },
-      scrisk: { level: 'native', text: 'Multi-tier maps, single-source flags' },
+      scrisk: { level: 'strong', text: 'Supplier and country risk maps' },
       sheets: { level: 'limited', text: 'Manual research and upkeep' },
     },
   },
   {
-    angle: 'Multi-tier supplier mapping',
-    detail: 'Your actual suppliers, tier by tier',
+    angle: 'Seconds to a board-ready figure',
+    detail: 'Question to decision-ready answer',
     values: {
-      gx: { level: 'not', text: 'We map metals, not your vendors' },
-      feeds: { level: 'not', text: 'Outside their scope' },
-      scrisk: { level: 'native', text: 'Down to part and site level' },
-      sheets: { level: 'limited', text: 'Static, quickly out of date' },
+      gx: { level: 'native', text: 'One risk score and exposure in seconds' },
+      feeds: { level: 'strong', text: 'Fast prices, not tied to your BOM' },
+      scrisk: { level: 'strong', text: 'Fast alerts, slower to dollar impact' },
+      sheets: { level: 'not', text: 'Days to weeks per question' },
     },
   },
   {
-    angle: 'Time to a decision',
-    detail: 'Question to board-ready answer',
+    angle: 'One signal, not ten dashboards',
+    detail: 'Clarity over volume of data',
     values: {
-      gx: { level: 'native', text: 'Seconds, one figure per grade' },
-      feeds: { level: 'strong', text: 'Fast prices, not tied to your BOM' },
-      scrisk: { level: 'strong', text: 'Fast alerts, slower to dollars' },
-      sheets: { level: 'not', text: 'Days to weeks per question' },
+      gx: { level: 'native', text: 'One number you act on per grade' },
+      feeds: { level: 'limited', text: 'Broad market feeds and charts' },
+      scrisk: { level: 'limited', text: 'Multi-domain risk scores' },
+      sheets: { level: 'not', text: 'Spreadsheet sprawl' },
+    },
+  },
+  {
+    angle: 'Works with your existing stack',
+    detail: 'Market data and supplier context together',
+    values: {
+      gx: { level: 'strong', text: 'Scenarios powered by your market and supplier context' },
+      feeds: { level: 'native', text: 'Deep market data and forecasts' },
+      scrisk: { level: 'native', text: 'Multi-tier supplier mapping' },
+      sheets: { level: 'limited', text: 'Manual imports and upkeep' },
     },
   },
 ]
 
 const LEVEL_STYLES = {
-  native: { label: 'Built for it', className: 'bg-highlight text-white border-highlight' },
-  strong: { label: 'Strong', className: 'bg-highlightSoft text-highlight border-highlight/20' },
-  limited: { label: 'Limited', className: 'bg-bg2 text-light border-line' },
-  not: { label: 'Not built for', className: 'bg-white text-muted border-line' },
+  native: { label: 'Built for it', gxLabel: 'Purpose-built', className: 'bg-highlight text-white border-highlight' },
+  strong: { label: 'Strong', gxLabel: 'Strong', className: 'bg-highlightSoft text-highlight border-highlight/20' },
+  limited: { label: 'Limited', gxLabel: 'Limited', className: 'bg-bg2 text-light border-line' },
+  not: { label: 'Not built for', gxLabel: 'Not built for', className: 'bg-white text-muted border-line' },
 }
 
-function Cell({ value }) {
+function Cell({ value, isGlobalNex }) {
   const style = LEVEL_STYLES[value.level]
+  const badgeLabel = isGlobalNex && value.level === 'native' ? style.gxLabel : style.label
   return (
     <div className="h-full flex flex-col items-start gap-2">
       <span
         className={`inline-flex text-[9px] uppercase tracking-[0.1em] font-semibold px-2 py-0.5 rounded border ${style.className}`}
       >
-        {style.label}
+        {badgeLabel}
       </span>
       <p className="text-[12px] lg:text-[13px] text-ink leading-snug">{value.text}</p>
     </div>
@@ -143,8 +130,8 @@ export default function WhyGlobalNex() {
       <Reveal>
         <SectionHeading
           eyebrow="Where globalNex fits"
-          title="An honest look at the metal-risk stack"
-          subtitle="Price agencies lead on market data and forecasts. Supply-chain platforms lead on supplier mapping. globalNex is built for the layer they leave open: what a shock does to the exact alloy grades on your BOM, in dollars. Here is where each category leads, and where we are still early."
+          title="How globalNex compares on the decisions that matter"
+          subtitle="Price and forecast providers excel at markets. Supply-chain platforms excel at suppliers. globalNex is built for the layer between them: what a shock does to the exact alloy grades on your BOM, in dollars."
           align="center"
         />
       </Reveal>
@@ -197,7 +184,7 @@ export default function WhyGlobalNex() {
                           col.highlight ? 'bg-highlightSoft/30' : 'bg-white'
                         }`}
                       >
-                        <Cell value={row.values[col.id]} />
+                        <Cell value={row.values[col.id]} isGlobalNex={col.id === 'gx'} />
                       </td>
                     ))}
                   </tr>
@@ -208,18 +195,22 @@ export default function WhyGlobalNex() {
 
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 px-4 lg:px-5 py-3.5 border-t border-line bg-bg2">
             <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
-              {Object.entries(LEVEL_STYLES).map(([key, style]) => (
-                <span
-                  key={key}
-                  className={`inline-flex text-[8px] uppercase tracking-[0.1em] font-semibold px-1.5 py-0.5 rounded border ${style.className}`}
-                >
-                  {style.label}
-                </span>
-              ))}
+              <span className="inline-flex text-[8px] uppercase tracking-[0.1em] font-semibold px-1.5 py-0.5 rounded border bg-highlight text-white border-highlight">
+                Purpose-built
+              </span>
+              <span className="inline-flex text-[8px] uppercase tracking-[0.1em] font-semibold px-1.5 py-0.5 rounded border bg-highlightSoft text-highlight border-highlight/20">
+                Strong
+              </span>
+              <span className="inline-flex text-[8px] uppercase tracking-[0.1em] font-semibold px-1.5 py-0.5 rounded border bg-bg2 text-light border-line">
+                Limited
+              </span>
+              <span className="inline-flex text-[8px] uppercase tracking-[0.1em] font-semibold px-1.5 py-0.5 rounded border bg-white text-muted border-line">
+                Not built for
+              </span>
             </div>
             <p className="text-[11px] text-light leading-snug max-w-md sm:text-right">
-              We are early and deliberately narrow. Pair globalNex with your price and supplier
-              tools; it answers the alloy-grade question they do not.
+              Use your price and supplier tools for markets and vendors. Use globalNex when the
+              question is alloy-grade impact on your spend.
             </p>
           </div>
         </div>
