@@ -11,14 +11,14 @@ export default function StartedPage() {
                 <header className="pb-10">
                     <div className="grid grid-cols-1 gap-6 justify-items-center text-center">
                         <p className="text-xs uppercase tracking-[0.2em] text-highlight font-semibold">
-                            Early access
+                            Request an assessment
                         </p>
                         <h1 className={`lg:max-w-[75%] text-4xl lg:text-5xl font-light text-ink ${urbanist.className}`}>
-                            Help shape what we build next
+                            Apply to work with our team
                         </h1>
                         <h2 className={`lg:max-w-[60%] text-base lg:text-lg text-light font-light leading-relaxed ${urbanist.className}`}>
-                            We are building globalNex with manufacturers who feel this gap.
-                            Join early access and tell us where metal risk shows up for you.
+                            We take a limited number of engagements with defense, aerospace, and
+                            heavy manufacturing teams. Tell us where metal risk shows up for you.
                         </h2>
                     </div>
                 </header>

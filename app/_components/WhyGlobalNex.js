@@ -9,95 +9,83 @@ const COLUMNS = [
   {
     id: 'gx',
     label: 'globalNex',
-    blurb: 'Alloy-grade scenario layer',
+    blurb: 'Engine + experts + data',
     highlight: true,
   },
   {
-    id: 'feeds',
-    label: 'Price & forecast providers',
-    blurb: 'Fastmarkets, CRU, MetalMiner, Argus',
+    id: 'saas',
+    label: 'Pure SaaS tools',
+    blurb: 'Self-serve dashboards',
   },
   {
-    id: 'scrisk',
-    label: 'Supply-chain risk platforms',
-    blurb: 'Everstream, Interos, Resilinc',
-  },
-  {
-    id: 'sheets',
-    label: 'In-house spreadsheets',
-    blurb: 'Analysts & custom models',
+    id: 'consult',
+    label: 'Consultancies',
+    blurb: 'Analyst reports & projects',
   },
 ]
 
 const ROWS = [
   {
-    angle: 'Alloy-grade composition',
-    detail: 'Decompose 7075-T6 into its metals',
+    angle: 'What you get',
+    detail: 'The deliverable, not the tool',
     values: {
-      gx: { level: 'native', text: 'Every grade broken to constituent metals' },
-      feeds: { level: 'limited', text: 'Metal-level; should-cost on quotes' },
-      scrisk: { level: 'not', text: 'Supplier and part level, not chemistry' },
-      sheets: { level: 'limited', text: 'Only if an analyst encodes it' },
+      gx: { level: 'native', text: 'Boardroom-ready number and negotiation counter' },
+      saas: { level: 'limited', text: 'A login and a blank dashboard' },
+      consult: { level: 'strong', text: 'A PDF report in weeks' },
     },
   },
   {
-    angle: 'Shock to grade & BOM dollars',
-    detail: 'Dollar impact on the spend you own',
+    angle: 'Your messy BOMs',
+    detail: 'Who maps spreadsheets and ERP dumps',
     values: {
-      gx: { level: 'native', text: 'Cost, at-risk spend, and margin by grade' },
-      feeds: { level: 'strong', text: 'Should-cost and exposure by metal' },
-      scrisk: { level: 'limited', text: 'Disruption flags, rarely alloy dollars' },
-      sheets: { level: 'strong', text: 'Achievable with sustained analyst effort' },
+      gx: { level: 'native', text: 'Ingestion engine + Expert-in-the-Loop maps it for you' },
+      saas: { level: 'not', text: 'You clean and upload the data' },
+      consult: { level: 'strong', text: 'Analysts do it, billed by the hour' },
     },
   },
   {
-    angle: 'Interactive grade scenarios',
-    detail: 'Price moves, output cuts, export bans',
+    angle: 'Supplier negotiation counter',
+    detail: 'Counter a +12% hike with alloy-grade math',
     values: {
-      gx: { level: 'native', text: 'Instant shock modeling on the grade you buy' },
-      feeds: { level: 'strong', text: 'Disruption modeling at metal level' },
-      scrisk: { level: 'limited', text: 'Event alerts, not priced scenarios' },
-      sheets: { level: 'strong', text: 'Flexible if you maintain the model' },
+      gx: { level: 'native', text: '6061-T6 breakdown: true cost +4.2%, counter at 5%' },
+      saas: { level: 'limited', text: 'Commodity charts, not grade decomposition' },
+      consult: { level: 'limited', text: 'Possible, but slow and project-scoped' },
     },
   },
   {
-    angle: 'Geo exposure behind the grade',
-    detail: 'Where each alloy input is concentrated',
+    angle: 'Speed to answer',
+    detail: 'Question to decision-ready figure',
     values: {
-      gx: { level: 'native', text: 'Metal origins mapped to every grade' },
-      feeds: { level: 'limited', text: 'Production and cost site data' },
-      scrisk: { level: 'strong', text: 'Supplier and country risk maps' },
-      sheets: { level: 'limited', text: 'Manual research and upkeep' },
+      gx: { level: 'native', text: 'Seconds in the room; trigger alerts same morning' },
+      saas: { level: 'limited', text: 'Fast UI, if your data is already mapped' },
+      consult: { level: 'not', text: 'Days to weeks per question' },
     },
   },
   {
-    angle: 'Seconds to a board-ready figure',
-    detail: 'Question to decision-ready answer',
+    angle: 'Switching cost',
+    detail: 'Embedded in your operation',
     values: {
-      gx: { level: 'native', text: 'One risk score and exposure in seconds' },
-      feeds: { level: 'strong', text: 'Fast prices, not tied to your BOM' },
-      scrisk: { level: 'strong', text: 'Fast alerts, slower to dollar impact' },
-      sheets: { level: 'not', text: 'Days to weeks per question' },
+      gx: { level: 'native', text: 'Your BOM mapped, studios configured — hard to rip out' },
+      saas: { level: 'not', text: 'Export your data and leave' },
+      consult: { level: 'limited', text: 'Knowledge walks out when the project ends' },
     },
   },
   {
-    angle: 'One signal, not ten dashboards',
-    detail: 'Clarity over volume of data',
+    angle: 'Defensibility',
+    detail: 'Can a competitor clone it in a weekend',
     values: {
-      gx: { level: 'native', text: 'One number you act on per grade' },
-      feeds: { level: 'limited', text: 'Broad market feeds and charts' },
-      scrisk: { level: 'limited', text: 'Multi-domain risk scores' },
-      sheets: { level: 'not', text: 'Spreadsheet sprawl' },
+      gx: { level: 'native', text: 'Proprietary alloy DB + expert interpretation layer' },
+      saas: { level: 'not', text: 'UI and charts are trivially copyable' },
+      consult: { level: 'strong', text: 'Relationships and expertise, no live engine' },
     },
   },
   {
-    angle: 'Works with your existing stack',
+    angle: 'Works with your stack',
     detail: 'Market data and supplier context together',
     values: {
-      gx: { level: 'strong', text: 'Scenarios powered by your market and supplier context' },
-      feeds: { level: 'native', text: 'Deep market data and forecasts' },
-      scrisk: { level: 'native', text: 'Multi-tier supplier mapping' },
-      sheets: { level: 'limited', text: 'Manual imports and upkeep' },
+      gx: { level: 'strong', text: 'Scenarios powered by your feeds and supplier maps' },
+      saas: { level: 'limited', text: 'Another siloed dashboard' },
+      consult: { level: 'strong', text: 'Flexible, but not continuous' },
     },
   },
 ]
@@ -129,9 +117,9 @@ export default function WhyGlobalNex() {
     <section className="w-full">
       <Reveal>
         <SectionHeading
-          eyebrow="Where globalNex fits"
-          title="How globalNex compares on the decisions that matter"
-          subtitle="Price and forecast providers excel at markets. Supply-chain platforms excel at suppliers. globalNex is built for the layer between them: what a shock does to the exact alloy grades on your BOM, in dollars."
+          eyebrow="The moat"
+          title="Software does the computation. Experts deliver the strategy."
+          subtitle="Pure SaaS hands you a blank dashboard anyone can clone. Consultancies hand you a report in weeks. globalNex combines a proprietary engine, an alloy database, and an Expert-in-the-Loop team — the outcome neither can match alone."
           align="center"
         />
       </Reveal>
@@ -139,10 +127,10 @@ export default function WhyGlobalNex() {
       <Reveal delay={0.05}>
         <div className="mt-8 lg:mt-10 rounded-2xl border border-line bg-white overflow-hidden shadow-[0_20px_60px_-34px_rgba(10,10,10,0.22)]">
           <div className="overflow-x-auto gx-scrollbar">
-            <table className="w-full border-collapse min-w-[880px]">
+            <table className="w-full border-collapse min-w-[720px]">
               <thead>
                 <tr className="border-b border-line">
-                  <th className="text-left p-4 lg:p-5 w-[22%] align-bottom bg-bg2/40">
+                  <th className="text-left p-4 lg:p-5 w-[24%] align-bottom bg-bg2/40">
                     <span className="text-[10px] uppercase tracking-[0.14em] text-light font-medium">
                       Angle
                     </span>
@@ -150,7 +138,7 @@ export default function WhyGlobalNex() {
                   {COLUMNS.map((col) => (
                     <th
                       key={col.id}
-                      className={`p-4 lg:p-5 text-left align-bottom w-[19.5%] ${
+                      className={`p-4 lg:p-5 text-left align-bottom w-[25.3%] ${
                         col.highlight ? 'bg-highlightSoft/50' : 'bg-bg2/40'
                       }`}
                     >
@@ -194,23 +182,12 @@ export default function WhyGlobalNex() {
           </div>
 
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 px-4 lg:px-5 py-3.5 border-t border-line bg-bg2">
-            <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
-              <span className="inline-flex text-[8px] uppercase tracking-[0.1em] font-semibold px-1.5 py-0.5 rounded border bg-highlight text-white border-highlight">
-                Purpose-built
-              </span>
-              <span className="inline-flex text-[8px] uppercase tracking-[0.1em] font-semibold px-1.5 py-0.5 rounded border bg-highlightSoft text-highlight border-highlight/20">
-                Strong
-              </span>
-              <span className="inline-flex text-[8px] uppercase tracking-[0.1em] font-semibold px-1.5 py-0.5 rounded border bg-bg2 text-light border-line">
-                Limited
-              </span>
-              <span className="inline-flex text-[8px] uppercase tracking-[0.1em] font-semibold px-1.5 py-0.5 rounded border bg-white text-muted border-line">
-                Not built for
-              </span>
-            </div>
+            <p className="text-[11px] text-light leading-snug max-w-lg">
+              An elite, tech-enabled advisory platform. The engine does the heavy lifting; domain
+              experts deliver the boardroom-ready strategy.
+            </p>
             <p className="text-[11px] text-light leading-snug max-w-md sm:text-right">
-              Use your price and supplier tools for markets and vendors. Use globalNex when the
-              question is alloy-grade impact on your spend.
+              Selective engagements. A limited number of manufacturers at a time.
             </p>
           </div>
         </div>

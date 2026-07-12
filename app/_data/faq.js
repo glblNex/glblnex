@@ -3,40 +3,58 @@
 
 export const FAQ_ITEMS = [
   {
+    id: 'software-or-service',
+    question: 'Is globalNex software or a service?',
+    answer:
+      'Both, delivered as Outcome-as-a-Service. The software is the engine — alloy decomposition, scenario modeling, trigger alerts. The service is the Expert-in-the-Loop team that maps your messy BOMs, configures your scenario studio, and delivers the boardroom-ready number. You buy the quantified conclusion, not a login to a blank dashboard.',
+  },
+  {
+    id: 'counter-supplier-hike',
+    question: 'Can globalNex help me counter a supplier price increase?',
+    answer:
+      'Yes — this is the primary use case. When a supplier claims aluminum is up and demands +12%, globalNex decomposes the exact grade (e.g. 6061-T6: 97% aluminum, magnesium actually down) and shows the true cost increase (e.g. +4.2%). You counter with a defensible number (e.g. 5%). One negotiation pays for the engagement.',
+  },
+  {
+    id: 'clean-bom-data',
+    question: 'Do I need clean BOM or ERP data?',
+    answer:
+      'No. Your BOMs are messy and your ERP is a mess — that is exactly what we take off your plate. Our ingestion engine auto-maps disparate spreadsheets and ERP dumps to our metallurgical alloy database. Our Expert-in-the-Loop team validates the edge cases. You never clean the data yourself.',
+  },
+  {
+    id: 'expert-in-the-loop',
+    question: 'What does the Expert-in-the-Loop team actually do?',
+    answer:
+      'Fractional cost engineers, metallurgical analysts, and commodity strategists — not customer-success reps showing you how to click buttons. They map your BOMs to our alloy database, build custom scenario studios for your geographic footprint, and act as a fractional strategic wing helping you interpret risk scores into hedging, dual-sourcing, and redesign strategies.',
+  },
+  {
+    id: 'trigger-alerts',
+    question: 'How do trigger alerts work?',
+    answer:
+      'We watch the macro events that move your specific grades — Indonesian nickel export bans, Chinese magnesium squeezes, production cuts, sanctions — and run your spend through the model the morning the news drops. You get a quantified impact (e.g. 2-point gross-margin hit on your 7075-T6 spend) and a recommended move, not a generic market headline.',
+  },
+  {
+    id: 'how-engagements-work',
+    question: 'How do engagements work?',
+    answer:
+      'globalNex takes a limited number of manufacturers at a time. You request an assessment, we scope your metal exposure and BOM complexity, and deploy the Expert-in-the-Loop team to map your data and configure your scenario studio. Ongoing: trigger alerts, negotiation support, and strategic advisory as macro events hit your grades.',
+  },
+  {
     id: 'what-is-alloy-grade-supply-risk',
     question: 'What is alloy-grade supply risk analysis?',
     answer:
       'Alloy-grade supply risk analysis models how price and supply shocks propagate through the exact alloy grades on your bill of materials, not just spot commodity prices. Instead of tracking LME aluminum, it decomposes 7075-T6 into its constituent metals (aluminum, zinc, magnesium, copper), maps where each is sourced, and calculates the dollar impact on cost, margin, and at-risk spend when a shock hits.',
   },
   {
-    id: 'globalnex-vs-price-feeds',
-    question: 'How is globalNex different from commodity price feeds like Fastmarkets or MetalMiner?',
+    id: 'globalnex-vs-saas',
+    question: 'How is globalNex different from pure SaaS supply-risk tools?',
     answer:
-      'Price and forecast providers excel at market-level data: IOSCO-accredited prices, metal-level forecasts, and disruption modeling at the commodity level. globalNex operates at the alloy-grade layer: it decomposes the specific grades you buy (7075-T6, Ti-6Al-4V, Inconel 718), models how shocks propagate through their composition, and outputs grade-level and BOM-level dollar impact. The two are complementary: market data feeds the scenario inputs; globalNex answers what it means for your spend.',
+      'Pure SaaS hands you a login and a blank dashboard — you clean your own data, learn the UI, and hope someone on your team maintains it. The UI is trivially copyable. globalNex combines a proprietary alloy database and engine with an Expert-in-the-Loop team that does the heavy lifting and delivers the outcome. Once your BOM is mapped and studios configured, switching cost is high.',
   },
   {
-    id: 'globalnex-vs-supply-chain-platforms',
-    question: 'How is globalNex different from supply-chain risk platforms like Interos or Resilinc?',
+    id: 'globalnex-vs-consultancies',
+    question: 'How is globalNex different from consultancies?',
     answer:
-      'Supply-chain risk platforms map your suppliers tier by tier, score vendor risk, and flag disruptions at the company and site level. globalNex maps metal and geographic concentration behind each alloy grade: where the constituent metals are mined and refined, and what a production cut or export ban does to the grades on your BOM in dollars. Supplier platforms answer who supplies you; globalNex answers what your metal chemistry exposes you to.',
-  },
-  {
-    id: 'how-shock-modeling-works',
-    question: 'How does globalNex model the impact of a metal price or supply shock?',
-    answer:
-      'You select an alloy grade, set a price shock percentage and a production change percentage, and globalNex computes cost impact, at-risk spend, margin hit, availability drop, lead-time change, and an overall risk score. The model weights each constituent metal by its composition share, factors in supply concentration and volatility, and produces board-ready figures in seconds.',
-  },
-  {
-    id: 'spot-vs-alloy',
-    question: 'Why does LME spot price not tell you your real metal exposure?',
-    answer:
-      'Spot prices reflect a single commodity at a single point in time. Manufacturers buy alloy grades, not raw metals. A 20% aluminum price move affects 7075-T6 differently than 6061-T6 because their compositions differ. A magnesium export ban hits AZ31 and 7075-T6 through different metal pathways. Alloy-grade analysis connects market events to the grades and dollars on your BOM.',
-  },
-  {
-    id: 'who-uses-globalnex',
-    question: 'Who uses alloy-grade supply risk analysis?',
-    answer:
-      'Procurement and sourcing teams use it to negotiate from exposure data instead of spot prices. Supply chain and operations teams use it to spot single-country dependencies before disruptions stop production. Finance and risk teams use it to quantify at-risk spend and margin impact for board reporting. Engineering teams use it to compare alloy grades on supply resilience, not just mechanical spec.',
+      'Consultancies deliver a report in weeks, billed by the hour, with no live engine and no continuous trigger alerts. Knowledge walks out when the project ends. globalNex delivers ongoing, seconds-fast answers via a proprietary engine, plus experts who interpret the numbers into actionable strategy — hedging, dual-sourcing, redesign.',
   },
   {
     id: 'metals-covered',
@@ -44,15 +62,19 @@ export const FAQ_ITEMS = [
     answer:
       'globalNex covers aluminum (6061-T6, 7075-T6, 2024-T3), titanium (Ti-6Al-4V, Grade 2), steel and stainless (304, 316L, 4140), nickel superalloys (Inconel 718, 625), copper (C11000, C26000 brass), gold (Fine Gold 999), and zinc/magnesium alloys (Zamak 3, AZ31). Each grade is decomposed into constituent metals with composition share, volatility, and geographic supply concentration.',
   },
-  {
-    id: 'board-question',
-    question: 'What question does globalNex answer for leadership teams?',
-    answer:
-      'The question every leadership team eventually asks: what does a specific supply or price shock do to the alloy grades we buy, and what does it cost us in margin and spend? globalNex turns that into one risk score and one exposure figure in seconds, on the exact grades on your bill of materials.',
-  },
 ]
 
 export const GLOSSARY = [
+  {
+    term: 'Outcome-as-a-Service (OaaS)',
+    definition:
+      'A delivery model where the customer buys a quantified conclusion (negotiation counter, boardroom figure, trigger alert) rather than software access. The engine does computation; domain experts deliver the strategy.',
+  },
+  {
+    term: 'Expert-in-the-Loop',
+    definition:
+      'Fractional cost engineers, metallurgical analysts, and commodity strategists who map client BOMs, configure scenario studios, and interpret risk scores into hedging, dual-sourcing, and redesign moves.',
+  },
   {
     term: 'Alloy-grade exposure',
     definition:
@@ -61,7 +83,7 @@ export const GLOSSARY = [
   {
     term: 'Composition decomposition',
     definition:
-      'Breaking an alloy into its constituent metals by weight percentage (e.g. 7075-T6 is 89.5% aluminum, 5.6% zinc, 2.5% magnesium, 1.6% copper) to trace how shocks propagate.',
+      'Breaking an alloy into its constituent metals by weight percentage (e.g. 6061-T6 is 97% aluminum) to trace how shocks propagate and counter supplier price claims.',
   },
   {
     term: 'At-risk spend',
@@ -69,8 +91,8 @@ export const GLOSSARY = [
       'The portion of annual alloy spend exposed to a modeled shock scenario, expressed in dollars.',
   },
   {
-    term: 'Supply concentration',
+    term: 'Trigger alert',
     definition:
-      'The degree to which a metal\'s production or refining is concentrated in a single country or region, creating geo-political exposure.',
+      'An event-driven notification quantifying a client\'s exposure when a macro supply shock (export ban, production cut, sanction) hits a metal in their BOM.',
   },
 ]

@@ -8,7 +8,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 import { syne } from '../_style/fonts'
 
 const siteDescription =
-  'globalNex is the alloy-grade supply risk analysis platform for manufacturers. Decompose the alloys you buy (7075-T6, Ti-6Al-4V, Inconel 718), model price and supply shocks, and quantify cost, margin, and at-risk spend in seconds. All signal, no noise.';
+  'globalNex is an Outcome-as-a-Service platform for defense, aerospace, and heavy manufacturing. Counter supplier price hikes with alloy-grade precision, map messy BOMs via Expert-in-the-Loop deployment, and get boardroom-ready exposure figures — not a blank dashboard.';
 
 const ogImage = 'https://y2etwt0sktcajnaj.public.blob.vercel-storage.com/og_photo.png';
 
@@ -16,7 +16,7 @@ export const metadata = {
   metadataBase: new URL('https://glblnex.com'),
   title: {
     template: '%s | globalNex',
-    default: 'globalNex: Alloy-Grade Supply Risk Analysis',
+    default: 'globalNex: Material-Risk Outcomes, Delivered',
   },
   description: siteDescription,
   applicationName: 'globalNex',
@@ -25,12 +25,13 @@ export const metadata = {
   publisher: 'globalNex',
   category: 'technology',
   keywords: [
-    'alloy-grade supply risk', 'alloy-grade exposure', 'metal supply risk analysis',
-    'BOM metal risk', '7075-T6 supply risk', 'Ti-6Al-4V exposure', 'Inconel 718 risk',
+    'outcome-as-a-service', 'material risk advisory', 'BOM risk assessment',
+    'fractional commodity strategist', 'supplier price negotiation', 'alloy-grade supply risk',
+    'alloy-grade exposure', 'metal supply risk analysis', 'BOM metal risk',
+    '7075-T6 supply risk', 'Ti-6Al-4V exposure', 'Inconel 718 risk',
     'metal price shock modeling', 'at-risk spend metals', 'composition decomposition',
-    'Metals Scenario Analysis', 'Supply Chain Risk', 'Aluminum', 'Titanium',
-    'Steel', 'Copper', 'Nickel', 'Alloys', 'Procurement', 'Commodity Risk',
-    'Manufacturing Metals', 'globalNex',
+    'critical minerals risk', 'supply shock prediction', 'Metals Scenario Analysis',
+    'Supply Chain Risk', 'Procurement', 'Commodity Risk', 'Manufacturing Metals', 'globalNex',
   ],
   robots: {
     index: true,
@@ -61,8 +62,8 @@ export const metadata = {
   },
   manifest: '/icons/site.webmanifest',
   openGraph: {
-    title: 'globalNex: Alloy-Grade Supply Risk Analysis',
-    description: 'Model what a price or supply shock does to the exact alloy grades on your BOM. Cost, margin, and at-risk spend in seconds.',
+    title: 'globalNex: Material-Risk Outcomes, Delivered',
+    description: 'Counter supplier price hikes with alloy-grade precision. Expert-in-the-Loop deployment maps your BOMs and delivers boardroom-ready numbers — not a blank dashboard.',
     url: 'https://glblnex.com/',
     siteName: 'globalNex',
     locale: 'en_US',
@@ -72,14 +73,14 @@ export const metadata = {
         url: ogImage,
         width: 1200,
         height: 630,
-        alt: 'globalNex: Metals Scenario Analysis',
+        alt: 'globalNex: Material-Risk Outcomes',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'globalNex: Alloy-Grade Supply Risk Analysis',
-    description: 'Decompose alloys, model shocks, quantify cost and margin impact. The alloy-grade layer your price feeds and supplier tools leave open.',
+    title: 'globalNex: Material-Risk Outcomes, Delivered',
+    description: 'Outcome-as-a-Service for manufacturers. Alloy-grade counters, trigger alerts, and Expert-in-the-Loop deployment — not another self-serve dashboard.',
     site: '@glblNex',
     creator: '@glblNex',
     images: [ogImage],

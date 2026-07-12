@@ -12,8 +12,8 @@ export default function FaqSection() {
       <Reveal>
         <SectionHeading
           eyebrow="Common questions"
-          title="Alloy-grade supply risk, explained"
-          subtitle="Definitive answers for procurement, supply chain, finance, and engineering teams evaluating metal exposure."
+          title="Outcome-as-a-Service, explained"
+          subtitle="Definitive answers on engagements, data ingestion, supplier counters, and the Expert-in-the-Loop team."
           align="center"
         />
       </Reveal>

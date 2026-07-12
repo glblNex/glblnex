@@ -1,33 +1,43 @@
 # globalNex
 
-> globalNex is an alloy-grade supply risk analysis platform for manufacturers. It decomposes the exact alloy grades on your bill of materials into constituent metals, models price and supply shocks, and quantifies the impact on cost, margin, and at-risk spend in seconds.
+> globalNex is an Outcome-as-a-Service platform for defense, aerospace, and heavy manufacturing. It delivers quantified material-risk conclusions — not a blank dashboard. Counter supplier price hikes with alloy-grade precision, map messy BOMs via Expert-in-the-Loop deployment, and get boardroom-ready exposure figures in seconds.
 
-globalNex answers the question price feeds and supplier platforms leave open: what does a shock do to 7075-T6, Ti-6Al-4V, or Inconel 718, and what does it cost you in dollars?
+The painkiller: when a supplier claims aluminum is up and demands +12%, globalNex shows the exact 6061-T6 breakdown — aluminum is 97% of the grade, magnesium is down, true cost rose 4.2%. You counter at 5%. One interaction pays for the year.
 
-All signal, no noise. One risk score. One exposure figure. Alloy-grade precision.
+## What you get (the outcome)
 
-## Core capabilities
+- A defensible negotiation counter backed by alloy-grade decomposition
+- Boardroom-ready at-risk spend and margin impact figures
+- Trigger alerts quantifying your exposure the morning macro news drops
+- Expert-in-the-Loop team mapping your BOMs — you never clean the data
+
+## How deployment works
+
+1. **Map your BOMs** — ingestion engine auto-maps messy spreadsheets and ERP dumps to our metallurgical alloy database; experts validate edge cases
+2. **Build your scenario studio** — custom shock models tuned to your geographic footprint and grades
+3. **Act as your strategic wing** — fractional cost engineers and commodity strategists turn risk scores into hedging, dual-sourcing, and redesign moves
+
+## The engine (proof, not the product)
 
 - Alloy-grade composition decomposition (7075-T6, Ti-6Al-4V, Inconel 718, and more)
 - Interactive scenario modeling: price shocks, production cuts, export bans
 - Dollar impact: cost, at-risk spend, margin hit, availability, lead time
 - Geographic supply concentration mapped to each grade's constituent metals
-- Board-ready risk score and exposure figure in seconds
 
 ## Key pages
 
-- [Home](https://glblnex.com/): Product overview, live demo, comparison, FAQ
-- [Early access](https://glblnex.com/started): Join waitlist for manufacturers building with globalNex
+- [Home](https://glblnex.com/): Outcome overview, painkiller demo, Expert-in-the-Loop, FAQ
+- [Request an assessment](https://glblnex.com/started): Apply to work with our team
 
 ## Who it is for
 
-Aerospace, automotive and EV, industrial manufacturing, defense, medical devices, and energy companies where metal spend is material to cost and margin.
+Defense, aerospace, automotive and EV, industrial manufacturing, medical devices, and energy companies where metal spend is material to cost and margin. Selective engagements — a limited number of manufacturers at a time.
 
 ## How globalNex compares
 
-- **Price and forecast providers** (Fastmarkets, CRU, MetalMiner, Argus): excel at market-level prices and forecasts. globalNex operates at the alloy-grade layer on your BOM.
-- **Supply-chain risk platforms** (Everstream, Interos, Resilinc): excel at multi-tier supplier mapping. globalNex maps metal and geo concentration behind each alloy grade.
-- **globalNex**: purpose-built for alloy-grade shock to grade and BOM dollars.
+- **Pure SaaS tools**: hand you a login and a blank dashboard; you clean your own data; trivially copyable
+- **Consultancies**: deliver a report in weeks; no live engine; knowledge walks out when the project ends
+- **globalNex**: proprietary engine + alloy database + Expert-in-the-Loop team = the outcome neither can match alone
 
 ## Extended documentation
 

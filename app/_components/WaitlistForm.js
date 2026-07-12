@@ -25,8 +25,8 @@ const formStyles = {
   name: 'Default',
   formStyle: 'buttonBelow',
   placeholderText: 'you@company.com',
-  buttonText: 'Join early access',
-  successMessage: "You're on the list. We'll be in touch.",
+  buttonText: 'Request an assessment',
+  successMessage: "Request received. We'll be in touch.",
   userGroup: 'gxWebsite',
 };
 

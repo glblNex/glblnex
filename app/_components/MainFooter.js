@@ -8,11 +8,11 @@ import { urbanist } from '../_style/fonts'
 import MainButton from './MainButton'
 
 const EXPLORE = [
-  { label: 'Live demo', href: '/#demo' },
+  { label: 'See the engine', href: '/#demo' },
   { label: 'Alloy decomposition', href: '/#alloys' },
   { label: 'How we compare', href: '/#compare' },
   { label: 'FAQ', href: '/#faq' },
-  { label: 'Early access', href: '/started' },
+  { label: 'Request access', href: '/started' },
 ]
 
 const INDUSTRIES = [
@@ -64,14 +64,15 @@ export default function MainFooter() {
               globalNex
             </p>
             <p className={`text-3xl sm:text-4xl lg:text-5xl font-light leading-[1.1] ${urbanist.className}`}>
-              Material intelligence, refined to one decision.
+              We hand you the number, not the dashboard.
             </p>
             <p className="mt-4 text-sm text-white/55 leading-relaxed max-w-lg">
-              Alloy-grade supply risk for manufacturers who refuse to guess. All signal, no noise.
+              Outcome-as-a-Service for manufacturers who refuse to guess. Alloy-grade counters,
+              trigger alerts, Expert-in-the-Loop deployment.
             </p>
           </div>
           <Link href="/started" className="shrink-0">
-            <MainButton btn_txt="Join early access" />
+            <MainButton btn_txt="Request an assessment" />
           </Link>
         </div>
       </div>
@@ -91,8 +92,8 @@ export default function MainFooter() {
               />
             </Link>
             <p className="mt-5 text-sm text-light leading-relaxed max-w-xs">
-              Decompose the alloys you buy. Model shocks. Quantify cost, margin, and exposure in
-              seconds.
+              Counter supplier hikes. Map your BOMs. Quantify exposure. The outcome you carry into
+              the room.
             </p>
             <div className="mt-6 flex items-center gap-4 text-ink">
               <Link
@@ -155,8 +156,7 @@ export default function MainFooter() {
               The stack
             </p>
             <p className="text-sm text-light leading-relaxed mb-4">
-              Works alongside your price feeds and supplier platforms. Answers the alloy-grade
-              question they leave open.
+              Engine plus Expert-in-the-Loop team. Not another self-serve dashboard.
             </p>
             <div className="rounded-xl border border-line bg-white p-4 space-y-2">
               <div className="flex items-center justify-between text-xs">

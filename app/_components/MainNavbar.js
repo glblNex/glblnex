@@ -68,7 +68,7 @@ export default function MainNavbar() {
             </div>
             <div className='flex items-center justify-self-end'>
               <Link href="/started" className=''>
-                <MainButton btn_txt='Get Started' />
+                <MainButton btn_txt='Request access' />
               </Link>
             </div>
           </div>
@@ -106,7 +106,7 @@ export default function MainNavbar() {
               Company
             </Link> */}
             <Link href="/started" className='self-center'>
-              <MainButton btn_txt='Get Started' />
+              <MainButton btn_txt='Request access' />
             </Link>
           </div> : null}
         </div>

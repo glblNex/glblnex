@@ -7,34 +7,34 @@ import Reveal, { RevealGroup, RevealItem } from './Reveal'
 
 const PILLARS = [
   {
-    label: 'Precision',
-    value: 'Alloy-grade',
-    detail: 'Every figure is tied to the exact grades on your bill of materials, not a commodity index.',
+    label: 'Negotiation',
+    value: 'Counter in the room',
+    detail: 'Walk into supplier talks with the exact alloy breakdown and a defensible number — not a commodity index.',
   },
   {
-    label: 'Speed',
-    value: 'Seconds',
-    detail: 'Scenario answers arrive at the pace of a leadership conversation, not a research cycle.',
+    label: 'Boardroom',
+    value: 'One figure',
+    detail: 'At-risk spend and margin impact your leadership can trust and act on, not a promise to follow up.',
   },
   {
-    label: 'Stewardship',
-    value: 'Board-ready',
-    detail: 'One risk score and one exposure figure your leadership can trust and act on.',
+    label: 'Window',
+    value: 'Act in time',
+    detail: 'See the shock, quantify the exposure, and move on hedging or dual-sourcing while the window is still open.',
   },
 ]
 
 const STANDARDS = [
   {
-    title: 'Negotiate with composure',
-    body: 'Enter supplier conversations knowing which grades carry concentration risk and what a move means in dollars.',
+    title: 'Protected margin',
+    body: 'Every percentage point you do not overpay in a supplier negotiation flows straight to gross margin.',
   },
   {
-    title: 'Decide with foresight',
-    body: 'Model dual-sourcing, redesign, and hedging options while the window to act is still open.',
+    title: 'Composure under pressure',
+    body: 'When the board asks what a magnesium squeeze does to your spend, you have the answer — not a research project.',
   },
   {
-    title: 'Lead with clarity',
-    body: 'Bring a precise material-risk figure into every review, not a promise to follow up.',
+    title: 'Decisions, not dashboards',
+    body: 'One quantified conclusion per question. The outcome you carry into the room, not another tool to learn.',
   },
 ]
 
@@ -43,9 +43,9 @@ export default function BusinessCase() {
     <section className="w-full">
       <Reveal>
         <SectionHeading
-          eyebrow="The standard"
-          title="Built for operators who refuse to guess"
-          subtitle="globalNex is not another feed or spreadsheet. It is the material-risk layer serious manufacturers use to see clearly and decide well."
+          eyebrow="The outcome"
+          title="What you walk away with"
+          subtitle="globalNex is not software you log into. It is the quantified conclusion you take into a board meeting or a supplier negotiation."
           align="center"
         />
       </Reveal>

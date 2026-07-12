@@ -8,7 +8,7 @@ export default function StructuredData() {
     url: 'https://glblnex.com',
     logo: 'https://glblnex.com/LightSVG.svg',
     description:
-      'Alloy-grade supply risk analysis for manufacturers. Decompose alloy grades, model price and supply shocks, quantify cost and margin impact.',
+      'Outcome-as-a-Service for material-risk analysis. Alloy-grade negotiation counters, Expert-in-the-Loop deployment, and boardroom-ready exposure figures for defense, aerospace, and heavy manufacturing.',
     sameAs: [
       'https://x.com/glblNex',
       'https://www.linkedin.com/company/glblnex/',
@@ -21,7 +21,7 @@ export default function StructuredData() {
     name: 'globalNex',
     url: 'https://glblnex.com',
     description:
-      'Alloy-grade supply risk analysis platform. Model metal price and supply shocks on the exact grades you buy.',
+      'Material-risk outcomes delivered via Expert-in-the-Loop deployment. Counter supplier hikes, map messy BOMs, quantify exposure.',
     potentialAction: {
       '@type': 'SearchAction',
       target: 'https://glblnex.com/#faq',
@@ -32,26 +32,42 @@ export default function StructuredData() {
   const software = {
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
-    name: 'globalNex',
+    name: 'globalNex Engine',
     applicationCategory: 'BusinessApplication',
     operatingSystem: 'Web',
     url: 'https://glblnex.com',
     description:
-      'Alloy-grade supply risk analysis. Decompose alloys into constituent metals, stress-test price and supply shocks, and quantify cost, margin, and at-risk spend impact in seconds.',
+      'Proprietary alloy-grade decomposition and scenario engine. Powers Outcome-as-a-Service delivery — not sold as self-serve SaaS.',
     offers: {
       '@type': 'Offer',
       price: '0',
       priceCurrency: 'USD',
-      description: 'Early access waitlist',
+      description: 'Request an assessment',
       url: 'https://glblnex.com/started',
     },
     featureList: [
       'Alloy-grade composition decomposition',
+      'Supplier negotiation counter (e.g. 6061-T6 breakdown)',
+      'Zero-friction BOM ingestion engine',
+      'Trigger alerts on macro supply events',
       'Interactive price and supply shock scenarios',
-      'Cost, margin, and at-risk spend modeling',
       'Geographic supply concentration mapping',
-      'Board-ready risk score',
     ],
+  }
+
+  const service = {
+    '@context': 'https://schema.org',
+    '@type': 'ProfessionalService',
+    name: 'globalNex Expert-in-the-Loop',
+    url: 'https://glblnex.com',
+    description:
+      'Fractional cost engineers, metallurgical analysts, and commodity strategists who map client BOMs, configure scenario studios, and deliver boardroom-ready material-risk strategy.',
+    serviceType: 'Material risk advisory and Outcome-as-a-Service',
+    areaServed: 'Worldwide',
+    audience: {
+      '@type': 'BusinessAudience',
+      audienceType: 'Defense, aerospace, automotive, and heavy manufacturing procurement and finance teams',
+    },
   }
 
   const faqPage = {
@@ -69,7 +85,7 @@ export default function StructuredData() {
 
   const graph = {
     '@context': 'https://schema.org',
-    '@graph': [organization, website, software, faqPage],
+    '@graph': [organization, website, software, service, faqPage],
   }
 
   return (

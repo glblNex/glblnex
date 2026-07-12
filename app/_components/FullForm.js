@@ -30,8 +30,8 @@ const formConfig = {
     company: 'Company Name',
     role: 'Your Role/Title',
   },
-  buttonText: 'Join early access',
-  successMessage: "You're on the list. We'll be in touch.",
+  buttonText: 'Request an assessment',
+  successMessage: "Request received. We'll be in touch.",
   userGroup: 'gxWaitlistInterest',
   domain: 'app.loops.so',
 };
