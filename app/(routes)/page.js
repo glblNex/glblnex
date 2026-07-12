@@ -15,6 +15,7 @@ import CoverageMarquee from '../_components/CoverageMarquee'
 import FaqSection from '../_components/FaqSection'
 import IndustriesStrip from '../_components/IndustriesStrip'
 import WhyGlobalNex from '../_components/WhyGlobalNex'
+import MarketThesis from '../_components/MarketThesis'
 import ShockMoment from '../_components/ShockMoment'
 import BusinessCase from '../_components/BusinessCase'
 import SectionHeading from '../_components/SectionHeading'
@@ -150,6 +151,9 @@ export default function Home() {
           ))}
         </RevealGroup>
       </GxSection>
+
+      {/* Market thesis / why now */}
+      <MarketThesis />
 
       {/* The unanswerable question */}
       <GxSection>

@@ -19,6 +19,14 @@ Tagline: All signal, no noise.
 
 ---
 
+## Market context (why now)
+
+As the global economy electrifies and geopolitical tension remains high, securing raw physical inputs is becoming more critical than writing code. The nature of commodities trading is evolving from a pure financial exercise into a strategic necessity. Electrification (EVs, grids, turbines) is compounding demand for critical metals, while tariffs, export controls, and sanctions are reshaping where those metals are mined and refined.
+
+This creates a wide-open frontier for global metal risk tracking: platforms that can precisely trace where critical materials are sourced, understand how they are refined, and predict supply shocks before they hit the manufacturing floor. globalNex is building that layer at the alloy-grade level, connecting macro resource-security shifts to the specific grades and dollars on a manufacturer's bill of materials.
+
+---
+
 ## Frequently asked questions
 
 ### What is alloy-grade supply risk analysis?
