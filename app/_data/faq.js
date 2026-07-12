@@ -30,7 +30,7 @@ export const FAQ_ITEMS = [
     id: 'trigger-alerts',
     question: 'How do trigger alerts work?',
     answer:
-      'We watch the macro events that move your specific grades: Indonesian nickel export bans, Chinese magnesium squeezes, production cuts, sanctions, and run your spend through the model the morning the news drops. You get a quantified impact (e.g. 2-point gross-margin hit on your 7075-T6 spend) and a recommended move, not a generic market headline.',
+      'We watch the macro events that move your specific grades, including Indonesian nickel export bans, Chinese magnesium squeezes, production cuts, and sanctions, and run your spend through the model the morning the news drops. You get a quantified impact (e.g. 2-point gross-margin hit on your 7075-T6 spend) and a recommended move, not a generic market headline.',
   },
   {
     id: 'how-engagements-work',
