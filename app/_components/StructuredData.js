@@ -37,7 +37,7 @@ export default function StructuredData() {
     operatingSystem: 'Web',
     url: 'https://glblnex.com',
     description:
-      'Proprietary alloy-grade decomposition and scenario engine. Powers Outcome-as-a-Service delivery — not sold as self-serve SaaS.',
+      'Proprietary alloy-grade decomposition and scenario engine. Powers Outcome-as-a-Service delivery, not sold as self-serve SaaS.',
     offers: {
       '@type': 'Offer',
       price: '0',

@@ -9,7 +9,7 @@ const PILLARS = [
   {
     label: 'Negotiation',
     value: 'Counter in the room',
-    detail: 'Walk into supplier talks with the exact alloy breakdown and a defensible number — not a commodity index.',
+    detail: 'Walk into supplier talks with the exact alloy breakdown and a defensible number, not a commodity index.',
   },
   {
     label: 'Boardroom',
@@ -30,7 +30,7 @@ const STANDARDS = [
   },
   {
     title: 'Composure under pressure',
-    body: 'When the board asks what a magnesium squeeze does to your spend, you have the answer — not a research project.',
+    body: 'When the board asks what a magnesium squeeze does to your spend, you have the answer, not a research project.',
   },
   {
     title: 'Decisions, not dashboards',

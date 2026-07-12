@@ -43,7 +43,7 @@ export default function Home() {
               Win the next price negotiation before it starts
             </h1>
             <p className={`mt-5 text-base lg:text-lg text-light font-light max-w-xl leading-relaxed ${urbanist.className}`}>
-              globalNex hands manufacturers a quantified conclusion — not a blank dashboard.
+              globalNex hands manufacturers a quantified conclusion, not a blank dashboard.
               Counter supplier hikes with alloy-grade precision. One number. Absolute composure.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
@@ -76,7 +76,7 @@ export default function Home() {
         <IndustriesStrip />
       </GxSection>
 
-      {/* Painkiller — supplier negotiation counter */}
+      {/* Painkiller: supplier negotiation counter */}
       <GxSection>
         <ShockMoment />
       </GxSection>
@@ -95,7 +95,7 @@ export default function Home() {
           <SectionHeading
             eyebrow="Proof the engine is real"
             title="The math behind the counter"
-            subtitle="This is not the product — it is evidence the engine works. Pick a grade, run a shock, read the number."
+            subtitle="This is not the product. It is evidence the engine works. Pick a grade, run a shock, read the number."
             align="center"
             className="mb-5"
           />
@@ -120,7 +120,7 @@ export default function Home() {
         </Reveal>
       </GxSection>
 
-      {/* Alloy decomposition — depth behind the number */}
+      {/* Alloy decomposition: depth behind the number */}
       <GxSection id="alloys">
         <Reveal>
           <SectionHeading
@@ -135,7 +135,7 @@ export default function Home() {
         </Reveal>
       </GxSection>
 
-      {/* Moat — software + experts + data */}
+      {/* Moat: software + experts + data */}
       <GxSection id="compare">
         <WhyGlobalNex />
       </GxSection>

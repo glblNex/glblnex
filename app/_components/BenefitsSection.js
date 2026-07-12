@@ -23,7 +23,7 @@ const BENEFITS = [
     role: 'Supply Chain & Operations',
     short: 'Supply Chain',
     headline: 'Know the margin hit before the line stops',
-    outcome: 'Trigger alerts the morning a squeeze hits — with your spend already quantified.',
+    outcome: 'Trigger alerts the morning a squeeze hits, with your spend already quantified.',
     points: [
       'Exposure on your grades, not generic market alerts',
       'Dual-sourcing priorities ranked by concentration risk',
@@ -34,7 +34,7 @@ const BENEFITS = [
     role: 'Finance & Risk',
     short: 'Finance',
     headline: 'One at-risk spend figure for the board',
-    outcome: 'Margin impact and dollar exposure leadership can act on — not a follow-up promise.',
+    outcome: 'Margin impact and dollar exposure leadership can act on, not a follow-up promise.',
     points: [
       'Board-ready figures tied to your BOM',
       'Scenario-backed numbers for hedging and budget calls',
@@ -63,7 +63,7 @@ export default function BenefitsSection() {
         <SectionHeading
           eyebrow="Who we work with"
           title="Every function walks away with an outcome"
-          subtitle="Defense, aerospace, automotive, and heavy manufacturing — selective engagements for teams who refuse to guess."
+          subtitle="Defense, aerospace, automotive, and heavy manufacturing, selective engagements for teams who refuse to guess."
           align="center"
         />
       </Reveal>

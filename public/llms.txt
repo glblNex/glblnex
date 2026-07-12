@@ -1,21 +1,21 @@
 # globalNex
 
-> globalNex is an Outcome-as-a-Service platform for defense, aerospace, and heavy manufacturing. It delivers quantified material-risk conclusions — not a blank dashboard. Counter supplier price hikes with alloy-grade precision, map messy BOMs via Expert-in-the-Loop deployment, and get boardroom-ready exposure figures in seconds.
+> globalNex is an Outcome-as-a-Service platform for defense, aerospace, and heavy manufacturing. It delivers quantified material-risk conclusions, not a blank dashboard. Counter supplier price hikes with alloy-grade precision, map messy BOMs via Expert-in-the-Loop deployment, and get boardroom-ready exposure figures in seconds.
 
-The painkiller: when a supplier claims aluminum is up and demands +12%, globalNex shows the exact 6061-T6 breakdown — aluminum is 97% of the grade, magnesium is down, true cost rose 4.2%. You counter at 5%. One interaction pays for the year.
+The painkiller: when a supplier claims aluminum is up and demands +12%, globalNex shows the exact 6061-T6 breakdown: aluminum is 97% of the grade, magnesium is down, true cost rose 4.2%. You counter at 5%. One interaction pays for the year.
 
 ## What you get (the outcome)
 
 - A defensible negotiation counter backed by alloy-grade decomposition
 - Boardroom-ready at-risk spend and margin impact figures
 - Trigger alerts quantifying your exposure the morning macro news drops
-- Expert-in-the-Loop team mapping your BOMs — you never clean the data
+- Expert-in-the-Loop team mapping your BOMs; you never clean the data
 
 ## How deployment works
 
-1. **Map your BOMs** — ingestion engine auto-maps messy spreadsheets and ERP dumps to our metallurgical alloy database; experts validate edge cases
-2. **Build your scenario studio** — custom shock models tuned to your geographic footprint and grades
-3. **Act as your strategic wing** — fractional cost engineers and commodity strategists turn risk scores into hedging, dual-sourcing, and redesign moves
+1. **Map your BOMs:** ingestion engine auto-maps messy spreadsheets and ERP dumps to our metallurgical alloy database; experts validate edge cases
+2. **Build your scenario studio:** custom shock models tuned to your geographic footprint and grades
+3. **Act as your strategic wing:** fractional cost engineers and commodity strategists turn risk scores into hedging, dual-sourcing, and redesign moves
 
 ## The engine (proof, not the product)
 
@@ -31,7 +31,7 @@ The painkiller: when a supplier claims aluminum is up and demands +12%, globalNe
 
 ## Who it is for
 
-Defense, aerospace, automotive and EV, industrial manufacturing, medical devices, and energy companies where metal spend is material to cost and margin. Selective engagements — a limited number of manufacturers at a time.
+Defense, aerospace, automotive and EV, industrial manufacturing, medical devices, and energy companies where metal spend is material to cost and margin. Selective engagements, with a limited number of manufacturers at a time.
 
 ## How globalNex compares
 

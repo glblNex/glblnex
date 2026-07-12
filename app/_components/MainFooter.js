@@ -29,7 +29,7 @@ const METALS = [
 ]
 
 function FooterMarquee({ items }) {
-  // Repeat so each track is wider than the viewport — prevents visible gaps on large screens
+  // Repeat so each track is wider than the viewport, which prevents visible gaps on large screens
   const trackItems = Array(4).fill(items).flat()
 
   const Track = ({ trackId, hidden }) => (

@@ -21,7 +21,7 @@ export default function ShockMoment() {
         <SectionHeading
           eyebrow="The painkiller"
           title="Win the next price negotiation before it starts"
-          subtitle="When a supplier claims aluminum is up and demands +12%, globalNex hands you the exact alloy breakdown — and the number you counter with."
+          subtitle="When a supplier claims aluminum is up and demands +12%, globalNex hands you the exact alloy breakdown, and the number you counter with."
           align="center"
         />
       </Reveal>
@@ -45,7 +45,7 @@ export default function ShockMoment() {
 
             <div className="lg:col-span-3 p-7 lg:p-10">
               <p className="text-[10px] uppercase tracking-[0.18em] text-highlight font-medium mb-5">
-                Your counter receipt — 6061-T6
+                Your counter receipt for 6061-T6
               </p>
 
               <div className="space-y-2 mb-5">

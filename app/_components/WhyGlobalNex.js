@@ -65,7 +65,7 @@ const ROWS = [
     angle: 'Switching cost',
     detail: 'Embedded in your operation',
     values: {
-      gx: { level: 'native', text: 'Your BOM mapped, studios configured — hard to rip out' },
+      gx: { level: 'native', text: 'Your BOM mapped, studios configured, so it is hard to rip out' },
       saas: { level: 'not', text: 'Export your data and leave' },
       consult: { level: 'limited', text: 'Knowledge walks out when the project ends' },
     },
@@ -119,7 +119,7 @@ export default function WhyGlobalNex() {
         <SectionHeading
           eyebrow="The moat"
           title="Software does the computation. Experts deliver the strategy."
-          subtitle="Pure SaaS hands you a blank dashboard anyone can clone. Consultancies hand you a report in weeks. globalNex combines a proprietary engine, an alloy database, and an Expert-in-the-Loop team — the outcome neither can match alone."
+          subtitle="Pure SaaS hands you a blank dashboard anyone can clone. Consultancies hand you a report in weeks. globalNex combines a proprietary engine, an alloy database, and an Expert-in-the-Loop team, delivering the outcome neither can match alone."
           align="center"
         />
       </Reveal>

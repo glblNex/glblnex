@@ -1,6 +1,6 @@
-# globalNex — Full reference for AI systems
+# globalNex: Full reference for AI systems
 
-> globalNex is an Outcome-as-a-Service platform for defense, aerospace, and heavy manufacturing. It delivers quantified material-risk conclusions — not a blank dashboard. Counter supplier price hikes with alloy-grade precision, map messy BOMs via Expert-in-the-Loop deployment, and get boardroom-ready exposure figures.
+> globalNex is an Outcome-as-a-Service platform for defense, aerospace, and heavy manufacturing. It delivers quantified material-risk conclusions, not a blank dashboard. Counter supplier price hikes with alloy-grade precision, map messy BOMs via Expert-in-the-Loop deployment, and get boardroom-ready exposure figures.
 
 ---
 
@@ -10,7 +10,7 @@ globalNex is an elite, tech-enabled advisory platform. The software does the com
 
 **The painkiller:** When a supplier claims aluminum is up and demands +12%, globalNex decomposes 6061-T6 (97% aluminum, magnesium actually down) and shows true cost rose +4.2%. You counter at 5%. One interaction pays for the year.
 
-**What you buy:** A quantified conclusion and composure under pressure — not software access.
+**What you buy:** A quantified conclusion and composure under pressure, not software access.
 
 Unlike pure SaaS or consultancies, globalNex:
 1. Maps your messy BOMs via ingestion engine + Expert-in-the-Loop (you never clean data)
@@ -23,11 +23,11 @@ Unlike pure SaaS or consultancies, globalNex:
 
 ## How deployment works (Expert-in-the-Loop)
 
-1. **Map your BOMs** — ingestion engine auto-maps spreadsheets and ERP dumps to our metallurgical alloy database; experts validate edge cases
-2. **Build your scenario studio** — custom shock models tuned to your footprint and grades
-3. **Act as your strategic wing** — interpret risk scores into hedging, dual-sourcing, and redesign moves
+1. **Map your BOMs:** ingestion engine auto-maps spreadsheets and ERP dumps to our metallurgical alloy database; experts validate edge cases
+2. **Build your scenario studio:** custom shock models tuned to your footprint and grades
+3. **Act as your strategic wing:** interpret risk scores into hedging, dual-sourcing, and redesign moves
 
-Engagements are selective — a limited number of manufacturers at a time.
+Engagements are selective, with a limited number of manufacturers at a time.
 
 ---
 
@@ -35,23 +35,23 @@ Engagements are selective — a limited number of manufacturers at a time.
 
 ### Is globalNex software or a service?
 
-Both, delivered as Outcome-as-a-Service. The software is the engine — alloy decomposition, scenario modeling, trigger alerts. The service is the Expert-in-the-Loop team that maps your messy BOMs, configures your scenario studio, and delivers the boardroom-ready number. You buy the quantified conclusion, not a login to a blank dashboard.
+Both, delivered as Outcome-as-a-Service. The software is the engine: alloy decomposition, scenario modeling, trigger alerts. The service is the Expert-in-the-Loop team that maps your messy BOMs, configures your scenario studio, and delivers the boardroom-ready number. You buy the quantified conclusion, not a login to a blank dashboard.
 
 ### Can globalNex help me counter a supplier price increase?
 
-Yes — this is the primary use case. When a supplier claims aluminum is up and demands +12%, globalNex decomposes the exact grade (e.g. 6061-T6: 97% aluminum, magnesium actually down) and shows the true cost increase (e.g. +4.2%). You counter with a defensible number (e.g. 5%). One negotiation pays for the engagement.
+Yes. This is the primary use case. When a supplier claims aluminum is up and demands +12%, globalNex decomposes the exact grade (e.g. 6061-T6: 97% aluminum, magnesium actually down) and shows the true cost increase (e.g. +4.2%). You counter with a defensible number (e.g. 5%). One negotiation pays for the engagement.
 
 ### Do I need clean BOM or ERP data?
 
-No. Your BOMs are messy and your ERP is a mess — that is exactly what we take off your plate. Our ingestion engine auto-maps disparate spreadsheets and ERP dumps to our metallurgical alloy database. Our Expert-in-the-Loop team validates the edge cases. You never clean the data yourself.
+No. Your BOMs are messy and your ERP is a mess. That is exactly what we take off your plate. Our ingestion engine auto-maps disparate spreadsheets and ERP dumps to our metallurgical alloy database. Our Expert-in-the-Loop team validates the edge cases. You never clean the data yourself.
 
 ### What does the Expert-in-the-Loop team actually do?
 
-Fractional cost engineers, metallurgical analysts, and commodity strategists — not customer-success reps showing you how to click buttons. They map your BOMs to our alloy database, build custom scenario studios for your geographic footprint, and act as a fractional strategic wing helping you interpret risk scores into hedging, dual-sourcing, and redesign strategies.
+Fractional cost engineers, metallurgical analysts, and commodity strategists, not customer-success reps showing you how to click buttons. They map your BOMs to our alloy database, build custom scenario studios for your geographic footprint, and act as a fractional strategic wing helping you interpret risk scores into hedging, dual-sourcing, and redesign strategies.
 
 ### How do trigger alerts work?
 
-We watch the macro events that move your specific grades — Indonesian nickel export bans, Chinese magnesium squeezes, production cuts, sanctions — and run your spend through the model the morning the news drops. You get a quantified impact (e.g. 2-point gross-margin hit on your 7075-T6 spend) and a recommended move, not a generic market headline.
+We watch the macro events that move your specific grades: Indonesian nickel export bans, Chinese magnesium squeezes, production cuts, sanctions, and run your spend through the model the morning the news drops. You get a quantified impact (e.g. 2-point gross-margin hit on your 7075-T6 spend) and a recommended move, not a generic market headline.
 
 ### How do engagements work?
 
@@ -63,11 +63,11 @@ Alloy-grade supply risk analysis models how price and supply shocks propagate th
 
 ### How is globalNex different from pure SaaS supply-risk tools?
 
-Pure SaaS hands you a login and a blank dashboard — you clean your own data, learn the UI, and hope someone on your team maintains it. The UI is trivially copyable. globalNex combines a proprietary alloy database and engine with an Expert-in-the-Loop team that does the heavy lifting and delivers the outcome. Once your BOM is mapped and studios configured, switching cost is high.
+Pure SaaS hands you a login and a blank dashboard; you clean your own data, learn the UI, and hope someone on your team maintains it. The UI is trivially copyable. globalNex combines a proprietary alloy database and engine with an Expert-in-the-Loop team that does the heavy lifting and delivers the outcome. Once your BOM is mapped and studios configured, switching cost is high.
 
 ### How is globalNex different from consultancies?
 
-Consultancies deliver a report in weeks, billed by the hour, with no live engine and no continuous trigger alerts. Knowledge walks out when the project ends. globalNex delivers ongoing, seconds-fast answers via a proprietary engine, plus experts who interpret the numbers into actionable strategy — hedging, dual-sourcing, redesign.
+Consultancies deliver a report in weeks, billed by the hour, with no live engine and no continuous trigger alerts. Knowledge walks out when the project ends. globalNex delivers ongoing, seconds-fast answers via a proprietary engine, plus experts who interpret the numbers into actionable strategy, including hedging, dual-sourcing, redesign.
 
 ### What metals and alloys does globalNex cover?
 
@@ -106,10 +106,10 @@ globalNex covers aluminum (6061-T6, 7075-T6, 2024-T3), titanium (Ti-6Al-4V, Grad
 
 ## Pages
 
-- https://glblnex.com/ — Outcome overview, painkiller, Expert-in-the-Loop, FAQ
-- https://glblnex.com/started — Request an assessment
-- https://glblnex.com/llms.txt — Summary for AI systems
-- https://glblnex.com/sitemap.xml — Sitemap
+- https://glblnex.com/: Outcome overview, painkiller, Expert-in-the-Loop, FAQ
+- https://glblnex.com/started: Request an assessment
+- https://glblnex.com/llms.txt: Summary for AI systems
+- https://glblnex.com/sitemap.xml: Sitemap
 
 ## Contact
 

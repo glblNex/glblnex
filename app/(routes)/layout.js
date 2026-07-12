@@ -8,7 +8,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 import { syne } from '../_style/fonts'
 
 const siteDescription =
-  'globalNex is an Outcome-as-a-Service platform for defense, aerospace, and heavy manufacturing. Counter supplier price hikes with alloy-grade precision, map messy BOMs via Expert-in-the-Loop deployment, and get boardroom-ready exposure figures — not a blank dashboard.';
+  'globalNex is an Outcome-as-a-Service platform for defense, aerospace, and heavy manufacturing. Counter supplier price hikes with alloy-grade precision, map messy BOMs via Expert-in-the-Loop deployment, and get boardroom-ready exposure figures, not a blank dashboard.';
 
 const ogImage = 'https://y2etwt0sktcajnaj.public.blob.vercel-storage.com/og_photo.png';
 
@@ -63,7 +63,7 @@ export const metadata = {
   manifest: '/icons/site.webmanifest',
   openGraph: {
     title: 'globalNex: Material-Risk Outcomes, Delivered',
-    description: 'Counter supplier price hikes with alloy-grade precision. Expert-in-the-Loop deployment maps your BOMs and delivers boardroom-ready numbers — not a blank dashboard.',
+    description: 'Counter supplier price hikes with alloy-grade precision. Expert-in-the-Loop deployment maps your BOMs and delivers boardroom-ready numbers, not a blank dashboard.',
     url: 'https://glblnex.com/',
     siteName: 'globalNex',
     locale: 'en_US',
@@ -80,7 +80,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'globalNex: Material-Risk Outcomes, Delivered',
-    description: 'Outcome-as-a-Service for manufacturers. Alloy-grade counters, trigger alerts, and Expert-in-the-Loop deployment — not another self-serve dashboard.',
+    description: 'Outcome-as-a-Service for manufacturers. Alloy-grade counters, trigger alerts, and Expert-in-the-Loop deployment, not another self-serve dashboard.',
     site: '@glblNex',
     creator: '@glblNex',
     images: [ogImage],

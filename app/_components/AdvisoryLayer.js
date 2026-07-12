@@ -115,8 +115,8 @@ export default function AdvisoryLayer() {
               We quantify your exposure the morning the news drops.
             </h3>
             <p className="mt-4 text-sm lg:text-base text-white/55 leading-relaxed max-w-2xl">
-              We watch the macro events that move your grades — export bans, production cuts,
-              sanctions — and run your spend through the model before your team finishes their
+              We watch the macro events that move your grades, including export bans, production cuts,
+              and sanctions, and run your spend through the model before your team finishes their
               first coffee.
             </p>
 
