@@ -23,6 +23,10 @@ All signal, no noise. One risk score. One exposure figure. Alloy-grade precision
 
 Aerospace, automotive and EV, industrial manufacturing, defense, medical devices, and energy companies where metal spend is material to cost and margin.
 
+## Market context (why now)
+
+As the global economy electrifies and geopolitical tension remains high, securing raw physical inputs is becoming a strategic priority rather than a purely financial one. Electrification (EVs, grids, turbines) is compounding demand for critical metals, while tariffs, export controls, and sanctions are redrawing where those metals are mined and refined. This creates a wide-open frontier for global metal risk tracking: platforms that can precisely trace where critical materials are sourced, understand how they are refined, and predict supply shocks before they reach the manufacturing floor. globalNex is building that layer at the alloy-grade level.
+
 ## How globalNex compares
 
 - **Price and forecast providers** (Fastmarkets, CRU, MetalMiner, Argus): excel at market-level prices and forecasts. globalNex operates at the alloy-grade layer on your BOM.

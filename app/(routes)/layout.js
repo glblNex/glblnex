@@ -30,7 +30,9 @@ export const metadata = {
     'metal price shock modeling', 'at-risk spend metals', 'composition decomposition',
     'Metals Scenario Analysis', 'Supply Chain Risk', 'Aluminum', 'Titanium',
     'Steel', 'Copper', 'Nickel', 'Alloys', 'Procurement', 'Commodity Risk',
-    'Manufacturing Metals', 'globalNex',
+    'Manufacturing Metals', 'resource security', 'critical minerals risk',
+    'critical materials sourcing', 'commodity supply strategy',
+    'supply shock prediction', 'metal supply chain resilience', 'globalNex',
   ],
   robots: {
     index: true,

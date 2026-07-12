@@ -50,6 +50,12 @@ export const FAQ_ITEMS = [
     answer:
       'The question every leadership team eventually asks: what does a specific supply or price shock do to the alloy grades we buy, and what does it cost us in margin and spend? globalNex turns that into one risk score and one exposure figure in seconds, on the exact grades on your bill of materials.',
   },
+  {
+    id: 'why-resource-security-now',
+    question: 'Why is metal and resource security a strategic priority now?',
+    answer:
+      'As the global economy electrifies and geopolitical tension remains high, securing raw physical inputs is becoming a strategic necessity rather than a purely financial exercise. Electrification (EVs, grids, turbines) is compounding demand for critical metals, while tariffs, export controls, and sanctions are reshaping where those metals are mined and refined. This opens a wide-open frontier for global metal risk tracking: precisely tracing where critical materials are sourced, how they are refined, and predicting supply shocks before they hit the manufacturing floor. globalNex builds that layer at the alloy-grade level.',
+  },
 ]
 
 export const GLOSSARY = [
