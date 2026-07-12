@@ -49,6 +49,10 @@ body {
   will-change: transform;
 }
 
+.gx-marquee-inner > .flex {
+  flex-shrink: 0;
+}
+
 .gx-marquee-reverse {
   animation-direction: reverse;
 }

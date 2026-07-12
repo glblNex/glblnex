@@ -11,24 +11,32 @@ const ALLOY_GRADES = [
 ]
 
 function MarqueeRow({ items, reverse = false, duration = '38s' }) {
-  const loop = [...items, ...items]
+  // Repeat so each track exceeds viewport width for a seamless loop
+  const trackItems = Array(3).fill(items).flat()
+
+  const Track = ({ trackId, hidden }) => (
+    <div className="flex shrink-0 items-center whitespace-nowrap" aria-hidden={hidden || undefined}>
+      {trackItems.map((label, i) => (
+        <span
+          key={`${trackId}-${label}-${i}`}
+          className={`inline-flex items-center shrink-0 ${urbanist.className}`}
+        >
+          <span className="mx-3 sm:mx-4 px-4 py-2 rounded-full border border-line bg-white text-sm sm:text-base lg:text-lg font-light text-ink/80 shadow-sm">
+            {label}
+          </span>
+        </span>
+      ))}
+    </div>
+  )
 
   return (
     <div className="gx-fade-mask overflow-hidden gx-marquee-wrap">
       <div
-        className={`gx-marquee-inner flex whitespace-nowrap ${reverse ? 'gx-marquee-reverse' : ''}`}
+        className={`gx-marquee-inner flex w-max ${reverse ? 'gx-marquee-reverse' : ''}`}
         style={{ '--gx-marquee-duration': duration }}
       >
-        {loop.map((label, i) => (
-          <span
-            key={`${label}-${i}`}
-            className={`inline-flex items-center shrink-0 ${urbanist.className}`}
-          >
-            <span className="mx-3 sm:mx-4 px-4 py-2 rounded-full border border-line bg-white text-sm sm:text-base lg:text-lg font-light text-ink/80 shadow-sm">
-              {label}
-            </span>
-          </span>
-        ))}
+        <Track trackId="a" />
+        <Track trackId="b" hidden />
       </div>
     </div>
   )

@@ -29,21 +29,33 @@ const METALS = [
 ]
 
 function FooterMarquee({ items }) {
-  const loop = [...items, ...items]
+  // Repeat so each track is wider than the viewport — prevents visible gaps on large screens
+  const trackItems = Array(4).fill(items).flat()
+
+  const Track = ({ trackId, hidden }) => (
+    <div
+      className="flex shrink-0 items-center whitespace-nowrap py-3"
+      aria-hidden={hidden || undefined}
+    >
+      {trackItems.map((label, i) => (
+        <span
+          key={`${trackId}-${label}-${i}`}
+          className={`mx-6 text-xs font-light text-ink/40 ${urbanist.className}`}
+        >
+          {label}
+        </span>
+      ))}
+    </div>
+  )
+
   return (
-    <div className="gx-fade-mask overflow-hidden border-t border-line/60">
+    <div className="gx-fade-mask overflow-hidden border-t border-line/60 gx-marquee-wrap">
       <div
-        className="gx-marquee-inner flex whitespace-nowrap py-3"
+        className="gx-marquee-inner flex w-max"
         style={{ '--gx-marquee-duration': '48s' }}
       >
-        {loop.map((label, i) => (
-          <span
-            key={`${label}-${i}`}
-            className={`mx-6 text-xs font-light text-ink/40 ${urbanist.className}`}
-          >
-            {label}
-          </span>
-        ))}
+        <Track trackId="a" />
+        <Track trackId="b" hidden />
       </div>
     </div>
   )
