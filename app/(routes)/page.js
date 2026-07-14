@@ -7,7 +7,7 @@ import GxSection from '../_components/GxSection'
 import MainButton from '../_components/MainButton'
 import SecondButton from '../_components/SecondButton'
 import CTABanner from '../_components/CTABanner'
-import DashboardMockup from '../_components/DashboardMockup'
+import OutcomeDeliverable from '../_components/OutcomeDeliverable'
 import ScenarioDemo from '../_components/ScenarioDemo'
 import AlloyExposureSection from '../_components/AlloyExposureSection'
 import BenefitsSection from '../_components/BenefitsSection'
@@ -44,7 +44,7 @@ export default function Home() {
             </h1>
             <p className={`mt-5 text-base lg:text-lg text-light font-light max-w-xl leading-relaxed ${urbanist.className}`}>
               We map your BOMs, quantify the hit, and hand you the counter and the next move.
-              Personalized actionables for manufacturers who need the problem taken care of, not another dashboard.
+              For manufacturers who need the problem taken care of, not another dashboard to learn.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
               <Link href="/started">
@@ -66,7 +66,7 @@ export default function Home() {
             </dl>
           </Reveal>
           <div className="relative">
-            <DashboardMockup />
+            <OutcomeDeliverable />
           </div>
         </div>
       </GxSection>

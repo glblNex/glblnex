@@ -16,8 +16,8 @@ export default function CTABanner() {
                     Bring us your hardest material-risk question
                 </h2>
                 <p className={`text-light max-w-xl mx-auto mb-10 text-base leading-relaxed ${urbanist.className}`}>
-                    We take a limited number of manufacturers at a time. Request an assessment
-                    and tell us where metal risk shows up for you.
+                    We take a limited number of manufacturers at a time. Hand us your BOM and
+                    hardest material-risk question. We map the exposure and deliver the counter and the move.
                 </p>
                 <WaitlistForm />
             </div>

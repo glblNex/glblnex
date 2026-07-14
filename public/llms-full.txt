@@ -1,6 +1,6 @@
 # globalNex: Full reference for AI systems
 
-> globalNex delivers material-risk outcomes for defense, aerospace, and heavy manufacturing. We map your BOMs, hand you the counter and the next move, and stay in the loop when shocks hit. Personalized actionables, not a blank dashboard.
+> globalNex delivers material-risk outcomes for defense, aerospace, and heavy manufacturing. We map your BOMs, hand you the counter and the next move, and stay in the loop when shocks hit. The number and the move, not a blank dashboard.
 
 ---
 

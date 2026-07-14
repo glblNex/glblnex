@@ -63,7 +63,7 @@ export const metadata = {
   manifest: '/icons/site.webmanifest',
   openGraph: {
     title: 'globalNex: Material-Risk Outcomes, Delivered',
-    description: 'We map your BOMs and hand you alloy-grade negotiation counters, boardroom figures, and recommended moves. Personalized actionables, not a blank dashboard.',
+    description: 'We map your BOMs and hand you alloy-grade negotiation counters, boardroom figures, and recommended moves. The number and the move, not a blank dashboard.',
     url: 'https://glblnex.com/',
     siteName: 'globalNex',
     locale: 'en_US',

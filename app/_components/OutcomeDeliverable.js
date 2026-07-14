@@ -11,7 +11,7 @@ const COMPOSITION = [
   { metal: "Other", share: "1.4%", move: "+0.8%" },
 ];
 
-export default function DashboardMockup() {
+export default function OutcomeDeliverable() {
   return (
     <div className="relative">
       <div

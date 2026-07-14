@@ -63,7 +63,7 @@ export default function BenefitsSection() {
         <SectionHeading
           eyebrow="Who we work with"
           title="Every function walks away with an outcome"
-          subtitle="Defense, aerospace, automotive, and heavy manufacturing, selective engagements for teams who refuse to guess."
+          subtitle="Defense, aerospace, automotive, heavy manufacturing, and hardware teams who refuse to guess. Every function leaves with a move to take."
           align="center"
         />
       </Reveal>
