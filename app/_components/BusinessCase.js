@@ -9,32 +9,32 @@ const PILLARS = [
   {
     label: 'Negotiation',
     value: 'Counter in the room',
-    detail: 'Walk into supplier talks with the exact alloy breakdown and a defensible number, not a commodity index.',
+    detail: 'Walk in with the alloy breakdown and a defensible number. Counter at 5% when they ask for 12%.',
   },
   {
     label: 'Boardroom',
     value: 'One figure',
-    detail: 'At-risk spend and margin impact your leadership can trust and act on, not a promise to follow up.',
+    detail: 'At-risk spend and margin impact leadership can act on today, not a promise to follow up.',
   },
   {
     label: 'Window',
     value: 'Act in time',
-    detail: 'See the shock, quantify the exposure, and move on hedging or dual-sourcing while the window is still open.',
+    detail: 'See the shock, quantify the exposure, then lock contracts, dual-source, or redesign while the window is open.',
   },
 ]
 
 const STANDARDS = [
   {
     title: 'Protected margin',
-    body: 'Every percentage point you do not overpay in a supplier negotiation flows straight to gross margin.',
+    body: 'Every point you do not overpay in a supplier negotiation flows straight to gross margin. We own the math so you can take the move.',
   },
   {
     title: 'Composure under pressure',
-    body: 'When the board asks what a magnesium squeeze does to your spend, you have the answer, not a research project.',
+    body: 'When the board asks what a magnesium squeeze does to your spend, you leave with the figure and the next action.',
   },
   {
     title: 'Decisions, not dashboards',
-    body: 'One quantified conclusion per question. The outcome you carry into the room, not another tool to learn.',
+    body: 'One quantified conclusion per question, plus the recommended move. The outcome you carry into the room.',
   },
 ]
 
@@ -45,7 +45,7 @@ export default function BusinessCase() {
         <SectionHeading
           eyebrow="The outcome"
           title="What you walk away with"
-          subtitle="globalNex is not software you log into. It is the quantified conclusion you take into a board meeting or a supplier negotiation."
+          subtitle="You walk away with the number and the move: a negotiation counter, a boardroom figure, a dual-sourcing call. We take the problem on, so you do not babysit a tool."
           align="center"
         />
       </Reveal>

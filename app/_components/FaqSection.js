@@ -12,7 +12,7 @@ export default function FaqSection() {
       <Reveal>
         <SectionHeading
           eyebrow="Common questions"
-          title="Outcome-as-a-Service, explained"
+          title="Outcomes, explained"
           subtitle="Definitive answers on engagements, data ingestion, supplier counters, and the Expert-in-the-Loop team."
           align="center"
         />

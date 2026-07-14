@@ -1,7 +1,7 @@
 {
-  "name": "globalNex: Metals Scenario Analysis",
+  "name": "globalNex: Material-Risk Outcomes",
   "short_name": "globalNex",
-  "description": "Stress-test the alloys you buy. Quantify cost, availability, and margin impact from price and supply shocks.",
+  "description": "Alloy-grade negotiation counters, boardroom exposure figures, and recommended moves for manufacturers. Outcomes delivered, not a blank dashboard.",
   "start_url": "/",
   "scope": "/",
   "icons": [

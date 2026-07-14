@@ -9,7 +9,7 @@ const COLUMNS = [
   {
     id: 'gx',
     label: 'globalNex',
-    blurb: 'Engine + experts + data',
+    blurb: 'Outcomes + experts + engine',
     highlight: true,
   },
   {
@@ -29,7 +29,7 @@ const ROWS = [
     angle: 'What you get',
     detail: 'The deliverable, not the tool',
     values: {
-      gx: { level: 'native', text: 'Boardroom-ready number and negotiation counter' },
+      gx: { level: 'native', text: 'Counter, board figure, and recommended move ready to use' },
       saas: { level: 'limited', text: 'A login and a blank dashboard' },
       consult: { level: 'strong', text: 'A PDF report in weeks' },
     },
@@ -38,7 +38,7 @@ const ROWS = [
     angle: 'Your messy BOMs',
     detail: 'Who maps spreadsheets and ERP dumps',
     values: {
-      gx: { level: 'native', text: 'Ingestion engine + Expert-in-the-Loop maps it for you' },
+      gx: { level: 'native', text: 'We map it; you leave with grade-level exposure and a counter' },
       saas: { level: 'not', text: 'You clean and upload the data' },
       consult: { level: 'strong', text: 'Analysts do it, billed by the hour' },
     },
@@ -56,7 +56,7 @@ const ROWS = [
     angle: 'Speed to answer',
     detail: 'Question to decision-ready figure',
     values: {
-      gx: { level: 'native', text: 'Seconds in the room; trigger alerts same morning' },
+      gx: { level: 'native', text: 'Seconds in the room; same-morning alert with the move to take' },
       saas: { level: 'limited', text: 'Fast UI, if your data is already mapped' },
       consult: { level: 'not', text: 'Days to weeks per question' },
     },
@@ -118,8 +118,8 @@ export default function WhyGlobalNex() {
       <Reveal>
         <SectionHeading
           eyebrow="The moat"
-          title="Software does the computation. Experts deliver the strategy."
-          subtitle="Pure SaaS hands you a blank dashboard anyone can clone. Consultancies hand you a report in weeks. globalNex combines a proprietary engine, an alloy database, and an Expert-in-the-Loop team, delivering the outcome neither can match alone."
+          title="We own the problem. You walk away with the move."
+          subtitle="Pure SaaS hands you a blank dashboard anyone can clone. Consultancies hand you a report in weeks. globalNex maps your BOMs, runs the engine, and delivers the counter, the board figure, and the next action neither can match alone."
           align="center"
         />
       </Reveal>
@@ -183,8 +183,8 @@ export default function WhyGlobalNex() {
 
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 px-4 lg:px-5 py-3.5 border-t border-line bg-bg2">
             <p className="text-[11px] text-light leading-snug max-w-lg">
-              An elite, tech-enabled advisory platform. The engine does the heavy lifting; domain
-              experts deliver the boardroom-ready strategy.
+              An elite, tech-enabled advisory engagement. The engine does the heavy lifting; domain
+              experts deliver the boardroom-ready move.
             </p>
             <p className="text-[11px] text-light leading-snug max-w-md sm:text-right">
               Selective engagements. A limited number of manufacturers at a time.

@@ -6,55 +6,55 @@ export const FAQ_ITEMS = [
     id: 'software-or-service',
     question: 'Is globalNex software or a service?',
     answer:
-      'Both, delivered as Outcome-as-a-Service. The software is the engine: alloy decomposition, scenario modeling, trigger alerts. The service is the Expert-in-the-Loop team that maps your messy BOMs, configures your scenario studio, and delivers the boardroom-ready number. You buy the quantified conclusion, not a login to a blank dashboard.',
+      'A service, powered by software. You buy the quantified conclusion and the next move: negotiation counter, boardroom figure, trigger alert with a recommended action. Our Expert-in-the-Loop team maps your messy BOMs and delivers those outcomes. The engine does the computation behind the scenes. You do not buy a login to a blank dashboard.',
   },
   {
     id: 'counter-supplier-hike',
     question: 'Can globalNex help me counter a supplier price increase?',
     answer:
-      'Yes. This is the primary use case. When a supplier claims aluminum is up and demands +12%, globalNex decomposes the exact grade (e.g. 6061-T6: 97% aluminum, magnesium actually down) and shows the true cost increase (e.g. +4.2%). You counter with a defensible number (e.g. 5%). One negotiation pays for the engagement.',
+      'Yes. This is the primary use case. When a supplier claims aluminum is up and demands +12%, globalNex decomposes the exact grade (e.g. 6061-T6: 97% aluminum, magnesium actually down) and shows the true cost increase (e.g. +4.2%). You counter with a defensible number (e.g. 5%) and lock the rest of the year. One negotiation pays for the engagement.',
   },
   {
     id: 'clean-bom-data',
     question: 'Do I need clean BOM or ERP data?',
     answer:
-      'No. Your BOMs are messy and your ERP is a mess. That is exactly what we take off your plate. Our ingestion engine auto-maps disparate spreadsheets and ERP dumps to our metallurgical alloy database. Our Expert-in-the-Loop team validates the edge cases. You never clean the data yourself.',
+      'No. Your BOMs are messy and your ERP is a mess. That is exactly what we take off your plate. Our ingestion engine auto-maps disparate spreadsheets and ERP dumps to our metallurgical alloy database. Our Expert-in-the-Loop team validates the edge cases. You never clean the data yourself. You leave with mapped exposure ready for the next negotiation.',
   },
   {
     id: 'expert-in-the-loop',
     question: 'What does the Expert-in-the-Loop team actually do?',
     answer:
-      'Fractional cost engineers, metallurgical analysts, and commodity strategists, not customer-success reps showing you how to click buttons. They map your BOMs to our alloy database, build custom scenario studios for your geographic footprint, and act as a fractional strategic wing helping you interpret risk scores into hedging, dual-sourcing, and redesign strategies.',
+      'Fractional cost engineers, metallurgical analysts, and commodity strategists, not customer-success reps showing you how to click buttons. They map your BOMs to our alloy database, build custom scenario studios for your geographic footprint, and turn risk into moves you execute: hedge, dual-source, redesign, or counter in the room.',
   },
   {
     id: 'trigger-alerts',
     question: 'How do trigger alerts work?',
     answer:
-      'We watch the macro events that move your specific grades, including Indonesian nickel export bans, Chinese magnesium squeezes, production cuts, and sanctions, and run your spend through the model the morning the news drops. You get a quantified impact (e.g. 2-point gross-margin hit on your 7075-T6 spend) and a recommended move, not a generic market headline.',
+      'We watch the macro events that move your specific grades, including Indonesian nickel export bans, Chinese magnesium squeezes, production cuts, and sanctions, and run your spend through the model the morning the news drops. You get a quantified impact (e.g. 2-point gross-margin hit on your 7075-T6 spend) and a recommended move such as lock contracts this week or dual-source before Q3, not a generic market headline.',
   },
   {
     id: 'how-engagements-work',
     question: 'How do engagements work?',
     answer:
-      'globalNex takes a limited number of manufacturers at a time. You request an assessment, we scope your metal exposure and BOM complexity, and deploy the Expert-in-the-Loop team to map your data and configure your scenario studio. Ongoing: trigger alerts, negotiation support, and strategic advisory as macro events hit your grades.',
+      'globalNex takes a limited number of manufacturers at a time. You request an assessment, we scope your metal exposure and BOM complexity, and deploy the Expert-in-the-Loop team to map your data and configure your scenario studio. Ongoing: trigger alerts with recommended moves, negotiation support, and strategic advisory as macro events hit your grades.',
   },
   {
     id: 'what-is-alloy-grade-supply-risk',
     question: 'What is alloy-grade supply risk analysis?',
     answer:
-      'Alloy-grade supply risk analysis models how price and supply shocks propagate through the exact alloy grades on your bill of materials, not just spot commodity prices. Instead of tracking LME aluminum, it decomposes 7075-T6 into its constituent metals (aluminum, zinc, magnesium, copper), maps where each is sourced, and calculates the dollar impact on cost, margin, and at-risk spend when a shock hits.',
+      'Alloy-grade supply risk analysis models how price and supply shocks propagate through the exact alloy grades on your bill of materials, not just spot commodity prices. Instead of tracking LME aluminum, it decomposes 7075-T6 into its constituent metals (aluminum, zinc, magnesium, copper), maps where each is sourced, and calculates the dollar impact on cost, margin, and at-risk spend when a shock hits, so you can take a concrete move.',
   },
   {
     id: 'globalnex-vs-saas',
     question: 'How is globalNex different from pure SaaS supply-risk tools?',
     answer:
-      'Pure SaaS hands you a login and a blank dashboard; you clean your own data, learn the UI, and hope someone on your team maintains it. The UI is trivially copyable. globalNex combines a proprietary alloy database and engine with an Expert-in-the-Loop team that does the heavy lifting and delivers the outcome. Once your BOM is mapped and studios configured, switching cost is high.',
+      'Pure SaaS hands you a login and a blank dashboard; you clean your own data, learn the UI, and hope someone on your team maintains it. The UI is trivially copyable. globalNex maps your BOMs, runs a proprietary alloy engine, and delivers the outcome: the counter, the board figure, and the next action. Once your BOM is mapped and studios configured, switching cost is high.',
   },
   {
     id: 'globalnex-vs-consultancies',
     question: 'How is globalNex different from consultancies?',
     answer:
-      'Consultancies deliver a report in weeks, billed by the hour, with no live engine and no continuous trigger alerts. Knowledge walks out when the project ends. globalNex delivers ongoing, seconds-fast answers via a proprietary engine, plus experts who interpret the numbers into actionable strategy, including hedging, dual-sourcing, redesign.',
+      'Consultancies deliver a report in weeks, billed by the hour, with no live engine and no continuous trigger alerts. Knowledge walks out when the project ends. globalNex delivers ongoing, seconds-fast answers via a proprietary engine, plus experts who interpret the numbers into actionable moves: hedge, dual-source, redesign, or counter.',
   },
   {
     id: 'metals-covered',
@@ -66,14 +66,14 @@ export const FAQ_ITEMS = [
 
 export const GLOSSARY = [
   {
-    term: 'Outcome-as-a-Service (OaaS)',
+    term: 'Material-risk outcome',
     definition:
-      'A delivery model where the customer buys a quantified conclusion (negotiation counter, boardroom figure, trigger alert) rather than software access. The engine does computation; domain experts deliver the strategy.',
+      'A quantified conclusion the customer can act on: negotiation counter, boardroom exposure figure, or trigger alert with a recommended move. Delivered by experts using the engine, not sold as a blank login.',
   },
   {
     term: 'Expert-in-the-Loop',
     definition:
-      'Fractional cost engineers, metallurgical analysts, and commodity strategists who map client BOMs, configure scenario studios, and interpret risk scores into hedging, dual-sourcing, and redesign moves.',
+      'Fractional cost engineers, metallurgical analysts, and commodity strategists who map client BOMs, configure scenario studios, and interpret risk scores into hedging, dual-sourcing, redesign, and counter moves.',
   },
   {
     term: 'Alloy-grade exposure',
@@ -93,6 +93,6 @@ export const GLOSSARY = [
   {
     term: 'Trigger alert',
     definition:
-      'An event-driven notification quantifying a client\'s exposure when a macro supply shock (export ban, production cut, sanction) hits a metal in their BOM.',
+      'An event-driven notification quantifying a client\'s exposure when a macro supply shock (export ban, production cut, sanction) hits a metal in their BOM, paired with a recommended move.',
   },
 ]

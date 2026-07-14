@@ -8,7 +8,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 import { syne } from '../_style/fonts'
 
 const siteDescription =
-  'globalNex is an Outcome-as-a-Service platform for defense, aerospace, and heavy manufacturing. Counter supplier price hikes with alloy-grade precision, map messy BOMs via Expert-in-the-Loop deployment, and get boardroom-ready exposure figures, not a blank dashboard.';
+  'globalNex delivers material-risk outcomes for defense, aerospace, and heavy manufacturing. We map your BOMs, counter supplier price hikes with alloy-grade precision, and hand you boardroom-ready figures and recommended moves, not a blank dashboard.';
 
 const ogImage = 'https://y2etwt0sktcajnaj.public.blob.vercel-storage.com/og_photo.png';
 
@@ -25,12 +25,12 @@ export const metadata = {
   publisher: 'globalNex',
   category: 'technology',
   keywords: [
-    'outcome-as-a-service', 'material risk advisory', 'BOM risk assessment',
+    'material risk outcomes', 'material risk advisory', 'BOM risk assessment',
     'fractional commodity strategist', 'supplier price negotiation', 'alloy-grade supply risk',
     'alloy-grade exposure', 'metal supply risk analysis', 'BOM metal risk',
     '7075-T6 supply risk', 'Ti-6Al-4V exposure', 'Inconel 718 risk',
     'metal price shock modeling', 'at-risk spend metals', 'composition decomposition',
-    'critical minerals risk', 'supply shock prediction', 'Metals Scenario Analysis',
+    'critical minerals risk', 'supply shock prediction', 'negotiation counter',
     'Supply Chain Risk', 'Procurement', 'Commodity Risk', 'Manufacturing Metals', 'globalNex',
   ],
   robots: {
@@ -63,7 +63,7 @@ export const metadata = {
   manifest: '/icons/site.webmanifest',
   openGraph: {
     title: 'globalNex: Material-Risk Outcomes, Delivered',
-    description: 'Counter supplier price hikes with alloy-grade precision. Expert-in-the-Loop deployment maps your BOMs and delivers boardroom-ready numbers, not a blank dashboard.',
+    description: 'We map your BOMs and hand you alloy-grade negotiation counters, boardroom figures, and recommended moves. Personalized actionables, not a blank dashboard.',
     url: 'https://glblnex.com/',
     siteName: 'globalNex',
     locale: 'en_US',
@@ -80,7 +80,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'globalNex: Material-Risk Outcomes, Delivered',
-    description: 'Outcome-as-a-Service for manufacturers. Alloy-grade counters, trigger alerts, and Expert-in-the-Loop deployment, not another self-serve dashboard.',
+    description: 'Material-risk outcomes for manufacturers. Alloy-grade counters, trigger alerts with recommended moves, and Expert-in-the-Loop deployment, not another self-serve dashboard.',
     site: '@glblNex',
     creator: '@glblNex',
     images: [ogImage],

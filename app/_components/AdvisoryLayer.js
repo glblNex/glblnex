@@ -12,17 +12,17 @@ const DEPLOYMENT = [
   {
     n: '01',
     title: 'Map your BOMs',
-    body: 'We take your messy spreadsheets and ERP dumps and map every part to our metallurgical alloy database. You never clean the data.',
+    body: 'We take your messy spreadsheets and ERP dumps and map every part to our metallurgical alloy database. You never clean the data, and you walk into talks with grade-level exposure ready.',
   },
   {
     n: '02',
     title: 'Build your scenario studio',
-    body: 'Custom shock models tuned to your geographic footprint, supplier mix, and the grades that actually move your margin.',
+    body: 'Custom shock models tuned to your footprint and grades. When a squeeze hits, you already know the margin hit and which contracts to lock.',
   },
   {
     n: '03',
     title: 'Act as your strategic wing',
-    body: 'Fractional cost engineers and commodity strategists turn risk scores into hedging, dual-sourcing, and redesign moves you can execute.',
+    body: 'Fractional cost engineers and commodity strategists turn risk into moves you execute: hedge, dual-source, redesign, or counter in the room.',
   },
 ]
 
@@ -67,7 +67,7 @@ export default function AdvisoryLayer() {
             <p className="mt-5 text-base lg:text-lg text-white/60 leading-relaxed max-w-2xl">
               Our ingestion engine auto-maps disparate spreadsheets and ERP dumps to our
               metallurgical alloy database. Our Expert-in-the-Loop team validates the edge cases.
-              No blank dashboard. No data cleanup on your side.
+              You get mapped exposure and actionables. No data cleanup on your side.
             </p>
           </div>
         </Reveal>
@@ -112,12 +112,12 @@ export default function AdvisoryLayer() {
             <h3
               className={`text-2xl sm:text-3xl lg:text-4xl font-light leading-snug max-w-3xl ${urbanist.className}`}
             >
-              We quantify your exposure the morning the news drops.
+              We quantify your exposure and hand you the move the morning the news drops.
             </h3>
             <p className="mt-4 text-sm lg:text-base text-white/55 leading-relaxed max-w-2xl">
               We watch the macro events that move your grades, including export bans, production cuts,
-              and sanctions, and run your spend through the model before your team finishes their
-              first coffee.
+              and sanctions, run your spend through the model, and tell you whether to lock contracts,
+              dual-source, or redesign before your team finishes their first coffee.
             </p>
 
             <motion.div

@@ -37,21 +37,21 @@ export default function Home() {
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <Reveal>
             <p className="text-xs uppercase tracking-[0.2em] text-highlight font-semibold mb-3">
-              Outcome-as-a-Service
+              Material-risk outcomes, delivered
             </p>
             <h1 className={`text-4xl sm:text-5xl lg:text-6xl font-light leading-[1.08] text-ink ${urbanist.className}`}>
               Win the next price negotiation before it starts
             </h1>
             <p className={`mt-5 text-base lg:text-lg text-light font-light max-w-xl leading-relaxed ${urbanist.className}`}>
-              globalNex hands manufacturers a quantified conclusion, not a blank dashboard.
-              Counter supplier hikes with alloy-grade precision. One number. Absolute composure.
+              We map your BOMs, quantify the hit, and hand you the counter and the next move.
+              Personalized actionables for manufacturers who need the problem taken care of, not another dashboard.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
               <Link href="/started">
                 <MainButton btn_txt="Request an assessment" />
               </Link>
               <a href="#demo">
-                <SecondButton btn_txt="See the engine" />
+                <SecondButton btn_txt="See a sample counter" />
               </a>
             </div>
             <dl className="mt-8 grid grid-cols-3 gap-4 max-w-xl border-t border-line pt-6">
@@ -76,24 +76,24 @@ export default function Home() {
         <IndustriesStrip />
       </GxSection>
 
-      {/* Painkiller: supplier negotiation counter */}
+      {/* Pain: supplier negotiation */}
       <GxSection>
         <ShockMoment />
       </GxSection>
 
-      {/* Expert-in-the-Loop + ingestion + trigger alerts */}
-      <AdvisoryLayer />
-
-      {/* The outcome you walk away with */}
+      {/* What you get */}
       <GxSection>
         <BusinessCase />
       </GxSection>
 
-      {/* Proof the engine is real */}
+      {/* How we take it on */}
+      <AdvisoryLayer />
+
+      {/* Proof the math is real (evidence, not the product) */}
       <GxSection id="demo">
         <Reveal>
           <SectionHeading
-            eyebrow="Proof the engine is real"
+            eyebrow="Proof the math is real"
             title="The math behind the counter"
             subtitle="This is not the product. It is evidence the engine works. Pick a grade, run a shock, read the number."
             align="center"
@@ -135,7 +135,7 @@ export default function Home() {
         </Reveal>
       </GxSection>
 
-      {/* Moat: software + experts + data */}
+      {/* Why not SaaS / consultancies */}
       <GxSection id="compare">
         <WhyGlobalNex />
       </GxSection>

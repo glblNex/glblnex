@@ -8,11 +8,11 @@ import { urbanist } from '../_style/fonts'
 import MainButton from './MainButton'
 
 const EXPLORE = [
-  { label: 'See the engine', href: '/#demo' },
+  { label: 'See a sample counter', href: '/#demo' },
   { label: 'Alloy decomposition', href: '/#alloys' },
   { label: 'How we compare', href: '/#compare' },
   { label: 'FAQ', href: '/#faq' },
-  { label: 'Request access', href: '/started' },
+  { label: 'Request an assessment', href: '/started' },
 ]
 
 const INDUSTRIES = [
@@ -76,11 +76,11 @@ export default function MainFooter() {
               globalNex
             </p>
             <p className={`text-3xl sm:text-4xl lg:text-5xl font-light leading-[1.1] ${urbanist.className}`}>
-              We hand you the number, not the dashboard.
+              We hand you the number and the move, not the dashboard.
             </p>
             <p className="mt-4 text-sm text-white/55 leading-relaxed max-w-lg">
-              Outcome-as-a-Service for manufacturers who refuse to guess. Alloy-grade counters,
-              trigger alerts, Expert-in-the-Loop deployment.
+              Material-risk outcomes for manufacturers who refuse to guess. Alloy-grade counters,
+              trigger alerts with recommended moves, Expert-in-the-Loop deployment.
             </p>
           </div>
           <Link href="/started" className="shrink-0">

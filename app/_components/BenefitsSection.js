@@ -12,10 +12,10 @@ const BENEFITS = [
     role: 'Procurement & Sourcing',
     short: 'Procurement',
     headline: 'Counter the +12% hike with a 5% counter',
-    outcome: 'A defensible alloy-grade number in every supplier negotiation.',
+    outcome: 'Walk into the room with a defensible alloy-grade number and accept 5%, not 12%.',
     points: [
       'True cost delta on the grade, not the commodity index',
-      'Counter receipt you can use in the room, same day',
+      'Counter receipt you use in the room the same day',
     ],
   },
   {
@@ -23,10 +23,10 @@ const BENEFITS = [
     role: 'Supply Chain & Operations',
     short: 'Supply Chain',
     headline: 'Know the margin hit before the line stops',
-    outcome: 'Trigger alerts the morning a squeeze hits, with your spend already quantified.',
+    outcome: 'Same-morning trigger: quantified spend impact plus lock contracts or dual-source now.',
     points: [
       'Exposure on your grades, not generic market alerts',
-      'Dual-sourcing priorities ranked by concentration risk',
+      'Dual-sourcing priorities ranked so you move before Q3',
     ],
   },
   {
@@ -34,7 +34,7 @@ const BENEFITS = [
     role: 'Finance & Risk',
     short: 'Finance',
     headline: 'One at-risk spend figure for the board',
-    outcome: 'Margin impact and dollar exposure leadership can act on, not a follow-up promise.',
+    outcome: 'Margin impact and dollar exposure leadership can hedge or budget against today.',
     points: [
       'Board-ready figures tied to your BOM',
       'Scenario-backed numbers for hedging and budget calls',
@@ -45,10 +45,10 @@ const BENEFITS = [
     role: 'Engineering & Design',
     short: 'Engineering',
     headline: 'Pick the grade that survives the shock',
-    outcome: 'Compare alloys on supply resilience before tooling locks you in.',
+    outcome: 'Compare alloys on supply resilience, then lock the grade before tooling commits you.',
     points: [
       'Composition and volatility behind each grade choice',
-      'De-risk programs before qualification commits you',
+      'De-risk programs before qualification locks the BOM',
     ],
   },
 ]

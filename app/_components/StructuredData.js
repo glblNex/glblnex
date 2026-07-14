@@ -8,7 +8,7 @@ export default function StructuredData() {
     url: 'https://glblnex.com',
     logo: 'https://glblnex.com/LightSVG.svg',
     description:
-      'Outcome-as-a-Service for material-risk analysis. Alloy-grade negotiation counters, Expert-in-the-Loop deployment, and boardroom-ready exposure figures for defense, aerospace, and heavy manufacturing.',
+      'Material-risk outcomes for defense, aerospace, and heavy manufacturing. Alloy-grade negotiation counters, Expert-in-the-Loop deployment, and boardroom-ready exposure figures with recommended moves.',
     sameAs: [
       'https://x.com/glblNex',
       'https://www.linkedin.com/company/glblnex/',
@@ -21,7 +21,7 @@ export default function StructuredData() {
     name: 'globalNex',
     url: 'https://glblnex.com',
     description:
-      'Material-risk outcomes delivered via Expert-in-the-Loop deployment. Counter supplier hikes, map messy BOMs, quantify exposure.',
+      'Material-risk outcomes delivered via Expert-in-the-Loop engagement. Counter supplier hikes, map messy BOMs, quantify exposure, and get the next move.',
     potentialAction: {
       '@type': 'SearchAction',
       target: 'https://glblnex.com/#faq',
@@ -29,6 +29,22 @@ export default function StructuredData() {
     },
   }
 
+  const service = {
+    '@context': 'https://schema.org',
+    '@type': 'ProfessionalService',
+    name: 'globalNex Expert-in-the-Loop',
+    url: 'https://glblnex.com',
+    description:
+      'Fractional cost engineers, metallurgical analysts, and commodity strategists who map client BOMs, configure scenario studios, and deliver negotiation counters, boardroom figures, and recommended moves.',
+    serviceType: 'Material risk advisory and outcomes delivery',
+    areaServed: 'Worldwide',
+    audience: {
+      '@type': 'BusinessAudience',
+      audienceType: 'Defense, aerospace, automotive, and heavy manufacturing procurement and finance teams',
+    },
+  }
+
+  // Engine is supporting evidence for the service, not the product being sold.
   const software = {
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
@@ -37,7 +53,7 @@ export default function StructuredData() {
     operatingSystem: 'Web',
     url: 'https://glblnex.com',
     description:
-      'Proprietary alloy-grade decomposition and scenario engine. Powers Outcome-as-a-Service delivery, not sold as self-serve SaaS.',
+      'Proprietary alloy-grade decomposition and scenario engine used by the Expert-in-the-Loop team to deliver quantified conclusions. Not sold as self-serve SaaS.',
     offers: {
       '@type': 'Offer',
       price: '0',
@@ -48,26 +64,11 @@ export default function StructuredData() {
     featureList: [
       'Alloy-grade composition decomposition',
       'Supplier negotiation counter (e.g. 6061-T6 breakdown)',
-      'Zero-friction BOM ingestion engine',
-      'Trigger alerts on macro supply events',
+      'Zero-friction BOM ingestion',
+      'Trigger alerts with recommended moves',
       'Interactive price and supply shock scenarios',
       'Geographic supply concentration mapping',
     ],
-  }
-
-  const service = {
-    '@context': 'https://schema.org',
-    '@type': 'ProfessionalService',
-    name: 'globalNex Expert-in-the-Loop',
-    url: 'https://glblnex.com',
-    description:
-      'Fractional cost engineers, metallurgical analysts, and commodity strategists who map client BOMs, configure scenario studios, and deliver boardroom-ready material-risk strategy.',
-    serviceType: 'Material risk advisory and Outcome-as-a-Service',
-    areaServed: 'Worldwide',
-    audience: {
-      '@type': 'BusinessAudience',
-      audienceType: 'Defense, aerospace, automotive, and heavy manufacturing procurement and finance teams',
-    },
   }
 
   const faqPage = {
@@ -83,9 +84,10 @@ export default function StructuredData() {
     })),
   }
 
+  // Lead with ProfessionalService; SoftwareApplication is supporting evidence only.
   const graph = {
     '@context': 'https://schema.org',
-    '@graph': [organization, website, software, service, faqPage],
+    '@graph': [organization, website, service, software, faqPage],
   }
 
   return (
