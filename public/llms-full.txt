@@ -1,23 +1,23 @@
 # globalNex: Full reference for AI systems
 
-> globalNex delivers material-risk outcomes for defense, aerospace, and heavy manufacturing. We map your BOMs, hand you the counter and the next move, and stay in the loop when shocks hit. The number and the move, not a blank dashboard.
+> globalNex is a tech-enabled managed service for defense, aerospace, heavy manufacturing, hardware, and deal teams. We trace shocks to specific parts, audit surcharges, route NPI spend, and quantify material exposure in days. Engine plus experts who execute the move, not a blank dashboard.
 
 ---
 
 ## What globalNex does
 
-globalNex is an elite, tech-enabled advisory engagement. The engine does the computational heavy lifting; domain experts deliver the boardroom-ready move.
+globalNex is a tech-enabled managed service. The engine decomposes BOMs to chemistry; domain experts deliver hit lists, rejection reports, sourcing plans, and diligence figures, then execute the move.
 
-**The painkiller:** When a supplier claims aluminum is up and demands +12%, globalNex decomposes 6061-T6 (97% aluminum, magnesium actually down) and shows true cost rose +4.2%. You counter at 5% and lock the rest of the year. One interaction pays for the engagement.
+**Example outcome:** When a supplier demands +12% on 6061-T6, globalNex decomposes the grade (97% aluminum, magnesium down) and shows true cost at +4.2%. You reject the blanket surcharge or counter at 5%.
 
-**What you buy:** A quantified conclusion, the recommended move, and composure under pressure, not software access alone.
+**What you buy:** Trace, audit, counter, route, and quantify. Outcomes and execution, not software access alone.
 
 Unlike pure SaaS or consultancies, globalNex:
-1. Maps your messy BOMs via ingestion engine + Expert-in-the-Loop (you never clean data)
-2. Decomposes each alloy grade into constituent metals by weight percentage
-3. Delivers negotiation counters, trigger alerts with recommended moves, and boardroom figures
-4. Provides fractional cost engineers and commodity strategists as your strategic wing
-5. Configures custom scenario studios for your geographic footprint
+1. Maps messy BOMs to elemental chemistry via ingestion engine + Expert-in-the-Loop (you never clean data)
+2. Traces geo shocks and supply disruptions to specific components at risk
+3. Audits material surcharges line-by-line before invoices are paid
+4. Routes NPI and low-volume spend through a vetted supplier network
+5. Quantifies hidden material exposure for board and deal decisions in days
 
 ---
 

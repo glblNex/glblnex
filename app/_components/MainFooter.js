@@ -8,7 +8,7 @@ import { urbanist } from '../_style/fonts'
 import MainButton from './MainButton'
 
 const EXPLORE = [
-  { label: 'See a sample counter', href: '/#demo' },
+  { label: 'See sample deliverable', href: '/#demo' },
   { label: 'Alloy decomposition', href: '/#alloys' },
   { label: 'How we compare', href: '/#compare' },
   { label: 'FAQ', href: '/#faq' },
@@ -16,12 +16,13 @@ const EXPLORE = [
 ]
 
 const INDUSTRIES = [
+  'Defense',
   'Aerospace',
   'Automotive & EV',
   'Industrial',
-  'Defense',
+  'Hardware',
   'Medical',
-  'Energy',
+  'Private equity',
 ]
 
 const METALS = [
@@ -76,11 +77,11 @@ export default function MainFooter() {
               globalNex
             </p>
             <p className={`text-3xl sm:text-4xl lg:text-5xl font-light leading-[1.1] ${urbanist.className}`}>
-              We hand you the number and the move, not the dashboard.
+              Trace, audit, route, quantify. We execute the move.
             </p>
             <p className="mt-4 text-sm text-white/55 leading-relaxed max-w-lg">
-              Material-risk outcomes for manufacturers who refuse to guess. Alloy-grade counters,
-              trigger alerts with recommended moves, Expert-in-the-Loop deployment.
+              Tech-enabled managed service for manufacturers and deal teams. Hit lists, rejection
+              reports, sourcing plans, and exposure figures, with experts who execute.
             </p>
           </div>
           <Link href="/started" className="shrink-0">
@@ -104,8 +105,8 @@ export default function MainFooter() {
               />
             </Link>
             <p className="mt-5 text-sm text-light leading-relaxed max-w-xs">
-              Counter supplier hikes. Map your BOMs. Quantify exposure. The outcome you carry into
-              the room.
+              Trace shocks to specific parts. Audit surcharges. Route NPI spend. Quantify exposure
+              for the board or the deal room.
             </p>
             <div className="mt-6 flex items-center gap-4 text-ink">
               <Link
@@ -168,7 +169,8 @@ export default function MainFooter() {
               The stack
             </p>
             <p className="text-sm text-light leading-relaxed mb-4">
-              Engine plus Expert-in-the-Loop team. Not another self-serve dashboard.
+              Engine plus Expert-in-the-Loop team. Chemistry mapped, moves executed. Not another
+              self-serve dashboard.
             </p>
             <div className="rounded-xl border border-line bg-white p-4 space-y-2">
               <div className="flex items-center justify-between text-xs">

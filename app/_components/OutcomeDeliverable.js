@@ -27,13 +27,13 @@ export default function OutcomeDeliverable() {
       >
         <div className="px-5 py-4 lg:px-6 lg:py-5 border-b border-line bg-bg2/50">
           <p className="text-[10px] uppercase tracking-[0.18em] text-highlight font-semibold">
-            Negotiation counter
+            Sample deliverable
           </p>
           <p className={`mt-1.5 text-lg lg:text-xl font-medium text-ink ${urbanist.className}`}>
-            6061-T6 supplier hike
+            Surcharge rejection · 6061-T6
           </p>
           <p className="mt-1 text-xs text-light">
-            They asked for 12%. Here is what you walk into the room with.
+            One of five outcomes: trace, audit, counter, route, quantify.
           </p>
         </div>
 

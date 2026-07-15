@@ -12,7 +12,7 @@ export const FAQ_ITEMS = [
     id: 'counter-supplier-hike',
     question: 'Can globalNex help me counter a supplier price increase?',
     answer:
-      'Yes. This is the primary use case. When a supplier claims aluminum is up and demands +12%, globalNex decomposes the exact grade (e.g. 6061-T6: 97% aluminum, magnesium actually down) and shows the true cost increase (e.g. +4.2%). You counter with a defensible number (e.g. 5%) and lock the rest of the year. One negotiation pays for the engagement.',
+      'Yes. When a supplier claims aluminum is up and demands +12%, globalNex decomposes the exact grade (e.g. 6061-T6: 97% aluminum, magnesium actually down) and shows the true cost increase (e.g. +4.2%). You counter with a defensible number (e.g. 5%) or reject blanket surcharges on the same math. One interaction can pay for the engagement.',
   },
   {
     id: 'audit-surcharges',
@@ -54,7 +54,7 @@ export const FAQ_ITEMS = [
     id: 'how-engagements-work',
     question: 'How do engagements work?',
     answer:
-      'globalNex takes a limited number of manufacturers at a time. You request an assessment, we scope your metal exposure and BOM complexity, and deploy the Expert-in-the-Loop team to map your data and configure your scenario studio. Ongoing: trigger alerts with recommended moves, negotiation support, and strategic advisory as macro events hit your grades.',
+      'globalNex takes a limited number of manufacturers and deal teams at a time. You request an assessment, we scope your metal exposure and BOM complexity, and deploy the Expert-in-the-Loop team to map chemistry and configure your scenario studio. Ongoing: trace geo shocks to your parts, audit surcharges, route NPI spend, and quantify exposure as events hit your grades.',
   },
   {
     id: 'what-is-alloy-grade-supply-risk',
@@ -86,7 +86,7 @@ export const GLOSSARY = [
   {
     term: 'Material-risk outcome',
     definition:
-      'A quantified conclusion the customer can act on: negotiation counter, boardroom exposure figure, or trigger alert with a recommended move. Delivered by experts using the engine, not sold as a blank login.',
+      'A quantified conclusion the customer can act on: risk hit list, surcharge rejection report, sourcing plan, negotiation counter, boardroom exposure figure, or diligence report. Delivered by experts using the engine, not sold as a blank login.',
   },
   {
     term: 'Expert-in-the-Loop',

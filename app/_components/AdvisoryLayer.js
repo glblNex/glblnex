@@ -11,27 +11,27 @@ const EASE = [0.22, 1, 0.36, 1]
 const DEPLOYMENT = [
   {
     n: '01',
-    title: 'Map your BOMs',
-    body: 'We take your messy spreadsheets and ERP dumps and map every part to our metallurgical alloy database. You never clean the data, and you walk into talks with grade-level exposure ready.',
+    title: 'Map chemistry, not SKUs',
+    body: 'Raw ERP and Excel uploads decomposed to elemental exposure. Part numbers mapped to grades, grades to metals. You never clean the data.',
   },
   {
     n: '02',
-    title: 'Build your scenario studio',
-    body: 'Custom shock models tuned to your footprint and grades. When a squeeze hits, you already know the margin hit and which contracts to lock.',
+    title: 'Monitor and model your footprint',
+    body: 'Custom shock models tied to your suppliers, grades, and geography. When a smelter goes offline or an export ban hits, your spend is already in the model.',
   },
   {
     n: '03',
-    title: 'Act as your strategic wing',
-    body: 'Fractional cost engineers and commodity strategists turn risk into moves you execute: hedge, dual-source, redesign, or counter in the room.',
+    title: 'Execute the move',
+    body: 'Redirect capacity, reject surcharges, route NPI spend, or quantify deal risk. Fractional experts who pick up the phone, not customer-success reps.',
   },
 ]
 
 const TRIGGER_EXAMPLES = [
   {
-    event: 'Chinese magnesium export squeeze',
-    grade: '7075-T6',
-    impact: '2.5 pt gross-margin hit',
-    action: 'Lock Q3/Q4 POs today; qualify India suppliers',
+    event: 'Production outage at key smelter',
+    grade: '6061-T6 extrusions',
+    impact: 'Tier 1 short in 9 days',
+    action: 'Secure secondary billet; redirect POs today',
   },
   {
     event: 'Indonesian nickel export ban',

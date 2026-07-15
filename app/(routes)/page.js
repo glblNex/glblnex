@@ -22,9 +22,9 @@ import SectionHeading from '../_components/SectionHeading'
 import Reveal from '../_components/Reveal'
 
 const HERO_PROOF = [
-  { value: "5%", label: "counter when they ask for 12%" },
-  { value: "Your BOM", label: "mapped by our team, not you" },
-  { value: "Selective", label: "limited engagements at a time" },
+  { value: "Days", label: "messy ERP mapped to chemistry" },
+  { value: "Same day", label: "redirect before the market panics" },
+  { value: "Line-by-line", label: "surcharge audit before AP pays" },
 ]
 
 const STEPS = ["Pick a grade", "Run a shock", "Read the number"]
@@ -37,21 +37,21 @@ export default function Home() {
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <Reveal>
             <p className="text-xs uppercase tracking-[0.2em] text-highlight font-semibold mb-3">
-              Material-risk outcomes, delivered
+              Tech-enabled managed service
             </p>
             <h1 className={`text-4xl sm:text-5xl lg:text-6xl font-light leading-[1.08] text-ink ${urbanist.className}`}>
-              Win the next price negotiation before it starts
+              Keep the line running when material risk hits
             </h1>
             <p className={`mt-5 text-base lg:text-lg text-light font-light max-w-xl leading-relaxed ${urbanist.className}`}>
-              Tech-enabled managed service: we trace shocks to your parts, audit surcharges, route NPI spend,
-              and quantify exposure in days. You get the counter and the next move, not another dashboard.
+              We trace shocks to your specific parts, audit surcharges, route NPI spend, and quantify
+              hidden exposure in days. Engine plus experts: you get the move, not another dashboard.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
               <Link href="/started">
                 <MainButton btn_txt="Request an assessment" />
               </Link>
               <a href="#demo">
-                <SecondButton btn_txt="See a sample counter" />
+                <SecondButton btn_txt="See sample deliverable" />
               </a>
             </div>
             <dl className="mt-8 grid grid-cols-3 gap-4 max-w-xl border-t border-line pt-6">
@@ -76,7 +76,7 @@ export default function Home() {
         <IndustriesStrip />
       </GxSection>
 
-      {/* Pain: supplier negotiation */}
+      {/* Painkiller: surcharge audit example */}
       <GxSection>
         <ShockMoment />
       </GxSection>
@@ -93,9 +93,9 @@ export default function Home() {
       <GxSection id="demo">
         <Reveal>
           <SectionHeading
-            eyebrow="Proof the math is real"
-            title="The math behind the counter"
-            subtitle="This is not the product. It is evidence the engine works. Pick a grade, run a shock, read the number."
+            eyebrow="Proof the engine is real"
+            title="Alloy-grade math behind every outcome"
+            subtitle="Counters, rejection reports, hit lists, and exposure figures all run on the same decomposition engine. Pick a grade, run a shock, read the number."
             align="center"
             className="mb-5"
           />
@@ -126,7 +126,7 @@ export default function Home() {
           <SectionHeading
             eyebrow="The depth behind the number"
             title="Every grade decomposed to its metals"
-            subtitle="The proprietary alloy database that makes the counter possible. Composition, volatility, and geo-concentration nobody else gives you at grade level."
+            subtitle="The proprietary alloy database behind every outcome. Your ERP tracks part numbers; we decompose to elemental chemistry, volatility, and geo-concentration at grade level."
             className="mb-8"
           />
         </Reveal>

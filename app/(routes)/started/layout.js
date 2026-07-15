@@ -1,7 +1,7 @@
 export const metadata = {
   title: 'Request an Assessment',
   description:
-    'Request a selective assessment with globalNex. We map your metal exposure and BOM complexity, then deliver alloy-grade counters and recommended moves.',
+    'Request a selective assessment with globalNex. Trace, audit, route, or quantify material risk from your BOM or purchase data.',
   alternates: {
     canonical: 'https://glblnex.com/started',
   },

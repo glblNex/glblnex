@@ -17,8 +17,8 @@ export default function StartedPage() {
                             Apply to work with our team
                         </h1>
                         <h2 className={`lg:max-w-[60%] text-base lg:text-lg text-light font-light leading-relaxed ${urbanist.className}`}>
-                            We take a limited number of engagements with defense, aerospace, and
-                            heavy manufacturing teams. Tell us where metal risk shows up for you.
+                            Defense, aerospace, automotive, hardware, and deal teams. Tell us where
+                            surcharges, geo exposure, NPI sourcing, or supply continuity breaks down for you.
                         </h2>
                     </div>
                 </header>

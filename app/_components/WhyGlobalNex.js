@@ -29,7 +29,7 @@ const ROWS = [
     angle: 'What you get',
     detail: 'The deliverable, not the tool',
     values: {
-      gx: { level: 'native', text: 'Counter, board figure, and recommended move ready to use' },
+      gx: { level: 'native', text: 'Hit list, rejection report, sourcing plan, or diligence figure' },
       saas: { level: 'limited', text: 'A login and a blank dashboard' },
       consult: { level: 'strong', text: 'A PDF report in weeks' },
     },
@@ -44,10 +44,10 @@ const ROWS = [
     },
   },
   {
-    angle: 'Supplier negotiation counter',
-    detail: 'Counter a +12% hike with alloy-grade math',
+    angle: 'Surcharge & price claims',
+    detail: 'Blanket hike vs alloy-weight math',
     values: {
-      gx: { level: 'native', text: '6061-T6 breakdown: true cost +4.2%, counter at 5%' },
+      gx: { level: 'native', text: 'Line-by-line rejection report: 6061-T6 true cost +4.2%, counter at 5%' },
       saas: { level: 'limited', text: 'Commodity charts, not grade decomposition' },
       consult: { level: 'limited', text: 'Possible, but slow and project-scoped' },
     },

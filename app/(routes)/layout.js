@@ -16,7 +16,7 @@ export const metadata = {
   metadataBase: new URL('https://glblnex.com'),
   title: {
     template: '%s | globalNex',
-    default: 'globalNex: Material-Risk Outcomes, Delivered',
+    default: 'globalNex: Material Risk, Managed',
   },
   description: siteDescription,
   applicationName: 'globalNex',
@@ -62,7 +62,7 @@ export const metadata = {
   },
   manifest: '/icons/site.webmanifest',
   openGraph: {
-    title: 'globalNex: Material-Risk Outcomes, Delivered',
+    title: 'globalNex: Material Risk, Managed',
     description: 'Tech-enabled managed service: trace, audit, counter, route, and quantify material risk. The number and the move, not a blank dashboard.',
     url: 'https://glblnex.com/',
     siteName: 'globalNex',
@@ -79,8 +79,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'globalNex: Material-Risk Outcomes, Delivered',
-    description: 'Material-risk outcomes for manufacturers. Alloy-grade counters, trigger alerts with recommended moves, and Expert-in-the-Loop deployment, not another self-serve dashboard.',
+    title: 'globalNex: Material Risk, Managed',
+    description: 'Tech-enabled managed service: trace shocks to parts, audit surcharges, route NPI spend, quantify deal exposure. Engine plus experts who execute the move.',
     site: '@glblNex',
     creator: '@glblNex',
     images: [ogImage],

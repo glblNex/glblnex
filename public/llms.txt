@@ -1,43 +1,46 @@
 # globalNex
 
-> globalNex delivers material-risk outcomes for defense, aerospace, and heavy manufacturing. We map your BOMs, hand you the counter and the next move, and stay in the loop when shocks hit. The number and the move, not a blank dashboard.
+> globalNex is a tech-enabled managed service for defense, aerospace, heavy manufacturing, hardware, and deal teams. We trace shocks to specific parts, audit surcharges, route NPI spend, and quantify material exposure in days. Engine plus experts who execute the move, not a blank dashboard.
 
-The painkiller: when a supplier claims aluminum is up and demands +12%, globalNex shows the exact 6061-T6 breakdown: aluminum is 97% of the grade, magnesium is down, true cost rose 4.2%. You counter at 5% and lock the rest of the year. One interaction pays for the engagement.
+Example outcome: a supplier demands +12% on 6061-T6; we decompose the grade, show true cost at +4.2%, and deliver a rejection report or counter at 5%.
 
 ## What you get (the outcome)
 
-- A defensible negotiation counter backed by alloy-grade decomposition
-- Boardroom-ready at-risk spend and margin impact figures
-- Trigger alerts with quantified exposure and a recommended move (lock contracts, dual-source, redesign)
-- Expert-in-the-Loop team mapping your BOMs; you never clean the data
+- Risk and redirect hit lists: macro shock traced to specific components at risk
+- Line-by-line surcharge rejection reports before AP pays
+- Defensible negotiation counters backed by alloy-grade decomposition
+- De-risked NPI and low-volume sourcing plans through a vetted network
+- Board- and deal-ready material exposure figures from messy purchase data in days
+- Grade-matched trigger alerts with recommended moves (lock contracts, dual-source, redirect)
+- Expert-in-the-Loop team mapping your BOMs to chemistry; you never clean the data
 
 ## How deployment works
 
-1. **Map your BOMs:** ingestion engine auto-maps messy spreadsheets and ERP dumps to our metallurgical alloy database; experts validate edge cases
-2. **Build your scenario studio:** custom shock models tuned to your geographic footprint and grades
-3. **Act as your strategic wing:** fractional cost engineers and commodity strategists turn risk into moves you execute
+1. **Map chemistry, not SKUs:** ingestion engine maps messy ERP and Excel to elemental exposure; experts validate edge cases
+2. **Monitor your footprint:** custom shock models tied to your suppliers, grades, and geography
+3. **Execute the move:** redirect, reject, source, or quantify with fractional experts who execute
 
 ## The engine (proof, not the product)
 
-- Alloy-grade composition decomposition (7075-T6, Ti-6Al-4V, Inconel 718, and more)
-- Interactive scenario modeling: price shocks, production cuts, export bans
+- Elemental BOM decomposition (part numbers to grades to metals)
+- Interactive scenario modeling: price shocks, production cuts, export bans, smelter outages
 - Dollar impact: cost, at-risk spend, margin hit, availability, lead time
 - Geographic supply concentration mapped to each grade's constituent metals
 
 ## Key pages
 
-- [Home](https://glblnex.com/): Outcomes overview, painkiller, Expert-in-the-Loop, FAQ
+- [Home](https://glblnex.com/): Managed service overview, surcharge audit example, Expert-in-the-Loop, FAQ
 - [Request an assessment](https://glblnex.com/started): Apply to work with our team
 
 ## Who it is for
 
-Defense, aerospace, automotive and EV, industrial manufacturing, medical devices, and energy companies where metal spend is material to cost and margin. Selective engagements, with a limited number of manufacturers at a time.
+Defense, aerospace, automotive and EV, industrial manufacturing, hardware and mobility, medical devices, and private equity teams where metal spend, supply continuity, or deal risk is material. Selective engagements.
 
 ## How globalNex compares
 
-- **Pure SaaS tools**: hand you a login and a blank dashboard; you clean your own data; trivially copyable
-- **Consultancies**: deliver a report in weeks; no live engine; knowledge walks out when the project ends
-- **globalNex**: we own the problem: proprietary engine + alloy database + Expert-in-the-Loop team = the counter, board figure, and next move
+- **Pure SaaS tools**: track part numbers and push news alerts; you figure out the response
+- **Consultancies**: deliver a report in weeks; no live engine; too slow for invoices or deal windows
+- **globalNex**: chemistry mapped, moves executed: hit lists, rejection reports, sourcing plans, diligence figures
 
 ## Extended documentation
 

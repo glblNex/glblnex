@@ -8,7 +8,7 @@ export default function StructuredData() {
     url: 'https://glblnex.com',
     logo: 'https://glblnex.com/LightSVG.svg',
     description:
-      'Material-risk outcomes for defense, aerospace, and heavy manufacturing. Alloy-grade negotiation counters, Expert-in-the-Loop deployment, and boardroom-ready exposure figures with recommended moves.',
+      'Tech-enabled managed service for material-risk outcomes. Trace shocks to specific parts, audit surcharges, route NPI spend, and quantify exposure for defense, aerospace, heavy manufacturing, and deal teams.',
     sameAs: [
       'https://x.com/glblNex',
       'https://www.linkedin.com/company/glblnex/',
@@ -21,7 +21,7 @@ export default function StructuredData() {
     name: 'globalNex',
     url: 'https://glblnex.com',
     description:
-      'Material-risk outcomes delivered via Expert-in-the-Loop engagement. Counter supplier hikes, map messy BOMs, quantify exposure, and get the next move.',
+      'Tech-enabled managed service: map BOMs to chemistry, deliver hit lists, rejection reports, sourcing plans, and diligence figures with Expert-in-the-Loop execution.',
     potentialAction: {
       '@type': 'SearchAction',
       target: 'https://glblnex.com/#faq',
@@ -35,16 +35,15 @@ export default function StructuredData() {
     name: 'globalNex Expert-in-the-Loop',
     url: 'https://glblnex.com',
     description:
-      'Fractional cost engineers, metallurgical analysts, and commodity strategists who map client BOMs, configure scenario studios, and deliver negotiation counters, boardroom figures, and recommended moves.',
-    serviceType: 'Material risk advisory and outcomes delivery',
+      'Fractional cost engineers, metallurgical analysts, and commodity strategists who map client BOMs to chemistry, trace geo shocks to specific parts, audit surcharges, route NPI spend, and quantify material exposure for board and deal decisions.',
+    serviceType: 'Tech-enabled material risk managed service',
     areaServed: 'Worldwide',
     audience: {
       '@type': 'BusinessAudience',
-      audienceType: 'Defense, aerospace, automotive, and heavy manufacturing procurement and finance teams',
+      audienceType: 'Defense, aerospace, automotive, heavy manufacturing, hardware, and private equity teams',
     },
   }
 
-  // Engine is supporting evidence for the service, not the product being sold.
   const software = {
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
@@ -53,7 +52,7 @@ export default function StructuredData() {
     operatingSystem: 'Web',
     url: 'https://glblnex.com',
     description:
-      'Proprietary alloy-grade decomposition and scenario engine used by the Expert-in-the-Loop team to deliver quantified conclusions. Not sold as self-serve SaaS.',
+      'Proprietary alloy-grade decomposition and scenario engine used by the Expert-in-the-Loop team. Powers trace, audit, route, and quantify outcomes. Not sold as self-serve SaaS.',
     offers: {
       '@type': 'Offer',
       price: '0',
@@ -62,12 +61,12 @@ export default function StructuredData() {
       url: 'https://glblnex.com/started',
     },
     featureList: [
-      'Alloy-grade composition decomposition',
-      'Supplier negotiation counter (e.g. 6061-T6 breakdown)',
-      'Zero-friction BOM ingestion',
-      'Trigger alerts with recommended moves',
-      'Interactive price and supply shock scenarios',
-      'Geographic supply concentration mapping',
+      'Elemental BOM decomposition (part number to chemistry)',
+      'Line-by-line surcharge audit and rejection reports',
+      'Geo shock traceability to specific components',
+      'Grade-matched trigger alerts with recommended moves',
+      'NPI and low-volume sourcing risk modeling',
+      'Deal-speed material exposure mapping',
     ],
   }
 
@@ -84,7 +83,6 @@ export default function StructuredData() {
     })),
   }
 
-  // Lead with ProfessionalService; SoftwareApplication is supporting evidence only.
   const graph = {
     '@context': 'https://schema.org',
     '@graph': [organization, website, service, software, faqPage],

@@ -19,9 +19,9 @@ export default function ShockMoment() {
     <section className="w-full">
       <Reveal>
         <SectionHeading
-          eyebrow="The painkiller"
-          title="Win the next price negotiation before it starts"
-          subtitle="When a supplier claims aluminum is up and demands +12%, globalNex hands you the exact alloy breakdown, and the number you counter with."
+          eyebrow="Surcharge audit"
+          title="Reject blanket surcharges before AP pays"
+          subtitle="Suppliers hide behind commodity headlines. We decompose every line to alloy weight and deliver a rejection report with the justified number, not a dashboard to figure out yourself."
           align="center"
         />
       </Reveal>
@@ -35,17 +35,17 @@ export default function ShockMoment() {
               </p>
               <p className={`text-xl lg:text-2xl font-light text-ink leading-snug ${urbanist.className}`}>
                 &ldquo;Aluminum is up. We need a <span className="text-highlight font-medium">12%</span> price
-                increase on your 6061-T6.&rdquo;
+                increase on your 6061-T6 brackets.&rdquo;
               </p>
               <p className="mt-6 text-sm text-light leading-relaxed">
-                Without alloy-grade decomposition, you accept the hike or spend weeks in spreadsheets.
-                With globalNex, you counter in the room.
+                Internal teams lack the bandwidth to reverse-engineer thousands of part weights into
+                metal ratios. We deliver the rejection sheet before the invoice clears.
               </p>
             </div>
 
             <div className="lg:col-span-3 p-7 lg:p-10">
               <p className="text-[10px] uppercase tracking-[0.18em] text-highlight font-medium mb-5">
-                Your counter receipt for 6061-T6
+                Surcharge rejection report · 6061-T6
               </p>
 
               <div className="space-y-2 mb-5">
@@ -74,7 +74,7 @@ export default function ShockMoment() {
 
               <div className="grid grid-cols-2 gap-3 lg:gap-4">
                 <div className="rounded-xl border border-line bg-bg2/50 p-5">
-                  <p className="text-[10px] uppercase tracking-wide text-light">True cost increase</p>
+                  <p className="text-[10px] uppercase tracking-wide text-light">Justified increase</p>
                   <p className={`mt-2 text-3xl lg:text-4xl font-light text-highlight tabular-nums ${urbanist.className}`}>
                     +4.2%
                   </p>
@@ -88,15 +88,15 @@ export default function ShockMoment() {
               </div>
 
               <p className="mt-6 text-sm text-light leading-relaxed max-w-xl">
-                Aluminum is 97% of this grade. Magnesium is actually down. Their real cost rose
-                4.2%. You accept 5%. One interaction pays for the year.
+                Aluminum is 97% of this grade. Magnesium is actually down. Reject the blanket 12%.
+                Accept 5%. Margin defended in one afternoon.
               </p>
             </div>
           </div>
 
           <div className="border-t border-line px-7 lg:px-10 py-6 lg:py-7 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 bg-white">
             <p className={`text-base lg:text-lg font-light text-ink leading-snug max-w-xl ${urbanist.className}`}>
-              We hand you the number and the move, not the dashboard.
+              Hit lists, rejection reports, sourcing plans, diligence figures. One engine, many outcomes.
             </p>
             <Link href="/started" className="shrink-0">
               <MainButton btn_txt="Request an assessment" />

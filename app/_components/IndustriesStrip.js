@@ -5,12 +5,12 @@ import { urbanist } from '../_style/fonts'
 import Reveal from './Reveal'
 
 const INDUSTRIES = [
-  'Aerospace',
+  'Defense & aerospace',
   'Automotive & EV',
   'Industrial manufacturing',
-  'Defense',
+  'Hardware & mobility',
   'Medical devices',
-  'Energy & infrastructure',
+  'Private equity & M&A',
 ]
 
 export default function IndustriesStrip() {
@@ -19,7 +19,7 @@ export default function IndustriesStrip() {
       <Reveal>
         <div className="text-center">
           <p className="text-xs uppercase tracking-[0.2em] text-light font-medium mb-6">
-            Built for manufacturers where metal spend is material
+            Built for teams where metal spend, supply continuity, or deal risk is material
           </p>
           <ul className="flex flex-wrap items-center justify-center gap-x-3 gap-y-3 sm:gap-x-4">
             {INDUSTRIES.map((industry) => (

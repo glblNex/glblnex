@@ -13,7 +13,7 @@ export default function FaqSection() {
         <SectionHeading
           eyebrow="Common questions"
           title="Outcomes, explained"
-          subtitle="Definitive answers on engagements, data ingestion, supplier counters, and the Expert-in-the-Loop team."
+          subtitle="Engagements, ingestion, surcharge audit, NPI sourcing, deal diligence, and the Expert-in-the-Loop team."
           align="center"
         />
       </Reveal>
