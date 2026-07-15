@@ -80,6 +80,33 @@ const ROWS = [
     },
   },
   {
+    angle: 'Part numbers vs chemistry',
+    detail: 'What your ERP actually tracks',
+    values: {
+      gx: { level: 'native', text: 'Decompose SKUs to elemental exposure; trace policy shocks to specific parts' },
+      saas: { level: 'not', text: 'Tracks vendors and part numbers, not metallurgical makeup' },
+      consult: { level: 'limited', text: 'Possible manually, billed by the hour, too slow' },
+    },
+  },
+  {
+    angle: 'Alert vs execution',
+    detail: 'News push vs the move delivered',
+    values: {
+      gx: { level: 'native', text: 'Redirect, reject, source, or counter, with experts who execute' },
+      saas: { level: 'not', text: 'Generic news alerts; you figure out the response' },
+      consult: { level: 'limited', text: 'Recommendations in a report; no continuous execution' },
+    },
+  },
+  {
+    angle: 'Deal-cycle speed',
+    detail: 'Messy data to exposure figure',
+    values: {
+      gx: { level: 'native', text: 'Days from raw purchase data to board or diligence-ready figure' },
+      saas: { level: 'not', text: 'Months of IT integration before data is usable' },
+      consult: { level: 'not', text: 'Weeks per audit; impossible in a 30-day diligence window' },
+    },
+  },
+  {
     angle: 'Works with your stack',
     detail: 'Market data and supplier context together',
     values: {
@@ -119,7 +146,7 @@ export default function WhyGlobalNex() {
         <SectionHeading
           eyebrow="The moat"
           title="We own the problem. You walk away with the move."
-          subtitle="Pure SaaS hands you a blank dashboard anyone can clone. Consultancies hand you a report in weeks. globalNex maps your BOMs, runs the engine, and delivers the counter, the board figure, and the next action neither can match alone."
+          subtitle="A tech-enabled managed service: engine plus experts. Pure SaaS hands you alerts. Consultancies hand you a report in weeks. globalNex maps chemistry, delivers the move, and executes."
           align="center"
         />
       </Reveal>
@@ -183,8 +210,8 @@ export default function WhyGlobalNex() {
 
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 px-4 lg:px-5 py-3.5 border-t border-line bg-bg2">
             <p className="text-[11px] text-light leading-snug max-w-lg">
-              An elite, tech-enabled advisory engagement. The engine does the heavy lifting; domain
-              experts deliver the boardroom-ready move.
+              An elite, tech-enabled managed service. The engine does the heavy lifting; domain
+              experts deliver the move.
             </p>
             <p className="text-[11px] text-light leading-snug max-w-md sm:text-right">
               Selective engagements. A limited number of manufacturers at a time.

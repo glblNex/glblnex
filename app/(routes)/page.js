@@ -15,7 +15,6 @@ import CoverageMarquee from '../_components/CoverageMarquee'
 import FaqSection from '../_components/FaqSection'
 import IndustriesStrip from '../_components/IndustriesStrip'
 import WhyGlobalNex from '../_components/WhyGlobalNex'
-import ServiceFlow from '../_components/ServiceFlow'
 import AdvisoryLayer from '../_components/AdvisoryLayer'
 import ShockMoment from '../_components/ShockMoment'
 import BusinessCase from '../_components/BusinessCase'
@@ -44,8 +43,8 @@ export default function Home() {
               Win the next price negotiation before it starts
             </h1>
             <p className={`mt-5 text-base lg:text-lg text-light font-light max-w-xl leading-relaxed ${urbanist.className}`}>
-              We map your BOMs, quantify the hit, and hand you the counter and the next move.
-              For manufacturers who need the problem taken care of, not another dashboard to learn.
+              Tech-enabled managed service: we trace shocks to your parts, audit surcharges, route NPI spend,
+              and quantify exposure in days. You get the counter and the next move, not another dashboard.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
               <Link href="/started">
@@ -85,11 +84,6 @@ export default function Home() {
       {/* What you get */}
       <GxSection>
         <BusinessCase />
-      </GxSection>
-
-      {/* Day-one ingestion + real-world service scenarios */}
-      <GxSection id="how-it-works">
-        <ServiceFlow />
       </GxSection>
 
       {/* Expert team + trigger alerts */}

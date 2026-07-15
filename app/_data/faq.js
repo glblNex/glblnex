@@ -6,13 +6,31 @@ export const FAQ_ITEMS = [
     id: 'software-or-service',
     question: 'Is globalNex software or a service?',
     answer:
-      'A service, powered by software. You buy the quantified conclusion and the next move: negotiation counter, boardroom figure, trigger alert with a recommended action. Our Expert-in-the-Loop team maps your messy BOMs and delivers those outcomes. The engine does the computation behind the scenes. You do not buy a login to a blank dashboard.',
+      'A tech-enabled managed service, powered by software. You buy quantified outcomes and the next move: hit lists, rejection reports, sourcing plans, counters, and boardroom figures. Our Expert-in-the-Loop team maps your messy BOMs and executes. The engine runs behind the scenes. You do not buy a login to a blank dashboard.',
   },
   {
     id: 'counter-supplier-hike',
     question: 'Can globalNex help me counter a supplier price increase?',
     answer:
       'Yes. This is the primary use case. When a supplier claims aluminum is up and demands +12%, globalNex decomposes the exact grade (e.g. 6061-T6: 97% aluminum, magnesium actually down) and shows the true cost increase (e.g. +4.2%). You counter with a defensible number (e.g. 5%) and lock the rest of the year. One negotiation pays for the engagement.',
+  },
+  {
+    id: 'audit-surcharges',
+    question: 'Can globalNex audit material surcharges on supplier invoices?',
+    answer:
+      'Yes. Forward the invoices to your globalNex advisor. We map each part to its alloy grade, calculate the penny-accurate surcharge justified by metal weight and live indices, and deliver a line-by-line rejection report. Reject inflated surcharges before AP pays, not after a three-month consultancy audit.',
+  },
+  {
+    id: 'npi-sourcing',
+    question: 'Do you handle new product or prototype sourcing?',
+    answer:
+      'Yes. Hand us the prototype BOM. We analyze grades for supply risk, route low-volume and NPI spend through our vetted network of specialized suppliers, and deliver a sourcing plan with projected costs and lead times. Your engineering team stays on the main product line while we manage the ugly spend.',
+  },
+  {
+    id: 'ma-diligence',
+    question: 'Can globalNex assess material risk for M&A diligence?',
+    answer:
+      'Yes. Provide historical purchase data from the target. In days, our ingestion engine maps SKUs to chemistry and our experts quantify geographic concentration and hidden geopolitical exposure. You get a material exposure figure for the deal room, not a balance-sheet audit that misses supply chain physics.',
   },
   {
     id: 'clean-bom-data',

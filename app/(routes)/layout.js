@@ -8,7 +8,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 import { syne } from '../_style/fonts'
 
 const siteDescription =
-  'globalNex delivers material-risk outcomes for defense, aerospace, and heavy manufacturing. We map your BOMs, counter supplier price hikes with alloy-grade precision, and hand you boardroom-ready figures and recommended moves, not a blank dashboard.';
+  'globalNex is a tech-enabled managed service for defense, aerospace, and heavy manufacturing. Trace shocks to specific parts, audit surcharges, route NPI spend, and quantify material exposure in days. Outcomes delivered, not a blank dashboard.';
 
 const ogImage = 'https://y2etwt0sktcajnaj.public.blob.vercel-storage.com/og_photo.png';
 
@@ -63,7 +63,7 @@ export const metadata = {
   manifest: '/icons/site.webmanifest',
   openGraph: {
     title: 'globalNex: Material-Risk Outcomes, Delivered',
-    description: 'We map your BOMs and hand you alloy-grade negotiation counters, boardroom figures, and recommended moves. The number and the move, not a blank dashboard.',
+    description: 'Tech-enabled managed service: trace, audit, counter, route, and quantify material risk. The number and the move, not a blank dashboard.',
     url: 'https://glblnex.com/',
     siteName: 'globalNex',
     locale: 'en_US',

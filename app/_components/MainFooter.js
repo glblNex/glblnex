@@ -8,7 +8,6 @@ import { urbanist } from '../_style/fonts'
 import MainButton from './MainButton'
 
 const EXPLORE = [
-  { label: 'How the service works', href: '/#how-it-works' },
   { label: 'See a sample counter', href: '/#demo' },
   { label: 'Alloy decomposition', href: '/#alloys' },
   { label: 'How we compare', href: '/#compare' },

@@ -65,10 +65,9 @@ export default function AdvisoryLayer() {
               Your BOMs are messy. Your ERP is a mess. You never touch it.
             </h2>
             <p className="mt-5 text-base lg:text-lg text-white/60 leading-relaxed max-w-2xl">
-              Your supply chain finance team securely uploads raw ERP exports or messy Excel dumps:
-              thousands of part numbers and purchase orders. Our ingestion engine and fractional experts
-              map abstract part numbers to metallurgical chemistry (Part #8472 is 7075-T6). You never
-              clean the data.
+              Your supply chain finance team securely uploads raw ERP exports or messy Excel dumps.
+              Our ingestion engine decomposes Tier 1 BOMs to elemental chemistry: part numbers mapped
+              to grades, grades mapped to metals. You never clean the data.
             </p>
           </div>
         </Reveal>
@@ -113,12 +112,13 @@ export default function AdvisoryLayer() {
             <h3
               className={`text-2xl sm:text-3xl lg:text-4xl font-light leading-snug max-w-3xl ${urbanist.className}`}
             >
-              We quantify your exposure and hand you the move the morning the news drops.
+              Grade-matched exposure and the move, before your team finishes their first coffee.
             </h3>
             <p className="mt-4 text-sm lg:text-base text-white/55 leading-relaxed max-w-2xl">
-              We watch the macro events that move your grades, including export bans, production cuts,
-              and sanctions, run your spend through the model, and tell you whether to lock contracts,
-              dual-source, or redesign before your team finishes their first coffee.
+              We connect macro disruptions directly to the chemical grades in your spend, not generic
+              market headlines. Export bans, production cuts, smelter outages: run through your mapped
+              BOM instantly, then redirect, dual-source, or lock contracts while competitors are still
+              reading the news.
             </p>
 
             <motion.div

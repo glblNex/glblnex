@@ -11,44 +11,55 @@ const BENEFITS = [
     id: 'procurement',
     role: 'Procurement & Sourcing',
     short: 'Procurement',
-    headline: 'Counter the +12% hike with a 5% counter',
-    outcome: 'Walk into the room with a defensible alloy-grade number and accept 5%, not 12%.',
+    headline: 'Reject inflated surcharges before you pay',
+    outcome: 'Line-by-line alloy math on every invoice. Counter hikes and reject unjustified material surcharges same day.',
     points: [
       'True cost delta on the grade, not the commodity index',
-      'Counter receipt you use in the room the same day',
+      'Rejection sheet ready before the invoice clears AP',
     ],
   },
   {
     id: 'supply-chain',
     role: 'Supply Chain & Operations',
     short: 'Supply Chain',
-    headline: 'Know the margin hit before the line stops',
-    outcome: 'Same-morning trigger: quantified spend impact plus lock contracts or dual-source now.',
+    headline: 'Trace shocks to specific parts before the line stops',
+    outcome: 'Same-morning alert: which components are exposed, margin hit quantified, redirect options ranked.',
     points: [
-      'Exposure on your grades, not generic market alerts',
-      'Dual-sourcing priorities ranked so you move before Q3',
+      'Macro event mapped to your BOM, not generic market news',
+      'Dual-source or lock contracts before competitors react',
     ],
   },
   {
     id: 'finance',
     role: 'Finance & Risk',
     short: 'Finance',
-    headline: 'One at-risk spend figure for the board',
-    outcome: 'Margin impact and dollar exposure leadership can hedge or budget against today.',
+    headline: 'One exposure figure for the board or the deal',
+    outcome: 'At-risk spend and margin impact leadership can hedge, budget, or negotiate against today.',
     points: [
-      'Board-ready figures tied to your BOM',
+      'Board-ready figures tied to your mapped BOM',
       'Scenario-backed numbers for hedging and budget calls',
     ],
   },
   {
     id: 'engineering',
-    role: 'Engineering & Design',
+    role: 'Engineering & NPI',
     short: 'Engineering',
-    headline: 'Pick the grade that survives the shock',
-    outcome: 'Compare alloys on supply resilience, then lock the grade before tooling commits you.',
+    headline: 'Hand off the prototype BOM. Keep building.',
+    outcome: 'Low-volume and NPI spend routed through our network. Your team stays on the main product line.',
     points: [
-      'Composition and volatility behind each grade choice',
-      'De-risk programs before qualification locks the BOM',
+      'De-risk grades before tooling locks the BOM',
+      'Sourcing plan with vetted partners, costs, and lead times',
+    ],
+  },
+  {
+    id: 'pe',
+    role: 'Private Equity & M&A',
+    short: 'PE / M&A',
+    headline: 'Hidden material risk in days, not months',
+    outcome: 'Messy purchase data mapped to chemistry. Quantified geopolitical exposure for diligence or post-close dual-sourcing.',
+    points: [
+      'Material exposure report from historical PO data in days',
+      'Unpriced supply chain liability surfaced before close',
     ],
   },
 ]
@@ -63,12 +74,12 @@ export default function BenefitsSection() {
         <SectionHeading
           eyebrow="Who we work with"
           title="Every function walks away with an outcome"
-          subtitle="Defense, aerospace, automotive, heavy manufacturing, and hardware teams who refuse to guess. Every function leaves with a move to take."
+          subtitle="Defense, aerospace, automotive, heavy manufacturing, hardware startups, and deal teams. Every function leaves with a move to take."
           align="center"
         />
       </Reveal>
 
-      <div className="mt-8 lg:mt-10 grid grid-cols-2 lg:grid-cols-4 gap-2 lg:gap-3 w-full">
+      <div className="mt-8 lg:mt-10 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2 lg:gap-3 w-full">
         {BENEFITS.map((b) => {
           const selected = activeId === b.id
           return (
@@ -76,7 +87,7 @@ export default function BenefitsSection() {
               key={b.id}
               type="button"
               onClick={() => setActiveId(b.id)}
-              className={`rounded-xl border px-3 py-3 lg:px-5 lg:py-4 text-left transition-all duration-250 focus:outline-none focus-visible:ring-2 focus-visible:ring-highlight/40 ${
+              className={`rounded-xl border px-3 py-3 lg:px-4 lg:py-4 text-left transition-all duration-250 focus:outline-none focus-visible:ring-2 focus-visible:ring-highlight/40 ${
                 selected
                   ? 'border-highlight bg-highlight text-white shadow-md'
                   : 'border-line bg-white text-ink hover:border-highlight/35 hover:bg-highlightSoft/40'
