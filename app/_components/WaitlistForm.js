@@ -25,7 +25,7 @@ const formStyles = {
   name: 'Default',
   formStyle: 'buttonBelow',
   placeholderText: 'you@company.com',
-  buttonText: 'Request an assessment',
+  buttonText: 'Get started',
   successMessage: "Request received. We'll be in touch.",
   userGroup: 'gxWebsite',
 };

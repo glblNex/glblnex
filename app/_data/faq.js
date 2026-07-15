@@ -54,7 +54,7 @@ export const FAQ_ITEMS = [
     id: 'how-engagements-work',
     question: 'How do engagements work?',
     answer:
-      'globalNex takes a limited number of manufacturers and deal teams at a time. You request an assessment, we scope your metal exposure and BOM complexity, and deploy the Expert-in-the-Loop team to map chemistry and configure your scenario studio. Ongoing: trace geo shocks to your parts, audit surcharges, route NPI spend, and quantify exposure as events hit your grades.',
+      'You reach out, tell us what you are building and where material risk shows up. We scope your metal exposure and BOM complexity, then deploy the Expert-in-the-Loop team to map chemistry and configure your scenario studio. Ongoing: trace geo shocks to your parts, audit surcharges, route NPI spend, and quantify exposure as events hit your grades.',
   },
   {
     id: 'what-is-alloy-grade-supply-risk',

@@ -78,7 +78,7 @@ export default function AdvisoryLayer() {
             <SectionHeading
               eyebrow="Expert-in-the-Loop"
               title="A small, world-class team amplified by our engine and AI"
-              subtitle="Fractional cost engineers, metallurgical analysts, and commodity strategists. Not customer-success reps showing you how to click buttons. We take a limited number of engagements."
+              subtitle="Fractional cost engineers, metallurgical analysts, and commodity strategists. Not customer-success reps showing you how to click buttons. We work directly with your team."
               align="left"
               className="[&_h2]:text-white [&_p]:text-white/55 [&_p]:max-w-2xl [&_p]:text-left"
             />

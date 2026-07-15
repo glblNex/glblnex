@@ -99,7 +99,7 @@ export default function ShockMoment() {
               Hit lists, rejection reports, sourcing plans, diligence figures. One engine, many outcomes.
             </p>
             <Link href="/started" className="shrink-0">
-              <MainButton btn_txt="Request an assessment" />
+              <MainButton btn_txt="Get started" />
             </Link>
           </div>
         </div>

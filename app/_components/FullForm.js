@@ -30,7 +30,7 @@ const formConfig = {
     company: 'Company Name',
     role: 'Your Role/Title',
   },
-  buttonText: 'Request an assessment',
+  buttonText: 'Get started',
   successMessage: "Request received. We'll be in touch.",
   userGroup: 'gxWaitlistInterest',
   domain: 'app.loops.so',

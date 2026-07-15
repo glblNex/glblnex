@@ -57,7 +57,7 @@ export default function StructuredData() {
       '@type': 'Offer',
       price: '0',
       priceCurrency: 'USD',
-      description: 'Request an assessment',
+      description: 'Get started',
       url: 'https://glblnex.com/started',
     },
     featureList: [

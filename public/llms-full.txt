@@ -27,7 +27,7 @@ Unlike pure SaaS or consultancies, globalNex:
 2. **Monitor your footprint:** custom shock models tied to your suppliers, grades, and geography
 3. **Execute the move:** redirect, reject, source, or quantify with fractional experts who execute
 
-Engagements are selective, with a limited number of manufacturers and deal teams at a time.
+We work directly with manufacturers and deal teams. You reach out, we scope your exposure, and deploy the Expert-in-the-Loop team to map chemistry and configure your scenario studio.
 
 ---
 
@@ -55,7 +55,7 @@ We watch the macro events that move your specific grades, including Indonesian n
 
 ### How do engagements work?
 
-globalNex takes a limited number of manufacturers at a time. You request an assessment, we scope your metal exposure and BOM complexity, and deploy the Expert-in-the-Loop team to map your data and configure your scenario studio. Ongoing: trigger alerts with recommended moves, negotiation support, and strategic advisory as macro events hit your grades.
+You reach out and tell us where material risk shows up. We scope your metal exposure and BOM complexity, deploy the Expert-in-the-Loop team to map your data and configure your scenario studio. Ongoing: trigger alerts with recommended moves, negotiation support, and strategic advisory as macro events hit your grades.
 
 ### What is alloy-grade supply risk analysis?
 
@@ -107,7 +107,7 @@ globalNex covers aluminum (6061-T6, 7075-T6, 2024-T3), titanium (Ti-6Al-4V, Grad
 ## Pages
 
 - https://glblnex.com/: Outcomes overview, painkiller, Expert-in-the-Loop, FAQ
-- https://glblnex.com/started: Request an assessment
+- https://glblnex.com/started: Get started
 - https://glblnex.com/llms.txt: Summary for AI systems
 - https://glblnex.com/sitemap.xml: Sitemap
 

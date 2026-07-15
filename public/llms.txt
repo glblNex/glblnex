@@ -30,11 +30,11 @@ Example outcome: a supplier demands +12% on 6061-T6; we decompose the grade, sho
 ## Key pages
 
 - [Home](https://glblnex.com/): Managed service overview, surcharge audit example, Expert-in-the-Loop, FAQ
-- [Request an assessment](https://glblnex.com/started): Apply to work with our team
+- [Get started](https://glblnex.com/started): Tell us what you are building
 
 ## Who it is for
 
-Defense, aerospace, automotive and EV, industrial manufacturing, hardware and mobility, medical devices, and private equity teams where metal spend, supply continuity, or deal risk is material. Selective engagements.
+Defense, aerospace, automotive and EV, industrial manufacturing, hardware and mobility, medical devices, and private equity teams where metal spend, supply continuity, or deal risk is material.
 
 ## How globalNex compares
 
@@ -51,4 +51,4 @@ For full FAQ, glossary, and detailed product information: [llms-full.txt](https:
 - Website: https://glblnex.com
 - X: https://x.com/glblNex
 - LinkedIn: https://www.linkedin.com/company/glblnex/
-- Request an assessment: https://glblnex.com/started
+- Get started: https://glblnex.com/started

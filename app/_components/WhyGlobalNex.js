@@ -214,7 +214,7 @@ export default function WhyGlobalNex() {
               experts deliver the move.
             </p>
             <p className="text-[11px] text-light leading-snug max-w-md sm:text-right">
-              Selective engagements. A limited number of manufacturers at a time.
+              We work with manufacturers and deal teams who need material risk handled.
             </p>
           </div>
         </div>

@@ -12,7 +12,7 @@ const EXPLORE = [
   { label: 'Alloy decomposition', href: '/#alloys' },
   { label: 'How we compare', href: '/#compare' },
   { label: 'FAQ', href: '/#faq' },
-  { label: 'Request an assessment', href: '/started' },
+  { label: 'Get started', href: '/started' },
 ]
 
 const INDUSTRIES = [
@@ -85,7 +85,7 @@ export default function MainFooter() {
             </p>
           </div>
           <Link href="/started" className="shrink-0">
-            <MainButton btn_txt="Request an assessment" />
+            <MainButton btn_txt="Get started" />
           </Link>
         </div>
       </div>

@@ -48,7 +48,7 @@ export default function Home() {
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
               <Link href="/started">
-                <MainButton btn_txt="Request an assessment" />
+                <MainButton btn_txt="Get started" />
               </Link>
               <a href="#demo">
                 <SecondButton btn_txt="See sample deliverable" />

@@ -1,14 +1,14 @@
 export const metadata = {
-  title: 'Request an Assessment',
+  title: 'Get Started',
   description:
-    'Request a selective assessment with globalNex. Trace, audit, route, or quantify material risk from your BOM or purchase data.',
+    'Get started with globalNex. Share your BOM or purchase data and tell us where material risk shows up. We map chemistry and show you how we can help.',
   alternates: {
     canonical: 'https://glblnex.com/started',
   },
   openGraph: {
-    title: 'Request a globalNex Assessment',
+    title: 'Get Started with globalNex',
     description:
-      'Limited engagements with defense, aerospace, and heavy manufacturing. Tell us where metal risk shows up for you.',
+      'Tell us what you are building. We map your material exposure and show you how we can work together.',
     url: 'https://glblnex.com/started',
   },
 }

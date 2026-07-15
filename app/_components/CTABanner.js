@@ -10,7 +10,7 @@ export default function CTABanner() {
         <GxSection>
             <div className="rounded-2xl border border-line bg-bg2 px-6 py-14 lg:px-16 lg:py-20 text-center">
                 <p className="text-xs uppercase tracking-[0.2em] text-highlight font-semibold mb-4">
-                    Selective engagements
+                    Work with us
                 </p>
                 <h2 className={`text-3xl lg:text-5xl font-light text-ink mb-4 ${urbanist.className}`}>
                     Tell us where material risk breaks your operation
