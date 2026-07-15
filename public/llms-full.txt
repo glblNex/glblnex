@@ -23,11 +23,11 @@ Unlike pure SaaS or consultancies, globalNex:
 
 ## How deployment works (Expert-in-the-Loop)
 
-1. **Map your BOMs:** ingestion engine auto-maps spreadsheets and ERP dumps to our metallurgical alloy database; experts validate edge cases
-2. **Build your scenario studio:** custom shock models tuned to your footprint and grades
-3. **Act as your strategic wing:** turn risk into moves you execute: hedge, dual-source, redesign, or counter
+1. **Map chemistry, not SKUs:** ingestion engine maps ERP and Excel to elemental exposure; experts validate edge cases
+2. **Monitor your footprint:** custom shock models tied to your suppliers, grades, and geography
+3. **Execute the move:** redirect, reject, source, or quantify with fractional experts who execute
 
-Engagements are selective, with a limited number of manufacturers at a time.
+Engagements are selective, with a limited number of manufacturers and deal teams at a time.
 
 ---
 
