@@ -30,8 +30,8 @@ const TRIGGER_EXAMPLES = [
   {
     event: 'Chinese magnesium export squeeze',
     grade: '7075-T6',
-    impact: '2.0 pt gross-margin hit',
-    action: 'Lock contracts this week',
+    impact: '2.5 pt gross-margin hit',
+    action: 'Lock Q3/Q4 POs today; qualify India suppliers',
   },
   {
     event: 'Indonesian nickel export ban',
@@ -65,9 +65,10 @@ export default function AdvisoryLayer() {
               Your BOMs are messy. Your ERP is a mess. You never touch it.
             </h2>
             <p className="mt-5 text-base lg:text-lg text-white/60 leading-relaxed max-w-2xl">
-              Our ingestion engine auto-maps disparate spreadsheets and ERP dumps to our
-              metallurgical alloy database. Our Expert-in-the-Loop team validates the edge cases.
-              You get mapped exposure and actionables. No data cleanup on your side.
+              Your supply chain finance team securely uploads raw ERP exports or messy Excel dumps:
+              thousands of part numbers and purchase orders. Our ingestion engine and fractional experts
+              map abstract part numbers to metallurgical chemistry (Part #8472 is 7075-T6). You never
+              clean the data.
             </p>
           </div>
         </Reveal>

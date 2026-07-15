@@ -96,8 +96,8 @@ export default function ShockMoment() {
 
           <div className="border-t border-line px-7 lg:px-10 py-6 lg:py-7 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 bg-white">
             <p className={`text-base lg:text-lg font-light text-ink leading-snug max-w-xl ${urbanist.className}`}>
-            We hand you the number and the move, not the dashboard.
-          </p>
+              We hand you the number and the move, not the dashboard.
+            </p>
             <Link href="/started" className="shrink-0">
               <MainButton btn_txt="Request an assessment" />
             </Link>

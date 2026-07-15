@@ -15,6 +15,7 @@ import CoverageMarquee from '../_components/CoverageMarquee'
 import FaqSection from '../_components/FaqSection'
 import IndustriesStrip from '../_components/IndustriesStrip'
 import WhyGlobalNex from '../_components/WhyGlobalNex'
+import ServiceFlow from '../_components/ServiceFlow'
 import AdvisoryLayer from '../_components/AdvisoryLayer'
 import ShockMoment from '../_components/ShockMoment'
 import BusinessCase from '../_components/BusinessCase'
@@ -86,7 +87,12 @@ export default function Home() {
         <BusinessCase />
       </GxSection>
 
-      {/* How we take it on */}
+      {/* Day-one ingestion + real-world service scenarios */}
+      <GxSection id="how-it-works">
+        <ServiceFlow />
+      </GxSection>
+
+      {/* Expert team + trigger alerts */}
       <AdvisoryLayer />
 
       {/* Proof the math is real (evidence, not the product) */}
