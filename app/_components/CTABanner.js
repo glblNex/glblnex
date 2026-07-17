@@ -13,11 +13,11 @@ export default function CTABanner() {
                     Work with us
                 </p>
                 <h2 className={`text-3xl lg:text-5xl font-light text-ink mb-4 ${urbanist.className}`}>
-                    Tell us where material risk breaks your operation
+                    Send us an invoice or BOM. We show you the move.
                 </h2>
                 <p className={`text-light max-w-xl mx-auto mb-10 text-base leading-relaxed ${urbanist.className}`}>
-                    Surcharge audit, geo exposure, NPI sourcing, supply redirect, or deal diligence.
-                    Hand us your BOM or purchase data. We map chemistry and deliver the move.
+                    Surcharge audit, geo exposure, NPI sourcing, or deal diligence.
+                    Hand us your data. We map chemistry and deliver the counter, rejection report, or hit list.
                 </p>
                 <WaitlistForm />
             </div>

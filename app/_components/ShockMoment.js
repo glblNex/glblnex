@@ -89,7 +89,7 @@ export default function ShockMoment() {
 
               <p className="mt-6 text-sm text-light leading-relaxed max-w-xl">
                 Aluminum is 97% of this grade. Magnesium is actually down. Reject the blanket 12%.
-                Accept 5%. Margin defended in one afternoon.
+                Accept 5%. The math is on the rejection sheet before AP pays.
               </p>
             </div>
           </div>
@@ -99,7 +99,7 @@ export default function ShockMoment() {
               Hit lists, rejection reports, sourcing plans, diligence figures. One engine, many outcomes.
             </p>
             <Link href="/started" className="shrink-0">
-              <MainButton btn_txt="Get started" />
+              <MainButton btn_txt="Send us your last supplier invoice" className="!text-xs sm:!text-sm !px-4 sm:!px-6" />
             </Link>
           </div>
         </div>

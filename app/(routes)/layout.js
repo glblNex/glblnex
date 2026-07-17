@@ -8,7 +8,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 import { syne } from '../_style/fonts'
 
 const siteDescription =
-  'globalNex is a tech-enabled managed service for defense, aerospace, and heavy manufacturing. Trace shocks to specific parts, audit surcharges, route NPI spend, and quantify material exposure in days. Outcomes delivered, not a blank dashboard.';
+  'Your suppliers are overcharging you. globalNex decomposes every invoice and BOM to elemental math, rejects inflated surcharges, and hands you the counter before AP pays. Tech-enabled managed service — engine plus cost engineers who execute the move.';
 
 const ogImage = 'https://y2etwt0sktcajnaj.public.blob.vercel-storage.com/og_photo.png';
 
@@ -16,7 +16,7 @@ export const metadata = {
   metadataBase: new URL('https://glblnex.com'),
   title: {
     template: '%s | globalNex',
-    default: 'globalNex: Material Risk, Managed',
+    default: 'globalNex: Prove the Surcharge, Down to the Alloy',
   },
   description: siteDescription,
   applicationName: 'globalNex',
@@ -62,8 +62,8 @@ export const metadata = {
   },
   manifest: '/icons/site.webmanifest',
   openGraph: {
-    title: 'globalNex: Material Risk, Managed',
-    description: 'Tech-enabled managed service: trace, audit, counter, route, and quantify material risk. The number and the move, not a blank dashboard.',
+    title: 'globalNex: Prove the Surcharge, Down to the Alloy',
+    description: 'Your suppliers are overcharging you. We decompose every invoice and BOM to elemental math, reject inflated surcharges, and hand you the counter before AP pays.',
     url: 'https://glblnex.com/',
     siteName: 'globalNex',
     locale: 'en_US',
@@ -79,8 +79,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'globalNex: Material Risk, Managed',
-    description: 'Tech-enabled managed service: trace shocks to parts, audit surcharges, route NPI spend, quantify deal exposure. Engine plus experts who execute the move.',
+    title: 'globalNex: Prove the Surcharge, Down to the Alloy',
+    description: 'We decompose invoices and BOMs to elemental math, reject inflated surcharges, and hand you the counter before AP pays. Engine plus experts who execute the move.',
     site: '@glblNex',
     creator: '@glblNex',
     images: [ogImage],

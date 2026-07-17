@@ -1,16 +1,16 @@
 # globalNex
 
-> globalNex is a tech-enabled managed service for defense, aerospace, heavy manufacturing, hardware, and deal teams. We trace shocks to specific parts, audit surcharges, route NPI spend, and quantify material exposure in days. Engine plus experts who execute the move, not a blank dashboard.
+> Your suppliers are overcharging you. globalNex decomposes every invoice and BOM to elemental math, rejects inflated surcharges, and hands you the counter before AP pays. Tech-enabled managed service — our engine does the math, our cost engineers execute the move.
 
 Example outcome: a supplier demands +12% on 6061-T6; we decompose the grade, show true cost at +4.2%, and deliver a rejection report or counter at 5%.
 
 ## What you get (the outcome)
 
-- Risk and redirect hit lists: macro shock traced to specific components at risk
 - Line-by-line surcharge rejection reports before AP pays
 - Defensible negotiation counters backed by alloy-grade decomposition
+- Risk and redirect hit lists: macro shock traced to specific components at risk
 - De-risked NPI and low-volume sourcing plans through a vetted network
-- Board- and deal-ready material exposure figures from messy purchase data in days
+- Board- and deal-ready material exposure figures from messy purchase data
 - Grade-matched trigger alerts with recommended moves (lock contracts, dual-source, redirect)
 - Expert-in-the-Loop team mapping your BOMs to chemistry; you never clean the data
 
@@ -19,6 +19,8 @@ Example outcome: a supplier demands +12% on 6061-T6; we decompose the grade, sho
 1. **Map chemistry, not SKUs:** ingestion engine maps messy ERP and Excel to elemental exposure; experts validate edge cases
 2. **Monitor your footprint:** custom shock models tied to your suppliers, grades, and geography
 3. **Execute the move:** redirect, reject, source, or quantify with fractional experts who execute
+
+Engagements: fixed-scope audits and diligence sprints, or a standing retainer with success fees on defended savings.
 
 ## The engine (proof, not the product)
 
@@ -29,8 +31,8 @@ Example outcome: a supplier demands +12% on 6061-T6; we decompose the grade, sho
 
 ## Key pages
 
-- [Home](https://glblnex.com/): Managed service overview, surcharge audit example, Expert-in-the-Loop, FAQ
-- [Get started](https://glblnex.com/started): Tell us what you are building
+- [Home](https://glblnex.com/): Surcharge audit example, Expert-in-the-Loop, FAQ
+- [Send an invoice or BOM](https://glblnex.com/started): First step to a surcharge audit or hit list
 
 ## Who it is for
 
@@ -51,4 +53,4 @@ For full FAQ, glossary, and detailed product information: [llms-full.txt](https:
 - Website: https://glblnex.com
 - X: https://x.com/glblNex
 - LinkedIn: https://www.linkedin.com/company/glblnex/
-- Get started: https://glblnex.com/started
+- Send an invoice or BOM: https://glblnex.com/started

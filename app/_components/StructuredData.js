@@ -57,7 +57,7 @@ export default function StructuredData() {
       '@type': 'Offer',
       price: '0',
       priceCurrency: 'USD',
-      description: 'Get started',
+      description: 'Send an invoice or BOM for a surcharge audit',
       url: 'https://glblnex.com/started',
     },
     featureList: [

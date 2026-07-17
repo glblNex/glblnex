@@ -21,75 +21,60 @@ import BusinessCase from '../_components/BusinessCase'
 import SectionHeading from '../_components/SectionHeading'
 import Reveal from '../_components/Reveal'
 
-const HERO_PROOF = [
-  { value: "Days", label: "messy ERP mapped to chemistry" },
-  { value: "Same day", label: "redirect before the market panics" },
-  { value: "Line-by-line", label: "surcharge audit before AP pays" },
-]
-
 const STEPS = ["Pick a grade", "Run a shock", "Read the number"]
 
 export default function Home() {
   return (
     <main className="overflow-x-hidden">
-      {/* Hero */}
+      {/* Hero: money first, deliverable above the fold */}
       <GxSection className="pt-24 lg:pt-28 pb-4 lg:pb-6">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-          <Reveal>
+          <Reveal className="order-2 lg:order-1">
             <p className="text-xs uppercase tracking-[0.2em] text-highlight font-semibold mb-3">
-              Tech-enabled managed service
+              Surcharge audit and negotiation counters
             </p>
             <h1 className={`text-4xl sm:text-5xl lg:text-6xl font-light leading-[1.08] text-ink ${urbanist.className}`}>
-              Keep the line running when material risk hits
+              Your suppliers are overcharging you. We prove it, down to the alloy.
             </h1>
             <p className={`mt-5 text-base lg:text-lg text-light font-light max-w-xl leading-relaxed ${urbanist.className}`}>
-              We trace shocks to your specific parts, audit surcharges, route NPI spend, and quantify
-              hidden exposure in days. Engine plus experts: you get the move, not another dashboard.
+              We decompose every invoice and BOM to elemental math, reject inflated surcharges,
+              and hand you the counter before AP pays.
+            </p>
+            <p className={`mt-4 text-sm lg:text-base text-ink/80 font-light max-w-xl leading-relaxed ${urbanist.className}`}>
+              Tech-enabled managed service. Our engine does the math, our cost engineers execute the move.
+            </p>
+            <p className={`mt-3 text-sm text-light max-w-xl leading-relaxed ${urbanist.className}`}>
+              When supply shocks hit, we trace them to your parts and keep production moving.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
               <Link href="/started">
-                <MainButton btn_txt="Get started" />
+                <MainButton btn_txt="Send us your last supplier invoice" className="!text-xs sm:!text-sm !px-4 sm:!px-6" />
               </Link>
               <a href="#demo">
-                <SecondButton btn_txt="See sample deliverable" />
+                <SecondButton btn_txt="See the math" />
               </a>
             </div>
-            <dl className="mt-8 grid grid-cols-3 gap-4 max-w-xl border-t border-line pt-6">
-              {HERO_PROOF.map((p) => (
-                <div key={p.value}>
-                  <dt className={`text-lg lg:text-xl font-medium text-highlight ${urbanist.className}`}>
-                    {p.value}
-                  </dt>
-                  <dd className="mt-1 text-xs text-light leading-snug">{p.label}</dd>
-                </div>
-              ))}
-            </dl>
           </Reveal>
-          <div className="relative">
+          <div className="relative order-1 lg:order-2">
             <OutcomeDeliverable />
           </div>
         </div>
       </GxSection>
 
-      {/* Industries */}
       <GxSection className="py-2">
         <IndustriesStrip />
       </GxSection>
 
-      {/* Painkiller: surcharge audit example */}
       <GxSection>
         <ShockMoment />
       </GxSection>
 
-      {/* What you get */}
       <GxSection>
         <BusinessCase />
       </GxSection>
 
-      {/* Expert team + trigger alerts */}
       <AdvisoryLayer />
 
-      {/* Proof the math is real (evidence, not the product) */}
       <GxSection id="demo">
         <Reveal>
           <SectionHeading
@@ -120,7 +105,6 @@ export default function Home() {
         </Reveal>
       </GxSection>
 
-      {/* Alloy decomposition: depth behind the number */}
       <GxSection id="alloys">
         <Reveal>
           <SectionHeading
@@ -135,12 +119,10 @@ export default function Home() {
         </Reveal>
       </GxSection>
 
-      {/* Why not SaaS / consultancies */}
       <GxSection id="compare">
         <WhyGlobalNex />
       </GxSection>
 
-      {/* Who we work with */}
       <GxSection>
         <BenefitsSection />
       </GxSection>

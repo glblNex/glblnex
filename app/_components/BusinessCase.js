@@ -1,25 +1,22 @@
 'use client'
 
 import React from 'react'
+import Link from 'next/link'
 import { urbanist } from '../_style/fonts'
 import SectionHeading from './SectionHeading'
 import Reveal, { RevealGroup, RevealItem } from './Reveal'
+import MainButton from './MainButton'
 
 const PILLARS = [
-  {
-    label: 'Trace',
-    value: 'Shock to parts',
-    detail: 'Macro event traced to the specific components at risk, with a redirect hit list, not a commodity headline.',
-  },
-  {
-    label: 'Audit',
-    value: 'Surcharge to math',
-    detail: 'Line-by-line alloy breakdown on incoming invoices. Reject inflated surcharges before you pay.',
-  },
   {
     label: 'Counter',
     value: 'Claim to receipt',
     detail: 'Supplier hike decomposed to true cost. Walk in with a defensible number and counter in the room.',
+  },
+  {
+    label: 'Audit',
+    value: 'Surcharge to math',
+    detail: 'Line-by-line alloy breakdown on incoming invoices. Rejection sheet ready before AP clears the payment.',
   },
   {
     label: 'Route',
@@ -28,8 +25,13 @@ const PILLARS = [
   },
   {
     label: 'Quantify',
-    value: 'Exposure in days',
-    detail: 'Board, deal, or hedge figure from messy purchase data, mapped to chemistry, not part numbers alone.',
+    value: 'Exposure for the deal',
+    detail: 'Board or diligence figure from messy purchase data, mapped to chemistry, not part numbers alone.',
+  },
+  {
+    label: 'Trace',
+    value: 'Shock to parts',
+    detail: 'The capability behind every outcome: macro events traced to the components that move your margin.',
   },
 ]
 
@@ -55,7 +57,7 @@ export default function BusinessCase() {
         <SectionHeading
           eyebrow="The outcome"
           title="What you walk away with"
-          subtitle="Trace, audit, counter, route, and quantify. We take the problem on so you do not babysit a tool or wait weeks for a report."
+          subtitle="Counter and audit put money back this quarter. Route and quantify serve the deal room. Trace powers all four."
           align="center"
         />
       </Reveal>
@@ -89,6 +91,14 @@ export default function BusinessCase() {
               <p className="mt-2 text-sm text-light leading-relaxed">{p.body}</p>
             </div>
           ))}
+        </div>
+      </Reveal>
+
+      <Reveal delay={0.1}>
+        <div className="mt-8 flex justify-center">
+          <Link href="/started">
+            <MainButton btn_txt="Upload a BOM, get a hit list" className="!text-xs sm:!text-sm" />
+          </Link>
         </div>
       </Reveal>
     </section>

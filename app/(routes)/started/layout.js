@@ -1,14 +1,14 @@
 export const metadata = {
-  title: 'Get Started',
+  title: 'Send an Invoice or BOM',
   description:
-    'Get started with globalNex. Share your BOM or purchase data and tell us where material risk shows up. We map chemistry and show you how we can help.',
+    'Send globalNex your last supplier invoice or BOM. We decompose it to elemental math and deliver a surcharge audit, counter, or hit list.',
   alternates: {
     canonical: 'https://glblnex.com/started',
   },
   openGraph: {
-    title: 'Get Started with globalNex',
+    title: 'Send an Invoice or BOM | globalNex',
     description:
-      'Tell us what you are building. We map your material exposure and show you how we can work together.',
+      'Upload your invoice or BOM. We map chemistry, scope exposure, and deliver the move.',
     url: 'https://glblnex.com/started',
   },
 }

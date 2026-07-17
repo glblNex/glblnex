@@ -1,6 +1,7 @@
 'use client'
 
 import React from 'react'
+import Link from 'next/link'
 import { urbanist } from '../_style/fonts'
 import SectionHeading from './SectionHeading'
 import Reveal from './Reveal'
@@ -24,136 +25,67 @@ const COLUMNS = [
   },
 ]
 
-const CAPABILITIES = [
+const ROWS = [
   {
-    category: 'Foundation',
-    rows: [
-      {
-        angle: 'BOM to chemistry',
-        detail: 'Messy ERP and Excel to elemental exposure',
-        values: {
-          gx: { level: 'native', text: 'Zero-friction ingestion: part numbers mapped to grades, grades to metals' },
-          saas: { level: 'not', text: 'You clean, upload, and maintain the data yourself' },
-          consult: { level: 'limited', text: 'Analysts map manually, billed hourly, takes weeks' },
-        },
-      },
-      {
-        angle: 'Alloy decomposition',
-        detail: 'Grade-level math, not commodity indices',
-        values: {
-          gx: { level: 'native', text: 'Proprietary alloy DB: composition, volatility, geo-concentration per grade' },
-          saas: { level: 'not', text: 'LME charts and spot prices, not 6061-T6 or Inconel 718 breakdown' },
-          consult: { level: 'limited', text: 'Possible in a project scope, not continuous or live' },
-        },
-      },
-      {
-        angle: 'Scenario studio',
-        detail: 'Shock models tuned to your footprint',
-        values: {
-          gx: { level: 'native', text: 'Custom price, supply, and geo scenarios on your mapped BOM' },
-          saas: { level: 'limited', text: 'Generic templates if your data is already loaded' },
-          consult: { level: 'limited', text: 'Built once per engagement, not kept live' },
-        },
-      },
-    ],
+    angle: 'BOM to chemistry',
+    detail: 'Messy ERP and Excel to elemental exposure',
+    values: {
+      gx: { level: 'native', text: 'Zero-friction ingestion: part numbers mapped to grades, grades to metals' },
+      saas: { level: 'not', text: 'You clean, upload, and maintain the data yourself' },
+      consult: { level: 'limited', text: 'Analysts map manually, billed hourly, takes weeks' },
+    },
   },
   {
-    category: 'Applications',
-    rows: [
-      {
-        angle: 'Geo shock tracing',
-        detail: 'Policy and supply events to your parts',
-        values: {
-          gx: { level: 'native', text: 'Risk and redirect hit list: which components bottleneck, with alternate sources' },
-          saas: { level: 'not', text: 'Generic news alert; no link to your BOM chemistry' },
-          consult: { level: 'not', text: 'Too slow to trace 15,000 parts when the embargo drops' },
-        },
-      },
-      {
-        angle: 'Surcharge audit',
-        detail: 'Blanket invoice hikes vs alloy-weight math',
-        values: {
-          gx: { level: 'native', text: 'Line-by-line rejection report before AP pays the invoice' },
-          saas: { level: 'not', text: 'No penny-accurate grade decomposition on invoice lines' },
-          consult: { level: 'not', text: 'Three-month audit cycle; invoice already paid' },
-        },
-      },
-      {
-        angle: 'Price negotiations',
-        detail: 'Supplier claims vs true cost',
-        values: {
-          gx: { level: 'native', text: 'Counter receipt: true cost +4.2%, counter at 5%, ready for the room' },
-          saas: { level: 'limited', text: 'Commodity trend charts, not a defensible grade counter' },
-          consult: { level: 'limited', text: 'Possible per project, not same-day in the negotiation' },
-        },
-      },
-      {
-        angle: 'Supply redirect',
-        detail: 'Disruption to capacity move',
-        values: {
-          gx: { level: 'native', text: 'Grade-matched alert same morning: lock billet, redirect POs, qualify alternates' },
-          saas: { level: 'not', text: 'Headline notification; you wait for Tier 1 to update the ERP' },
-          consult: { level: 'not', text: 'No live engine connecting smelter outage to your grades' },
-        },
-      },
-      {
-        angle: 'NPI and ugly spend',
-        detail: 'Prototype and low-volume sourcing',
-        values: {
-          gx: { level: 'native', text: 'De-risked sourcing plan: vetted partners, landed cost, lead time, contracts executed' },
-          saas: { level: 'not', text: 'No supplier network; does not pick up the phone' },
-          consult: { level: 'limited', text: 'Strategy deck; no ongoing execution on the build' },
-        },
-      },
-      {
-        angle: 'Deal diligence',
-        detail: 'Hidden material exposure at deal speed',
-        values: {
-          gx: { level: 'native', text: 'Material exposure report from messy PO data in days, not months' },
-          saas: { level: 'not', text: 'Six-month IT integration; useless in a 30-day diligence window' },
-          consult: { level: 'not', text: 'Balance sheet audit; misses metallurgical supply chain risk' },
-        },
-      },
-    ],
+    angle: 'Alloy decomposition',
+    detail: 'Grade-level math, not commodity indices',
+    values: {
+      gx: { level: 'native', text: 'Proprietary alloy DB: composition, volatility, geo-concentration per grade' },
+      saas: { level: 'not', text: 'LME charts and spot prices, not 6061-T6 or Inconel 718 breakdown' },
+      consult: { level: 'limited', text: 'Possible in a project scope, not continuous or live' },
+    },
   },
   {
-    category: 'Execution',
-    rows: [
-      {
-        angle: 'Trigger alerts',
-        detail: 'Macro event to your spend, instantly',
-        values: {
-          gx: { level: 'native', text: 'Quantified margin hit on your grades plus the recommended move' },
-          saas: { level: 'limited', text: 'Market alert with no spend context' },
-          consult: { level: 'not', text: 'No continuous monitoring between projects' },
-        },
-      },
-      {
-        angle: 'Expert-in-the-Loop',
-        detail: 'Who executes the move',
-        values: {
-          gx: { level: 'native', text: 'Fractional cost engineers and commodity strategists who redirect, reject, and source' },
-          saas: { level: 'not', text: 'Customer-success reps showing you how to click buttons' },
-          consult: { level: 'limited', text: 'Knowledge walks out when the project ends' },
-        },
-      },
-      {
-        angle: 'Speed to outcome',
-        detail: 'Question to decision-ready deliverable',
-        values: {
-          gx: { level: 'native', text: 'Same day for counters and redirects; days for diligence and BOM mapping' },
-          saas: { level: 'limited', text: 'Fast UI only after months of data prep' },
-          consult: { level: 'not', text: 'Days to weeks per question; PDF in the mail' },
-        },
-      },
-    ],
+    angle: 'Surcharge audit',
+    detail: 'Blanket invoice hikes vs alloy-weight math',
+    values: {
+      gx: { level: 'native', text: 'Line-by-line rejection report before AP pays the invoice' },
+      saas: { level: 'not', text: 'No penny-accurate grade decomposition on invoice lines' },
+      consult: { level: 'not', text: 'Three-month audit cycle; invoice already paid' },
+    },
+  },
+  {
+    angle: 'Trigger alerts',
+    detail: 'Macro event to your mapped spend',
+    values: {
+      gx: { level: 'native', text: 'Quantified margin hit on your grades plus the recommended move' },
+      saas: { level: 'limited', text: 'Market alert with no spend context' },
+      consult: { level: 'not', text: 'No continuous monitoring between projects' },
+    },
+  },
+  {
+    angle: 'Expert-in-the-Loop',
+    detail: 'Who executes the move',
+    values: {
+      gx: { level: 'native', text: 'Fractional cost engineers and commodity strategists who redirect, reject, and source' },
+      saas: { level: 'not', text: 'Customer-success reps showing you how to click buttons' },
+      consult: { level: 'limited', text: 'Knowledge walks out when the project ends' },
+    },
+  },
+  {
+    angle: 'Deliverable-first',
+    detail: 'What lands on your desk',
+    values: {
+      gx: { level: 'native', text: 'Rejection reports, counter receipts, and hit lists from your mapped BOM' },
+      saas: { level: 'limited', text: 'Fast UI only after months of data prep' },
+      consult: { level: 'not', text: 'Days to weeks per question; PDF in the mail' },
+    },
   },
 ]
 
 const DELIVERABLES = [
-  'Hit lists',
   'Rejection reports',
   'Counter receipts',
+  'Hit lists',
   'Redirect protocols',
   'Sourcing plans',
   'Diligence figures',
@@ -187,8 +119,8 @@ export default function WhyGlobalNex() {
       <Reveal>
         <SectionHeading
           eyebrow="Purpose-built"
-          title="Every material-risk job, built in"
-          subtitle="Not a generic dashboard with a login. globalNex is a tech-enabled managed service with purpose-built applications for ingestion, tracing, auditing, redirecting, sourcing, and diligence. Engine plus experts who execute."
+          title="Where we win, head to head"
+          subtitle="Six capabilities where globalNex is purpose-built and SaaS or consultancies fall short. Full capability list in the FAQ."
           align="center"
         />
       </Reveal>
@@ -226,37 +158,25 @@ export default function WhyGlobalNex() {
                 </tr>
               </thead>
               <tbody>
-                {CAPABILITIES.map((group) => (
-                  <React.Fragment key={group.category}>
-                    <tr className="border-t border-line bg-bg2/60">
+                {ROWS.map((row) => (
+                  <tr key={row.angle} className="border-t border-line align-top">
+                    <td className="p-4 lg:p-5 bg-white">
+                      <p className={`text-sm font-medium text-ink ${urbanist.className}`}>
+                        {row.angle}
+                      </p>
+                      <p className="mt-1 text-[11px] text-light leading-snug">{row.detail}</p>
+                    </td>
+                    {COLUMNS.map((col) => (
                       <td
-                        colSpan={4}
-                        className="px-4 lg:px-5 py-2.5 text-[10px] uppercase tracking-[0.16em] text-highlight font-semibold"
+                        key={col.id}
+                        className={`p-4 lg:p-5 ${
+                          col.highlight ? 'bg-highlightSoft/30' : 'bg-white'
+                        }`}
                       >
-                        {group.category}
+                        <Cell value={row.values[col.id]} isGlobalNex={col.id === 'gx'} />
                       </td>
-                    </tr>
-                    {group.rows.map((row) => (
-                      <tr key={row.angle} className="border-t border-line align-top">
-                        <td className="p-4 lg:p-5 bg-white">
-                          <p className={`text-sm font-medium text-ink ${urbanist.className}`}>
-                            {row.angle}
-                          </p>
-                          <p className="mt-1 text-[11px] text-light leading-snug">{row.detail}</p>
-                        </td>
-                        {COLUMNS.map((col) => (
-                          <td
-                            key={col.id}
-                            className={`p-4 lg:p-5 ${
-                              col.highlight ? 'bg-highlightSoft/30' : 'bg-white'
-                            }`}
-                          >
-                            <Cell value={row.values[col.id]} isGlobalNex={col.id === 'gx'} />
-                          </td>
-                        ))}
-                      </tr>
                     ))}
-                  </React.Fragment>
+                  </tr>
                 ))}
               </tbody>
             </table>
@@ -280,12 +200,11 @@ export default function WhyGlobalNex() {
 
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 px-4 lg:px-5 py-3.5 border-t border-line bg-white">
             <p className="text-[11px] text-light leading-snug max-w-lg">
-              Twelve purpose-built capabilities. Six deliverable types. One team that executes
-              the move.
+              Geo tracing, NPI routing, deal diligence, and more: see the FAQ for the full matrix.
             </p>
-            <p className="text-[11px] text-light leading-snug max-w-md sm:text-right">
-              Pure SaaS and consultancies cover pieces. globalNex covers the full job.
-            </p>
+            <Link href="/#faq" className="text-[11px] text-highlight font-medium hover:underline shrink-0">
+              Full capabilities in FAQ →
+            </Link>
           </div>
         </div>
       </Reveal>

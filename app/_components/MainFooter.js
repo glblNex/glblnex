@@ -12,7 +12,7 @@ const EXPLORE = [
   { label: 'Alloy decomposition', href: '/#alloys' },
   { label: 'How we compare', href: '/#compare' },
   { label: 'FAQ', href: '/#faq' },
-  { label: 'Get started', href: '/started' },
+  { label: 'Get a surcharge audit', href: '/started' },
 ]
 
 const INDUSTRIES = [
@@ -24,43 +24,6 @@ const INDUSTRIES = [
   'Medical',
   'Private equity',
 ]
-
-const METALS = [
-  'Aluminum', 'Titanium', 'Nickel', 'Copper', 'Steel', 'Magnesium', 'Gold', 'Inconel',
-]
-
-function FooterMarquee({ items }) {
-  // Repeat so each track is wider than the viewport, which prevents visible gaps on large screens
-  const trackItems = Array(4).fill(items).flat()
-
-  const Track = ({ trackId, hidden }) => (
-    <div
-      className="flex shrink-0 items-center whitespace-nowrap py-3"
-      aria-hidden={hidden || undefined}
-    >
-      {trackItems.map((label, i) => (
-        <span
-          key={`${trackId}-${label}-${i}`}
-          className={`mx-6 text-xs font-light text-ink/40 ${urbanist.className}`}
-        >
-          {label}
-        </span>
-      ))}
-    </div>
-  )
-
-  return (
-    <div className="gx-fade-mask overflow-hidden border-t border-line/60 gx-marquee-wrap">
-      <div
-        className="gx-marquee-inner flex w-max"
-        style={{ '--gx-marquee-duration': '48s' }}
-      >
-        <Track trackId="a" />
-        <Track trackId="b" hidden />
-      </div>
-    </div>
-  )
-}
 
 export default function MainFooter() {
   return (
@@ -77,7 +40,7 @@ export default function MainFooter() {
               globalNex
             </p>
             <p className={`text-3xl sm:text-4xl lg:text-5xl font-light leading-[1.1] ${urbanist.className}`}>
-              Trace, audit, route, quantify. We execute the move.
+              Counter, audit, route, quantify. We execute the move.
             </p>
             <p className="mt-4 text-sm text-white/55 leading-relaxed max-w-lg">
               Tech-enabled managed service for manufacturers and deal teams. Hit lists, rejection
@@ -85,7 +48,7 @@ export default function MainFooter() {
             </p>
           </div>
           <Link href="/started" className="shrink-0">
-            <MainButton btn_txt="Get started" />
+            <MainButton btn_txt="Get a surcharge audit" className="!text-xs sm:!text-sm !px-4 sm:!px-6" />
           </Link>
         </div>
       </div>
@@ -192,8 +155,6 @@ export default function MainFooter() {
           </div>
         </div>
       </div>
-
-      <FooterMarquee items={METALS} />
 
       {/* Legal */}
       <div className="px-6 lg:px-24 py-5 bg-white border-t border-line flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 text-xs text-light">

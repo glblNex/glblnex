@@ -30,7 +30,7 @@ export const FAQ_ITEMS = [
     id: 'ma-diligence',
     question: 'Can globalNex assess material risk for M&A diligence?',
     answer:
-      'Yes. Provide historical purchase data from the target. In days, our ingestion engine maps SKUs to chemistry and our experts quantify geographic concentration and hidden geopolitical exposure. You get a material exposure figure for the deal room, not a balance-sheet audit that misses supply chain physics.',
+      'Yes. Provide historical purchase data from the target. Our ingestion engine maps SKUs to chemistry and our experts quantify geographic concentration and hidden geopolitical exposure. You get a material exposure figure for the deal room, not a balance-sheet audit that misses supply chain physics.',
   },
   {
     id: 'clean-bom-data',
@@ -54,7 +54,7 @@ export const FAQ_ITEMS = [
     id: 'how-engagements-work',
     question: 'How do engagements work?',
     answer:
-      'You reach out, tell us what you are building and where material risk shows up. We scope your metal exposure and BOM complexity, then deploy the Expert-in-the-Loop team to map chemistry and configure your scenario studio. Ongoing: trace geo shocks to your parts, audit surcharges, route NPI spend, and quantify exposure as events hit your grades.',
+      'You reach out with an invoice, BOM, or purchase data. We scope your metal exposure and BOM complexity, then deploy the Expert-in-the-Loop team to map chemistry and configure your scenario studio. Fixed-scope audits and diligence sprints, or a standing retainer with success fees on defended savings. Ongoing: trace geo shocks to your parts, audit surcharges, route NPI spend, and quantify exposure as events hit your grades.',
   },
   {
     id: 'what-is-alloy-grade-supply-risk',
@@ -72,7 +72,7 @@ export const FAQ_ITEMS = [
     id: 'globalnex-vs-consultancies',
     question: 'How is globalNex different from consultancies?',
     answer:
-      'Consultancies deliver a report in weeks, billed by the hour, with no live engine and no continuous trigger alerts. Knowledge walks out when the project ends. globalNex delivers ongoing, seconds-fast answers via a proprietary engine, plus experts who interpret the numbers into actionable moves: hedge, dual-source, redesign, or counter.',
+      'Consultancies deliver a report in weeks, billed by the hour, with no live engine and no continuous trigger alerts. Knowledge walks out when the project ends. globalNex delivers ongoing answers via a proprietary engine, plus experts who interpret the numbers into actionable moves: hedge, dual-source, redesign, or counter.',
   },
   {
     id: 'metals-covered',

@@ -33,7 +33,7 @@ export default function OutcomeDeliverable() {
             Surcharge rejection · 6061-T6
           </p>
           <p className="mt-1 text-xs text-light">
-            One of five outcomes: trace, audit, counter, route, quantify.
+            One of five outcomes: counter, audit, route, quantify, trace.
           </p>
         </div>
 

@@ -11,14 +11,14 @@ export default function StartedPage() {
                 <header className="pb-10">
                     <div className="grid grid-cols-1 gap-6 justify-items-center text-center">
                         <p className="text-xs uppercase tracking-[0.2em] text-highlight font-semibold">
-                            Get started
+                            First step
                         </p>
                         <h1 className={`lg:max-w-[75%] text-4xl lg:text-5xl font-light text-ink ${urbanist.className}`}>
-                            Tell us what you are building. We will take it from here.
+                            Send us your last supplier invoice or BOM.
                         </h1>
                         <h2 className={`lg:max-w-[60%] text-base lg:text-lg text-light font-light leading-relaxed ${urbanist.className}`}>
-                            Share your BOM or purchase data and where material risk is hitting you.
-                            We map chemistry, scope the exposure, and show you how we can help.
+                            We decompose it to elemental math, scope the exposure, and show you the counter,
+                            rejection report, or hit list. No clean data required.
                         </h2>
                     </div>
                 </header>

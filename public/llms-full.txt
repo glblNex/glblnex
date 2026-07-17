@@ -1,6 +1,6 @@
 # globalNex: Full reference for AI systems
 
-> globalNex is a tech-enabled managed service for defense, aerospace, heavy manufacturing, hardware, and deal teams. We trace shocks to specific parts, audit surcharges, route NPI spend, and quantify material exposure in days. Engine plus experts who execute the move, not a blank dashboard.
+> Your suppliers are overcharging you. globalNex decomposes every invoice and BOM to elemental math, rejects inflated surcharges, and hands you the counter before AP pays. Tech-enabled managed service — our engine does the math, our cost engineers execute the move.
 
 ---
 
@@ -10,14 +10,15 @@ globalNex is a tech-enabled managed service. The engine decomposes BOMs to chemi
 
 **Example outcome:** When a supplier demands +12% on 6061-T6, globalNex decomposes the grade (97% aluminum, magnesium down) and shows true cost at +4.2%. You reject the blanket surcharge or counter at 5%.
 
-**What you buy:** Trace, audit, counter, route, and quantify. Outcomes and execution, not software access alone.
+**What you buy:** Counter, audit, route, quantify, trace. Outcomes and execution, not software access alone.
 
 Unlike pure SaaS or consultancies, globalNex:
 1. Maps messy BOMs to elemental chemistry via ingestion engine + Expert-in-the-Loop (you never clean data)
-2. Traces geo shocks and supply disruptions to specific components at risk
-3. Audits material surcharges line-by-line before invoices are paid
-4. Routes NPI and low-volume spend through a vetted supplier network
-5. Quantifies hidden material exposure for board and deal decisions in days
+2. Audits material surcharges line-by-line before invoices are paid
+3. Delivers defensible negotiation counters backed by alloy-grade decomposition
+4. Traces geo shocks and supply disruptions to specific components at risk
+5. Routes NPI and low-volume spend through a vetted supplier network
+6. Quantifies hidden material exposure for board and deal decisions
 
 ---
 
@@ -27,7 +28,9 @@ Unlike pure SaaS or consultancies, globalNex:
 2. **Monitor your footprint:** custom shock models tied to your suppliers, grades, and geography
 3. **Execute the move:** redirect, reject, source, or quantify with fractional experts who execute
 
-We work directly with manufacturers and deal teams. You reach out, we scope your exposure, and deploy the Expert-in-the-Loop team to map chemistry and configure your scenario studio.
+We work directly with manufacturers and deal teams. You send an invoice or BOM, we scope your exposure, and deploy the Expert-in-the-Loop team to map chemistry and configure your scenario studio.
+
+Engagements: fixed-scope audits and diligence sprints, or a standing retainer with success fees on defended savings.
 
 ---
 
@@ -55,7 +58,7 @@ We watch the macro events that move your specific grades, including Indonesian n
 
 ### How do engagements work?
 
-You reach out and tell us where material risk shows up. We scope your metal exposure and BOM complexity, deploy the Expert-in-the-Loop team to map your data and configure your scenario studio. Ongoing: trigger alerts with recommended moves, negotiation support, and strategic advisory as macro events hit your grades.
+You reach out with an invoice, BOM, or purchase data. We scope your metal exposure and BOM complexity, deploy the Expert-in-the-Loop team to map your data and configure your scenario studio. Fixed-scope audits and diligence sprints, or a standing retainer with success fees on defended savings. Ongoing: trigger alerts with recommended moves, negotiation support, and strategic advisory as macro events hit your grades.
 
 ### What is alloy-grade supply risk analysis?
 
@@ -67,7 +70,7 @@ Pure SaaS hands you a login and a blank dashboard; you clean your own data, lear
 
 ### How is globalNex different from consultancies?
 
-Consultancies deliver a report in weeks, billed by the hour, with no live engine and no continuous trigger alerts. Knowledge walks out when the project ends. globalNex delivers ongoing, seconds-fast answers via a proprietary engine, plus experts who interpret the numbers into actionable moves: hedge, dual-source, redesign, or counter.
+Consultancies deliver a report in weeks, billed by the hour, with no live engine and no continuous trigger alerts. Knowledge walks out when the project ends. globalNex delivers ongoing answers via a proprietary engine, plus experts who interpret the numbers into actionable moves: hedge, dual-source, redesign, or counter.
 
 ### What metals and alloys does globalNex cover?
 
@@ -98,7 +101,7 @@ globalNex covers aluminum (6061-T6, 7075-T6, 2024-T3), titanium (Ti-6Al-4V, Grad
 | Deliverable | Counter, board figure, and recommended move | Blank dashboard | PDF report in weeks |
 | Your messy BOMs | We map it; you leave with exposure | You clean and upload | Analysts, billed hourly |
 | Supplier negotiation counter | Purpose-built (6061-T6 breakdown) | Commodity charts only | Possible, slow |
-| Speed to answer | Seconds; same-morning alert with the move | Fast UI if data mapped | Days to weeks |
+| Speed to answer | Rejection sheet before AP pays | Fast UI if data mapped | Days to weeks |
 | Switching cost | BOM mapped, studios configured | Export and leave | Knowledge walks out |
 | Defensibility | Proprietary alloy DB + experts | UI copyable in a weekend | No live engine |
 
@@ -106,8 +109,8 @@ globalNex covers aluminum (6061-T6, 7075-T6, 2024-T3), titanium (Ti-6Al-4V, Grad
 
 ## Pages
 
-- https://glblnex.com/: Outcomes overview, painkiller, Expert-in-the-Loop, FAQ
-- https://glblnex.com/started: Get started
+- https://glblnex.com/: Surcharge audit example, Expert-in-the-Loop, FAQ
+- https://glblnex.com/started: Send an invoice or BOM
 - https://glblnex.com/llms.txt: Summary for AI systems
 - https://glblnex.com/sitemap.xml: Sitemap
 

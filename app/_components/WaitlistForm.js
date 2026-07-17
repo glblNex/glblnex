@@ -25,7 +25,7 @@ const formStyles = {
   name: 'Default',
   formStyle: 'buttonBelow',
   placeholderText: 'you@company.com',
-  buttonText: 'Get started',
+  buttonText: 'Get a surcharge audit',
   successMessage: "Request received. We'll be in touch.",
   userGroup: 'gxWebsite',
 };

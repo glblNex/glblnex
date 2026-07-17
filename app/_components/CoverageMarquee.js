@@ -5,13 +5,7 @@ import { motion } from 'motion/react'
 import { urbanist } from '../_style/fonts'
 import { COVERAGE } from '../_data/metals'
 
-const ALLOY_GRADES = [
-  '7075-T6', '6061-T6', 'Ti-6Al-4V', 'Inconel 718', '316L', '304 SS',
-  '4140', 'C11000', 'AZ31', 'Zamak 3', 'Fine Gold 999', 'Inconel 625',
-]
-
-function MarqueeRow({ items, reverse = false, duration = '38s' }) {
-  // Repeat so each track exceeds viewport width for a seamless loop
+function MarqueeRow({ items, duration = '38s' }) {
   const trackItems = Array(3).fill(items).flat()
 
   const Track = ({ trackId, hidden }) => (
@@ -32,7 +26,7 @@ function MarqueeRow({ items, reverse = false, duration = '38s' }) {
   return (
     <div className="gx-fade-mask overflow-hidden gx-marquee-wrap">
       <div
-        className={`gx-marquee-inner flex w-max ${reverse ? 'gx-marquee-reverse' : ''}`}
+        className="gx-marquee-inner flex w-max"
         style={{ '--gx-marquee-duration': duration }}
       >
         <Track trackId="a" />
@@ -43,9 +37,6 @@ function MarqueeRow({ items, reverse = false, duration = '38s' }) {
 }
 
 export default function CoverageMarquee() {
-  const metalsRow = COVERAGE
-  const alloysRow = ALLOY_GRADES
-
   return (
     <section className="relative py-10 lg:py-14 border-y border-line bg-bg2 overflow-hidden">
       <div
@@ -67,9 +58,8 @@ export default function CoverageMarquee() {
         Metals and alloys covered
       </motion.p>
 
-      <div className="relative space-y-5">
-        <MarqueeRow items={metalsRow} duration="36s" />
-        <MarqueeRow items={alloysRow} reverse duration="32s" />
+      <div className="relative">
+        <MarqueeRow items={COVERAGE} duration="36s" />
       </div>
 
       <motion.p

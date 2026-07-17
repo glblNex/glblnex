@@ -103,6 +103,13 @@ export default function AdvisoryLayer() {
           ))}
         </RevealGroup>
 
+        <Reveal delay={0.06}>
+          <p className="mt-8 text-sm text-white/50 leading-relaxed max-w-2xl">
+            <span className="text-white/70 font-medium">How engagements work: </span>
+            Fixed-scope audits and diligence sprints, or a standing retainer with success fees on defended savings.
+          </p>
+        </Reveal>
+
         {/* Trigger alerts */}
         <Reveal delay={0.08}>
           <div className="mt-14 lg:mt-20 border-t border-white/10 pt-12 lg:pt-16">
@@ -112,7 +119,7 @@ export default function AdvisoryLayer() {
             <h3
               className={`text-2xl sm:text-3xl lg:text-4xl font-light leading-snug max-w-3xl ${urbanist.className}`}
             >
-              Grade-matched exposure and the move, before your team finishes their first coffee.
+              Grade-matched exposure and the recommended move on your mapped spend.
             </h3>
             <p className="mt-4 text-sm lg:text-base text-white/55 leading-relaxed max-w-2xl">
               We connect macro disruptions directly to the chemical grades in your spend, not generic
