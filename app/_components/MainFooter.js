@@ -8,11 +8,10 @@ import { urbanist } from '../_style/fonts'
 import MainButton from './MainButton'
 
 const EXPLORE = [
-  { label: 'See sample deliverable', href: '/#demo' },
-  { label: 'Alloy decomposition', href: '/#alloys' },
-  { label: 'How we compare', href: '/#compare' },
+  { label: 'How it works', href: '/#how' },
+  { label: 'See an example', href: '/#proof' },
   { label: 'FAQ', href: '/#faq' },
-  { label: 'Get a surcharge audit', href: '/started' },
+  { label: 'Send us an invoice', href: '/started' },
 ]
 
 const INDUSTRIES = [
@@ -22,13 +21,11 @@ const INDUSTRIES = [
   'Industrial',
   'Hardware',
   'Medical',
-  'Private equity',
 ]
 
 export default function MainFooter() {
   return (
     <footer className="container mx-auto min-w-full mt-8">
-      {/* Statement band */}
       <div className="relative overflow-hidden bg-ink text-white px-6 lg:px-24 py-14 lg:py-20">
         <div
           className="pointer-events-none absolute inset-0 opacity-[0.07] gx-grid"
@@ -40,23 +37,22 @@ export default function MainFooter() {
               globalNex
             </p>
             <p className={`text-3xl sm:text-4xl lg:text-5xl font-light leading-[1.1] ${urbanist.className}`}>
-              Counter, audit, route, quantify. We execute the move.
+              Negotiate with math. Hedge before the hike.
             </p>
             <p className="mt-4 text-sm text-white/55 leading-relaxed max-w-lg">
-              Tech-enabled managed service for manufacturers and deal teams. Hit lists, rejection
-              reports, sourcing plans, and exposure figures, with experts who execute.
+              Custom analysis of your raw materials and composition—so supplier hikes don’t eat
+              your margin.
             </p>
           </div>
           <Link href="/started" className="shrink-0">
-            <MainButton btn_txt="Get a surcharge audit" className="!text-xs sm:!text-sm !px-4 sm:!px-6" />
+            <MainButton btn_txt="Send us an invoice" className="!text-xs sm:!text-sm !px-4 sm:!px-6" />
           </Link>
         </div>
       </div>
 
-      {/* Main grid */}
       <div className="relative px-6 lg:px-24 py-12 lg:py-16 bg-bg2 border-t border-line">
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-8">
-          <div className="lg:col-span-4">
+          <div className="lg:col-span-5">
             <Link href="/" className="inline-block">
               <Image
                 src="LightSVG.svg"
@@ -68,8 +64,7 @@ export default function MainFooter() {
               />
             </Link>
             <p className="mt-5 text-sm text-light leading-relaxed max-w-xs">
-              Trace shocks to specific parts. Audit surcharges. Route NPI spend. Quantify exposure
-              for the board or the deal room.
+              Composition analysis that funds negotiation counters and hedge timing on metal spend.
             </p>
             <div className="mt-6 flex items-center gap-4 text-ink">
               <Link
@@ -93,7 +88,7 @@ export default function MainFooter() {
             </div>
           </div>
 
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-3">
             <p className="text-[10px] uppercase tracking-[0.16em] text-light font-medium mb-4">
               Explore
             </p>
@@ -111,7 +106,7 @@ export default function MainFooter() {
             </ul>
           </div>
 
-          <div className="lg:col-span-3">
+          <div className="lg:col-span-4">
             <p className="text-[10px] uppercase tracking-[0.16em] text-light font-medium mb-4">
               Built for
             </p>
@@ -119,36 +114,15 @@ export default function MainFooter() {
               {INDUSTRIES.map((ind) => (
                 <span
                   key={ind}
-                  className={`text-xs font-light text-ink/70 px-3 py-1.5 rounded-full border border-line bg-white ${urbanist.className}`}
+                  className={`text-xs font-light text-ink/70 px-3 py-1.5 border border-line bg-white ${urbanist.className}`}
                 >
                   {ind}
                 </span>
               ))}
             </div>
-          </div>
-
-          <div className="lg:col-span-3">
-            <p className="text-[10px] uppercase tracking-[0.16em] text-light font-medium mb-4">
-              The stack
-            </p>
-            <p className="text-sm text-light leading-relaxed mb-4">
-              Engine plus Expert-in-the-Loop team. Chemistry mapped, moves executed. Not another
-              self-serve dashboard.
-            </p>
-            <div className="rounded-xl border border-line bg-white p-4 space-y-2">
-              <div className="flex items-center justify-between text-xs">
-                <span className="text-light">Your BOM</span>
-                <span className="font-medium text-highlight">globalNex</span>
-              </div>
-              <div className="h-px bg-line" />
-              <div className="flex items-center justify-between text-xs text-light">
-                <span>Price feeds</span>
-                <span>Supplier maps</span>
-              </div>
-            </div>
             <Link
               href="/llms.txt"
-              className="mt-4 inline-block text-[11px] text-light hover:text-highlight transition-colors"
+              className="mt-6 inline-block text-[11px] text-light hover:text-highlight transition-colors"
             >
               AI reference (llms.txt)
             </Link>
@@ -156,7 +130,6 @@ export default function MainFooter() {
         </div>
       </div>
 
-      {/* Legal */}
       <div className="px-6 lg:px-24 py-5 bg-white border-t border-line flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 text-xs text-light">
         <p>© 2026 globalNex. All rights reserved.</p>
         <div className="flex flex-wrap items-center gap-x-1 gap-y-1">

@@ -8,7 +8,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 import { syne } from '../_style/fonts'
 
 const siteDescription =
-  'Your suppliers are overcharging you. globalNex decomposes every invoice and BOM to elemental math, rejects inflated surcharges, and hands you the counter before AP pays. Tech-enabled managed service — engine plus cost engineers who execute the move.';
+  'globalNex helps you save money on metal spend with custom analysis of your raw materials and composition—so you can negotiate pricing and hedge increases before the next surcharge hits.';
 
 const ogImage = 'https://y2etwt0sktcajnaj.public.blob.vercel-storage.com/og_photo.png';
 
@@ -16,7 +16,7 @@ export const metadata = {
   metadataBase: new URL('https://glblnex.com'),
   title: {
     template: '%s | globalNex',
-    default: 'globalNex: Prove the Surcharge, Down to the Alloy',
+    default: 'globalNex: Save Money on Metal Spend',
   },
   description: siteDescription,
   applicationName: 'globalNex',
@@ -25,13 +25,11 @@ export const metadata = {
   publisher: 'globalNex',
   category: 'technology',
   keywords: [
-    'material risk outcomes', 'material risk advisory', 'BOM risk assessment',
-    'fractional commodity strategist', 'supplier price negotiation', 'alloy-grade supply risk',
-    'alloy-grade exposure', 'metal supply risk analysis', 'BOM metal risk',
-    '7075-T6 supply risk', 'Ti-6Al-4V exposure', 'Inconel 718 risk',
-    'metal price shock modeling', 'at-risk spend metals', 'composition decomposition',
-    'critical minerals risk', 'supply shock prediction', 'negotiation counter',
-    'Supply Chain Risk', 'Procurement', 'Commodity Risk', 'Manufacturing Metals', 'globalNex',
+    'metal spend savings', 'supplier price negotiation', 'composition analysis',
+    'raw material analysis', 'alloy composition', 'surcharge audit',
+    'negotiation counter', 'hedge metal prices', 'material surcharge rejection',
+    'BOM metal analysis', 'procurement metal costs', 'supply chain cost savings',
+    '6061-T6 surcharge', 'alloy-grade pricing', 'Manufacturing Metals', 'globalNex',
   ],
   robots: {
     index: true,
@@ -62,8 +60,8 @@ export const metadata = {
   },
   manifest: '/icons/site.webmanifest',
   openGraph: {
-    title: 'globalNex: Prove the Surcharge, Down to the Alloy',
-    description: 'Your suppliers are overcharging you. We decompose every invoice and BOM to elemental math, reject inflated surcharges, and hand you the counter before AP pays.',
+    title: 'globalNex: Save Money on Metal Spend',
+    description: 'Custom analysis of your raw materials and composition so you can negotiate pricing and hedge increases.',
     url: 'https://glblnex.com/',
     siteName: 'globalNex',
     locale: 'en_US',
@@ -73,14 +71,14 @@ export const metadata = {
         url: ogImage,
         width: 1200,
         height: 630,
-        alt: 'globalNex: Material-Risk Outcomes',
+        alt: 'globalNex: Save money on metal spend',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'globalNex: Prove the Surcharge, Down to the Alloy',
-    description: 'We decompose invoices and BOMs to elemental math, reject inflated surcharges, and hand you the counter before AP pays. Engine plus experts who execute the move.',
+    title: 'globalNex: Save Money on Metal Spend',
+    description: 'Custom composition analysis so you can negotiate pricing and hedge increases—before the next surcharge hits.',
     site: '@glblNex',
     creator: '@glblNex',
     images: [ogImage],

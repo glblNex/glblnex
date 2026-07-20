@@ -32,6 +32,13 @@ body {
   background-size: 34px 34px;
 }
 
+.gx-hero-atmosphere {
+  background:
+    radial-gradient(ellipse 90% 70% at 12% 18%, rgba(0, 91, 151, 0.14), transparent 55%),
+    radial-gradient(ellipse 70% 55% at 88% 8%, rgba(0, 56, 93, 0.1), transparent 50%),
+    linear-gradient(165deg, #F5F6F8 0%, #FFFFFF 42%, #E6EFF5 100%);
+}
+
 .gx-fade-mask {
   -webkit-mask-image: linear-gradient(to right, transparent, #000 14%, #000 86%, transparent);
   mask-image: linear-gradient(to right, transparent, #000 14%, #000 86%, transparent);

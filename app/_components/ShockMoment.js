@@ -16,18 +16,18 @@ const COMPOSITION = [
 
 export default function ShockMoment() {
   return (
-    <section className="w-full">
+    <section id="proof" className="w-full scroll-mt-24">
       <Reveal>
         <SectionHeading
-          eyebrow="Surcharge audit"
-          title="Reject blanket surcharges before AP pays"
-          subtitle="Suppliers hide behind commodity headlines. We decompose every line to alloy weight and deliver a rejection report with the justified number, not a dashboard to figure out yourself."
+          eyebrow="One example"
+          title="Supplier asks 12%. The metals say 4.2%."
+          subtitle="We decompose the grade on your invoice, hand you the counter, and flag when to lock before the next move."
           align="center"
         />
       </Reveal>
 
       <Reveal delay={0.05}>
-        <div className="mt-8 lg:mt-10 rounded-2xl border border-line overflow-hidden bg-white shadow-[0_24px_70px_-36px_rgba(10,10,10,0.22)]">
+        <div className="mt-8 lg:mt-10 border-y border-line bg-white">
           <div className="grid lg:grid-cols-5">
             <div className="lg:col-span-2 p-7 lg:p-10 border-b lg:border-b-0 lg:border-r border-line bg-bg2/40 flex flex-col justify-center">
               <p className="text-[10px] uppercase tracking-[0.18em] text-light font-medium mb-5">
@@ -38,21 +38,21 @@ export default function ShockMoment() {
                 increase on your 6061-T6 brackets.&rdquo;
               </p>
               <p className="mt-6 text-sm text-light leading-relaxed">
-                Internal teams lack the bandwidth to reverse-engineer thousands of part weights into
-                metal ratios. We deliver the rejection sheet before the invoice clears.
+                Without grade-level composition, procurement pays the headline. We deliver the
+                justified number before AP clears the invoice.
               </p>
             </div>
 
             <div className="lg:col-span-3 p-7 lg:p-10">
               <p className="text-[10px] uppercase tracking-[0.18em] text-highlight font-medium mb-5">
-                Surcharge rejection report · 6061-T6
+                Composition · 6061-T6
               </p>
 
               <div className="space-y-2 mb-5">
                 {COMPOSITION.map((c) => (
                   <div
                     key={c.metal}
-                    className="flex items-center justify-between gap-4 rounded-lg border border-line bg-bg2/40 px-4 py-2.5"
+                    className="flex items-center justify-between gap-4 border-b border-line last:border-b-0 py-2.5"
                   >
                     <div className="flex items-center gap-3 min-w-0">
                       <span className="text-sm font-medium text-ink w-20 shrink-0">{c.metal}</span>
@@ -72,14 +72,14 @@ export default function ShockMoment() {
                 ))}
               </div>
 
-              <div className="grid grid-cols-2 gap-3 lg:gap-4">
-                <div className="rounded-xl border border-line bg-bg2/50 p-5">
+              <div className="grid grid-cols-2 gap-6 lg:gap-8 pt-2">
+                <div>
                   <p className="text-[10px] uppercase tracking-wide text-light">Justified increase</p>
                   <p className={`mt-2 text-3xl lg:text-4xl font-light text-highlight tabular-nums ${urbanist.className}`}>
                     +4.2%
                   </p>
                 </div>
-                <div className="rounded-xl border border-line bg-bg2/50 p-5">
+                <div>
                   <p className="text-[10px] uppercase tracking-wide text-light">Your counter</p>
                   <p className={`mt-2 text-3xl lg:text-4xl font-light text-ink tabular-nums ${urbanist.className}`}>
                     5%
@@ -89,17 +89,17 @@ export default function ShockMoment() {
 
               <p className="mt-6 text-sm text-light leading-relaxed max-w-xl">
                 Aluminum is 97% of this grade. Magnesium is actually down. Reject the blanket 12%.
-                Accept 5%. The math is on the rejection sheet before AP pays.
+                Accept 5%—and lock the rest of the year before indices climb again.
               </p>
             </div>
           </div>
 
-          <div className="border-t border-line px-7 lg:px-10 py-6 lg:py-7 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 bg-white">
+          <div className="border-t border-line px-7 lg:px-10 py-6 lg:py-7 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 bg-bg2/30">
             <p className={`text-base lg:text-lg font-light text-ink leading-snug max-w-xl ${urbanist.className}`}>
-              Hit lists, rejection reports, sourcing plans, diligence figures. One engine, many outcomes.
+              Negotiate with math. Hedge when the metals move—not when the invoice does.
             </p>
             <Link href="/started" className="shrink-0">
-              <MainButton btn_txt="Send us your last supplier invoice" className="!text-xs sm:!text-sm !px-4 sm:!px-6" />
+              <MainButton btn_txt="Send us a supplier invoice" className="!text-xs sm:!text-sm !px-4 sm:!px-6" />
             </Link>
           </div>
         </div>

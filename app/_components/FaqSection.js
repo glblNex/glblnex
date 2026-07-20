@@ -12,8 +12,8 @@ export default function FaqSection() {
       <Reveal>
         <SectionHeading
           eyebrow="Common questions"
-          title="Outcomes, explained"
-          subtitle="Engagements, ingestion, surcharge audit, NPI sourcing, deal diligence, and the Expert-in-the-Loop team."
+          title="Straight answers"
+          subtitle="Negotiation, surcharge audits, hedge timing, and how we work with your data."
           align="center"
         />
       </Reveal>

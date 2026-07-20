@@ -1,14 +1,14 @@
 export const metadata = {
-  title: 'Send an Invoice or BOM',
+  title: 'Send an Invoice',
   description:
-    'Send globalNex your last supplier invoice or BOM. We decompose it to elemental math and deliver a surcharge audit, counter, or hit list.',
+    'Send globalNex a supplier invoice or BOM. Custom composition analysis so you can negotiate pricing and hedge increases.',
   alternates: {
     canonical: 'https://glblnex.com/started',
   },
   openGraph: {
-    title: 'Send an Invoice or BOM | globalNex',
+    title: 'Send an Invoice | globalNex',
     description:
-      'Upload your invoice or BOM. We map chemistry, scope exposure, and deliver the move.',
+      'Upload your invoice or BOM. We map composition and show you how to negotiate and hedge.',
     url: 'https://glblnex.com/started',
   },
 }
