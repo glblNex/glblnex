@@ -1,34 +1,14 @@
 'use client'
 
 import React from 'react'
-import Link from 'next/link'
 import { urbanist } from '../_style/fonts'
 import SectionHeading from './SectionHeading'
 import Reveal from './Reveal'
 
-const BENEFITS = [
-  {
-    id: 'procurement',
-    role: 'Procurement & Sourcing',
-    short: 'Procurement',
-    headline: 'Reject inflated surcharges before AP pays',
-    outcome: 'Line-by-line alloy math on every invoice. Rejection sheet ready before the payment clears.',
-    points: [
-      'True cost delta on the grade, not the commodity index',
-      'Counter receipt when the supplier asks for 12% and true cost is 4.2%',
-    ],
-  },
-  {
-    id: 'pe',
-    role: 'Private Equity & M&A',
-    short: 'PE / M&A',
-    headline: 'Unpriced material risk before you close',
-    outcome: 'Messy purchase data mapped to chemistry. Quantified geopolitical exposure for diligence or post-close dual-sourcing.',
-    points: [
-      'Material exposure report scoped to the target\'s SKUs',
-      'Hidden supply chain liability surfaced before enterprise value is set',
-    ],
-  },
+const POINTS = [
+  'True cost delta on the grade you buy—not the commodity headline',
+  'Defensible counters when suppliers ask for more than the metals warrant',
+  'Early signal to hedge or lock before the next surcharge hits',
 ]
 
 export default function BenefitsSection() {
@@ -36,39 +16,29 @@ export default function BenefitsSection() {
     <section className="w-full">
       <Reveal>
         <SectionHeading
-          eyebrow="Who we work with"
-          title="Built for the buyers who feel the dollars"
-          subtitle="Procurement teams defending margin on every invoice. Deal teams pricing material risk before close."
+          eyebrow="Who it's for"
+          title="Procurement teams defending metal spend"
+          subtitle="If supplier hikes and material surcharges hit your margin, composition analysis is leverage—not another dashboard."
           align="center"
         />
       </Reveal>
 
-      <div className="mt-8 lg:mt-10 grid sm:grid-cols-2 gap-4 lg:gap-5 max-w-4xl mx-auto">
-        {BENEFITS.map((b) => (
-          <div
-            key={b.id}
-            className="rounded-2xl border border-line bg-white overflow-hidden shadow-[0_20px_60px_-32px_rgba(10,10,10,0.25)] p-6 lg:p-8"
-          >
-            <p className="text-xs uppercase tracking-[0.16em] text-highlight font-medium mb-3">
-              {b.role}
-            </p>
-            <h3 className={`text-xl lg:text-2xl font-medium text-ink leading-tight ${urbanist.className}`}>
-              {b.headline}
-            </h3>
-            <p className={`mt-4 text-base font-light text-highlight ${urbanist.className}`}>
-              {b.outcome}
-            </p>
-            <ul className="mt-5 space-y-3">
-              {b.points.map((point) => (
-                <li key={point} className="flex gap-3 text-sm text-light leading-relaxed">
-                  <span className="mt-2.5 h-1.5 w-1.5 rounded-full bg-highlight shrink-0" />
-                  <span>{point}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
-      </div>
+      <Reveal delay={0.05}>
+        <div className="mt-8 lg:mt-10 max-w-2xl mx-auto">
+          <p className={`text-lg lg:text-xl font-light text-ink leading-relaxed text-center ${urbanist.className}`}>
+            Line-by-line alloy math on the invoices you already pay. Rejection-ready numbers before
+            AP clears—and timing to lock when indices move on your grades.
+          </p>
+          <ul className="mt-8 space-y-4 max-w-lg mx-auto">
+            {POINTS.map((point) => (
+              <li key={point} className="flex gap-3 text-sm lg:text-base text-light leading-relaxed">
+                <span className="mt-2 h-1.5 w-1.5 rounded-full bg-highlight shrink-0" />
+                <span>{point}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </Reveal>
     </section>
   )
 }

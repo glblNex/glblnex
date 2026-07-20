@@ -1,56 +1,38 @@
 # globalNex
 
-> Your suppliers are overcharging you. globalNex decomposes every invoice and BOM to elemental math, rejects inflated surcharges, and hands you the counter before AP pays. Tech-enabled managed service — our engine does the math, our cost engineers execute the move.
+> globalNex helps manufacturers save money on metal spend with custom analysis of raw materials and composition—so you can negotiate pricing and hedge increases before the next surcharge hits.
 
-Example outcome: a supplier demands +12% on 6061-T6; we decompose the grade, show true cost at +4.2%, and deliver a rejection report or counter at 5%.
+Example: a supplier demands +12% on 6061-T6; we decompose the grade, show true cost at +4.2%, and deliver a counter at 5%—plus timing to lock before indices climb again.
 
-## What you get (the outcome)
+## What you get
 
+- Composition analysis of invoices and BOMs (grade → metals by weight)
+- Defensible negotiation counters when suppliers ask for more than the metals warrant
 - Line-by-line surcharge rejection reports before AP pays
-- Defensible negotiation counters backed by alloy-grade decomposition
-- Risk and redirect hit lists: macro shock traced to specific components at risk
-- De-risked NPI and low-volume sourcing plans through a vetted network
-- Board- and deal-ready material exposure figures from messy purchase data
-- Grade-matched trigger alerts with recommended moves (lock contracts, dual-source, redirect)
-- Expert-in-the-Loop team mapping your BOMs to chemistry; you never clean the data
+- Hedge timing when indices move on the grades you buy
 
-## How deployment works
+## How it works
 
-1. **Map chemistry, not SKUs:** ingestion engine maps messy ERP and Excel to elemental exposure; experts validate edge cases
-2. **Monitor your footprint:** custom shock models tied to your suppliers, grades, and geography
-3. **Execute the move:** redirect, reject, source, or quantify with fractional experts who execute
-
-Engagements: fixed-scope audits and diligence sprints, or a standing retainer with success fees on defended savings.
-
-## The engine (proof, not the product)
-
-- Elemental BOM decomposition (part numbers to grades to metals)
-- Interactive scenario modeling: price shocks, production cuts, export bans, smelter outages
-- Dollar impact: cost, at-risk spend, margin hit, availability, lead time
-- Geographic supply concentration mapped to each grade's constituent metals
+1. **Analyze composition** — map invoices/BOMs to alloy chemistry
+2. **Negotiate pricing** — justified cost delta and counters
+3. **Hedge increases** — early signal to lock, hedge, or dual-source
 
 ## Key pages
 
-- [Home](https://glblnex.com/): Surcharge audit example, Expert-in-the-Loop, FAQ
-- [Send an invoice or BOM](https://glblnex.com/started): First step to a surcharge audit or hit list
+- [Home](https://glblnex.com/): Offer, example, FAQ
+- [Send an invoice](https://glblnex.com/started): Start with a supplier invoice
 
 ## Who it is for
 
-Defense, aerospace, automotive and EV, industrial manufacturing, hardware and mobility, medical devices, and private equity teams where metal spend, supply continuity, or deal risk is material.
-
-## How globalNex compares
-
-- **Pure SaaS tools**: track part numbers and push news alerts; you figure out the response
-- **Consultancies**: deliver a report in weeks; no live engine; too slow for invoices or deal windows
-- **globalNex**: chemistry mapped, moves executed: hit lists, rejection reports, sourcing plans, diligence figures
+Procurement and supply-chain teams in defense, aerospace, automotive, industrial manufacturing, hardware, and medical devices where metal spend is material.
 
 ## Extended documentation
 
-For full FAQ, glossary, and detailed product information: [llms-full.txt](https://glblnex.com/llms-full.txt)
+For full FAQ and glossary: [llms-full.txt](https://glblnex.com/llms-full.txt)
 
 ## Contact
 
 - Website: https://glblnex.com
 - X: https://x.com/glblNex
 - LinkedIn: https://www.linkedin.com/company/glblnex/
-- Send an invoice or BOM: https://glblnex.com/started
+- Send an invoice: https://glblnex.com/started

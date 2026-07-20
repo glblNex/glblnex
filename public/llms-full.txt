@@ -1,121 +1,87 @@
 # globalNex: Full reference for AI systems
 
-> Your suppliers are overcharging you. globalNex decomposes every invoice and BOM to elemental math, rejects inflated surcharges, and hands you the counter before AP pays. Tech-enabled managed service — our engine does the math, our cost engineers execute the move.
+> globalNex helps manufacturers save money on metal spend with custom analysis of raw materials and composition—so you can negotiate pricing and hedge increases before the next surcharge hits.
 
 ---
 
 ## What globalNex does
 
-globalNex is a tech-enabled managed service. The engine decomposes BOMs to chemistry; domain experts deliver hit lists, rejection reports, sourcing plans, and diligence figures, then execute the move.
+globalNex turns invoice and BOM composition into negotiation math and hedge timing.
 
-**Example outcome:** When a supplier demands +12% on 6061-T6, globalNex decomposes the grade (97% aluminum, magnesium down) and shows true cost at +4.2%. You reject the blanket surcharge or counter at 5%.
+**Example outcome:** When a supplier demands +12% on 6061-T6, globalNex decomposes the grade (97% aluminum, magnesium down) and shows true cost at +4.2%. You reject the blanket surcharge or counter at 5%, and lock before indices climb again.
 
-**What you buy:** Counter, audit, route, quantify, trace. Outcomes and execution, not software access alone.
+**What you buy:** Composition analysis that funds counters, surcharge rejection reports, and hedge timing—not a blank dashboard or a kitchen-sink platform.
 
-Unlike pure SaaS or consultancies, globalNex:
-1. Maps messy BOMs to elemental chemistry via ingestion engine + Expert-in-the-Loop (you never clean data)
-2. Audits material surcharges line-by-line before invoices are paid
-3. Delivers defensible negotiation counters backed by alloy-grade decomposition
-4. Traces geo shocks and supply disruptions to specific components at risk
-5. Routes NPI and low-volume spend through a vetted supplier network
-6. Quantifies hidden material exposure for board and deal decisions
+The defended-dollar loop:
+1. Decompose invoices/BOMs to chemistry
+2. Deliver a counter / surcharge rejection (cash this quarter)
+3. Flag when indices move so you hedge or lock before the next hike
 
 ---
 
-## How deployment works (Expert-in-the-Loop)
+## How it works
 
-1. **Map chemistry, not SKUs:** ingestion engine maps ERP and Excel to elemental exposure; experts validate edge cases
-2. **Monitor your footprint:** custom shock models tied to your suppliers, grades, and geography
-3. **Execute the move:** redirect, reject, source, or quantify with fractional experts who execute
+1. **Analyze composition** — map invoices and BOMs to alloy chemistry by weight
+2. **Negotiate pricing** — justified cost delta and defensible counters
+3. **Hedge increases** — early signal to lock, hedge, or dual-source when your grades move
 
-We work directly with manufacturers and deal teams. You send an invoice or BOM, we scope your exposure, and deploy the Expert-in-the-Loop team to map chemistry and configure your scenario studio.
-
-Engagements: fixed-scope audits and diligence sprints, or a standing retainer with success fees on defended savings.
+Engagements: fixed-scope audits or a standing retainer with success fees on defended savings. Start by sending a supplier invoice.
 
 ---
 
 ## Frequently asked questions
 
-### Is globalNex software or a service?
-
-A service, powered by software. You buy the quantified conclusion and the next move: negotiation counter, boardroom figure, trigger alert with a recommended action. Our Expert-in-the-Loop team maps your messy BOMs and delivers those outcomes. The engine does the computation behind the scenes. You do not buy a login to a blank dashboard.
-
 ### Can globalNex help me counter a supplier price increase?
 
-Yes. This is the primary use case. When a supplier claims aluminum is up and demands +12%, globalNex decomposes the exact grade (e.g. 6061-T6: 97% aluminum, magnesium actually down) and shows the true cost increase (e.g. +4.2%). You counter with a defensible number (e.g. 5%) and lock the rest of the year. One negotiation pays for the engagement.
+Yes. When a supplier claims aluminum is up and demands +12%, we decompose the exact grade (e.g. 6061-T6: 97% aluminum, magnesium actually down) and show the true cost increase (e.g. +4.2%). You counter with a defensible number (e.g. 5%) or reject blanket surcharges on the same math. One interaction can pay for the engagement.
+
+### Can you audit material surcharges on supplier invoices?
+
+Yes. Forward the invoices. We map each part to its alloy grade, calculate the surcharge justified by metal weight and live indices, and deliver a line-by-line rejection report—before AP pays.
+
+### How do you help us hedge material increases?
+
+We watch the indices and events that move the grades on your BOM. When a shock hits, you get quantified impact on your spend and a recommended move—lock contracts, hedge, or dual-source—before the next surcharge lands on an invoice.
 
 ### Do I need clean BOM or ERP data?
 
-No. Your BOMs are messy and your ERP is a mess. That is exactly what we take off your plate. Our ingestion engine auto-maps disparate spreadsheets and ERP dumps to our metallurgical alloy database. Our Expert-in-the-Loop team validates the edge cases. You never clean the data yourself. You leave with mapped exposure ready for the next negotiation.
-
-### What does the Expert-in-the-Loop team actually do?
-
-Fractional cost engineers, metallurgical analysts, and commodity strategists, not customer-success reps showing you how to click buttons. They map your BOMs to our alloy database, build custom scenario studios for your geographic footprint, and turn risk into moves you execute: hedge, dual-source, redesign, or counter in the room.
-
-### How do trigger alerts work?
-
-We watch the macro events that move your specific grades, including Indonesian nickel export bans, Chinese magnesium squeezes, production cuts, and sanctions, and run your spend through the model the morning the news drops. You get a quantified impact (e.g. 2-point gross-margin hit on your 7075-T6 spend) and a recommended move such as lock contracts this week or dual-source before Q3, not a generic market headline.
+No. Messy BOMs and ERP dumps are normal. We map them to alloy chemistry and validate edge cases. You leave with composition-backed numbers ready for the next negotiation—not a data-cleaning project.
 
 ### How do engagements work?
 
-You reach out with an invoice, BOM, or purchase data. We scope your metal exposure and BOM complexity, deploy the Expert-in-the-Loop team to map your data and configure your scenario studio. Fixed-scope audits and diligence sprints, or a standing retainer with success fees on defended savings. Ongoing: trigger alerts with recommended moves, negotiation support, and strategic advisory as macro events hit your grades.
+Send an invoice, BOM, or purchase data. We scope your metal exposure, map chemistry, and deliver counters, rejection reports, and hedge timing. Fixed-scope audits or a standing retainer with success fees on defended savings.
 
-### What is alloy-grade supply risk analysis?
+### What is raw-material composition analysis?
 
-Alloy-grade supply risk analysis models how price and supply shocks propagate through the exact alloy grades on your bill of materials, not just spot commodity prices. Instead of tracking LME aluminum, it decomposes 7075-T6 into its constituent metals (aluminum, zinc, magnesium, copper), maps where each is sourced, and calculates the dollar impact on cost, margin, and at-risk spend when a shock hits, so you can take a concrete move.
-
-### How is globalNex different from pure SaaS supply-risk tools?
-
-Pure SaaS hands you a login and a blank dashboard; you clean your own data, learn the UI, and hope someone on your team maintains it. The UI is trivially copyable. globalNex maps your BOMs, runs a proprietary alloy engine, and delivers the outcome: the counter, the board figure, and the next action. Once your BOM is mapped and studios configured, switching cost is high.
-
-### How is globalNex different from consultancies?
-
-Consultancies deliver a report in weeks, billed by the hour, with no live engine and no continuous trigger alerts. Knowledge walks out when the project ends. globalNex delivers ongoing answers via a proprietary engine, plus experts who interpret the numbers into actionable moves: hedge, dual-source, redesign, or counter.
-
-### What metals and alloys does globalNex cover?
-
-globalNex covers aluminum (6061-T6, 7075-T6, 2024-T3), titanium (Ti-6Al-4V, Grade 2), steel and stainless (304, 316L, 4140), nickel superalloys (Inconel 718, 625), copper (C11000, C26000 brass), gold (Fine Gold 999), and zinc/magnesium alloys (Zamak 3, AZ31). Each grade is decomposed into constituent metals with composition share, volatility, and geographic supply concentration.
+We break each alloy grade into its constituent metals by weight (e.g. 6061-T6 is ~97% aluminum). That math shows how price shocks actually hit your parts—so you negotiate and hedge on chemistry, not commodity headlines.
 
 ---
 
 ## Glossary
 
-**Material-risk outcome**: A quantified conclusion the customer can act on: negotiation counter, boardroom exposure figure, or trigger alert with a recommended move. Delivered by experts using the engine, not sold as a blank login.
+**Composition decomposition**: Breaking an alloy into its constituent metals by weight percentage (e.g. 6061-T6 is 97% aluminum) to counter supplier price claims and time hedges.
 
-**Expert-in-the-Loop**: Fractional cost engineers, metallurgical analysts, and commodity strategists who map client BOMs, configure scenario studios, and interpret risk scores into hedging, dual-sourcing, redesign, and counter moves.
+**Negotiation counter**: A defensible price response backed by grade-level metal math—e.g. accept 5% when a supplier asks for 12% and true cost is +4.2%.
 
-**Alloy-grade exposure**: The dollar and margin impact of a supply or price shock on a specific named alloy grade (e.g. 7075-T6), accounting for its full metal composition rather than a single commodity index.
+**Hedge timing**: An early signal to lock, hedge, or dual-source when indices move on grades you buy, before the increase shows up on an invoice.
 
-**Composition decomposition**: Breaking an alloy into its constituent metals by weight percentage (e.g. 6061-T6 is 97% aluminum) to trace how shocks propagate and counter supplier price claims.
+**Surcharge rejection report**: A line-by-line audit of material surcharges on supplier invoices, showing the amount justified by metal weight and live indices.
 
-**At-risk spend**: The portion of annual alloy spend exposed to a modeled shock scenario, expressed in dollars.
-
-**Trigger alert**: An event-driven notification quantifying a client's exposure when a macro supply shock (export ban, production cut, sanction) hits a metal in their BOM, paired with a recommended move.
+**At-risk spend**: The portion of annual alloy spend exposed to a modeled price or supply shock, expressed in dollars.
 
 ---
 
-## Comparison summary
+## Who it is for
 
-| Capability | globalNex | Pure SaaS tools | Consultancies |
-|---|---|---|---|
-| Deliverable | Counter, board figure, and recommended move | Blank dashboard | PDF report in weeks |
-| Your messy BOMs | We map it; you leave with exposure | You clean and upload | Analysts, billed hourly |
-| Supplier negotiation counter | Purpose-built (6061-T6 breakdown) | Commodity charts only | Possible, slow |
-| Speed to answer | Rejection sheet before AP pays | Fast UI if data mapped | Days to weeks |
-| Switching cost | BOM mapped, studios configured | Export and leave | Knowledge walks out |
-| Defensibility | Proprietary alloy DB + experts | UI copyable in a weekend | No live engine |
+Procurement and supply-chain teams where metal spend and supplier surcharges hit margin: defense, aerospace, automotive and EV, industrial manufacturing, hardware, and medical devices.
 
 ---
-
-## Pages
-
-- https://glblnex.com/: Surcharge audit example, Expert-in-the-Loop, FAQ
-- https://glblnex.com/started: Send an invoice or BOM
-- https://glblnex.com/llms.txt: Summary for AI systems
-- https://glblnex.com/sitemap.xml: Sitemap
 
 ## Contact
 
 - Website: https://glblnex.com
+- Home: https://glblnex.com/
+- Send an invoice: https://glblnex.com/started
 - X: https://x.com/glblNex
 - LinkedIn: https://www.linkedin.com/company/glblnex/
+- Short AI summary: https://glblnex.com/llms.txt

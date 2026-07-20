@@ -17,8 +17,8 @@ export default function StartedPage() {
                             Send us your last supplier invoice or BOM.
                         </h1>
                         <h2 className={`lg:max-w-[60%] text-base lg:text-lg text-light font-light leading-relaxed ${urbanist.className}`}>
-                            We decompose it to elemental math, scope the exposure, and show you the counter,
-                            rejection report, or hit list. No clean data required.
+                            Custom composition analysis so you can negotiate pricing and hedge
+                            increases. No clean data required.
                         </h2>
                     </div>
                 </header>

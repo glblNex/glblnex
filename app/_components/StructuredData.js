@@ -8,7 +8,7 @@ export default function StructuredData() {
     url: 'https://glblnex.com',
     logo: 'https://glblnex.com/LightSVG.svg',
     description:
-      'Tech-enabled managed service for material-risk outcomes. Trace shocks to specific parts, audit surcharges, route NPI spend, and quantify exposure for defense, aerospace, heavy manufacturing, and deal teams.',
+      'globalNex helps manufacturers save money on metal spend through custom raw-material and composition analysis—so procurement can negotiate pricing and hedge increases.',
     sameAs: [
       'https://x.com/glblNex',
       'https://www.linkedin.com/company/glblnex/',
@@ -21,7 +21,7 @@ export default function StructuredData() {
     name: 'globalNex',
     url: 'https://glblnex.com',
     description:
-      'Tech-enabled managed service: map BOMs to chemistry, deliver hit lists, rejection reports, sourcing plans, and diligence figures with Expert-in-the-Loop execution.',
+      'Custom analysis of raw materials and composition for supplier negotiation and hedge timing on metal spend.',
     potentialAction: {
       '@type': 'SearchAction',
       target: 'https://glblnex.com/#faq',
@@ -32,15 +32,15 @@ export default function StructuredData() {
   const service = {
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
-    name: 'globalNex Expert-in-the-Loop',
+    name: 'globalNex composition analysis',
     url: 'https://glblnex.com',
     description:
-      'Fractional cost engineers, metallurgical analysts, and commodity strategists who map client BOMs to chemistry, trace geo shocks to specific parts, audit surcharges, route NPI spend, and quantify material exposure for board and deal decisions.',
-    serviceType: 'Tech-enabled material risk managed service',
+      'Composition analysis of invoices and BOMs that delivers negotiation counters, surcharge rejection reports, and hedge timing for procurement teams.',
+    serviceType: 'Metal spend savings and composition analysis',
     areaServed: 'Worldwide',
     audience: {
       '@type': 'BusinessAudience',
-      audienceType: 'Defense, aerospace, automotive, heavy manufacturing, hardware, and private equity teams',
+      audienceType: 'Procurement and supply-chain teams in manufacturing',
     },
   }
 
@@ -52,21 +52,19 @@ export default function StructuredData() {
     operatingSystem: 'Web',
     url: 'https://glblnex.com',
     description:
-      'Proprietary alloy-grade decomposition and scenario engine used by the Expert-in-the-Loop team. Powers trace, audit, route, and quantify outcomes. Not sold as self-serve SaaS.',
+      'Alloy-grade composition engine that powers negotiation counters, surcharge audits, and hedge timing. Delivered as analysis and outcomes—not a blank self-serve dashboard.',
     offers: {
       '@type': 'Offer',
       price: '0',
       priceCurrency: 'USD',
-      description: 'Send an invoice or BOM for a surcharge audit',
+      description: 'Send a supplier invoice for composition analysis',
       url: 'https://glblnex.com/started',
     },
     featureList: [
-      'Elemental BOM decomposition (part number to chemistry)',
+      'Elemental BOM and invoice decomposition',
       'Line-by-line surcharge audit and rejection reports',
-      'Geo shock traceability to specific components',
-      'Grade-matched trigger alerts with recommended moves',
-      'NPI and low-volume sourcing risk modeling',
-      'Deal-speed material exposure mapping',
+      'Defensible negotiation counters',
+      'Hedge timing when indices move on your grades',
     ],
   }
 
